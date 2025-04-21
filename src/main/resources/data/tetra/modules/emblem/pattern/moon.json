@@ -1,0 +1,29 @@
+{
+  "replace": true,
+  "type": "tetra:basic_major_module",
+  "slots": [ "emblem/pattern" ],
+  "improvements": [],
+  "renderLayer": "HIGHER",
+  "variants": [
+    {
+      "materials": [ "tetra:logo/moon/","tetra:metal/" ],
+      "key": "moon/",
+      "integrity": 2,
+      "extract": {
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+          "textureX": 32,
+          "textureY": 0
+        },
+        "availableTextures": [ "shiny","crystal","metal","obsidian" ],
+        "models": [
+          {
+            "location": "tetra:item/module/emblem/pattern/moon/",
+            "emission": 10
+            }
+
+        ]
+      }
+    }
+  ]
+}

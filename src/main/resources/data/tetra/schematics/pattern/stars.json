@@ -1,0 +1,18 @@
+{
+  "replace": true,
+  "slots": [ "emblem/pattern" ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 48,
+    "textureY": 0
+  },
+  "outcomes": [
+    {
+      "materials": [ "tetra:logo/stars/","tetra:metal/"],
+      "moduleKey": "emblem/pattern/stars",
+      "moduleVariant": "stars/"
+    }
+  ]
+}

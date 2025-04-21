@@ -1,0 +1,46 @@
+{
+  "replace": true,
+  "type": "tetra:basic_major_module",
+  "slots": [ "emblem/base" ],
+  "improvements": [],
+  "renderLayer": "BASE",
+  "variants": [
+    {
+      "materials": [ "tetra:metal/","tetra:bone/","tetra:wood/" ],
+      "key": "octagon/",
+      "integrity": 2,
+      "extract": {
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+          "textureX": 0,
+          "textureY": 0
+        },
+        "availableTextures": [ "metal", "default" ],
+        "models": [
+          {
+            "location": "tetra:item/module/emblem/base/octagon/"
+          },
+          {
+            "location": "tetra:item/module/emblem/base/octagon/layers/layer1/",
+            "transform": {
+              "translation": [ 0, 0, 0.00495]
+            }
+          },
+          {
+            "location": "tetra:item/module/emblem/base/octagon/layers/layer2/",
+            "transform": {
+              "translation": [ 0, 0, 0.00825]
+            }
+          }
+
+
+
+
+
+
+
+        ]
+      }
+    }
+  ]
+}

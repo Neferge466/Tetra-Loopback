@@ -1,0 +1,18 @@
+{
+  "replace": true,
+  "slots": [ "emblem/pattern" ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 32,
+    "textureY": 0
+  },
+  "outcomes": [
+    {
+      "materials": [ "tetra:logo/moon/","tetra:metal/" ],
+      "moduleKey": "emblem/pattern/moon",
+      "moduleVariant": "moon/"
+    }
+  ]
+}

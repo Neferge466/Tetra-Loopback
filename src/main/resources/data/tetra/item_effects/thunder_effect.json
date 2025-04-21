@@ -1,0 +1,13 @@
+{
+  "trigger": "tetra:apply_hit_effects",
+  "effect": "thunder_effect",
+  "outcome": {
+    "type": "tetra:apply_effect",
+    "effect": "tetra_loopback:thunder",
+    "entity": "attacker",
+    "source": "attacker",
+    "duration": 3000,
+    "amplifier": 1,
+    "stackDurationCap": 3000
+  }
+}

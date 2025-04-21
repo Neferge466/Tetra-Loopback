@@ -1,0 +1,26 @@
+{
+  "key": "fuse_steel_ingot",
+  "category": "metal",
+  "primary": 6.5,
+  "secondary": 2,
+  "tertiary": 3,
+  "durability": 1800,
+  "integrityCost": 2,
+  "integrityGain": 8,
+  "magicCapacity": 90,
+  "toolLevel": 5,
+  "toolEfficiency": 2,
+  "effects": {
+    "tetra_loopback:guardian":1
+  },
+  "tints": {
+    "glyph": "AAAAAA",
+    "texture":"AAAAAA"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:fuse_steel_ingot" ]
+  }
+}

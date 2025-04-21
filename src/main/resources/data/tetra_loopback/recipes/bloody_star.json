@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MRM",
+    "RSR",
+    "MRM"
+  ],
+  "key": {
+    "M": {
+      "item": "tetra:metal_scrap"
+    },
+    "R": {
+      "item": "tetra_loopback:round_ruby"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "tetra_loopback:bloody_star",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "key": "lightning",
+  "category": "logo/strange",
+  "primary": 0,
+  "secondary": 0,
+  "tertiary": 0,
+  "durability": 0,
+  "integrityCost": 1,
+  "integrityGain": 1,
+  "magicCapacity": 0,
+  "toolLevel": 3,
+  "toolEfficiency": 2,
+  "effects":{
+    "tetra_loopback:thundering":[1,0]
+  },
+  "tints": {
+    "glyph": "55FFFF"
+  },
+  "textures": [
+    "lightning"
+  ],
+  "material": {
+    "items": [
+      "tetra_loopback:lightning_ingot"
+    ]
+  }
+}

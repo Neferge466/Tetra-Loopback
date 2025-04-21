@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "MMM"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "M": {
+      "item": "tetra:metal_scrap"
+    }
+  },
+  "result": {
+    "item": "tetra_loopback:fuse_steel_ingot",
+    "count": 1
+  }
+}

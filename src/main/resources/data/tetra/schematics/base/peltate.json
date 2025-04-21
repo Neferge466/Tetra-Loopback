@@ -1,0 +1,23 @@
+{
+  "replace": true,
+  "slots": [ "emblem/base" ],
+  "improvements":
+  [
+    "tetra:emblem/base/"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 16,
+    "textureY": 0
+  },
+  "outcomes": [
+    {
+      "materials": [ "tetra:wood/", "tetra:metal/", "tetra:bone/"],
+      "countFactor": 2,
+      "moduleKey": "emblem/base/peltate",
+      "moduleVariant": "peltate/"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "replace": true,
+  "type": "tetra:basic_major_module",
+  "slots": [ "emblem/base" ],
+  "improvements": [],
+  "variants": [
+    {
+      "materials": [ "tetra:wood/", "tetra:metal/", "tetra:bone/", "tetra:rod/"],
+      "key": "round/",
+      "integrity": 2,
+      "extract": {
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+          "textureX": 1,
+          "textureY": 1
+        },
+        "availableTextures": [ "metal", "shiny","wood","bone", "bright" ],
+        "models": [
+          {
+            "location": "tetra:item/module/emblem/base/round/"
+          }
+        ]
+      }
+    }
+  ]
+}

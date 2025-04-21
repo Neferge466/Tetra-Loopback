@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MCM",
+    "CSC",
+    "MCM"
+  ],
+  "key": {
+    "M": {
+      "item": "tetra:metal_scrap"
+    },
+    "C": {
+      "item": "tetra:pristine_amethyst"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "tetra_loopback:mislead_star",
+    "count": 1
+  }
+}

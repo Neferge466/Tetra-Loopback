@@ -1,0 +1,27 @@
+{
+  "key": "mislead_star",
+  "category": "logo/stars",
+  "primary": 0,
+  "secondary": 0,
+  "tertiary": 0,
+  "durability": 0,
+  "integrityCost": 1,
+  "integrityGain": 1,
+  "magicCapacity": 0,
+  "toolLevel": 3,
+  "toolEfficiency": 2,
+  "effects":{
+    "tetra_loopback:attack_knockback":2
+  },
+  "tints": {
+    "glyph": "AA00AA"
+  },
+  "textures": [
+    "mislead"
+  ],
+  "material": {
+    "items": [
+      "tetra_loopback:mislead_star"
+    ]
+  }
+}

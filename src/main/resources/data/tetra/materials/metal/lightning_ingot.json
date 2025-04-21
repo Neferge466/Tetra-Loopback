@@ -1,0 +1,26 @@
+{
+  "key": "lightning_ingot",
+  "category": "metal",
+  "primary": 8,
+  "secondary": 3.5,
+  "tertiary": 4,
+  "durability": 3000,
+  "integrityCost": 3,
+  "integrityGain": 13,
+  "magicCapacity": 130,
+  "toolLevel": 7,
+  "toolEfficiency": 7,
+  "effects": {
+    "thunder_effect": 1
+  },
+  "tints": {
+    "glyph": "55FFFF",
+    "texture":"55FFFF"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:lightning_ingot" ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "key": "bloody_star",
+  "category": "logo/stars",
+  "primary": 0,
+  "secondary": 0,
+  "tertiary": 0,
+  "durability": 0,
+  "integrityCost": 1,
+  "integrityGain": 1,
+  "magicCapacity": 0,
+  "toolLevel": 3,
+  "toolEfficiency": 2,
+  "effects":{
+    "tetra_loopback:max_health":4
+  },
+  "tints": {
+    "glyph": "AA0000"
+  },
+  "textures": [
+    "bloody"
+  ],
+  "material": {
+    "items": [
+      "tetra_loopback:bloody_star"
+    ]
+  }
+}

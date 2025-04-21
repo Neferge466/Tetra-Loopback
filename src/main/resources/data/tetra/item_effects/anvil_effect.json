@@ -1,0 +1,15 @@
+{
+  "trigger": "tetra:apply_hit_effects",
+  "effect": "anvil_effect",
+  "outcome": {
+    "type": "tetra:sound",
+    "sound": "minecraft:block.anvil.land",
+    "volume": 1.0,
+    "position": {
+      "type": "tetra:entity_position",
+      "entity": "target",
+      "origin": "center"
+
+    }
+  }
+}

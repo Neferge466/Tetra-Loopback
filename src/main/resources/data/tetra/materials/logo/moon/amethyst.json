@@ -1,0 +1,22 @@
+{
+  "key": "amethyst",
+  "category": "logo/moon",
+  "primary": 0,
+  "secondary": 0,
+  "tertiary": 0,
+  "durability": 0,
+  "integrityCost": 1,
+  "integrityGain": 1,
+  "magicCapacity": 0,
+  "toolLevel": 3,
+  "toolEfficiency": 2,
+  "tints": {
+    "glyph": "AA00AA"
+  },
+  "textures": [
+    "amethyst"
+  ],
+  "material": {
+    "items": [ "minecraft:amethyst_shard" ]
+  }
+}

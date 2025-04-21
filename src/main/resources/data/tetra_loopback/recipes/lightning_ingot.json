@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item":"tetra_loopback:lightning_ingot_grit"
+    },
+
+    {
+      "item":"tetra_loopback:fuse_steel_ingot"
+    }
+
+  ],
+  "result": {
+    "item": "tetra_loopback:lightning_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "replace": true,
+  "slots": [ "emblem/carving" ],
+  "improvements":
+  [
+    "tetra:emblem/carving/"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "minor",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 112,
+    "textureY": 0
+  },
+  "outcomes": [
+    {
+      "materials":
+        ["tetra:ink/burn/"],
+      "countFactor": 2,
+      "moduleKey": "emblem/carving/burn",
+      "moduleVariant": "burn/"
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "curios.identifier.emblem": "Emblem Slot",
+  "item.tetra_loopback.crystal": "Loopback Crystal",
+  "itemGroup.tetra_loopback.loopback": "Loopback",
+  "item.tetra_loopback.ink_rune": "Rune Ink",
+  "item.tetra_loopback.ink_burn": "Burn Ink",
+  "item.tetra_loopback.ink_frozen": "Frozen Ink",
+  "item.tetra_loopback.ink_twinkle": "Twinkle Ink",
+  "item.tetra_loopback.bloody_star": "§4Red Blood Disaster Star",
+  "item.tetra_loopback.mislead_star": "§5Mislead Star",
+  "item.tetra_loopback.lightning_ingot": "§bLightning Ingot",
+  "item.tetra_loopback.lightning_ingot_grit": "§bLightning Ingot Grit",
+  "item.tetra_loopback.fuse_steel_ingot": "Fused Steel Ingot",
+  "item.tetra_loopback.round_ruby": "Round Ruby",
+  "item.tetra_loopback.curios_emblem": "Wood Emblem Base",
+  "creativetab.tetra_loopback": "Loopback",
+
+
+
+
+  "tetra.slot.emblem/base": "Base",
+  "tetra.slot.emblem/pattern": "Pattern",
+  "tetra.slot.emblem/carving": "Carving",
+
+
+
+
+
+
+
+
+
+  "tetra/schematic/base/octagon.name": "Octagon base",
+  "tetra/schematic/base/octagon.description": "Replace the current emblem base with an octagon base",
+  "tetra/schematic/base/octagon.slot1": "Emblem material",
+
+  "tetra.module.emblem/base/octagon.item_name": "Octagon Emblem",
+  "tetra.module.emblem/base/octagon.name": "Octagon Emblem",
+  "tetra.module.emblem/base/octagon.description": "A octagon emblem.",
+  "tetra.module.emblem/base/octagon.material_name": "%s octagon emblem",
+  "tetra.module.emblem/base/octagon.prefix": "%s",
+
+
+
+  "tetra/schematic/base/peltate.name": "Peltate base",
+  "tetra/schematic/base/peltate.description": "Replace the current emblem base with a peltate base",
+  "tetra/schematic/base/peltate.slot1": "Emblem material",
+
+  "tetra.module.emblem/base/peltate.item_name": "Peltate Emblem",
+  "tetra.module.emblem/base/peltate.name": "Peltate Emblem",
+  "tetra.module.emblem/base/peltate.description": "A peltate emblem.",
+  "tetra.module.emblem/base/peltate.material_name": "%s peltate emblem",
+  "tetra.module.emblem/base/peltate.prefix": "%s",
+
+
+
+  "tetra/schematic/base/rhombus.name": "Rhombus base",
+  "tetra/schematic/base/rhombus.description": "Replace the current emblem base with a rhombus base",
+  "tetra/schematic/base/rhombus.slot1": "Emblem material",
+
+  "tetra.module.emblem/base/rhombus.item_name": "Rhombus Emblem",
+  "tetra.module.emblem/base/rhombus.name": "Rhombus Emblem",
+  "tetra.module.emblem/base/rhombus.description": "A rhombus emblem.",
+  "tetra.module.emblem/base/rhombus.material_name": "%s rhombus emblem",
+  "tetra.module.emblem/base/rhombus.prefix": "%s",
+
+
+
+
+  "tetra/schematic/base/round.name": "Round base",
+  "tetra/schematic/base/round.description": "Replace the current emblem base with a round base",
+  "tetra/schematic/base/round.slot1": "Emblem material",
+
+  "tetra.module.emblem/base/round.item_name": "Round Emblem",
+  "tetra.module.emblem/base/round.name": "Round Emblem",
+  "tetra.module.emblem/base/round.description": "A round emblem.",
+  "tetra.module.emblem/base/round.material_name": "%s round emblem",
+  "tetra.module.emblem/base/round.prefix": "%s",
+
+
+
+
+
+
+
+
+
+
+  "tetra/schematic/pattern/moon.name": "Moon pattern",
+  "tetra/schematic/pattern/moon.description": "Replace the current emblem pattern with a moon pettern",
+  "tetra/schematic/pattern/moon.slot1": "Pattern material",
+
+  "tetra.module.emblem/pattern/moon.item_name": "Moon Pattern",
+  "tetra.module.emblem/pattern/moon.name": "Moon Pattern",
+  "tetra.module.emblem/pattern/moon.description": "A moon pattern.",
+  "tetra.module.emblem/pattern/moon.material_name": "%s moon pattern",
+  "tetra.module.emblem/pattern/moon.prefix": "%s",
+
+
+
+  "tetra/schematic/pattern/stars.name": "Stars pattern",
+  "tetra/schematic/pattern/stars.description": "Replace the current emblem pattern with a stars pettern",
+  "tetra/schematic/pattern/stars.slot1": "Pattern material",
+
+  "tetra.module.emblem/pattern/stars.item_name": "Stars Pattern",
+  "tetra.module.emblem/pattern/stars.name": "Stars Pattern",
+  "tetra.module.emblem/pattern/stars.description": "A stars pattern.",
+  "tetra.module.emblem/pattern/stars.material_name": "%s stars pattern",
+  "tetra.module.emblem/pattern/stars.prefix": "%s",
+
+  "tetra.stats.tetra_loopback:guardian": "Guardian",
+  "tetra.stats.tetra_loopback:thundering": "Thundering",
+  "tetra.stats.tetra_loopback:guardian.tooltip_short": "Increases the player's armor by granting 4 armor points per level",
+  "tetra.stats.tetra_loopback:thundering.tooltip_short": "Applies lightning to each of the player's attacks, cooling down for 10s",
+
+  "tetra.material.fuse_steel_ingot": "Fused Steel Ingot",
+  "tetra.material.lightning_ingot": "Lightning Ingot",
+  "tetra.material.lightning": "Lightning",
+  "tetra.material.bloody_star": "Blood Disaster Star",
+  "tetra.material.mislead_star": "Mislead Star",
+
+
+
+  "tetra/schematic/pattern/trace.name": "Trace pattern",
+  "tetra/schematic/pattern/trace.description": "Replace the current emblem pattern with a trace pettern",
+  "tetra/schematic/pattern/trace.slot1": "Pattern material",
+
+  "tetra.module.emblem/pattern/trace.item_name": "Trace Pattern",
+  "tetra.module.emblem/pattern/trace.name": "Trace Pattern",
+  "tetra.module.emblem/pattern/trace.description": "A trace pattern.",
+  "tetra.module.emblem/pattern/trace.material_name": "%s trace pattern",
+  "tetra.module.emblem/pattern/trace.prefix": "%s",
+
+
+
+  "tetra/schematic/pattern/strange.name": "Strange pattern",
+  "tetra/schematic/pattern/strange.description": "Replace the current emblem pattern with a strange pettern",
+  "tetra/schematic/pattern/strange.slot1": "Pattern material",
+
+
+
+  "tetra/schematic/carving/burn.name": "§4Burn §7Carving",
+  "tetra/schematic/carving/burn.description": "Replace the current emblem carving with a burn carving",
+  "tetra/schematic/carving/burn.slot1": "Carving material",
+
+  "tetra/schematic/carving/frozen.name": "§1Frozen §7Carving",
+  "tetra/schematic/carving/frozen.description": "Replace the current emblem carving with a frozen carving",
+  "tetra/schematic/carving/frozen.slot1": "Carving material",
+
+  "tetra/schematic/carving/rune.name": "§8Rune §7Carving",
+  "tetra/schematic/carving/rune.description": "Replace the current emblem carving with a rune carving",
+  "tetra/schematic/carving/rune.slot1": "Carving material",
+
+  "tetra/schematic/carving/twinkle.name": "§dTwinkle §7Carving",
+  "tetra/schematic/carving/twinkle.description": "Replace the current emblem carving with a twinkle carving",
+  "tetra/schematic/carving/twinkle.slot1": "Carving material",
+
+  "tetra.variant.burn/ink_burn": "§4Burn §7Carving",
+  "tetra.variant.frozen/ink_frozen": "§1Frozen §7Carving",
+  "tetra.variant.rune/ink_rune": "§8Rune §7Carving",
+  "tetra.variant.twinkle/ink_twinkle": "§dTwinkle §7Carving",
+
+
+
+
+
+
+
+
+
+
+  "tetra.module.emblem/pattern/strange.item_name": "Strange Pattern",
+  "tetra.module.emblem/pattern/strange.name": "Strange Pattern",
+  "tetra.module.emblem/pattern/strange.description": "A strange pattern.",
+  "tetra.module.emblem/pattern/strange.material_name": "%s strange pattern",
+  "tetra.module.emblem/pattern/strange.prefix": "%s",
+
+
+
+
+
+
+
+
+
+
+
+  "effect.tetra_loopback.thunder": "§bThunderous",
+  "effect.tetra_loopback.thunder.tooltip": "§bThunderous",
+
+  "tetra.material.bloody_star.prefix": "§4Blood Disater Star",
+  "tetra.material.lightning.prefix": "§bLightning",
+  "tetra.material.mislead_star.prefix": "§5Mislead Star",
+  "tetra.material.lightning_ingot.prefix": "§bLightning Ingot",
+  "tetra.material.fuse_steel_ingot.prefix": "§7Fuse Steel Ingot",
+
+
+
+  "tetra_loopback.effect.thundering.name": "§bThundering",
+  "tetra_loopback.effect.thundering.tooltip": "§bBring down the thunder",
+  "tetra_loopback.effect.guardian.name": "§7Guardian",
+  "tetra_loopback.effect.guardian.tooltip": "§7Great Guardian",
+
+  "tetra.variant.strange/lightning": "§bLightning",
+  "tetra.variant.stars/fuse_steel_ingot": "§7Fuse Steel Ingot",
+  "tetra.variant.stars/lightning_ingot": "§bLightning Ingot",
+  "tetra.variant.stars/bloody_star": "Bloody Star",
+  "tetra.variant.stars/mislead_star": "Mislead Star",
+  "tetra.variant_category.logo/strange.label": "Singular Element",
+  "tetra.variant_category.logo/stars.label": "Stars",
+  "tetra.variant_category.logo/moon.label": "Moon",
+  "tetra.variant.peltate/lightning_ingot": "§bLightning Ingot",
+  "tetra.variant.peltate/fuse_steel_ingot": "§7Fuse Steel Ingot",
+  "tetra.variant.sword_socket/socket_round_ruby": "§4Round Ruby",
+  "tetra.variant.single_socket/socket_round_ruby": "§4Round Ruby",
+  "tetra.variant.double_socket/socket_round_ruby": "§4Round Ruby",
+
+
+
+
+  "tetra_loopback.effect.armor.name": "Armor",
+  "tetra_loopback.effect.armor.tooltip": "Armor increased by %.0f",
+  "tetra_loopback.effect.armor_toughness.name": "Armor Toughness",
+  "tetra_loopback.effect.armor_toughness.tooltip": "Armor Toughness increased by %.0f",
+  "tetra_loopback.effect.attack_damage.name": "Attack Damage",
+  "tetra_loopback.effect.attack_damage.tooltip": "Attack Damage increased by %.0f",
+  "tetra_loopback.effect.attack_knockback.name": "Attack Knockback",
+  "tetra_loopback.effect.attack_knockback.tooltip": "Attack Knockback increased by %.0f",
+  "tetra_loopback.effect.attack_speed.name": "Attack Speed",
+  "tetra_loopback.effect.attack_speed.tooltip": "Attack Speed increased by %.0f%%",
+  "tetra_loopback.effect.flying_speed.name": "Flying Speed",
+  "tetra_loopback.effect.flying_speed.tooltip": "Flying Speed increased by %.0f%%",
+  "tetra_loopback.effect.follow_range.name": "Follow Range",
+  "tetra_loopback.effect.follow_range.tooltip": "Follow Range increased by %.0f",
+  "tetra_loopback.effect.knockback_resistance.name": "Knockback Resistance",
+  "tetra_loopback.effect.knockback_resistance.tooltip": "Knockback Resistance increased by %.0f%%",
+  "tetra_loopback.effect.luck.name": "Luck",
+  "tetra_loopback.effect.luck.tooltip": "Luck increased by %.0f",
+  "tetra_loopback.effect.max_health.name": "Max Health",
+  "tetra_loopback.effect.max_health.tooltip": "Max Health increased by %.0f",
+  "tetra_loopback.effect.movement_speed.name": "Movement Speed",
+  "tetra_loopback.effect.movement_speed.tooltip": "Movement Speed increased by %.0f%%"
+
+
+
+
+
+
+}

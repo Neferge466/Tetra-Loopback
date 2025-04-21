@@ -1,0 +1,243 @@
+{
+  "curios.identifier.emblem": "徽章",
+  "item.tetra_loopback.crystal": "回环水晶",
+  "itemGroup.tetra_loopback.loopback": "回环",
+  "item.tetra_loopback.ink_rune": "符文墨水",
+  "item.tetra_loopback.ink_burn": "灼烧墨水",
+  "item.tetra_loopback.ink_frozen": "霜冻墨水",
+  "item.tetra_loopback.ink_twinkle": "闪耀墨水",
+
+  "item.tetra_loopback.bloody_star": "§4血灾星",
+  "item.tetra_loopback.mislead_star": "§5荧惑星",
+  "item.tetra_loopback.lightning_ingot": "§b雷霆钢",
+  "item.tetra_loopback.lightning_ingot_grit": "§b雷霆钢粒",
+  "item.tetra_loopback.fuse_steel_ingot": "融合钢锭",
+  "item.tetra_loopback.round_ruby": "圆红玉",
+  "item.tetra_loopback.curios_emblem": "木质徽章底托",
+
+
+
+  "tetra.slot.emblem/base": "底托",
+  "tetra.slot.emblem/pattern": "纹样",
+  "tetra.slot.emblem/carving": "刻印",
+
+
+  "tetra/schematic/base/octagon.name": "八边形底托",
+  "tetra/schematic/base/octagon.description": "将当前徽章底托替换为八边形底托",
+  "tetra/schematic/base/octagon.slot1": "徽章材料",
+
+  "tetra.module.emblem/base/octagon.item_name": "八边形徽章",
+  "tetra.module.emblem/base/octagon.name": "八边形徽章",
+  "tetra.module.emblem/base/octagon.description": "一个八边形的徽章。",
+  "tetra.module.emblem/base/octagon.material_name": "%s 八边形徽章",
+  "tetra.module.emblem/base/octagon.prefix": "%s",
+
+
+  "tetra/schematic/base/peltate.name": "盾形底托",
+  "tetra/schematic/base/peltate.description": "将当前徽章基础替换为盾形底托",
+  "tetra/schematic/base/peltate.slot1": "徽章材料",
+
+  "tetra.module.emblem/base/peltate.item_name": "盾形徽章",
+  "tetra.module.emblem/base/peltate.name": "盾形徽章",
+  "tetra.module.emblem/base/peltate.description": "一个盾形的徽章。",
+  "tetra.module.emblem/base/peltate.material_name": "%s 盾形徽章",
+  "tetra.module.emblem/base/peltate.prefix": "%s",
+
+
+  "tetra/schematic/base/rhombus.name": "菱形底托",
+  "tetra/schematic/base/rhombus.description": "将当前徽章基础替换为菱形底托",
+  "tetra/schematic/base/rhombus.slot1": "徽章材料",
+
+  "tetra.module.emblem/base/rhombus.item_name": "菱形徽章",
+  "tetra.module.emblem/base/rhombus.name": "菱形徽章",
+  "tetra.module.emblem/base/rhombus.description": "一个菱形的徽章。",
+  "tetra.module.emblem/base/rhombus.material_name": "%s 菱形徽章",
+  "tetra.module.emblem/base/rhombus.prefix": "%s",
+
+
+  "tetra/schematic/base/round.name": "圆形底托",
+  "tetra/schematic/base/round.description": "将当前徽章基础替换为圆形底托",
+  "tetra/schematic/base/round.slot1": "徽章材料",
+
+  "tetra.module.emblem/base/round.item_name": "圆形徽章",
+  "tetra.module.emblem/base/round.name": "圆形徽章",
+  "tetra.module.emblem/base/round.description": "一个圆形的徽章。",
+  "tetra.module.emblem/base/round.material_name": "%s 圆形徽章",
+  "tetra.module.emblem/base/round.prefix": "%s",
+
+
+  "tetra/schematic/pattern/moon.name": "月亮图案",
+  "tetra/schematic/pattern/moon.description": "将当前徽章图案替换为月亮图案",
+  "tetra/schematic/pattern/moon.slot1": "图案材料",
+
+  "tetra.module.emblem/pattern/moon.item_name": "月亮图案",
+  "tetra.module.emblem/pattern/moon.name": "月亮图案",
+  "tetra.module.emblem/pattern/moon.description": "一个月亮的图案。",
+  "tetra.module.emblem/pattern/moon.material_name": "%s 月亮图案",
+  "tetra.module.emblem/pattern/moon.prefix": "%s",
+
+
+
+
+  "tetra/schematic/pattern/stars.name": "星星图案",
+  "tetra/schematic/pattern/stars.description": "将当前徽章图案替换为星星图案",
+  "tetra/schematic/pattern/stars.slot1": "图案材料",
+
+  "tetra.module.emblem/pattern/stars.item_name": "星星图案",
+  "tetra.module.emblem/pattern/stars.name": "星星图案",
+  "tetra.module.emblem/pattern/stars.description": "一个星星图案。",
+  "tetra.module.emblem/pattern/stars.material_name": "%s 星星图案",
+  "tetra.module.emblem/pattern/stars.prefix": "%s",
+
+  "tetra.stats.tetra_loopback:guardian": "守护",
+  "tetra.stats.tetra_loopback:thundering": "雷鸣",
+  "tetra.stats.tetra_loopback:guardian.tooltip_short": "增加玩家的护甲值，每级提供 4 点护甲",
+  "tetra.stats.tetra_loopback:thundering.tooltip_short": "为玩家的每一次攻击施加雷电，冷却10s",
+
+  "tetra.material.fuse_steel_ingot": "融合钢锭",
+  "tetra.material.lightning_ingot": "雷霆钢",
+  "tetra.material.lightning": "雷霆钢",
+  "tetra.material.bloody_star": "血灾星",
+  "tetra.material.mislead_star": "荧惑星",
+
+
+
+
+
+
+
+  "tetra/schematic/pattern/trace.name": "痕迹图案",
+  "tetra/schematic/pattern/trace.description": "将当前徽章图案替换为痕迹图案",
+  "tetra/schematic/pattern/trace.slot1": "图案材料",
+
+  "tetra.module.emblem/pattern/trace.item_name": "痕迹图案",
+  "tetra.module.emblem/pattern/trace.name": "痕迹图案",
+  "tetra.module.emblem/pattern/trace.description": "一个痕迹图案。",
+  "tetra.module.emblem/pattern/trace.material_name": "%s 痕迹图案",
+  "tetra.module.emblem/pattern/trace.prefix": "%s",
+
+
+  "tetra/schematic/pattern/strange.name": "奇异纹样",
+  "tetra/schematic/pattern/strange.description": "将当前徽章图案替换为奇异纹样",
+  "tetra/schematic/pattern/strange.slot1": "图案材料",
+
+
+
+  "tetra/schematic/carving/burn.name": "§4烧§6灼§7刻印",
+  "tetra/schematic/carving/burn.description": "将当前的徽章刻印替换为烧灼刻印",
+  "tetra/schematic/carving/burn.slot1": "刻印材料",
+
+  "tetra/schematic/carving/frozen.name": "§1冰§b冻§7刻印",
+  "tetra/schematic/carving/frozen.description": "将当前的徽章刻印替换为冰冻刻印",
+  "tetra/schematic/carving/frozen.slot1": "刻印材料",
+
+  "tetra/schematic/carving/rune.name": "§8符§f文§7刻印",
+  "tetra/schematic/carving/rune.description": "将当前的徽章刻印替换为符文刻印",
+  "tetra/schematic/carving/rune.slot1": "刻印材料",
+
+  "tetra/schematic/carving/twinkle.name": "§d闪§d耀§7刻印",
+  "tetra/schematic/carving/twinkle.description": "将当前的徽章刻印替换为闪耀刻印",
+  "tetra/schematic/carving/twinkle.slot1": "刻印材料",
+
+  "tetra.variant.burn/ink_burn": "§4烧§6灼§7刻印",
+  "tetra.variant.frozen/ink_frozen": "§1冰§b冻§7刻印",
+  "tetra.variant.rune/ink_rune": "§8符§f文§7刻印",
+  "tetra.variant.twinkle/ink_twinkle": "§d闪§d耀§7刻印",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "tetra.module.emblem/pattern/strange.item_name": "奇异纹样",
+  "tetra.module.emblem/pattern/strange.name": "奇异纹样",
+  "tetra.module.emblem/pattern/strange.description": "一个奇异纹样",
+  "tetra.module.emblem/pattern/strange.material_name": "%s 奇异纹样",
+  "tetra.module.emblem/pattern/strange.prefix": "%s",
+
+
+
+
+
+
+
+
+
+
+  "effect.tetra_loopback.thunder": "§b雷鸣",
+  "effect.tetra_loopback.thunder.tooltip": "§b攻击时召唤落雷",
+
+
+  "tetra.material.fuse_steel_ingot.prefix": "§7融合钢",
+  "tetra.material.lightning_ingot.prefix": "§b雷霆钢",
+  "tetra.material.bloody_star.prefix": "§4血灾星",
+  "tetra.material.lightning.prefix": "§b闪电",
+  "tetra.material.mislead_star.prefix": "§5荧惑星",
+
+  "tetra_loopback.effect.thundering.name": "§b雷鸣",
+  "tetra_loopback.effect.thundering.tooltip": "§b降下雷霆",
+  "tetra_loopback.effect.guardian.name": "§7守护",
+  "tetra_loopback.effect.guardian.tooltip": "§7尊位守护",
+
+
+
+  "tetra.variant.strange/lightning": "§b闪电",
+  "tetra.variant.stars/fuse_steel_ingot": "§7融合钢",
+  "tetra.variant.stars/lightning_ingot": "§b雷霆钢",
+  "tetra.variant.stars/bloody_star": "§4血灾星",
+  "tetra.variant.stars/mislead_star": "§5荧惑星",
+  "tetra.variant_category.logo/strange.label": "奇异元素",
+  "tetra.variant_category.logo/stars.label": "星星纹样",
+  "tetra.variant_category.logo/moon.label": "月亮纹样",
+  "tetra.variant.peltate/lightning_ingot": "§b雷霆钢",
+  "tetra.variant.peltate/fuse_steel_ingot": "§7融合钢",
+  "tetra.variant.sword_socket/socket_round_ruby": "§4圆红玉",
+  "tetra.variant.single_socket/socket_round_ruby": "§4圆红玉",
+  "tetra.variant.double_socket/socket_round_ruby": "§4圆红玉",
+
+
+
+
+
+  "tetra_loopback.effect.armor.name": "护甲",
+  "tetra_loopback.effect.armor.tooltip": "护甲值增加 %.0f",
+  "tetra_loopback.effect.armor_toughness.name": "护甲韧性",
+  "tetra_loopback.effect.armor_toughness.tooltip": "护甲韧性增加 %.0f",
+  "tetra_loopback.effect.attack_damage.name": "攻击伤害",
+  "tetra_loopback.effect.attack_damage.tooltip": "攻击伤害增加 %.0f",
+  "tetra_loopback.effect.attack_knockback.name": "攻击击退",
+  "tetra_loopback.effect.attack_knockback.tooltip": "攻击击退增加 %.0f",
+  "tetra_loopback.effect.attack_speed.name": "攻击速度",
+  "tetra_loopback.effect.attack_speed.tooltip": "攻击速度增加 %.0f%%",
+  "tetra_loopback.effect.flying_speed.name": "飞行速度",
+  "tetra_loopback.effect.flying_speed.tooltip": "飞行速度增加 %.0f%%",
+  "tetra_loopback.effect.follow_range.name": "追踪范围",
+  "tetra_loopback.effect.follow_range.tooltip": "追踪范围增加 %.0f",
+  "tetra_loopback.effect.knockback_resistance.name": "击退抗性",
+  "tetra_loopback.effect.knockback_resistance.tooltip": "击退抗性增加 %.0f%%",
+  "tetra_loopback.effect.luck.name": "幸运值",
+  "tetra_loopback.effect.luck.tooltip": "幸运值增加 %.0f",
+  "tetra_loopback.effect.max_health.name": "最大生命值",
+  "tetra_loopback.effect.max_health.tooltip": "最大生命值增加 %.0f",
+  "tetra_loopback.effect.movement_speed.name": "移动速度",
+  "tetra_loopback.effect.movement_speed.tooltip": "移动速度增加 %.0f%%"
+
+
+
+
+
+}

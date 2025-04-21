@@ -1,0 +1,29 @@
+{
+  "key": "socket_round_ruby",
+  "hidden": true,
+  "category": "socket",
+  "primary": 0,
+  "secondary": 0,
+  "tertiary": 0,
+  "durability": 48,
+  "integrityCost": 1,
+  "integrityGain": 1,
+  "magicCapacity": 55,
+  "toolLevel": 0,
+  "toolEfficiency": 0,
+  "effects":
+  {
+   "tetra_loopback:attack_speed": 0.3,
+   "tetra_loopback:attack_damage": 2,
+   "tetra_loopback:luck": 1.5
+  },
+  "tints": {
+    "glyph": "AA0000",
+    "texture": "AA0000"
+  },
+  "textures": [ "default" ],
+  "experienceCost": 2,
+  "material": {
+    "items": [ "tetra_loopback:round_ruby" ]
+  }
+}
