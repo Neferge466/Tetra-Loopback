@@ -12,7 +12,8 @@
   "toolEfficiency": 2,
   "effects":
   {
-    "tetra_loopback:knockback_resistance": 1
+    "tetra_loopback:knockback_resistance": 1,
+    "tetra_loopback:max_health": 20
   },
   "tints": {
     "glyph": "00AAAA",

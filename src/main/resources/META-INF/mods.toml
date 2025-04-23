@@ -64,7 +64,7 @@ side = "BOTH"
 [[dependencies."tetra_loopback"]]
 modId="tetra"
 mandatory=true
-versionRange="[6.0,)"
+versionRange="[6.5.0,)"
 ordering="AFTER"
 side="BOTH"
 [[dependencies."tetra_loopback"]]

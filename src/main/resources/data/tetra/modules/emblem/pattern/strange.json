@@ -13,7 +13,7 @@
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",
           "textureX": 97,
-          "textureY": 2
+          "textureY": 0
         },
         "availableTextures": [ "shiny","metal","lightning" ],
         "models": [

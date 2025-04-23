@@ -25,9 +25,44 @@
 
 
 
+  "tetra.stats.tetra_loopback:attack_knockback.tooltip_short": "Increases Attack Knockback",
+  "tetra.stats.tetra_loopback:follow_range.tooltip_short": "Increases Follow Range",
+  "tetra.stats.tetra_loopback:max_health.tooltip_short": "Increases Max Health",
+  "tetra.stats.tetra_loopback:attack_speed.tooltip_short": "Increases Attack Speed",
+  "tetra.stats.tetra_loopback:attack_damage.tooltip_short": "Increases Attack Damage",
+  "tetra.stats.tetra_loopback:flying_speed.tooltip_short": "Increases Fly Speed",
+  "tetra.stats.tetra_loopback:armor.tooltip_short": "Increases Armor",
+  "tetra.stats.tetra_loopback:luck.tooltip_short": "Increases Luck",
+  "tetra.stats.tetra_loopback:armor_toughness.tooltip_short": "Increases Armor Toughness",
+  "tetra.stats.tetra_loopback:knockback_resistance.tooltip_short": "Increases Knockblack Resistance",
+  "tetra.stats.tetra_loopback:movement_speed.tooltip_short": "Increases Speed",
+  "tetra.stats.thunder_effect.tooltip_short": "When attacking an enemy, there is a chance to trigger a lightning strike every 10s, and each lightning strike will provide the player with 2 temporary attack damage until they leave the battle",
 
 
 
+
+
+  "tetra.stats.tetra_loopback:attack_knockback": "Attack Knockback",
+  "tetra.stats.tetra_loopback:follow_range": "Follow Range",
+  "tetra.stats.tetra_loopback:max_health": "Max Health",
+  "tetra.stats.tetra_loopback:attack_speed": "Attack Speed",
+  "tetra.stats.tetra_loopback:attack_damage": "Attack Damage",
+  "tetra.stats.tetra_loopback:flying_speed": "Fly Speed",
+  "tetra.stats.tetra_loopback:armor": "Armor",
+  "tetra.stats.tetra_loopback:luck": "Luck",
+  "tetra.stats.tetra_loopback:armor_toughness": "Armor Toughness",
+  "tetra.stats.tetra_loopback:knockback_resistance": "Knockblack Resistance",
+  "tetra.stats.tetra_loopback:movement_speed": "Speed",
+  "tetra.stats.thunder_effect": "Power of Lightning",
+
+
+
+
+
+  "tetra.material.ink_burn": "Burn Ink",
+  "tetra.material.ink_frozen": "Frozen Ink",
+  "tetra.material.ink_rune": "Rune Ink",
+  "tetra.material.ink_twinkle": "Twinkle Ink",
 
 
   "tetra/schematic/base/octagon.name": "Octagon base",

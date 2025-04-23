@@ -22,6 +22,60 @@
   "tetra.slot.emblem/carving": "刻印",
 
 
+
+
+
+
+
+
+
+
+  "tetra.stats.tetra_loopback:attack_knockback.tooltip_short": "增加攻击击退",
+  "tetra.stats.tetra_loopback:follow_range.tooltip_short": "增加追踪范围",
+  "tetra.stats.tetra_loopback:max_health.tooltip_short": "增加最大生命值",
+  "tetra.stats.tetra_loopback:attack_speed.tooltip_short": "增加攻击速度",
+  "tetra.stats.tetra_loopback:attack_damage.tooltip_short": "增加攻击伤害",
+  "tetra.stats.tetra_loopback:flying_speed.tooltip_short": "增加飞行速度",
+  "tetra.stats.tetra_loopback:armor.tooltip_short": "增加护甲值",
+  "tetra.stats.tetra_loopback:luck.tooltip_short": "增加幸运值",
+  "tetra.stats.tetra_loopback:armor_toughness.tooltip_short": "增加护甲韧性",
+  "tetra.stats.tetra_loopback:knockback_resistance.tooltip_short": "增加击退抗性",
+  "tetra.stats.tetra_loopback:movement_speed.tooltip_short": "增加移动速度",
+  "tetra.stats.thunder_effect.tooltip_short": "攻击敌人时，每10秒有几率触发一次闪电打击，并且每次闪电打击都会为玩家提供2点临时攻击力直到脱战",
+
+
+
+
+
+
+
+  "tetra.stats.tetra_loopback:attack_knockback": "攻击击退",
+  "tetra.stats.tetra_loopback:follow_range": "追踪范围",
+  "tetra.stats.tetra_loopback:max_health": "最大生命值",
+  "tetra.stats.tetra_loopback:attack_speed": "攻击速度",
+  "tetra.stats.tetra_loopback:attack_damage": "攻击伤害",
+  "tetra.stats.tetra_loopback:flying_speed": "飞行速度",
+  "tetra.stats.tetra_loopback:armor": "护甲",
+  "tetra.stats.tetra_loopback:luck": "幸运",
+  "tetra.stats.tetra_loopback:armor_toughness": "护甲韧性",
+  "tetra.stats.tetra_loopback:knockback_resistance": "击退抗性",
+  "tetra.stats.tetra_loopback:movement_speed": "移动速度",
+  "tetra.stats.thunder_effect": "雷电之力",
+  "tetra.material.ink_burn": "灼烧墨水",
+  "tetra.material.ink_frozen": "霜冻墨水",
+  "tetra.material.ink_rune": "符文墨水",
+  "tetra.material.ink_twinkle": "闪耀墨水",
+
+
+
+
+
+
+
+
+
+
+
   "tetra/schematic/base/octagon.name": "八边形底托",
   "tetra/schematic/base/octagon.description": "将当前徽章底托替换为八边形底托",
   "tetra/schematic/base/octagon.slot1": "徽章材料",
