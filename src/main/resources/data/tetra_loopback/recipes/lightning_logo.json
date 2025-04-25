@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    "LDL",
+    " L "
+  ],
+  "key": {
+    "L": {
+      "item": "tetra_loopback:lightning_ingot_grit"
+    },
+    "D": {
+      "item": "tetra:pristine_diamond"
+    }
+  },
+  "result": {
+    "item": "tetra_loopback:lightning_logo",
+    "count": 1
+  }
+}

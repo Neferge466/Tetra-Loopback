@@ -8,7 +8,6 @@ import net.minecraftforge.fml.DistExecutor;
 import se.mickelus.tetra.effect.ItemEffect;
 
 public class ModEffectStats {
-    // 所有效果定义（服务端和客户端都需要）
     public static final ItemEffect thunderingEffect = ItemEffect.get(Tetra_loopback.MODID + ":thundering");
     public static final ItemEffect guardianEffect = ItemEffect.get(Tetra_loopback.MODID + ":guardian");
     public static final ItemEffect armorEffect = ItemEffect.get(Tetra_loopback.MODID + ":armor");
@@ -23,7 +22,11 @@ public class ModEffectStats {
     public static final ItemEffect maxHealthEffect = ItemEffect.get(Tetra_loopback.MODID + ":max_health");
     public static final ItemEffect movementSpeedEffect = ItemEffect.get(Tetra_loopback.MODID + ":movement_speed");
 
-    // 客户端安全初始化入口
+    public static final ItemEffect flameAdmonitionEffect = ItemEffect.get(Tetra_loopback.MODID + ":flame_admonition");
+    public static final ItemEffect frostCrownEffect = ItemEffect.get(Tetra_loopback.MODID + ":frost_crown");
+    public static final ItemEffect etherealGlowEffect = ItemEffect.get(Tetra_loopback.MODID + ":ethereal_glow");
+    public static final ItemEffect runeCreedEffect = ItemEffect.get(Tetra_loopback.MODID + ":rune_creed");
+
     public static void safeInit() {
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> ClientGuiRegistry::registerAllBars);
     }

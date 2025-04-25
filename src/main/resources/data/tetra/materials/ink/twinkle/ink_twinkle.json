@@ -12,7 +12,8 @@
   "toolEfficiency": 2,
   "effects":
   {
-    "tetra_loopback:movement_speed": 1
+    "tetra_loopback:movement_speed": 1,
+    "tetra_loopback:ethereal_glow": 1
   },
   "tints": {
     "glyph": "AA00AA",

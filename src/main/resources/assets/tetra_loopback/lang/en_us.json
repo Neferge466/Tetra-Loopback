@@ -13,6 +13,10 @@
   "item.tetra_loopback.fuse_steel_ingot": "Fused Steel Ingot",
   "item.tetra_loopback.round_ruby": "Round Ruby",
   "item.tetra_loopback.curios_emblem": "Wood Emblem Base",
+  "item.tetra_loopback.lightning_logo": "Lightning Logo",
+
+
+
   "creativetab.tetra_loopback": "Loopback",
 
 
@@ -147,6 +151,12 @@
   "tetra.stats.tetra_loopback:thundering": "Thundering",
   "tetra.stats.tetra_loopback:guardian.tooltip_short": "Increases the player's armor by granting 4 armor points per level",
   "tetra.stats.tetra_loopback:thundering.tooltip_short": "Applies lightning to each of the player's attacks, cooling down for 10s",
+  "tetra.stats.tetra_loopback:ethereal_glow": "§5Hazy shining",
+  "tetra.stats.tetra_loopback:frost_crown": "§9Winter Crown",
+  "tetra.stats.tetra_loopback:flame_admonition": "§cFlame admonition",
+  "tetra.stats.tetra_loopback:rune_creed": "§fRune Crede",
+
+
 
   "tetra.material.fuse_steel_ingot": "Fused Steel Ingot",
   "tetra.material.lightning_ingot": "Lightning Ingot",
@@ -196,9 +206,7 @@
   "tetra.variant.twinkle/ink_twinkle": "§dTwinkle §7Carving",
 
 
-
-
-
+  "tetra.variant_category.ink/.label": "Ink",
 
 
 
@@ -211,15 +219,6 @@
   "tetra.module.emblem/pattern/strange.prefix": "%s",
 
 
-
-
-
-
-
-
-
-
-
   "effect.tetra_loopback.thunder": "§bThunderous",
   "effect.tetra_loopback.thunder.tooltip": "§bThunderous",
 
@@ -228,7 +227,7 @@
   "tetra.material.mislead_star.prefix": "§5Mislead Star",
   "tetra.material.lightning_ingot.prefix": "§bLightning Ingot",
   "tetra.material.fuse_steel_ingot.prefix": "§7Fuse Steel Ingot",
-
+  "tetra.material.lightning_logo.prefix": "§bLightning Ingot",
 
 
   "tetra_loopback.effect.thundering.name": "§bThundering",
@@ -262,20 +261,30 @@
   "tetra_loopback.effect.attack_knockback.name": "Attack Knockback",
   "tetra_loopback.effect.attack_knockback.tooltip": "Attack Knockback increased by %.0f",
   "tetra_loopback.effect.attack_speed.name": "Attack Speed",
-  "tetra_loopback.effect.attack_speed.tooltip": "Attack Speed increased by %.0f%%",
+  "tetra_loopback.effect.attack_speed.tooltip": "Attack Speed increased by %.0f",
   "tetra_loopback.effect.flying_speed.name": "Flying Speed",
-  "tetra_loopback.effect.flying_speed.tooltip": "Flying Speed increased by %.0f%%",
+  "tetra_loopback.effect.flying_speed.tooltip": "Flying Speed increased by %.0f",
   "tetra_loopback.effect.follow_range.name": "Follow Range",
   "tetra_loopback.effect.follow_range.tooltip": "Follow Range increased by %.0f",
   "tetra_loopback.effect.knockback_resistance.name": "Knockback Resistance",
-  "tetra_loopback.effect.knockback_resistance.tooltip": "Knockback Resistance increased by %.0f%%",
+  "tetra_loopback.effect.knockback_resistance.tooltip": "Knockback Resistance increased by %.0f",
   "tetra_loopback.effect.luck.name": "Luck",
   "tetra_loopback.effect.luck.tooltip": "Luck increased by %.0f",
   "tetra_loopback.effect.max_health.name": "Max Health",
   "tetra_loopback.effect.max_health.tooltip": "Max Health increased by %.0f",
   "tetra_loopback.effect.movement_speed.name": "Movement Speed",
-  "tetra_loopback.effect.movement_speed.tooltip": "Movement Speed increased by %.0f%%"
+  "tetra_loopback.effect.movement_speed.tooltip": "Movement Speed increased by %.0f",
 
+
+
+  "tetra_loopback.effect.frost_crown.name": "§9Winter Crown",
+  "tetra_loopback.effect.frost_crown.tooltip": "§9Immunity to frostbite\nGrants Retardation II to the attacker when attacked (5 seconds)",
+  "tetra_loopback.effect.flame_admonition.name": "§cFlame admonition",
+  "tetra_loopback.effect.flame_admonition.tooltip": "§cReduces fire damage by 70%.\nIgnites the target for 6 seconds while attacking\nGain Strength II when self is on fire",
+  "tetra_loopback.effect.ethereal_glow.name": "§5Hazy shining",
+  "tetra_loopback.effect.ethereal_glow.tooltip": "§5Causes nearby hostile mobs to glow\nGain a 20% movement speed bonus\nGain permanent night vision",
+  "tetra_loopback.effect.rune_creed.name": "§fRune Crede",
+  "tetra_loopback.effect.rune_creed.tooltip": "§fEnchantment entries for each piece of equipment provide 0.5 armor\nThe main hand weapon enchantment entry provides 1 attack damage"
 
 
 

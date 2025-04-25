@@ -9,6 +9,11 @@
       "materials": [ "tetra:logo/","tetra:metal/" ],
       "key": "stars/",
       "integrity": 2,
+      "effects":
+      {
+        "tetra_loopback:luck": 1,
+        "tetra_loopback:attack_speed": 0.5
+      },
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",

@@ -9,6 +9,10 @@
       "materials": [ "tetra:metal/","tetra:bone/","tetra:wood/" ],
       "key": "octagon/",
       "integrity": 2,
+      "effects":
+      {
+       "tetra_loopback:max_health": 4
+      },
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",

@@ -87,4 +87,14 @@ public class TLbRegistry {
 
 
 
+
+
+
+
+
+    //strange
+    public static final RegistryObject<Item> LIGHTNING_LOGO = ITEMS.register("lightning_logo",
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+
+
 }

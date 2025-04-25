@@ -30,7 +30,7 @@ public class TLbCreativeModeTab {
                         pOutput.accept(TLbRegistry.LIGHTNING_INGOT_GRIT.get());
                         pOutput.accept(TLbRegistry.FUSE_STEEL_INGOT.get());
                         pOutput.accept(TLbRegistry.ROUND_RUBY.get());
-
+                        pOutput.accept(TLbRegistry.LIGHTNING_LOGO.get());
 
 
 

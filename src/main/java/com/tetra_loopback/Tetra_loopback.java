@@ -49,7 +49,7 @@ public class Tetra_loopback {
 
     private void onClientSetup(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            // 安全初始化客户端GUI组件
+
             ModEffectStats.safeInit();
         });
     }

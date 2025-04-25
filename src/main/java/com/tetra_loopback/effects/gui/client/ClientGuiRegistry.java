@@ -19,7 +19,119 @@ public class ClientGuiRegistry {
         registerAttributeBars();
         registerAttackSpeedBar();
         registerMovementSpeedBar();
+        registerFlameAdmonitionBar();
+        registerFrostCrownBar();
+        registerEtherealGlowBar();
+        registerRuneCreedBar();
     }
+
+
+
+    private static void registerRuneCreedBar() {
+        IStatGetter runeGetter = new StatGetterEffectLevel(ModEffectStats.runeCreedEffect, 1);
+        GuiStatBar runeBar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.rune_creed.name",
+                0, 1,
+                false, false, false,
+                runeGetter,
+                new ILabelGetter() {
+                    @Override
+                    public String getLabel(double value, double diffValue, boolean flipped) {
+                        return value > 0 ? "✡" : "";
+                    }
+
+                    @Override
+                    public String getLabelMerged(double v, double v1) {
+                        return "";
+                    }
+                },
+                new TooltipGetterDecimal(Tetra_loopback.MODID + ".effect.rune_creed.tooltip", runeGetter)
+        );
+        WorkbenchStatsGui.addBar(runeBar);
+        HoloStatsGui.addBar(runeBar);
+    }
+
+
+
+
+    private static void registerEtherealGlowBar() {
+        IStatGetter glowGetter = new StatGetterEffectLevel(ModEffectStats.etherealGlowEffect, 1);
+        GuiStatBar glowBar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.ethereal_glow.name",
+                0, 1,
+                false, false, false,
+                glowGetter,
+                new ILabelGetter() {
+                    @Override
+                    public String getLabel(double value, double diffValue, boolean flipped) {
+                        return value > 0 ? "✨" : "";
+                    }
+
+                    @Override
+                    public String getLabelMerged(double value, double diffValue) {
+                        return "";
+                    }
+                },
+                new TooltipGetterDecimal(Tetra_loopback.MODID + ".effect.ethereal_glow.tooltip", glowGetter)
+        );
+        WorkbenchStatsGui.addBar(glowBar);
+        HoloStatsGui.addBar(glowBar);
+    }
+
+    private static void registerFrostCrownBar() {
+        IStatGetter frostGetter = new StatGetterEffectLevel(ModEffectStats.frostCrownEffect, 1);
+        GuiStatBar frostBar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.frost_crown.name",
+                0, 1,
+                false, false, false,
+                frostGetter,
+                new ILabelGetter() {
+                    @Override
+                    public String getLabel(double value, double diffValue, boolean flipped) {
+                        return value > 0 ? "❄" : "";
+                    }
+
+                    @Override
+                    public String getLabelMerged(double value, double diffValue) {
+                        return "";
+                    }
+                },
+                new TooltipGetterDecimal(Tetra_loopback.MODID + ".effect.frost_crown.tooltip", frostGetter)
+        );
+        WorkbenchStatsGui.addBar(frostBar);
+        HoloStatsGui.addBar(frostBar);
+    }
+
+
+    private static void registerFlameAdmonitionBar() {
+        IStatGetter flameGetter = new StatGetterEffectLevel(ModEffectStats.flameAdmonitionEffect, 1);
+        GuiStatBar flameBar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.flame_admonition.name",
+                0, 1,
+                false, false, false,
+                flameGetter,
+                new ILabelGetter() {
+                    @Override
+                    public String getLabel(double value, double diffValue, boolean flipped) {
+                        return value > 0 ? "✧" : "";
+                    }
+
+                    @Override
+                    public String getLabelMerged(double value, double diffValue) {
+                        return "";
+                    }
+                },
+                new TooltipGetterDecimal(Tetra_loopback.MODID + ".effect.flame_admonition.tooltip", flameGetter)
+        );
+        WorkbenchStatsGui.addBar(flameBar);
+        HoloStatsGui.addBar(flameBar);
+    }
+
+
 
     private static void registerThunderingBar() {
         IStatGetter thunderingGetter = new StatGetterEffectLevel(ModEffectStats.thunderingEffect, 1);

@@ -13,9 +13,8 @@
   "toolEfficiency": 0,
   "effects":
   {
-   "tetra_loopback:attack_speed": 0.3,
-   "tetra_loopback:attack_damage": 2,
-   "tetra_loopback:luck": 1.5
+   "intuit": 3,
+    "bleeding": 2
   },
   "tints": {
     "glyph": "AA0000",

@@ -12,18 +12,31 @@ import net.minecraftforge.fml.common.Mod;
 import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
 import top.theillusivec4.curios.api.CuriosApi;
+import net.minecraftforge.common.ForgeMod;
+import se.mickelus.tetra.TetraMod;
 
+
+import java.lang.reflect.Field;
 import java.util.*;
 
 @Mod.EventBusSubscriber(modid = "tetra_loopback")
 public class AttributeCurioEffect {
     private static final Map<UUID, Map<Attribute, AttributeModifier>> playerModifiers = new HashMap<>();
-    private static final Map<ItemEffect, Attribute> effectToAttribute = Map.of(
-            ModEffectStats.attackDamageEffect, Attributes.ATTACK_DAMAGE,
-            ModEffectStats.armorEffect, Attributes.ARMOR,
-            ModEffectStats.armorToughnessEffect, Attributes.ARMOR_TOUGHNESS,
-            ModEffectStats.movementSpeedEffect, Attributes.MOVEMENT_SPEED
+    private static final Map<ItemEffect, Attribute> effectToAttribute = Map.ofEntries(
+            Map.entry(ModEffectStats.attackDamageEffect, Attributes.ATTACK_DAMAGE),
+            Map.entry(ModEffectStats.attackKnockbackEffect, Attributes.ATTACK_KNOCKBACK),
+            Map.entry(ModEffectStats.armorEffect, Attributes.ARMOR),
+            Map.entry(ModEffectStats.armorToughnessEffect, Attributes.ARMOR_TOUGHNESS),
+            Map.entry(ModEffectStats.movementSpeedEffect, Attributes.MOVEMENT_SPEED),
+            Map.entry(ModEffectStats.maxHealthEffect, Attributes.MAX_HEALTH),
+            Map.entry(ModEffectStats.attackSpeedEffect, Attributes.ATTACK_SPEED),
+            Map.entry(ModEffectStats.flyingSpeedEffect, Attributes.FLYING_SPEED),
+            Map.entry(ModEffectStats.followRangeEffect, Attributes.FOLLOW_RANGE),
+            Map.entry(ModEffectStats.knockbackResistanceEffect, Attributes.KNOCKBACK_RESISTANCE),
+            Map.entry(ModEffectStats.luckEffect, Attributes.LUCK)
+
     );
+
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -92,4 +105,6 @@ public class AttributeCurioEffect {
                 AttributeModifier.Operation.MULTIPLY_TOTAL :
                 AttributeModifier.Operation.ADDITION;
     }
+
+
 }

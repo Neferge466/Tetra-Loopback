@@ -14,20 +14,13 @@
   "item.tetra_loopback.fuse_steel_ingot": "融合钢锭",
   "item.tetra_loopback.round_ruby": "圆红玉",
   "item.tetra_loopback.curios_emblem": "木质徽章底托",
+  "item.tetra_loopback.lightning_logo": "闪电图案",
 
 
 
   "tetra.slot.emblem/base": "底托",
   "tetra.slot.emblem/pattern": "纹样",
   "tetra.slot.emblem/carving": "刻印",
-
-
-
-
-
-
-
-
 
 
   "tetra.stats.tetra_loopback:attack_knockback.tooltip_short": "增加攻击击退",
@@ -148,9 +141,24 @@
   "tetra.stats.tetra_loopback:guardian.tooltip_short": "增加玩家的护甲值，每级提供 4 点护甲",
   "tetra.stats.tetra_loopback:thundering.tooltip_short": "为玩家的每一次攻击施加雷电，冷却10s",
 
+
+
+
+
+  "tetra.stats.tetra_loopback:ethereal_glow": "§5朦胧闪耀",
+  "tetra.stats.tetra_loopback:frost_crown": "§9凛冬王冠",
+  "tetra.stats.tetra_loopback:flame_admonition": "§c火焰谏言",
+  "tetra.stats.tetra_loopback:rune_creed": "§f符文信条",
+
+
+
+
+
+
+
   "tetra.material.fuse_steel_ingot": "融合钢锭",
   "tetra.material.lightning_ingot": "雷霆钢",
-  "tetra.material.lightning": "雷霆钢",
+  "tetra.material.lightning": "雷霆",
   "tetra.material.bloody_star": "血灾星",
   "tetra.material.mislead_star": "荧惑星",
 
@@ -200,21 +208,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "tetra.variant_category.ink/.label": "墨水",
 
 
   "tetra.module.emblem/pattern/strange.item_name": "奇异纹样",
@@ -222,12 +216,6 @@
   "tetra.module.emblem/pattern/strange.description": "一个奇异纹样",
   "tetra.module.emblem/pattern/strange.material_name": "%s 奇异纹样",
   "tetra.module.emblem/pattern/strange.prefix": "%s",
-
-
-
-
-
-
 
 
 
@@ -276,19 +264,39 @@
   "tetra_loopback.effect.attack_knockback.name": "攻击击退",
   "tetra_loopback.effect.attack_knockback.tooltip": "攻击击退增加 %.0f",
   "tetra_loopback.effect.attack_speed.name": "攻击速度",
-  "tetra_loopback.effect.attack_speed.tooltip": "攻击速度增加 %.0f%%",
+  "tetra_loopback.effect.attack_speed.tooltip": "攻击速度增加 %.0f",
   "tetra_loopback.effect.flying_speed.name": "飞行速度",
-  "tetra_loopback.effect.flying_speed.tooltip": "飞行速度增加 %.0f%%",
+  "tetra_loopback.effect.flying_speed.tooltip": "飞行速度增加 %.0f",
   "tetra_loopback.effect.follow_range.name": "追踪范围",
   "tetra_loopback.effect.follow_range.tooltip": "追踪范围增加 %.0f",
   "tetra_loopback.effect.knockback_resistance.name": "击退抗性",
-  "tetra_loopback.effect.knockback_resistance.tooltip": "击退抗性增加 %.0f%%",
+  "tetra_loopback.effect.knockback_resistance.tooltip": "击退抗性增加 %.0f",
   "tetra_loopback.effect.luck.name": "幸运值",
   "tetra_loopback.effect.luck.tooltip": "幸运值增加 %.0f",
   "tetra_loopback.effect.max_health.name": "最大生命值",
   "tetra_loopback.effect.max_health.tooltip": "最大生命值增加 %.0f",
   "tetra_loopback.effect.movement_speed.name": "移动速度",
-  "tetra_loopback.effect.movement_speed.tooltip": "移动速度增加 %.0f%%"
+  "tetra_loopback.effect.movement_speed.tooltip": "移动速度增加 %.0f",
+
+
+  "tetra_loopback.effect.frost_crown.name": "§9凛冬王冠",
+  "tetra_loopback.effect.frost_crown.tooltip": "§9冻伤免疫,受到攻击时，使攻击者获得缓慢 II 效果（5秒）",
+  "tetra_loopback.effect.flame_admonition.name": "§c火焰谏言",
+  "tetra_loopback.effect.flame_admonition.tooltip":"§c减少百分之七十的火焰伤害,攻击时点燃目标6秒，自身着火时获得力量 II 效果",
+  "tetra_loopback.effect.ethereal_glow.name": "§5朦胧闪耀",
+  "tetra_loopback.effect.ethereal_glow.tooltip": "§5使附近的敌对生物发光\n获得百分之二十移动速度加成\n获得永久夜视效果",
+  "tetra_loopback.effect.rune_creed.name": "§f符文信条",
+  "tetra_loopback.effect.rune_creed.tooltip": "§f每件装备的附魔词条提供+0.5护甲\n主手武器附魔词条提供+1攻击力"
+
+
+
+
+
+
+
+
+
+
 
 
 

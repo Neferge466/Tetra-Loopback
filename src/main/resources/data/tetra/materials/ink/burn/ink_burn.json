@@ -12,7 +12,8 @@
   "toolEfficiency": 2,
   "effects":
         {
-            "tetra_loopback:armor_toughness": 1
+            "tetra_loopback:armor_toughness": 1,
+            "tetra_loopback:flame_admonition": 1
         },
   "tints": {
     "glyph": "AA0000",

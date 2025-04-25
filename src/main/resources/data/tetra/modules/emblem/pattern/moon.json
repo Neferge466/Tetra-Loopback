@@ -9,6 +9,10 @@
       "materials": [ "tetra:logo/moon/","tetra:metal/" ],
       "key": "moon/",
       "integrity": 2,
+      "effects":
+      {
+        "tetra_loopback:movement_speed": 1.5
+      },
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",
