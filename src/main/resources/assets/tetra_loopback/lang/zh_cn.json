@@ -42,22 +42,22 @@
 
 
 
-  "tetra.stats.tetra_loopback:attack_knockback": "攻击击退",
-  "tetra.stats.tetra_loopback:follow_range": "追踪范围",
-  "tetra.stats.tetra_loopback:max_health": "最大生命值",
-  "tetra.stats.tetra_loopback:attack_speed": "攻击速度",
-  "tetra.stats.tetra_loopback:attack_damage": "攻击伤害",
-  "tetra.stats.tetra_loopback:flying_speed": "飞行速度",
-  "tetra.stats.tetra_loopback:armor": "护甲",
-  "tetra.stats.tetra_loopback:luck": "幸运",
-  "tetra.stats.tetra_loopback:armor_toughness": "护甲韧性",
-  "tetra.stats.tetra_loopback:knockback_resistance": "击退抗性",
-  "tetra.stats.tetra_loopback:movement_speed": "移动速度",
-  "tetra.stats.thunder_effect": "雷电之力",
-  "tetra.material.ink_burn": "灼烧墨水",
-  "tetra.material.ink_frozen": "霜冻墨水",
-  "tetra.material.ink_rune": "符文墨水",
-  "tetra.material.ink_twinkle": "闪耀墨水",
+  "tetra.stats.tetra_loopback:attack_knockback": "§6ß§f攻击击退",
+  "tetra.stats.tetra_loopback:follow_range": "§6ß§f追踪范围",
+  "tetra.stats.tetra_loopback:max_health": "§6ß§f最大生命值",
+  "tetra.stats.tetra_loopback:attack_speed": "§6ß§f攻击速度",
+  "tetra.stats.tetra_loopback:attack_damage": "§6ß§f攻击伤害",
+  "tetra.stats.tetra_loopback:flying_speed": "§6ß§f飞行速度",
+  "tetra.stats.tetra_loopback:armor": "§6ß§f护甲",
+  "tetra.stats.tetra_loopback:luck": "§6ß§f幸运",
+  "tetra.stats.tetra_loopback:armor_toughness": "§6ß§f护甲韧性",
+  "tetra.stats.tetra_loopback:knockback_resistance": "§6ß§f击退抗性",
+  "tetra.stats.tetra_loopback:movement_speed": "§6ß§f移动速度",
+  "tetra.stats.thunder_effect": "§6ß§b雷电之力",
+  "tetra.material.ink_burn": "§c灼烧墨水",
+  "tetra.material.ink_frozen": "§3霜冻墨水",
+  "tetra.material.ink_rune": "§f符文墨水",
+  "tetra.material.ink_twinkle": "§d闪耀墨水",
 
 
 
@@ -136,8 +136,8 @@
   "tetra.module.emblem/pattern/stars.material_name": "%s 星星图案",
   "tetra.module.emblem/pattern/stars.prefix": "%s",
 
-  "tetra.stats.tetra_loopback:guardian": "守护",
-  "tetra.stats.tetra_loopback:thundering": "雷鸣",
+  "tetra.stats.tetra_loopback:guardian": "§6ß§7守护",
+  "tetra.stats.tetra_loopback:thundering": "§6ß§b雷鸣",
   "tetra.stats.tetra_loopback:guardian.tooltip_short": "增加玩家的护甲值，每级提供 4 点护甲",
   "tetra.stats.tetra_loopback:thundering.tooltip_short": "为玩家的每一次攻击施加雷电，冷却10s",
 
@@ -145,10 +145,10 @@
 
 
 
-  "tetra.stats.tetra_loopback:ethereal_glow": "§5朦胧闪耀",
-  "tetra.stats.tetra_loopback:frost_crown": "§9凛冬王冠",
-  "tetra.stats.tetra_loopback:flame_admonition": "§c火焰谏言",
-  "tetra.stats.tetra_loopback:rune_creed": "§f符文信条",
+  "tetra.stats.tetra_loopback:ethereal_glow": "§6ß§5朦胧闪耀",
+  "tetra.stats.tetra_loopback:frost_crown": "§6ß§9凛冬王冠",
+  "tetra.stats.tetra_loopback:flame_admonition": "§6ß§c火焰谏言",
+  "tetra.stats.tetra_loopback:rune_creed": "§6ß§f符文信条",
 
 
 
@@ -232,7 +232,7 @@
 
   "tetra_loopback.effect.thundering.name": "§b雷鸣",
   "tetra_loopback.effect.thundering.tooltip": "§b降下雷霆",
-  "tetra_loopback.effect.guardian.name": "§7守护",
+  "tetra_loopback.effect.guardian.name": "§6ß§7守护",
   "tetra_loopback.effect.guardian.tooltip": "§7尊位守护",
 
 
@@ -255,42 +255,55 @@
 
 
 
-  "tetra_loopback.effect.armor.name": "护甲",
+  "tetra_loopback.effect.armor.name": "§6ß§f护甲",
   "tetra_loopback.effect.armor.tooltip": "护甲值增加 %.0f",
-  "tetra_loopback.effect.armor_toughness.name": "护甲韧性",
+  "tetra_loopback.effect.armor_toughness.name": "§6ß§f护甲韧性",
   "tetra_loopback.effect.armor_toughness.tooltip": "护甲韧性增加 %.0f",
-  "tetra_loopback.effect.attack_damage.name": "攻击伤害",
+  "tetra_loopback.effect.attack_damage.name": "§6ß§f攻击伤害",
   "tetra_loopback.effect.attack_damage.tooltip": "攻击伤害增加 %.0f",
-  "tetra_loopback.effect.attack_knockback.name": "攻击击退",
+  "tetra_loopback.effect.attack_knockback.name": "§6ß§f攻击击退",
   "tetra_loopback.effect.attack_knockback.tooltip": "攻击击退增加 %.0f",
-  "tetra_loopback.effect.attack_speed.name": "攻击速度",
-  "tetra_loopback.effect.attack_speed.tooltip": "攻击速度增加 %.0f",
-  "tetra_loopback.effect.flying_speed.name": "飞行速度",
-  "tetra_loopback.effect.flying_speed.tooltip": "飞行速度增加 %.0f",
-  "tetra_loopback.effect.follow_range.name": "追踪范围",
+  "tetra_loopback.effect.attack_speed.name": "§6ß§f攻击速度",
+  "tetra_loopback.effect.attack_speed.tooltip": "攻击速度增加 %.0f*0.1",
+  "tetra_loopback.effect.flying_speed.name": "§6ß§f飞行速度",
+  "tetra_loopback.effect.flying_speed.tooltip": "飞行速度增加 %.0f*0.1",
+  "tetra_loopback.effect.follow_range.name": "§6ß§f追踪范围",
   "tetra_loopback.effect.follow_range.tooltip": "追踪范围增加 %.0f",
-  "tetra_loopback.effect.knockback_resistance.name": "击退抗性",
+  "tetra_loopback.effect.knockback_resistance.name": "§6ß§f击退抗性",
   "tetra_loopback.effect.knockback_resistance.tooltip": "击退抗性增加 %.0f",
-  "tetra_loopback.effect.luck.name": "幸运值",
+  "tetra_loopback.effect.luck.name": "§6ß§f幸运值",
   "tetra_loopback.effect.luck.tooltip": "幸运值增加 %.0f",
-  "tetra_loopback.effect.max_health.name": "最大生命值",
+  "tetra_loopback.effect.max_health.name": "§6ß§f最大生命值",
   "tetra_loopback.effect.max_health.tooltip": "最大生命值增加 %.0f",
-  "tetra_loopback.effect.movement_speed.name": "移动速度",
-  "tetra_loopback.effect.movement_speed.tooltip": "移动速度增加 %.0f",
+  "tetra_loopback.effect.movement_speed.name": "§6ß§f移动速度",
+  "tetra_loopback.effect.movement_speed.tooltip": "移动速度增加 %.0f*0.1",
 
 
-  "tetra_loopback.effect.frost_crown.name": "§9凛冬王冠",
+  "tetra_loopback.effect.frost_crown.name": "§6ß§9凛冬王冠",
   "tetra_loopback.effect.frost_crown.tooltip": "§9冻伤免疫,受到攻击时，使攻击者获得缓慢 II 效果（5秒）",
-  "tetra_loopback.effect.flame_admonition.name": "§c火焰谏言",
+  "tetra.stats.tetra_loopback:frost_crown.tooltip_short": "§9冻伤免疫,受到攻击时，使攻击者获得缓慢 II 效果（5秒）",
+  "tetra_loopback.effect.flame_admonition.name": "§6ß§c火焰谏言",
   "tetra_loopback.effect.flame_admonition.tooltip":"§c减少百分之七十的火焰伤害,攻击时点燃目标6秒，自身着火时获得力量 II 效果",
-  "tetra_loopback.effect.ethereal_glow.name": "§5朦胧闪耀",
+  "tetra.stats.tetra_loopback:flame_admonition.tooltip_short":"§c减少百分之七十的火焰伤害,攻击时点燃目标6秒，自身着火时获得力量 II 效果",
+  "tetra_loopback.effect.ethereal_glow.name": "§6ß§5朦胧闪耀",
   "tetra_loopback.effect.ethereal_glow.tooltip": "§5使附近的敌对生物发光\n获得百分之二十移动速度加成\n获得永久夜视效果",
-  "tetra_loopback.effect.rune_creed.name": "§f符文信条",
-  "tetra_loopback.effect.rune_creed.tooltip": "§f每件装备的附魔词条提供+0.5护甲\n主手武器附魔词条提供+1攻击力"
+  "tetra.stats.tetra_loopback:ethereal_glow.tooltip_short": "§5使附近的敌对生物发光\n获得百分之二十移动速度加成\n获得永久夜视效果",
+  "tetra_loopback.effect.rune_creed.name": "§6ß§f符文信条",
+  "tetra_loopback.effect.rune_creed.tooltip": "§f每件装备的附魔词条提供+0.5护甲\n主手武器附魔词条提供+1攻击力",
+  "tetra.stats.tetra_loopback:rune_creed.tooltip_short": "§f每件装备的附魔词条提供+0.5护甲\n主手武器附魔词条提供+1攻击力",
 
 
 
+  "tetra_loopback.effect.crimson_scourge.name": "§6ß§4血红灾祸",
+  "tetra_loopback.effect.crimson_scourge.tooltip": "§4当生物攻击时，会施加流血效果并附加一个灾厄印记，每秒流失百分之1生命值，每个印记还会使该生物的流血量提升百分之0.1。当印记达到7层或更多时触发灾祸效果，直接扣除该生物百分之40的最大生命值",
+  "tetra.stats.tetra_loopback:crimson_scourge.tooltip_short": "§4当生物攻击时，会施加流血效果并附加一个灾厄印记，每秒流失百分之1生命值，每个印记还会使该生物的流血量提升百分之0.1。当印记达到7层或更多时触发灾祸效果，直接扣除该生物百分之40的最大生命值",
+  "tetra.stats.tetra_loopback:crimson_scourge": "§6ß§4血红灾祸",
 
+
+  "tetra_loopback.effect.strife.name": "§6ß§d纷争",
+  "tetra_loopback.effect.strife.tooltip": "§d攻击敌对怪物时对其施加虚弱II效果；攻击中立或友方单位时对自己施加虚弱II效果。受到伤害时获得力量3和抗性提升2，冷却时间为20秒",
+  "tetra.stats.tetra_loopback:strife.tooltip_short": "§d攻击敌对怪物时对其施加虚弱II效果；攻击中立或友方单位时对自己施加虚弱II效果。受到伤害时获得力量3和抗性提升2，冷却时间为20秒",
+  "tetra.stats.tetra_loopback:strife": "§6ß§d纷争"
 
 
 

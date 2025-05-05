@@ -11,7 +11,8 @@
   "toolLevel": 5,
   "toolEfficiency": 2,
   "effects": {
-    "tetra_loopback:guardian":1
+    "tetra_loopback:guardian":1,
+    "truesweep": [2,1]
   },
   "tints": {
     "glyph": "AAAAAA",

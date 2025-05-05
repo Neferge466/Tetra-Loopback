@@ -8,6 +8,6 @@
     "source": "attacker",
     "duration": 3000,
     "amplifier": 1,
-    "stackDurationCap": 3000
+    "stackDurationCap": 1500
   }
 }

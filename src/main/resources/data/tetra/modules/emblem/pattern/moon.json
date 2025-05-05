@@ -11,7 +11,7 @@
       "integrity": 2,
       "effects":
       {
-        "tetra_loopback:movement_speed": 1.5
+        "tetra_loopback:movement_speed": 1
       },
       "extract": {
         "glyph": {
@@ -23,7 +23,10 @@
         "models": [
           {
             "location": "tetra:item/module/emblem/pattern/moon/",
-            "emission": 10
+            "emission": 10,
+            "transform": {
+              "translation": [0,0,0.005]
+            }
             }
 
         ]

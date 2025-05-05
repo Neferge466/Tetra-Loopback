@@ -26,7 +26,8 @@ public class ModEffectStats {
     public static final ItemEffect frostCrownEffect = ItemEffect.get(Tetra_loopback.MODID + ":frost_crown");
     public static final ItemEffect etherealGlowEffect = ItemEffect.get(Tetra_loopback.MODID + ":ethereal_glow");
     public static final ItemEffect runeCreedEffect = ItemEffect.get(Tetra_loopback.MODID + ":rune_creed");
-
+    public static final ItemEffect crimsonScourgeEffect = ItemEffect.get(Tetra_loopback.MODID + ":crimson_scourge");
+    public static final ItemEffect strifeEffect = ItemEffect.get(Tetra_loopback.MODID + ":strife");
     public static void safeInit() {
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> ClientGuiRegistry::registerAllBars);
     }

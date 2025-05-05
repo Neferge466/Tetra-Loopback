@@ -12,16 +12,29 @@ import net.minecraftforge.fml.common.Mod;
 import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
 import top.theillusivec4.curios.api.CuriosApi;
-import net.minecraftforge.common.ForgeMod;
-import se.mickelus.tetra.TetraMod;
 
-
-import java.lang.reflect.Field;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Mod.EventBusSubscriber(modid = "tetra_loopback")
 public class AttributeCurioEffect {
-    private static final Map<UUID, Map<Attribute, AttributeModifier>> playerModifiers = new HashMap<>();
+    private static final Map<UUID, Map<Attribute, AttributeModifier>> playerModifiers = new ConcurrentHashMap<>();
+
+
+    private static final Map<Attribute, Double> ATTRIBUTE_MULTIPLIERS = new HashMap<>();
+    static {
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.ARMOR, 1.0);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.ATTACK_DAMAGE, 1.0);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.MOVEMENT_SPEED, 0.1);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.ARMOR_TOUGHNESS, 1.0);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.MAX_HEALTH, 1.0);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.ATTACK_SPEED, 0.1);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.FLYING_SPEED, 0.1);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.FOLLOW_RANGE, 1.0);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.KNOCKBACK_RESISTANCE, 1.0);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.LUCK, 1.0);
+    }
+
     private static final Map<ItemEffect, Attribute> effectToAttribute = Map.ofEntries(
             Map.entry(ModEffectStats.attackDamageEffect, Attributes.ATTACK_DAMAGE),
             Map.entry(ModEffectStats.attackKnockbackEffect, Attributes.ATTACK_KNOCKBACK),
@@ -34,16 +47,13 @@ public class AttributeCurioEffect {
             Map.entry(ModEffectStats.followRangeEffect, Attributes.FOLLOW_RANGE),
             Map.entry(ModEffectStats.knockbackResistanceEffect, Attributes.KNOCKBACK_RESISTANCE),
             Map.entry(ModEffectStats.luckEffect, Attributes.LUCK)
-
     );
-
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END || event.player.level().isClientSide) return;
 
         Player player = event.player;
-        UUID playerId = player.getUUID();
         clearOldModifiers(player);
 
         Map<Attribute, Integer> totalLevels = new HashMap<>();
@@ -65,9 +75,9 @@ public class AttributeCurioEffect {
     }
 
     private static void clearOldModifiers(Player player) {
-        Map<Attribute, AttributeModifier> modifiers = playerModifiers.getOrDefault(player.getUUID(), new HashMap<>());
+        Map<Attribute, AttributeModifier> modifiers = playerModifiers.getOrDefault(player.getUUID(), Collections.emptyMap());
         modifiers.forEach((attribute, modifier) -> {
-            if (player.getAttribute(attribute) != null) {
+            if (player.getAttribute(attribute) != null && player.getAttribute(attribute).hasModifier(modifier)) {
                 player.getAttribute(attribute).removeModifier(modifier);
             }
         });
@@ -75,16 +85,21 @@ public class AttributeCurioEffect {
     }
 
     private static void applyModifiers(Player player, Map<Attribute, Integer> totalLevels) {
+
         Map<Attribute, AttributeModifier> applied = new HashMap<>();
         totalLevels.forEach((attribute, level) -> {
             double value = getValueByAttribute(attribute, level);
+            UUID uuid = generateUUID(player.getUUID(), attribute);
+
             AttributeModifier modifier = new AttributeModifier(
-                    UUID.nameUUIDFromBytes(attribute.getDescriptionId().getBytes()),
+                    uuid,
                     "tetra_loopback_attribute",
                     value,
                     getOperation(attribute)
             );
+
             if (player.getAttribute(attribute) != null) {
+                player.getAttribute(attribute).removeModifier(uuid);
                 player.getAttribute(attribute).addTransientModifier(modifier);
                 applied.put(attribute, modifier);
             }
@@ -92,19 +107,21 @@ public class AttributeCurioEffect {
         playerModifiers.put(player.getUUID(), applied);
     }
 
+    private static UUID generateUUID(UUID playerId, Attribute attribute) {
+        return UUID.nameUUIDFromBytes(
+                (playerId.toString() + attribute.getDescriptionId()).getBytes()
+        );
+    }
+
     private static double getValueByAttribute(Attribute attribute, int level) {
-        if (attribute == Attributes.MOVEMENT_SPEED) {
-            return 0.01 * level;
-        } else {
-            return level;
-        }
+        return ATTRIBUTE_MULTIPLIERS.getOrDefault(attribute, 1.0) * level;
     }
 
     private static AttributeModifier.Operation getOperation(Attribute attribute) {
-        return (attribute == Attributes.MOVEMENT_SPEED) ?
+        return (
+                attribute == Attributes.FLYING_SPEED ?
+
                 AttributeModifier.Operation.MULTIPLY_TOTAL :
-                AttributeModifier.Operation.ADDITION;
+                AttributeModifier.Operation.ADDITION);
     }
-
-
 }

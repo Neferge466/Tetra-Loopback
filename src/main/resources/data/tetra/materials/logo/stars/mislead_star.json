@@ -11,7 +11,8 @@
   "toolLevel": 3,
   "toolEfficiency": 2,
   "effects":{
-    "tetra_loopback:attack_knockback":2
+    "tetra_loopback:attack_knockback":2,
+    "tetra_loopback:strife": 1
   },
   "tints": {
     "glyph": "AA00AA"

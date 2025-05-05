@@ -11,6 +11,8 @@ import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
 import se.mickelus.tetra.gui.stats.getter.*;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
+
+
 @OnlyIn(Dist.CLIENT)
 public class ClientGuiRegistry {
     public static void registerAllBars() {
@@ -23,7 +25,66 @@ public class ClientGuiRegistry {
         registerFrostCrownBar();
         registerEtherealGlowBar();
         registerRuneCreedBar();
+        registerCrimsonScourgeBar();
+        registerStrifeBar();
     }
+
+
+    private static void registerCrimsonScourgeBar() {
+        IStatGetter scourgeGetter = new StatGetterEffectLevel(ModEffectStats.crimsonScourgeEffect, 1);
+        GuiStatBar scourgeBar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.crimson_scourge.name",
+                0, 1,
+                false, false, false,
+                scourgeGetter,
+                new ILabelGetter() {
+                    @Override
+                    public String getLabel(double value, double diffValue, boolean flipped) {
+                        return value > 0 ? "ǝ" : "";
+                    }
+
+                    @Override
+                    public String getLabelMerged(double v, double v1) {
+                        return "";
+                    }
+                },
+                new TooltipGetterDecimal(Tetra_loopback.MODID + ".effect.crimson_scourge.tooltip", scourgeGetter)
+        );
+
+
+
+
+        WorkbenchStatsGui.addBar(scourgeBar);
+        HoloStatsGui.addBar(scourgeBar);
+    }
+
+
+    private static void registerStrifeBar() {
+        IStatGetter strifeGetter = new StatGetterEffectLevel(ModEffectStats.strifeEffect, 1);
+        GuiStatBar strifeBar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.strife.name",
+                0, 1,
+                false, false, false,
+                strifeGetter,
+                new ILabelGetter() {
+                    @Override
+                    public String getLabel(double value, double diffValue, boolean flipped) {
+                        return value > 0 ? "Ƶ" : "";
+                    }
+
+                    @Override
+                    public String getLabelMerged(double v, double v1) {
+                        return "";
+                    }
+                },
+                new TooltipGetterDecimal(Tetra_loopback.MODID + ".effect.strife.tooltip", strifeGetter)
+        );
+        WorkbenchStatsGui.addBar(strifeBar);
+        HoloStatsGui.addBar(strifeBar);
+    }
+
 
 
 

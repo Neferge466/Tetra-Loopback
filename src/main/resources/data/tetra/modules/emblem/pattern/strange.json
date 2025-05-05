@@ -21,7 +21,7 @@
             "location": "tetra:item/module/emblem/pattern/strange/",
             "emission": 15,
             "transform": {
-              "translation": [0.25,0.25,0.00495],
+              "translation": [0.25,0.25,0.005],
               "scale": [0.5,0.5,1]
             }
           }

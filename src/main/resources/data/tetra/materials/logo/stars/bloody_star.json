@@ -11,7 +11,8 @@
   "toolLevel": 3,
   "toolEfficiency": 2,
   "effects":{
-    "tetra_loopback:max_health":4
+    "tetra_loopback:max_health":4,
+    "tetra_loopback:crimson_scourge": 1
   },
   "tints": {
     "glyph": "AA0000"

@@ -104,12 +104,12 @@
                 {
                     "type": "item",
                     "name": "tetra:forged_bolt",
-                    "weight": 1
+                    "weight": 2
                 },
                 {
                     "type": "item",
                     "name": "minecraft:diamond",
-                    "weight": 1
+                    "weight": 2
                 },
                 {
                     "type": "item",
@@ -124,7 +124,7 @@
                 {
                     "type": "item",
                     "name": "minecraft:emerald",
-                    "weight": 1
+                    "weight": 2
                 },
                 {
                     "type": "item",

@@ -12,7 +12,7 @@
       "effects":
       {
         "tetra_loopback:luck": 1,
-        "tetra_loopback:attack_speed": 0.5
+        "tetra_loopback:attack_speed": 1
       },
       "extract": {
         "glyph": {
@@ -26,7 +26,7 @@
             "location": "tetra:item/module/emblem/pattern/stars/",
             "emission": 15,
             "transform": {
-              "translation": [0,0,0.00495]
+              "translation": [0,0,0.005]
             }
           }
         ]

@@ -10,6 +10,11 @@
   "magicCapacity": 0,
   "toolLevel": 3,
   "toolEfficiency": 2,
+  "effects":
+  {
+    "sweeping": 10,
+    "truesweep": 2
+  },
   "tints": {
     "glyph": "AA00AA"
   },
