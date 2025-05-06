@@ -12,11 +12,13 @@
   "toolEfficiency": 2,
   "effects":
   {
-    "sweeping": 10,
-    "truesweep": 2
+    "crushing": 10
+  },
+  "overlayTint": {
+    "glyph": "FF55FF"
   },
   "tints": {
-    "glyph": "AA00AA"
+    "glyph": "FF55FF"
   },
   "textures": [
     "amethyst"

@@ -1,0 +1,31 @@
+{
+  "key": "phaonia_bone_ingot",
+  "category": "metal",
+  "primary": 7.5,
+  "secondary": 3.4,
+  "tertiary": 3.8,
+  "durability": 2025,
+  "integrityCost": 2,
+  "integrityGain": 5,
+  "magicCapacity": 70,
+  "toolLevel": 7,
+  "toolEfficiency": 6,
+  "effects":
+  {
+    "armorPenetration": 35,
+    "crushing": 8
+  },
+  "tints": {
+    "glyph": "d6daa8",
+    "texture": "d6daa8"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:phaonia_bone_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tetra_loopback:item/phaonia_bone_ingot"
+  }
+}

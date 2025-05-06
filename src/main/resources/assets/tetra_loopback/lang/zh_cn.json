@@ -15,6 +15,13 @@
   "item.tetra_loopback.round_ruby": "圆红玉",
   "item.tetra_loopback.curios_emblem": "木质徽章底托",
   "item.tetra_loopback.lightning_logo": "闪电图案",
+  "item.tetra_loopback.empty_ringing_crystal_ingot": "§1空响晶石锭",
+  "item.tetra_loopback.blazing_wood": "§4熔血木",
+  "item.tetra_loopback.phaonia_bone_ingot": "§7棘骨锭",
+
+
+
+
 
 
 
@@ -59,9 +66,9 @@
   "tetra.material.ink_rune": "§f符文墨水",
   "tetra.material.ink_twinkle": "§d闪耀墨水",
 
-
-
-
+  "tetra.material.empty_ringing_crystal_ingot": "§1空响晶石锭",
+  "tetra.material.blazing_wood": "§4熔血木",
+  "tetra.material.phaonia_bone_ingot": "§7棘骨锭",
 
 
 
@@ -224,6 +231,14 @@
   "effect.tetra_loopback.thunder.tooltip": "§b攻击时召唤落雷",
 
 
+
+
+
+
+
+  "tetra.material.blazing_wood.prefix": "§4熔血木",
+  "tetra.material.phaonia_bone_ingot.prefix": "§7棘骨锭",
+  "tetra.material.empty_ringing_crystal_ingot.prefix": "§1空响晶",
   "tetra.material.fuse_steel_ingot.prefix": "§7融合钢",
   "tetra.material.lightning_ingot.prefix": "§b雷霆钢",
   "tetra.material.bloody_star.prefix": "§4血灾星",

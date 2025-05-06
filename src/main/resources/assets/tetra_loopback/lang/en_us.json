@@ -14,6 +14,14 @@
   "item.tetra_loopback.round_ruby": "Round Ruby",
   "item.tetra_loopback.curios_emblem": "Wood Emblem Base",
   "item.tetra_loopback.lightning_logo": "Lightning Logo",
+  "item.tetra_loopback.empty_ringing_crystal_ingot": "§1Empty Ringing Crystal Ingot",
+  "item.tetra_loopback.blazing_wood": "§4Blazing Wood",
+  "item.tetra_loopback.phaonia_bone_ingot": "§7Phaonia Bone Ingot",
+
+
+
+
+
 
 
 
@@ -67,6 +75,12 @@
   "tetra.material.ink_frozen": "Frozen Ink",
   "tetra.material.ink_rune": "Rune Ink",
   "tetra.material.ink_twinkle": "Twinkle Ink",
+
+  "tetra.material.empty_ringing_crystal_ingot": "§1Empty Ringing Crystal Ingot",
+  "tetra.material.blazing_wood": "§4Blazing Wood",
+  "tetra.material.phaonia_bone_ingot": "§7Phaonia Bone Ingot",
+
+
 
 
   "tetra/schematic/base/octagon.name": "Octagon base",
@@ -228,6 +242,13 @@
   "tetra.material.lightning_ingot.prefix": "§bLightning Ingot",
   "tetra.material.fuse_steel_ingot.prefix": "§7Fuse Steel Ingot",
   "tetra.material.lightning_logo.prefix": "§bLightning Ingot",
+  "tetra.material.blazing_wood.prefix": "§4blazing_wood",
+  "tetra.material.phaonia_bone_ingot.prefix": "§7Phaonia Bone Ingot",
+  "tetra.material.empty_ringing_crystal_ingot.prefix": "§1Empty Ringing Crystal Ingot",
+
+
+
+
 
 
   "tetra_loopback.effect.thundering.name": "§6ß§bThundering",

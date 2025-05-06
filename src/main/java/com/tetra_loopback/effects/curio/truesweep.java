@@ -9,8 +9,6 @@ import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.effect.SweepingEffect;
 import se.mickelus.tetra.items.modular.ModularItem;
 import top.theillusivec4.curios.api.CuriosApi;
-import top.theillusivec4.curios.api.type.capability.ICurio;
-import top.theillusivec4.curios.api.type.inventory.ICurioStacksHandler;
 import top.theillusivec4.curios.api.type.inventory.IDynamicStackHandler;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -32,13 +30,19 @@ public class truesweep {
     private static void checkAndTriggerTruesweep(Player player) {
         if (player.getAttackStrengthScale(0.5f) > 0.9f
                 && player.onGround()
-                && !player.isSprinting()) {
+                && !player.isSprinting()
+                && !player.getPersistentData().contains("ProcessingTruesweep")) {
 
-            getTruesweepItems(player).ifPresent(items ->
-                    items.forEach(itemStack ->
-                            SweepingEffect.truesweep(itemStack, player, true) // 修正为boolean参数
-                    )
-            );
+            player.getPersistentData().putBoolean("ProcessingTruesweep", true);
+            try {
+                getTruesweepItems(player).ifPresent(items ->
+                        items.forEach(itemStack ->
+                                SweepingEffect.truesweep(itemStack, player, false)
+                        )
+                );
+            } finally {
+                player.getPersistentData().remove("ProcessingTruesweep");
+            }
         }
     }
 

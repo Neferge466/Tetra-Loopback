@@ -1,0 +1,31 @@
+{
+  "key": "empty_ringing_crystal_ingot",
+  "category": "metal",
+  "primary": 8,
+  "secondary": 3,
+  "tertiary": 4.3,
+  "durability": 2001,
+  "integrityCost": 2,
+  "integrityGain": 7,
+  "magicCapacity": 120,
+  "toolLevel": 7,
+  "toolEfficiency": 7,
+  "effects":
+  {
+    "sweeping": 10,
+    "truesweep": 8
+  },
+  "tints": {
+    "glyph": "220078",
+    "texture": "220078"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:empty_ringing_crystal_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}

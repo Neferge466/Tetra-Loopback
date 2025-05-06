@@ -1,0 +1,32 @@
+{
+  "key": "blazing_wood",
+  "category": "wood",
+  "primary": 4,
+  "secondary": 5,
+  "tertiary": 8,
+  "durability": 321,
+  "integrityCost": 3,
+  "integrityGain": 6,
+  "magicCapacity": 140,
+  "toolLevel": "minecraft:gold",
+  "toolEfficiency": 5,
+  "effects":
+  {
+    "fierySelf":[3,0.7],
+    "criticalStrike": [5,1.3]
+  },
+  "tints": {
+    "glyph": "562c3e",
+    "texture":"562c3e"
+  },
+  "textures": [
+    "crude",
+    "wooden"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:blazing_wood" ]
+  },
+  "requiredTools": {
+    "axe_dig": "minecraft:stone"
+  }
+}
