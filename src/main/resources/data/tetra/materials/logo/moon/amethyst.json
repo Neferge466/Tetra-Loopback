@@ -12,11 +12,22 @@
   "toolEfficiency": 2,
   "effects":
   {
-    "sweeping": 10,
-    "truesweep": 2
+    "crushing": 10,
+    "reaching": [10,10],
+    "stun": [50,2],
+    "fierySelf": [50,1],
+    "severing": [10,10],
+    "sweeping": 30,
+    "truesweep": 30,
+    "criticalStrike": [40,40],
+    "skewering": 30
+
+  },
+  "overlayTint": {
+    "glyph": "FF55FF"
   },
   "tints": {
-    "glyph": "AA00AA"
+    "glyph": "FF55FF"
   },
   "textures": [
     "amethyst"

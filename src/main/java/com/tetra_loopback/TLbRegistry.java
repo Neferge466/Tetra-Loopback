@@ -67,7 +67,7 @@ public class TLbRegistry {
 
     //gem
     public static final RegistryObject<Item> ROUND_RUBY = ITEMS.register("round_ruby",
-            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
 
 
@@ -80,7 +80,7 @@ public class TLbRegistry {
     public static final RegistryObject<Item> LIGHTNING_INGOT = ITEMS.register("lightning_ingot",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> LIGHTNING_INGOT_GRIT = ITEMS.register("lightning_ingot_grit",
-            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> FUSE_STEEL_INGOT = ITEMS.register("fuse_steel_ingot",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
 
