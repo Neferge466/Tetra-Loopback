@@ -12,8 +12,7 @@
   "toolEfficiency": 7,
   "effects":
   {
-    "sweeping": 10,
-    "truesweep": 8
+    "sweeping": 10
   },
   "tints": {
     "glyph": "220078",

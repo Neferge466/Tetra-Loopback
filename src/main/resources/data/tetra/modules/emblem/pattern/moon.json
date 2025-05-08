@@ -11,7 +11,8 @@
       "integrity": 2,
       "effects":
       {
-        "tetra_loopback:movement_speed": 1
+        "tetra_loopback:movement_speed": 1,
+        "reaching": 5
       },
       "extract": {
         "glyph": {
