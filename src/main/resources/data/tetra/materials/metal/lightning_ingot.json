@@ -22,5 +22,8 @@
   ],
   "material": {
     "items": [ "tetra_loopback:lightning_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
   }
 }

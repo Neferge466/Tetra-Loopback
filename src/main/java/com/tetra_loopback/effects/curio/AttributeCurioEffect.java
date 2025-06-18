@@ -25,7 +25,7 @@ public class AttributeCurioEffect {
     static {
         ATTRIBUTE_MULTIPLIERS.put(Attributes.ARMOR, 1.0);
         ATTRIBUTE_MULTIPLIERS.put(Attributes.ATTACK_DAMAGE, 1.0);
-        ATTRIBUTE_MULTIPLIERS.put(Attributes.MOVEMENT_SPEED, 0.1);
+        ATTRIBUTE_MULTIPLIERS.put(Attributes.MOVEMENT_SPEED, 0.01);
         ATTRIBUTE_MULTIPLIERS.put(Attributes.ARMOR_TOUGHNESS, 1.0);
         ATTRIBUTE_MULTIPLIERS.put(Attributes.MAX_HEALTH, 1.0);
         ATTRIBUTE_MULTIPLIERS.put(Attributes.ATTACK_SPEED, 0.1);

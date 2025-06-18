@@ -294,7 +294,7 @@
   "tetra_loopback.effect.max_health.name": "§6ß§fMax Health",
   "tetra_loopback.effect.max_health.tooltip": "Max Health increased by %.0f",
   "tetra_loopback.effect.movement_speed.name": "§6ß§fMovement Speed",
-  "tetra_loopback.effect.movement_speed.tooltip": "Movement Speed increased by %.0f*0.1",
+  "tetra_loopback.effect.movement_speed.tooltip": "Movement Speed increased by %.0f*0.01",
 
 
 
@@ -312,14 +312,19 @@
   "tetra.stats.tetra_loopback:rune_creed.tooltip_short": "§fEnchantment entries for each piece of equipment provide 0.5 armor\nThe main hand weapon enchantment entry provides 1 attack damage",
 
   "tetra_loopback.effect.crimson_scourge.name": "§6ß§4Scarlet Scourge",
-  "tetra_loopback.effect.crimson_scourge.tooltip": "§4When a creature hits, it applies Bleed and attaches a Calamity Mark, bleeding 1percent per second, and each mark increases its LOST-HP by 0.1percent, triggering the Scourge when it reaches 7 or more marks, and directly deducting 50percent of the creature's total HP",
+  "tetra_loopback.effect.crimson_scourge.tooltip": "§4When attacking a creature, it causes the creature to bleed for three seconds, losing 1% of its HP every second, and each attack has a 25% chance of applying a layer of Calamity Mark to the monster, each layer of the mark can provide 0.1% of the amount of blood flowed, and the upper limit of the mark is 10, when the mark reaches 10 stacks, 40% of the creature's total HP is immediately deducted",
   "tetra.stats.tetra_loopback:crimson_scourge": "§6ß§4Scarlet Scourge",
-  "tetra.stats.tetra_loopback:crimson_scourge.tooltip_short": "§4When a creature hits, it applies Bleed and attaches a Calamity Mark, bleeding 1percent per second, and each mark increases its LOST-HP by 0.1percent, triggering the Scourge when it reaches 7 or more marks, and directly deducting 50percent of the creature's total HP)",
+  "tetra.stats.tetra_loopback:crimson_scourge.tooltip_short": "§4When attacking a creature, it causes the creature to bleed for three seconds, losing 1% of its HP every second, and each attack has a 25% chance of applying a layer of Calamity Mark to the monster, each layer of the mark can provide 0.1% of the amount of blood flowed, and the upper limit of the mark is 10, when the mark reaches 10 stacks, 40% of the creature's total HP is immediately deducted",
 
 
   "tetra_loopback.effect.strife.name": "§6ß§dDisputes",
   "tetra_loopback.effect.strife.tooltip": "§dInflict Weakness 2 on hostile mobs when attacking hostile mobs, and Weakness 2 on self when attacking neutral or friendly creeps. When the caster is injured, gain Strength 3 and Resistance 2, and have a cooldown for 20 seconds",
   "tetra.stats.tetra_loopback:strife": "§6ß§dDisputes",
-  "tetra.stats.tetra_loopback:strife.tooltip_short": "§dInflict Weakness 2 on hostile mobs when attacking hostile mobs, and Weakness 2 on self when attacking neutral or friendly creeps. When the caster is injured, gain Strength 3 and Resistance 2, and have a cooldown for 20 seconds"
+  "tetra.stats.tetra_loopback:strife.tooltip_short": "§dInflict Weakness 2 on hostile mobs when attacking hostile mobs, and Weakness 2 on self when attacking neutral or friendly creeps. When the caster is injured, gain Strength 3 and Resistance 2, and have a cooldown for 20 seconds",
+
+  "tetra.stats.thunder_effect.tooltip": "§bWhen attacking an enemy, there is a chance to trigger a lightning strike every 10s, and each lightning strike will provide the player with 2 temporary attack damage until they leave the battle"
+
+
+
 
 }

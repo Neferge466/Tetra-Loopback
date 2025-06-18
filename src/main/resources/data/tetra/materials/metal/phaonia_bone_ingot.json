@@ -12,8 +12,9 @@
   "toolEfficiency": 6,
   "effects":
   {
-    "armorPenetration": 35,
-    "crushing": 8
+    "armorPenetration": 25,
+    "crushing": 2,
+    "stun": [50,10]
   },
   "tints": {
     "glyph": "d6daa8",

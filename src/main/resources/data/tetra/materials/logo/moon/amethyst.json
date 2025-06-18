@@ -12,7 +12,7 @@
   "toolEfficiency": 2,
   "effects":
   {
-    "crushing": 10
+    "crushing": 2
   },
   "overlayTint": {
     "glyph": "FF55FF"

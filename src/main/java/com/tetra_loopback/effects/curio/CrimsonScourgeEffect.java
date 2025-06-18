@@ -21,16 +21,15 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Mod.EventBusSubscriber(modid = Tetra_loopback.MODID)
 public class CrimsonScourgeEffect {
-    // 配置参数
-    private static final int BASE_DURATION = 3 * 20;   // 总持续时间5秒
-    private static final int DAMAGE_INTERVAL = 20;     // 伤害间隔1秒
-    private static final float BASE_DAMAGE = 0.01f;    // 基础伤害1%
-    private static final float STACK_BONUS = 0.001f;   // 每层加成0.1%
+
+    private static final int BASE_DURATION = 3 * 20;   //3s
+    private static final int DAMAGE_INTERVAL = 20;     //1s
+    private static final float BASE_DAMAGE = 0.01f;    //1%
+    private static final float STACK_BONUS = 0.001f;   //0.1%
     private static final int MAX_STACKS = 10;
 
-    // 粒子颜色配置
-    private static final Vector3f PURPLE_COLOR = new Vector3f(0.5f, 0.0f, 0.5f); // 紫色
-    private static final Vector3f BLACK_COLOR = new Vector3f(0.1f, 0.1f, 0.1f);  // 黑色
+    private static final Vector3f PURPLE_COLOR = new Vector3f(0.5f, 0.0f, 0.5f);
+    private static final Vector3f BLACK_COLOR = new Vector3f(0.1f, 0.1f, 0.1f);
     private static final DustParticleOptions PURPLE_PARTICLE = new DustParticleOptions(PURPLE_COLOR, 0.8f);
     private static final DustParticleOptions BLACK_PARTICLE = new DustParticleOptions(BLACK_COLOR, 1.5f);
     private static final DustParticleOptions RED_PARTICLE = new DustParticleOptions(new Vector3f(0.9f, 0.1f, 0.1f), 0.5f);
@@ -64,18 +63,16 @@ public class CrimsonScourgeEffect {
                     v == null ? new CurseData(0, currentTime + BASE_DURATION)
                             : new CurseData(v.stacks, currentTime + BASE_DURATION));
 
-            // 叠加紫色印记
             if (Math.random() < 0.25 && data.stacks < MAX_STACKS) {
                 data = new CurseData(data.stacks + 1, data.endTime);
                 curseDataMap.put(targetId, data);
                 spawnParticles(target, PURPLE_PARTICLE, 15, 0.5); // 紫色粒子
             }
 
-            // 黑色爆发效果
             if (data.stacks >= MAX_STACKS) {
                 if (target.getHealth() >= target.getMaxHealth() * 0.4f) {
                     target.hurt(target.damageSources().magic(), target.getMaxHealth() * 0.4f);
-                    spawnParticles(target, BLACK_PARTICLE, 50, 1.0); // 黑色爆发粒子
+                    spawnParticles(target, BLACK_PARTICLE, 50, 1.0);
                 }
                 curseDataMap.remove(targetId);
             }
@@ -101,14 +98,12 @@ public class CrimsonScourgeEffect {
                 entity.hurt(entity.damageSources().magic(), entity.getMaxHealth() * damagePercent);
                 data.lastDamageTick = currentTime;
 
-                // 动态红色流血粒子
                 spawnParticles(entity, RED_PARTICLE, 10 + data.stacks * 3, 0.5);
                 curseDataMap.put(uuid, data);
             }
         }
     }
 
-    // 增强版粒子生成方法
     private static void spawnParticles(LivingEntity target, DustParticleOptions options, int count, double spread) {
         if (target.level() instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(
@@ -117,8 +112,8 @@ public class CrimsonScourgeEffect {
                     target.getY() + target.getBbHeight()/2,
                     target.getZ(),
                     count,
-                    spread, spread, spread, // 散布范围
-                    0.3 // 基础速度
+                    spread, spread, spread,
+                    0.3
             );
         }
     }

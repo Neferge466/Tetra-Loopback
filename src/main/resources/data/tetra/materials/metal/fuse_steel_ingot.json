@@ -12,7 +12,7 @@
   "toolEfficiency": 2,
   "effects": {
     "tetra_loopback:guardian":1,
-    "truesweep": [2,1]
+    "crushing": 1
   },
   "tints": {
     "glyph": "AAAAAA",
@@ -23,5 +23,8 @@
   ],
   "material": {
     "items": [ "tetra_loopback:fuse_steel_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
   }
 }

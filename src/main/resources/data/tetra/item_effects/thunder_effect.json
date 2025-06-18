@@ -6,8 +6,8 @@
     "effect": "tetra_loopback:thunder",
     "entity": "attacker",
     "source": "attacker",
-    "duration": 3000,
+    "duration": 1000,
     "amplifier": 1,
-    "stackDurationCap": 1500
+    "stackDurationCap": 1000
   }
 }

@@ -291,7 +291,7 @@
   "tetra_loopback.effect.max_health.name": "§6ß§f最大生命值",
   "tetra_loopback.effect.max_health.tooltip": "最大生命值增加 %.0f",
   "tetra_loopback.effect.movement_speed.name": "§6ß§f移动速度",
-  "tetra_loopback.effect.movement_speed.tooltip": "移动速度增加 %.0f*0.1",
+  "tetra_loopback.effect.movement_speed.tooltip": "移动速度增加 %.0f*0.01",
 
 
   "tetra_loopback.effect.frost_crown.name": "§6ß§9凛冬王冠",
@@ -310,15 +310,23 @@
 
 
   "tetra_loopback.effect.crimson_scourge.name": "§6ß§4血红灾祸",
-  "tetra_loopback.effect.crimson_scourge.tooltip": "§4当生物攻击时，会施加流血效果并附加一个灾厄印记，每秒流失百分之1生命值，每个印记还会使该生物的流血量提升百分之0.1。当印记达到7层或更多时触发灾祸效果，直接扣除该生物百分之40的最大生命值",
-  "tetra.stats.tetra_loopback:crimson_scourge.tooltip_short": "§4当生物攻击时，会施加流血效果并附加一个灾厄印记，每秒流失百分之1生命值，每个印记还会使该生物的流血量提升百分之0.1。当印记达到7层或更多时触发灾祸效果，直接扣除该生物百分之40的最大生命值",
+  "tetra_loopback.effect.crimson_scourge.tooltip": "§4攻击到生物时，使该生物流血三秒，每一秒流失百分之1的血量，并且每一次攻击都有百分之25的概率为怪物施加一层灾祸印记，每一层印记能够提供百分之0.1的流血量，印记上限为10，当印记达到10层时，立刻扣除该生物总血量的百分之40",
+  "tetra.stats.tetra_loopback:crimson_scourge.tooltip_short": "§4攻击到生物时，使该生物流血三秒，每一秒流失百分之1的血量，并且每一次攻击都有百分之25的概率为怪物施加一层灾祸印记，每一层印记能够提供百分之0.1的流血量，印记上限为10，当印记达到10层时，立刻扣除该生物总血量的百分之40",
   "tetra.stats.tetra_loopback:crimson_scourge": "§6ß§4血红灾祸",
 
 
   "tetra_loopback.effect.strife.name": "§6ß§d纷争",
   "tetra_loopback.effect.strife.tooltip": "§d攻击敌对怪物时对其施加虚弱II效果；攻击中立或友方单位时对自己施加虚弱II效果。受到伤害时获得力量3和抗性提升2，冷却时间为20秒",
   "tetra.stats.tetra_loopback:strife.tooltip_short": "§d攻击敌对怪物时对其施加虚弱II效果；攻击中立或友方单位时对自己施加虚弱II效果。受到伤害时获得力量3和抗性提升2，冷却时间为20秒",
-  "tetra.stats.tetra_loopback:strife": "§6ß§d纷争"
+  "tetra.stats.tetra_loopback:strife": "§6ß§d纷争",
+
+
+
+
+
+  "tetra.stats.thunder_effect.tooltip": "§b攻击敌人时，每10秒有几率触发一次闪电打击，并且每次闪电打击都会为玩家提供2点临时攻击力直到脱战。"
+
+
 
 
 

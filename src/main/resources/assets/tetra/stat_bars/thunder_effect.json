@@ -1,0 +1,38 @@
+{
+  "type": "tetra:default",
+  "key": "tetra.stats.thunder_effect",
+  "contexts": [ "tetra:workbench" ],
+  "min": 0,
+  "max": 100,
+  "stat": {
+    "type": "tetra:sum",
+    "stats": [
+      {
+        "type": "tetra:effect_level",
+        "effect": "thunder_effect"
+      }
+    ]
+  },
+  "label": {
+    "type": "tetra:basic",
+    "format": "double_decimal",
+    "diff_format": "double_decimal"
+  },
+  "tooltip": {
+    "type": "tetra:default",
+    "key": "tetra.stats.thunder_effect.tooltip",
+    "stats": [
+      {
+        "type": "tetra:effect_efficiency",
+        "effect": "thunder_effect"
+      }
+    ],
+    "formatters": [
+      {
+        "type": "tetra:basic",
+        "format": "double_decimal"
+      }
+    ]
+  },
+  "indicators": [ "tetra:thunder_effect" ]
+}
