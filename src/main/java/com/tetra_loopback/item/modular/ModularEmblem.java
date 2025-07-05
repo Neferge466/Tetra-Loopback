@@ -1,8 +1,7 @@
 package com.tetra_loopback.item.modular;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -22,12 +21,9 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
-
-public class ModularEmblem extends ModularItem implements ICurio {
+public abstract class ModularEmblem extends ModularItem implements ICurio {
     public final static String emblemBase = "emblem/base";
     public final static String emblemPattern = "emblem/pattern";
-
     public final static String emblemCarving = "emblem/carving";
 
     public static final String identifier = "modular_emblem";
@@ -50,8 +46,6 @@ public class ModularEmblem extends ModularItem implements ICurio {
         minorModuleKeys = new String[]{emblemCarving};
 
         requiredModules = new String[]{emblemBase, emblemPattern};
-
-
     }
 
     @Override
@@ -82,4 +76,69 @@ public class ModularEmblem extends ModularItem implements ICurio {
     public ItemStack getStack() {
         return new ItemStack(instance);
     }
+
+    //ICurio
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext) {
+        return true;
+    }
+
+    @Override
+    public boolean canSync(SlotContext slotContext) {
+        return true;
+    }
+
+    @Override
+    public boolean canEquip(SlotContext slotContext) {
+        return true;
+    }
+
+    //ICurioItem
+    public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);
+
+//    ways
+//    @Override
+//    public void curioTick(SlotContext slotContext, ItemStack stack) {
+//        //粒子效果,动态渲染
+//        /*
+//        LivingEntity entity = slotContext.entity();
+//        if (entity.level().isClientSide && entity.tickCount % 10 == 0) {
+//            entity.level().addParticle(
+//                ParticleTypes.END_ROD,
+//                entity.getX(),
+//                entity.getY() + 1.5,
+//                entity.getZ(),
+//                0, 0, 0
+//            );
+//        }
+//        */
+//    }
+//
+//    @Override
+//    public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
+//        //装备时逻辑
+//        //播放声音
+//        /*
+//        LivingEntity entity = slotContext.entity();
+//        if (!entity.level().isClientSide) {
+//            entity.level().playSound(null, entity.blockPosition(),
+//                SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.PLAYERS,
+//                1.0F, 1.0F);
+//        }
+//        */
+//    }
+//
+//    @Override
+//    public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
+//        //卸下时逻辑
+//        //播放声音
+//        /*
+//        LivingEntity entity = slotContext.entity();
+//        if (!entity.level().isClientSide) {
+//            entity.level().playSound(null, entity.blockPosition(),
+//                SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.PLAYERS,
+//                1.0F, 0.8F);
+//        }
+//        */
+//    }
 }

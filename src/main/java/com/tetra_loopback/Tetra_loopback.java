@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.tetra_loopback.effects.TLbEffects;
 import com.tetra_loopback.effects.gui.ModEffectStats;
 import com.tetra_loopback.item.creative.TLbCreativeModeTab;
+import com.tetra_loopback.util.ClientProxy;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -13,49 +14,31 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-
 @Mod(Tetra_loopback.MODID)
 public class Tetra_loopback {
-
-
-
-
     public static final String MODID = "tetra_loopback";
     private static final Logger LOGGER = LogUtils.getLogger();
+
     public Tetra_loopback() {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
-        //IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::onClientSetup);
-        // Curios
-        //bus.addListener(this::enqueueIMC);
 
+        ClientProxy.init();
+
+        //register
         TLbRegistry.BLOCKS.register(bus);
-        // Items //
         TLbRegistry.ITEMS.register(bus);
-
-        // Creative Tab //
         TLbCreativeModeTab.register(bus);
-
-        // Potion Effects //
         TLbEffects.register(bus);
 
-
+        //bus
         MinecraftForge.EVENT_BUS.register(this);
-
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-
     }
 
     private void onClientSetup(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-
             ModEffectStats.safeInit();
         });
     }
-
-
-
 }
-
-
