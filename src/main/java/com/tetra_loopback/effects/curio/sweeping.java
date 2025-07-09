@@ -39,22 +39,33 @@ public class sweeping {
             try {
                 event.getEntity().addTag("tetra_sweep_processed");
 
-                getSweepingLevel(attacker).ifPresent(level -> {
-                    LivingEntity target = event.getEntity();
-                    float baseDamage = (float) attacker.getAttributeValue(Attributes.ATTACK_DAMAGE);
-                    double efficiency = getSweepingEfficiency(attacker);
+                Optional<Integer> sweepingLevel = getSweepingLevel(attacker);
+                if (!sweepingLevel.isPresent() || sweepingLevel.get() <= 0) return;
 
-                    double totalRange = BASE_RANGE + efficiency * RANGE_MULTIPLIER;
-                    float damageFactor = Math.min(level * DAMAGE_MULTIPLIER, MAX_DAMAGE_FACTOR);
-                    float sweepDamage = baseDamage * damageFactor;
+                int level = sweepingLevel.get();
+                LivingEntity target = event.getEntity();
+                float baseDamage = (float) attacker.getAttributeValue(Attributes.ATTACK_DAMAGE);
+                double efficiency = getSweepingEfficiency(attacker);
 
-                    Vec3 lookVec = attacker.getLookAngle().normalize();
-                    AABB aoeBox = calculateAttackAABB(attacker, totalRange, lookVec);
+                double totalRange = BASE_RANGE + efficiency * RANGE_MULTIPLIER;
+                float damageFactor = Math.min(level * DAMAGE_MULTIPLIER, MAX_DAMAGE_FACTOR);
+                float sweepDamage = baseDamage * damageFactor;
 
-                    attacker.level().getEntitiesOfClass(LivingEntity.class, aoeBox).stream()
-                            .filter(entity -> isValidTarget(entity, attacker, target))
-                            .forEach(entity -> handleSweepAttack(attacker, entity, sweepDamage, lookVec));
-                });
+                Vec3 lookVec = attacker.getLookAngle().normalize();
+                AABB aoeBox = calculateAttackAABB(attacker, totalRange, lookVec);
+
+                int validTargetCount = 0;
+
+                for (LivingEntity entity : attacker.level().getEntitiesOfClass(LivingEntity.class, aoeBox)) {
+                    if (isValidTarget(entity, attacker, target)) {
+                        validTargetCount++;
+                        handleSweepAttack(attacker, entity, sweepDamage, lookVec);
+                    }
+                }
+
+                if (validTargetCount > 0 && !attacker.level().isClientSide) {
+                    playSweepEffects((ServerLevel) attacker.level(), target, attacker);
+                }
             } finally {
                 event.getEntity().removeTag("tetra_sweep_processed");
             }
@@ -83,11 +94,6 @@ public class sweeping {
 
         DamageSource damageSource = attacker.damageSources().playerAttack(attacker);
         target.hurt(damageSource, damage);
-
-        if (!attacker.level().isClientSide) {
-            ServerLevel serverLevel = (ServerLevel) attacker.level();
-            playSweepEffects(serverLevel, target, attacker);
-        }
     }
 
     private static void applyKnockback(LivingEntity target, float yRot, float strength) {
@@ -99,6 +105,9 @@ public class sweeping {
     }
 
     private static void playSweepEffects(ServerLevel level, LivingEntity target, Player attacker) {
+        Optional<Integer> sweepingLevel = getSweepingLevel(attacker);
+        if (!sweepingLevel.isPresent() || sweepingLevel.get() <= 0) return;
+
         long lastSound = attacker.getPersistentData().getLong("LastSweepSound");
         long now = System.currentTimeMillis();
 

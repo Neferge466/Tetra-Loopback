@@ -79,14 +79,4 @@ public class TLbRegistry {
     public static final RegistryObject<Item> LIGHTNING_LOGO = ITEMS.register("lightning_logo",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
-    //block
-    /*
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block",
-            () -> new Block(Block.Properties.of()
-                    .strength(2.0f, 6.0f)
-                    .sound(SoundType.ANVIL)));
-
-    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block",
-            () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
-    */
 }
