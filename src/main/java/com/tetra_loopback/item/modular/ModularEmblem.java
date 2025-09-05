@@ -1,7 +1,11 @@
 package com.tetra_loopback.item.modular;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -13,15 +17,13 @@ import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurio;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public abstract class ModularEmblem extends ModularItem implements ICurio {
+public abstract class ModularEmblem extends ModularItem implements ICurioItem {
     public final static String emblemBase = "emblem/base";
     public final static String emblemPattern = "emblem/pattern";
     public final static String emblemCarving = "emblem/carving";
@@ -73,25 +75,16 @@ public abstract class ModularEmblem extends ModularItem implements ICurio {
     }
 
     @Override
-    public ItemStack getStack() {
-        return new ItemStack(instance);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
+        Multimap<Attribute, AttributeModifier> result = ArrayListMultimap.create();
+        if (!this.isBroken(stack)) {
+            Multimap<Attribute, AttributeModifier> Tetra = this.getAttributeModifiersCached(stack);
+            result.putAll(Tetra);
+        }
+        return result;
     }
 
-    //ICurio
-    @Override
-    public boolean canEquipFromUse(SlotContext slotContext) {
-        return true;
-    }
 
-    @Override
-    public boolean canSync(SlotContext slotContext) {
-        return true;
-    }
-
-    @Override
-    public boolean canEquip(SlotContext slotContext) {
-        return true;
-    }
 
     //ICurioItem
     public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);

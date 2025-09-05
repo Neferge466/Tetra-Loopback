@@ -1,4 +1,4 @@
-package com.tetra_loopback.effects.curio;
+package com.tetra_loopback.effects.curio.tetra;
 
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;

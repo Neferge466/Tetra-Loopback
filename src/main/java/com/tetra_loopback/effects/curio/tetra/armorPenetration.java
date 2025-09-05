@@ -1,4 +1,4 @@
-package com.tetra_loopback.effects.curio;
+package com.tetra_loopback.effects.curio.tetra;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;

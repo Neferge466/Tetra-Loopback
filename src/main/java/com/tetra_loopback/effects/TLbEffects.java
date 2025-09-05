@@ -13,10 +13,6 @@ public class TLbEffects {
                     Tetra_loopback.MODID);
 
 
-    public static final RegistryObject<MobEffect> THUNDER =
-            MOB_EFFECTS.register("thunder",ThunderEffect::new);
-
-
     public static void register(IEventBus bus) {
         MOB_EFFECTS.register(bus);
     }

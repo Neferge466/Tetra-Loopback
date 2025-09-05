@@ -2,10 +2,12 @@ package com.tetra_loopback.effects.gui.client;
 
 import com.tetra_loopback.Tetra_loopback;
 import com.tetra_loopback.effects.gui.ModEffectStats;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.registries.ForgeRegistries;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
-import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.gui.stats.StatsHelper;
 import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
 import se.mickelus.tetra.gui.stats.getter.*;
@@ -18,15 +20,20 @@ public class ClientGuiRegistry {
     public static void registerAllBars() {
         registerThunderingBar();
         registerGuardianBar();
-        registerAttributeBars();
-        registerAttackSpeedBar();
-        registerMovementSpeedBar();
         registerFlameAdmonitionBar();
         registerFrostCrownBar();
         registerEtherealGlowBar();
         registerRuneCreedBar();
         registerCrimsonScourgeBar();
         registerStrifeBar();
+
+        registerAttackKnockbackBar();
+        registerAttackFlyingSpeedBar();
+        registerFollowRangeBar();
+        registerKnockbackResistanceBar();
+        registerLuckBar();
+        registerMaxHealthBar();
+        registerMovementSpeedBar();
     }
 
 
@@ -51,8 +58,6 @@ public class ClientGuiRegistry {
                 },
                 new TooltipGetterDecimal(Tetra_loopback.MODID + ".effect.crimson_scourge.tooltip", scourgeGetter)
         );
-
-
 
 
         WorkbenchStatsGui.addBar(scourgeBar);
@@ -86,8 +91,6 @@ public class ClientGuiRegistry {
     }
 
 
-
-
     private static void registerRuneCreedBar() {
         IStatGetter runeGetter = new StatGetterEffectLevel(ModEffectStats.runeCreedEffect, 1);
         GuiStatBar runeBar = new GuiStatBar(
@@ -112,8 +115,6 @@ public class ClientGuiRegistry {
         WorkbenchStatsGui.addBar(runeBar);
         HoloStatsGui.addBar(runeBar);
     }
-
-
 
 
     private static void registerEtherealGlowBar() {
@@ -193,7 +194,6 @@ public class ClientGuiRegistry {
     }
 
 
-
     private static void registerThunderingBar() {
         IStatGetter thunderingGetter = new StatGetterEffectLevel(ModEffectStats.thunderingEffect, 1);
         ITooltipGetter thunderingTooltip = new TooltipGetterInteger(
@@ -229,132 +229,144 @@ public class ClientGuiRegistry {
         HoloStatsGui.addBar(guardianBar);
     }
 
-    private static void registerAttributeBars() {
-        registerAttributeBar(
-                ModEffectStats.armorEffect,
-                Tetra_loopback.MODID + ".effect.armor.name",
-                Tetra_loopback.MODID + ".effect.armor.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.armorEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.armorToughnessEffect,
-                Tetra_loopback.MODID + ".effect.armor_toughness.name",
-                Tetra_loopback.MODID + ".effect.armor_toughness.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.armorToughnessEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.attackDamageEffect,
-                Tetra_loopback.MODID + ".effect.attack_damage.name",
-                Tetra_loopback.MODID + ".effect.attack_damage.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.attackDamageEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.attackKnockbackEffect,
-                Tetra_loopback.MODID + ".effect.attack_knockback.name",
-                Tetra_loopback.MODID + ".effect.attack_knockback.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.attackKnockbackEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.flyingSpeedEffect,
-                Tetra_loopback.MODID + ".effect.flying_speed.name",
-                Tetra_loopback.MODID + ".effect.flying_speed.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.flyingSpeedEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.followRangeEffect,
-                Tetra_loopback.MODID + ".effect.follow_range.name",
-                Tetra_loopback.MODID + ".effect.follow_range.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.followRangeEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.knockbackResistanceEffect,
-                Tetra_loopback.MODID + ".effect.knockback_resistance.name",
-                Tetra_loopback.MODID + ".effect.knockback_resistance.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.knockbackResistanceEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.luckEffect,
-                Tetra_loopback.MODID + ".effect.luck.name",
-                Tetra_loopback.MODID + ".effect.luck.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.luckEffect, 1)
-        );
-
-        registerAttributeBar(
-                ModEffectStats.maxHealthEffect,
-                Tetra_loopback.MODID + ".effect.max_health.name",
-                Tetra_loopback.MODID + ".effect.max_health.tooltip",
-                new StatGetterEffectLevel(ModEffectStats.maxHealthEffect, 1)
-        );
-    }
-
-    private static void registerAttackSpeedBar() {
-        IStatGetter attackSpeedGetter = new StatGetterEffectLevel(ModEffectStats.attackSpeedEffect, 1);
-        GuiStatBar attackSpeedBar = new GuiStatBar(
-                0, 0, StatsHelper.barLength,
-                Tetra_loopback.MODID + ".effect.attack_speed.name",
-                -10, 10,
-                false, false, false,
-                attackSpeedGetter,
-                new ILabelGetter() {
-                    @Override
-                    public String getLabel(double value, double diffValue, boolean flipped) {
-                        return String.format("%+d", (int) value);
-                    }
-
-                    @Override
-                    public String getLabelMerged(double value, double diffValue) {
-                        return "";
-                    }
-                },
-                new TooltipGetterInteger(Tetra_loopback.MODID + ".effect.attack_speed.tooltip", attackSpeedGetter)
-        );
-        WorkbenchStatsGui.addBar(attackSpeedBar);
-        HoloStatsGui.addBar(attackSpeedBar);
-    }
-
-    private static void registerMovementSpeedBar() {
-        IStatGetter movementSpeedGetter = new StatGetterEffectLevel(ModEffectStats.movementSpeedEffect, 1);
-        GuiStatBar movementSpeedBar = new GuiStatBar(
-                0, 0, StatsHelper.barLength,
-                Tetra_loopback.MODID + ".effect.movement_speed.name",
-                -10, 10,
-                false, false, false,
-                movementSpeedGetter,
-                new ILabelGetter() {
-                    @Override
-                    public String getLabel(double value, double diffValue, boolean flipped) {
-                        return String.format("%+d", (int) value);
-                    }
-
-                    @Override
-                    public String getLabelMerged(double value, double diffValue) {
-                        return "";
-                    }
-                },
-                new TooltipGetterInteger(Tetra_loopback.MODID + ".effect.movement_speed.tooltip", movementSpeedGetter)
-        );
-        WorkbenchStatsGui.addBar(movementSpeedBar);
-        HoloStatsGui.addBar(movementSpeedBar);
-    }
-
-    private static void registerAttributeBar(ItemEffect effect, String nameKey, String tooltipKey, IStatGetter getter) {
+    private static void registerAttackKnockbackBar() {
+        ResourceLocation res = new ResourceLocation("minecraft:generic.attack_knockback");
+        Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(res);
+        if (attribute == null) {
+            return;
+        }
+        IStatGetter getter = new StatGetterAttribute(attribute, false);
         GuiStatBar bar = new GuiStatBar(
                 0, 0, StatsHelper.barLength,
-                nameKey,
+                Tetra_loopback.MODID + ".attribute.attack_knockback.name",
                 0, 10,
                 false, false, false,
                 getter,
                 LabelGetterBasic.integerLabel,
-                new TooltipGetterInteger(tooltipKey, getter)
+                new TooltipGetterInteger(Tetra_loopback.MODID + ".attribute.attack_knockback.tooltip", getter)
         );
         WorkbenchStatsGui.addBar(bar);
         HoloStatsGui.addBar(bar);
     }
+
+    private static void registerAttackFlyingSpeedBar() {
+        ResourceLocation res = new ResourceLocation("minecraft:generic.flying_speed");
+        Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(res);
+        if (attribute == null) {
+            return;
+        }
+        IStatGetter getter = new StatGetterAttribute(attribute, false);
+        GuiStatBar bar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".attribute.flying_speed.name",
+                0, 10,
+                false, false, false,
+                getter,
+                LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(Tetra_loopback.MODID + ".attribute.flying_speed.tooltip", getter)
+        );
+        WorkbenchStatsGui.addBar(bar);
+        HoloStatsGui.addBar(bar);
+    }
+
+    private static void registerFollowRangeBar() {
+        ResourceLocation res = new ResourceLocation("minecraft:generic.follow_range");
+        Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(res);
+        if (attribute == null) {
+            return;
+        }
+        IStatGetter getter = new StatGetterAttribute(attribute, false);
+        GuiStatBar bar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".attribute.follow_range.name",
+                0, 10,
+                false, false, false,
+                getter,
+                LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(Tetra_loopback.MODID + ".attribute.follow_range.tooltip", getter)
+        );
+        WorkbenchStatsGui.addBar(bar);
+        HoloStatsGui.addBar(bar);
+    }
+
+    private static void registerKnockbackResistanceBar() {
+        ResourceLocation res = new ResourceLocation("minecraft:generic.knockback_resistance");
+        Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(res);
+        if (attribute == null) {
+            return;
+        }
+        IStatGetter getter = new StatGetterAttribute(attribute, false);
+        GuiStatBar bar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".attribute.knockback_resistance.name",
+                0, 10,
+                false, false, false,
+                getter,
+                LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(Tetra_loopback.MODID + ".attribute.knockback_resistance.tooltip", getter)
+        );
+        WorkbenchStatsGui.addBar(bar);
+        HoloStatsGui.addBar(bar);
+    }
+
+    private static void registerLuckBar() {
+        ResourceLocation res = new ResourceLocation("minecraft:generic.luck");
+        Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(res);
+        if (attribute == null) {
+            return;
+        }
+        IStatGetter getter = new StatGetterAttribute(attribute, false);
+        GuiStatBar bar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".attribute.luck.name",
+                0, 10,
+                false, false, false,
+                getter,
+                LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(Tetra_loopback.MODID + ".attribute.luck.tooltip", getter)
+        );
+        WorkbenchStatsGui.addBar(bar);
+        HoloStatsGui.addBar(bar);
+    }
+
+    private static void registerMaxHealthBar() {
+        ResourceLocation res = new ResourceLocation("minecraft:generic.max_health");
+        Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(res);
+        if (attribute == null) {
+            return;
+        }
+        IStatGetter getter = new StatGetterAttribute(attribute, false);
+        GuiStatBar bar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".attribute.max_health.name",
+                0, 10,
+                false, false, false,
+                getter,
+                LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(Tetra_loopback.MODID + ".attribute.max_health.tooltip", getter)
+        );
+        WorkbenchStatsGui.addBar(bar);
+        HoloStatsGui.addBar(bar);
+    }
+
+    private static void registerMovementSpeedBar() {
+        ResourceLocation res = new ResourceLocation("minecraft:generic.movement_speed");
+        Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(res);
+        if (attribute == null) {
+            return;
+        }
+        IStatGetter getter = new StatGetterAttribute(attribute, false);
+        GuiStatBar bar = new GuiStatBar(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".attribute.movement_speed.name",
+                0, 10,
+                false, false, false,
+                getter,
+                LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(Tetra_loopback.MODID + ".attribute.movement_speed.tooltip", getter)
+        );
+        WorkbenchStatsGui.addBar(bar);
+        HoloStatsGui.addBar(bar);
+    }
+
 }
