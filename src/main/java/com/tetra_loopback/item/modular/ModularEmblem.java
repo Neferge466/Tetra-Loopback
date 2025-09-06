@@ -1,8 +1,10 @@
 package com.tetra_loopback.item.modular;
 
+
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -11,6 +13,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.ObjectHolder;
+import se.mickelus.mutil.network.PacketHandler;
+import se.mickelus.tetra.data.DataManager;
 import se.mickelus.tetra.gui.GuiModuleOffsets;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.module.ItemModule;
@@ -18,10 +22,15 @@ import se.mickelus.tetra.module.ItemUpgradeRegistry;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurio;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
+import se.mickelus.tetra.TetraMod;
+
+
 
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+
 
 public abstract class ModularEmblem extends ModularItem implements ICurioItem {
     public final static String emblemBase = "emblem/base";
@@ -39,6 +48,9 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
     )
     public static ModularEmblem instance;
 
+
+
+
     public ModularEmblem() {
         super(new Item.Properties().stacksTo(1).fireResistant());
 
@@ -49,6 +61,12 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
 
         requiredModules = new String[]{emblemBase, emblemPattern};
     }
+
+    //Emblem Synergies
+    public void commonInit(PacketHandler packetHandler) {
+        DataManager.instance.synergyData.onReload(() -> this.synergies =DataManager.instance.synergyData.getOrdered("emblem/base"));
+    }
+
 
     @Override
     public Collection<ItemModule> getAllModules(ItemStack stack) {

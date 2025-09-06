@@ -1,0 +1,14 @@
+[
+    {
+        "moduleVariants":["peltate/fuse_steel_ingot","burn/ink_burn","stars/bloody_star"],
+	    "name": "emblem/overgod",
+        "effects": {
+            "armorPenetration": 10,
+            "sweeping": 2
+	},
+        "attributes": {
+            "generic.attack_damage": 100,
+	        "generic.attack_speed": 1
+	}
+    }
+]

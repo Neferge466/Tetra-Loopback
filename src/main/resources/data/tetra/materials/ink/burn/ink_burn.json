@@ -14,19 +14,6 @@
         {
             "tetra_loopback:flame_admonition": 1
         },
-  "attributes": {
-    "generic.armor": 10,
-    "generic.armor_toughness": 10,
-    "generic.attack_damage": 10,
-    "generic.attack_speed": 10,
-
-
-    "generic.attack_knockback": 20,
-    "generic.knockback_resistance": 20,
-    "generic.luck": 10,
-    "generic.max_health": 10,
-    "generic.movement_speed": 10
-  },
   "tints": {
     "glyph": "AA0000",
     "texture": "AA0000"

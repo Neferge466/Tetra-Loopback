@@ -271,11 +271,11 @@
   "tetra_loopback.effect.frost_crown.tooltip": "§9冻伤免疫,受到攻击时，使攻击者获得缓慢 II 效果（5秒）",
   "tetra.stats.tetra_loopback:frost_crown.tooltip_short": "§9冻伤免疫,受到攻击时，使攻击者获得缓慢 II 效果（5秒）",
   "tetra_loopback.effect.flame_admonition.name": "§6ß§c火焰谏言",
-  "tetra_loopback.effect.flame_admonition.tooltip":"§c减少百分之七十的火焰伤害,攻击时点燃目标6秒，自身着火时获得力量 II 效果",
-  "tetra.stats.tetra_loopback:flame_admonition.tooltip_short":"§c减少百分之七十的火焰伤害,攻击时点燃目标6秒，自身着火时获得力量 II 效果",
+  "tetra_loopback.effect.flame_admonition.tooltip":"§c减少70%%的火焰伤害,攻击时点燃目标6秒，自身着火时获得力量 II 效果",
+  "tetra.stats.tetra_loopback:flame_admonition.tooltip_short":"§c减少70%%的火焰伤害,攻击时点燃目标6秒，自身着火时获得力量 II 效果",
   "tetra_loopback.effect.ethereal_glow.name": "§6ß§5朦胧闪耀",
-  "tetra_loopback.effect.ethereal_glow.tooltip": "§5使附近的敌对生物发光\n获得百分之二十移动速度加成\n获得永久夜视效果",
-  "tetra.stats.tetra_loopback:ethereal_glow.tooltip_short": "§5使附近的敌对生物发光\n获得百分之二十移动速度加成\n获得永久夜视效果",
+  "tetra_loopback.effect.ethereal_glow.tooltip": "§5使附近的敌对生物发光\n获得20%%移动速度加成\n获得永久夜视效果",
+  "tetra.stats.tetra_loopback:ethereal_glow.tooltip_short": "§5使附近的敌对生物发光\n获得20%%移动速度加成\n获得永久夜视效果",
   "tetra_loopback.effect.rune_creed.name": "§6ß§f符文信条",
   "tetra_loopback.effect.rune_creed.tooltip": "§f每件装备的附魔词条提供+0.5护甲\n主手武器附魔词条提供+1攻击力",
   "tetra.stats.tetra_loopback:rune_creed.tooltip_short": "§f每件装备的附魔词条提供+0.5护甲\n主手武器附魔词条提供+1攻击力",
@@ -283,8 +283,8 @@
 
 
   "tetra_loopback.effect.crimson_scourge.name": "§6ß§4血红灾祸",
-  "tetra_loopback.effect.crimson_scourge.tooltip": "§4攻击到生物时，使该生物流血三秒，每一秒流失百分之1的血量，并且每一次攻击都有百分之25的概率为怪物施加一层灾祸印记，每一层印记能够提供百分之0.1的流血量，印记上限为10，当印记达到10层时，立刻扣除该生物总血量的百分之40",
-  "tetra.stats.tetra_loopback:crimson_scourge.tooltip_short": "§4攻击到生物时，使该生物流血三秒，每一秒流失百分之1的血量，并且每一次攻击都有百分之25的概率为怪物施加一层灾祸印记，每一层印记能够提供百分之0.1的流血量，印记上限为10，当印记达到10层时，立刻扣除该生物总血量的百分之40",
+  "tetra_loopback.effect.crimson_scourge.tooltip": "§4攻击到生物时，使该生物流血3s，每一秒流失1%%的血量，并且每一次攻击都有25%%的概率为怪物施加一层灾祸印记，每一层印记能够提供0.1%%的流血量，印记上限为10，当印记达到10层时，立刻扣除该生物总血量的40%%",
+  "tetra.stats.tetra_loopback:crimson_scourge.tooltip_short": "§4攻击到生物时，使该生物流血3s，每一秒流失1%%的血量，并且每一次攻击都有25%%的概率为怪物施加一层灾祸印记，每一层印记能够提供0.1%%的流血量，印记上限为10，当印记达到10层时，立刻扣除该生物总血量的40%%",
   "tetra.stats.tetra_loopback:crimson_scourge": "§6ß§4血红灾祸",
 
 
