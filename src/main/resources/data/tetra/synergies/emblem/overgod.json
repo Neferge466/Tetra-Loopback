@@ -9,6 +9,15 @@
         "attributes": {
             "generic.attack_damage": 100,
 	        "generic.attack_speed": 1
-	}
+	},
+        "models": [
+          {
+            "location": "tetra:item/module/emblem/base/round/textsp",
+            "transform": {
+              "translation": [ 0, 0, 0.033],
+              "scale": [1,1,1]
+            }
+          }
+      ]
     }
 ]

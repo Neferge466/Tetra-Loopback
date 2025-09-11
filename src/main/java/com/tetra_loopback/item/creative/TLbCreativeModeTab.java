@@ -19,23 +19,10 @@ public class TLbCreativeModeTab {
                     .title(Component.translatable("creativetab.tetra_loopback"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(TLbRegistry.CURIOS_EMBLEM.get());
-                        pOutput.accept(TLbRegistry.INK_FROZEN.get());
-                        pOutput.accept(TLbRegistry.INK_RUNE.get());
-                        pOutput.accept(TLbRegistry.INK_BURN.get());
-                        pOutput.accept(TLbRegistry.INK_TWINKLE.get());
+                        pOutput.accept(TLbRegistry.CURIOS_GOGGLES.get());
                         pOutput.accept(TLbRegistry.BLOODY_STAR.get());
                         pOutput.accept(TLbRegistry.MISLEAD_STAR.get());
-
-                        pOutput.accept(TLbRegistry.LIGHTNING_INGOT.get());
-                        pOutput.accept(TLbRegistry.LIGHTNING_INGOT_GRIT.get());
                         pOutput.accept(TLbRegistry.FUSE_STEEL_INGOT.get());
-                        pOutput.accept(TLbRegistry.ROUND_RUBY.get());
-                        pOutput.accept(TLbRegistry.LIGHTNING_LOGO.get());
-                        pOutput.accept(TLbRegistry.EMPTY_RINGING_CRYSTAL_INGOT.get());
-                        pOutput.accept(TLbRegistry.BLAZING_WOOD.get());
-                        pOutput.accept(TLbRegistry.PHAONIA_BONE_INGOT.get());
-
-
 
                     })
                     .build());

@@ -1,0 +1,23 @@
+{
+  "replace": true,
+  "slots": [ "goggles/strap" ],
+  "improvements":
+  [
+    "tetra:goggles/strap/"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 16,
+    "textureY": 0
+  },
+  "outcomes": [
+    {
+      "materials": [ "tetra:fabric/","tetra:fibre/"],
+      "countFactor": 2,
+      "moduleKey": "goggles/strap/strap",
+      "moduleVariant": "strap/"
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 package com.tetra_loopback.effects.gui.client;
 
 import com.tetra_loopback.Tetra_loopback;
+import com.tetra_loopback.effects.getter.ResonanceGetter;
+import com.tetra_loopback.effects.getter.ResonanceLabelGetter;
+import com.tetra_loopback.effects.getter.ResonanceTooltipGetter;
+import com.tetra_loopback.effects.gui.GuiStatBarQuadSegmented;
 import com.tetra_loopback.effects.gui.ModEffectStats;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -27,6 +31,8 @@ public class ClientGuiRegistry {
         registerCrimsonScourgeBar();
         registerStrifeBar();
 
+        registerResonanceBar();
+
         registerAttackKnockbackBar();
         registerAttackFlyingSpeedBar();
         registerFollowRangeBar();
@@ -34,7 +40,27 @@ public class ClientGuiRegistry {
         registerLuckBar();
         registerMaxHealthBar();
         registerMovementSpeedBar();
+
+
     }
+
+    private static void registerResonanceBar() {
+        IStatGetter resonanceGetter = new ResonanceGetter();
+        GuiStatBarQuadSegmented resonanceBar = new GuiStatBarQuadSegmented(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.resonance.name",
+                0, 20,
+                false, false, false,
+                resonanceGetter,
+                new ResonanceLabelGetter(),
+                new ResonanceTooltipGetter()
+        );
+
+
+        WorkbenchStatsGui.addBar(resonanceBar);
+        HoloStatsGui.addBar(resonanceBar);
+    }
+
 
 
     private static void registerCrimsonScourgeBar() {

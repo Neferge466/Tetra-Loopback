@@ -1,0 +1,27 @@
+{
+  "key": "mislead_star",
+  "category": "resonance",
+  "primary": 0,
+  "secondary": 0,
+  "tertiary": 0,
+  "durability": 0,
+  "integrityCost": 1,
+  "integrityGain": 1,
+  "magicCapacity": 0,
+  "toolLevel": 3,
+  "toolEfficiency": 2,
+  "effects":{
+    "tetra_loopback:strife": 1
+  },
+  "tints": {
+    "glyph": "AA00AA"
+  },
+  "textures": [
+    "default"
+  ],
+  "material": {
+    "items": [
+      "tetra_loopback:mislead_star"
+    ]
+  }
+}

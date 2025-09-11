@@ -8,10 +8,10 @@ import com.google.common.collect.Multimaps;
 import com.tetra_loopback.Tetra_loopback;
 import com.tetra_loopback.util.CuriosAttributesUtil;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,9 +24,9 @@ import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
 import se.mickelus.tetra.module.data.ModuleModel;
+import se.mickelus.tetra.properties.AttributeHelper;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
-
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -35,40 +35,50 @@ import java.util.stream.Stream;
 
 
 
-public abstract class ModularEmblem extends ModularItem implements ICurioItem {
-    public final static String emblemBase = "emblem/base";
-    public final static String emblemPattern = "emblem/pattern";
-    public final static String emblemGemcore = "emblem/gemcore";
+public abstract class ModularGoggles extends ModularItem implements ICurioItem {
+    public final static String gogglesRightlense = "goggles/rightlense";
+    public final static String gogglesLeftlense = "goggles/leftlense";
+    public final static String gogglesStrap = "goggles/strap";
+    public final static String gogglesBuckle = "goggles/buckle";
 
-    public static final String identifier = "modular_emblem";
+    public static final String identifier = "modular_goggles";
 
-    private static final GuiModuleOffsets majorOffsets = new GuiModuleOffsets(4, 20, -12, 20);
-    private static final GuiModuleOffsets minorOffsets = new GuiModuleOffsets(-13, -1);
+    private static final GuiModuleOffsets majorOffsets = new GuiModuleOffsets(4, 20, -12, 20, -13, -1, 4,-1);
+    private static final GuiModuleOffsets minorOffsets = new GuiModuleOffsets();
+
+
+    // 添加一个常量定义Resonance_NBT_KEY
+    public static final String RESONANCE_NBT_KEY = "Resonance";
+    public static final String RESONANCE_VALUE_KEY = "value";
+
+    // 设置固定的共鸣值
+    public static final double FIXED_RESONANCE_VALUE =16;
+
 
     @ObjectHolder(
             registryName = "item",
-            value = "tetra:modular_emblem"
+            value = "tetra:modular_goggles"
     )
-    public static ModularEmblem instance;
+    public static ModularGoggles instance;
 
 
 
-    public ModularEmblem() {
-        super(new Item.Properties().stacksTo(1).fireResistant());
+    public ModularGoggles() {
+        super(new Properties().stacksTo(1).fireResistant());
 
         canHone = false;
 
-        majorModuleKeys = new String[]{emblemBase, emblemPattern,emblemGemcore};
+        majorModuleKeys = new String[]{gogglesRightlense, gogglesLeftlense,gogglesStrap,gogglesBuckle};
         minorModuleKeys = new String[]{};
 
-        requiredModules = new String[]{emblemBase};
+        requiredModules = new String[]{gogglesStrap};
         Tetra_loopback.items.add(this);
     }
 
-    //Emblem Synergies
+    // Synergies
     public void commonInit(PacketHandler packetHandler) {
         DataManager.instance.synergyData.onReload(() -> {
-            this.synergies = DataManager.instance.synergyData.getOrdered("emblem/");
+            this.synergies = DataManager.instance.synergyData.getOrdered("goggles/");
 
         });
     }
@@ -114,6 +124,7 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
         return minorOffsets;
     }
 
+
     public static Multimap<Attribute, AttributeModifier> Curios$fixIdentifiers(SlotContext slotContext, Multimap<Attribute, AttributeModifier> modifiers) {
         return Optional.ofNullable(modifiers)
                 .map(Multimap::entries)
@@ -138,29 +149,80 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
             Multimap<Attribute, AttributeModifier> Tetra = this.getAttributeModifiersCached(stack);
             result.putAll(Tetra);
         }
-
         return CuriosAttributesUtil.Curios$fixIdentifiers(slotContext, result);
     }
 
-    @Override
-    public void assemble(ItemStack itemStack, @Nullable Level world, float severity) {
-        itemStack.getOrCreateTag().putBoolean("gempeltate",
-                getModuleFromSlot(itemStack,"emblem/base")
-                        .getVariantData(itemStack).key
-                        .startsWith("gempeltate/"));
-        super.assemble(itemStack, world, severity);
+
+
+
+
+
+
+
+
+    /**
+     * 设置物品的共鸣值
+     * @param stack 物品堆栈
+     * @param value 共鸣值（-100到100之间）
+     */
+    public static void setResonanceValue(ItemStack stack, double value) {
+        // 确保值在0-20范围内
+        double clampedValue = Mth.clamp(value, 0, 20);
+
+        CompoundTag ResonanceValueTag = new CompoundTag();
+        ResonanceValueTag.putDouble(RESONANCE_VALUE_KEY, clampedValue);
+
+        CompoundTag stackTag = stack.getOrCreateTag();
+        stackTag.put(RESONANCE_NBT_KEY, ResonanceValueTag);
     }
 
-    @Override
-    public String[] getMajorModuleKeys(ItemStack itemStack) {
-        CompoundTag tag = itemStack.getTag();
-        //check gempeltate  true
-        if (tag != null && tag.contains("gempeltate") && tag.getBoolean("gempeltate")) {
-            return new String[]{"emblem/base", "emblem/gemcore"};
-        } else {
-            return new String[]{"emblem/base", "emblem/pattern"};
+    /**
+     * 获取物品的共鸣值
+     * @param stack 物品堆栈
+     * @return 共鸣值，如果没有设置则返回0
+     */
+    public static double getResonanceValue(ItemStack stack) {
+        if (stack.hasTag() && stack.getTag().contains(RESONANCE_NBT_KEY)) {
+            CompoundTag ResonanceTag = stack.getTag().getCompound(RESONANCE_NBT_KEY);
+            if (ResonanceTag.contains(RESONANCE_VALUE_KEY)) {
+                return ResonanceTag.getDouble(RESONANCE_VALUE_KEY);
+            }
         }
+        return 0;
     }
+
+
+//        itemStack.getOrCreateTag().putBoolean("gempeltate",
+//                getModuleFromSlot(itemStack,"goggles/base")
+//                        .getVariantData(itemStack).key
+//                        .startsWith("gempeltate/"));
+//        super.assemble(itemStack, world, severity);
+// 在物品组装时写入固定的共鸣值到NBT
+
+
+    @Override
+    public void assemble(ItemStack itemStack, @Nullable Level world, float severity) {
+        super.assemble(itemStack, world, severity);
+        setResonanceValue(itemStack, FIXED_RESONANCE_VALUE);
+    }
+
+
+
+
+
+
+
+//    @Override
+//    public String[] getMajorModuleKeys(ItemStack itemStack) {
+//        CompoundTag tag = itemStack.getTag();
+//        //check gempeltate  true
+//        if (tag != null && tag.contains("gempeltate") && tag.getBoolean("gempeltate")) {
+//            return new String[]{"emblem/base", "emblem/gemcore"};
+//        } else {
+//            return new String[]{"emblem/base", "emblem/pattern"};
+//        }
+//    }
+
 
         //ICurioItem
     public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);

@@ -1,0 +1,13 @@
+[
+  {
+    "variant": "buckle/iron",
+    "key": "buckle",
+    "steps": 10,
+    "properties": {
+      "attributes": {
+        "generic.attack_damage": 4
+      },
+      "integrityCost": 2
+    }
+  }
+]

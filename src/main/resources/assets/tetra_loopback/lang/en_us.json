@@ -1,24 +1,10 @@
 {
   "curios.identifier.emblem": "Emblem Slot",
-  "item.tetra_loopback.crystal": "Loopback Crystal",
   "itemGroup.tetra_loopback.loopback": "Loopback",
-  "item.tetra_loopback.ink_rune": "Rune Ink",
-  "item.tetra_loopback.ink_burn": "Burn Ink",
-  "item.tetra_loopback.ink_frozen": "Frozen Ink",
-  "item.tetra_loopback.ink_twinkle": "Twinkle Ink",
   "item.tetra_loopback.bloody_star": "§4Red Blood Disaster Star",
   "item.tetra_loopback.mislead_star": "§5Mislead Star",
-  "item.tetra_loopback.lightning_ingot": "§bLightning Ingot",
-  "item.tetra_loopback.lightning_ingot_grit": "§bLightning Ingot Grit",
   "item.tetra_loopback.fuse_steel_ingot": "Fused Steel Ingot",
-  "item.tetra_loopback.round_ruby": "Round Ruby",
   "item.tetra_loopback.curios_emblem": "Wood Emblem Base",
-  "item.tetra_loopback.lightning_logo": "Lightning Logo",
-  "item.tetra_loopback.empty_ringing_crystal_ingot": "§1Empty Ringing Crystal Ingot",
-  "item.tetra_loopback.blazing_wood": "§4Blazing Wood",
-  "item.tetra_loopback.phaonia_bone_ingot": "§7Phaonia Bone Ingot",
-
-
 
 
 
@@ -32,7 +18,7 @@
 
   "tetra.slot.emblem/base": "Base",
   "tetra.slot.emblem/pattern": "Pattern",
-  "tetra.slot.emblem/carving": "Carving",
+
 
 
 
@@ -48,10 +34,6 @@
   "tetra.stats.tetra_loopback:armor_toughness.tooltip_short": "Increases Armor Toughness",
   "tetra.stats.tetra_loopback:knockback_resistance.tooltip_short": "Increases Knockblack Resistance",
   "tetra.stats.tetra_loopback:movement_speed.tooltip_short": "Increases Speed",
-  "tetra.stats.thunder_effect.tooltip_short": "When attacking an enemy, there is a chance to trigger a lightning strike every 10s, and each lightning strike will provide the player with 2 temporary attack damage until they leave the battle",
-
-
-
 
 
   "tetra.stats.tetra_loopback:attack_knockback": "Attack Knockback",
@@ -65,33 +47,9 @@
   "tetra.stats.tetra_loopback:armor_toughness": "Armor Toughness",
   "tetra.stats.tetra_loopback:knockback_resistance": "Knockblack Resistance",
   "tetra.stats.tetra_loopback:movement_speed": "Speed",
-  "tetra.stats.thunder_effect": "Power of Lightning",
 
 
 
-
-
-  "tetra.material.ink_burn": "Burn Ink",
-  "tetra.material.ink_frozen": "Frozen Ink",
-  "tetra.material.ink_rune": "Rune Ink",
-  "tetra.material.ink_twinkle": "Twinkle Ink",
-
-  "tetra.material.empty_ringing_crystal_ingot": "§1Empty Ringing Crystal Ingot",
-  "tetra.material.blazing_wood": "§4Blazing Wood",
-  "tetra.material.phaonia_bone_ingot": "§7Phaonia Bone Ingot",
-
-
-
-
-  "tetra/schematic/base/octagon.name": "Octagon base",
-  "tetra/schematic/base/octagon.description": "Replace the current emblem base with an octagon base",
-  "tetra/schematic/base/octagon.slot1": "Emblem material",
-
-  "tetra.module.emblem/base/octagon.item_name": "Octagon Emblem",
-  "tetra.module.emblem/base/octagon.name": "Octagon Emblem",
-  "tetra.module.emblem/base/octagon.description": "A octagon emblem.",
-  "tetra.module.emblem/base/octagon.material_name": "%s octagon emblem",
-  "tetra.module.emblem/base/octagon.prefix": "%s",
 
 
 
@@ -107,48 +65,6 @@
 
 
 
-  "tetra/schematic/base/rhombus.name": "Rhombus base",
-  "tetra/schematic/base/rhombus.description": "Replace the current emblem base with a rhombus base",
-  "tetra/schematic/base/rhombus.slot1": "Emblem material",
-
-  "tetra.module.emblem/base/rhombus.item_name": "Rhombus Emblem",
-  "tetra.module.emblem/base/rhombus.name": "Rhombus Emblem",
-  "tetra.module.emblem/base/rhombus.description": "A rhombus emblem.",
-  "tetra.module.emblem/base/rhombus.material_name": "%s rhombus emblem",
-  "tetra.module.emblem/base/rhombus.prefix": "%s",
-
-
-
-
-  "tetra/schematic/base/round.name": "Round base",
-  "tetra/schematic/base/round.description": "Replace the current emblem base with a round base",
-  "tetra/schematic/base/round.slot1": "Emblem material",
-
-  "tetra.module.emblem/base/round.item_name": "Round Emblem",
-  "tetra.module.emblem/base/round.name": "Round Emblem",
-  "tetra.module.emblem/base/round.description": "A round emblem.",
-  "tetra.module.emblem/base/round.material_name": "%s round emblem",
-  "tetra.module.emblem/base/round.prefix": "%s",
-
-
-
-
-
-
-
-
-
-
-  "tetra/schematic/pattern/moon.name": "Moon pattern",
-  "tetra/schematic/pattern/moon.description": "Replace the current emblem pattern with a moon pettern",
-  "tetra/schematic/pattern/moon.slot1": "Pattern material",
-
-  "tetra.module.emblem/pattern/moon.item_name": "Moon Pattern",
-  "tetra.module.emblem/pattern/moon.name": "Moon Pattern",
-  "tetra.module.emblem/pattern/moon.description": "A moon pattern.",
-  "tetra.module.emblem/pattern/moon.material_name": "%s moon pattern",
-  "tetra.module.emblem/pattern/moon.prefix": "%s",
-
 
 
   "tetra/schematic/pattern/stars.name": "Stars pattern",
@@ -162,9 +78,7 @@
   "tetra.module.emblem/pattern/stars.prefix": "%s",
 
   "tetra.stats.tetra_loopback:guardian": "§6ß§7Guardian",
-  "tetra.stats.tetra_loopback:thundering": "§6ß§bThundering",
   "tetra.stats.tetra_loopback:guardian.tooltip_short": "Increases the player's armor by granting 4 armor points per level",
-  "tetra.stats.tetra_loopback:thundering.tooltip_short": "Applies lightning to each of the player's attacks, cooling down for 10s",
   "tetra.stats.tetra_loopback:ethereal_glow": "§6ß§5Hazy shining",
   "tetra.stats.tetra_loopback:frost_crown": "§6ß§9Winter Crown",
   "tetra.stats.tetra_loopback:flame_admonition": "§6ß§cFlame admonition",
@@ -173,102 +87,32 @@
 
 
   "tetra.material.fuse_steel_ingot": "Fused Steel Ingot",
-  "tetra.material.lightning_ingot": "Lightning Ingot",
-  "tetra.material.lightning": "Lightning",
   "tetra.material.bloody_star": "Blood Disaster Star",
   "tetra.material.mislead_star": "Mislead Star",
 
 
 
-  "tetra/schematic/pattern/trace.name": "Trace pattern",
-  "tetra/schematic/pattern/trace.description": "Replace the current emblem pattern with a trace pettern",
-  "tetra/schematic/pattern/trace.slot1": "Pattern material",
 
-  "tetra.module.emblem/pattern/trace.item_name": "Trace Pattern",
-  "tetra.module.emblem/pattern/trace.name": "Trace Pattern",
-  "tetra.module.emblem/pattern/trace.description": "A trace pattern.",
-  "tetra.module.emblem/pattern/trace.material_name": "%s trace pattern",
-  "tetra.module.emblem/pattern/trace.prefix": "%s",
-
-
-
-  "tetra/schematic/pattern/strange.name": "Strange pattern",
-  "tetra/schematic/pattern/strange.description": "Replace the current emblem pattern with a strange pettern",
-  "tetra/schematic/pattern/strange.slot1": "Pattern material",
-
-
-
-  "tetra/schematic/carving/burn.name": "§4Burn §7Carving",
-  "tetra/schematic/carving/burn.description": "Replace the current emblem carving with a burn carving",
-  "tetra/schematic/carving/burn.slot1": "Carving material",
-
-  "tetra/schematic/carving/frozen.name": "§1Frozen §7Carving",
-  "tetra/schematic/carving/frozen.description": "Replace the current emblem carving with a frozen carving",
-  "tetra/schematic/carving/frozen.slot1": "Carving material",
-
-  "tetra/schematic/carving/rune.name": "§8Rune §7Carving",
-  "tetra/schematic/carving/rune.description": "Replace the current emblem carving with a rune carving",
-  "tetra/schematic/carving/rune.slot1": "Carving material",
-
-  "tetra/schematic/carving/twinkle.name": "§dTwinkle §7Carving",
-  "tetra/schematic/carving/twinkle.description": "Replace the current emblem carving with a twinkle carving",
-  "tetra/schematic/carving/twinkle.slot1": "Carving material",
-
-  "tetra.variant.burn/ink_burn": "§4Burn §7Carving",
-  "tetra.variant.frozen/ink_frozen": "§1Frozen §7Carving",
-  "tetra.variant.rune/ink_rune": "§8Rune §7Carving",
-  "tetra.variant.twinkle/ink_twinkle": "§dTwinkle §7Carving",
-
-
-  "tetra.variant_category.ink/.label": "Ink",
-
-
-
-
-
-  "tetra.module.emblem/pattern/strange.item_name": "Strange Pattern",
-  "tetra.module.emblem/pattern/strange.name": "Strange Pattern",
-  "tetra.module.emblem/pattern/strange.description": "A strange pattern.",
-  "tetra.module.emblem/pattern/strange.material_name": "%s strange pattern",
-  "tetra.module.emblem/pattern/strange.prefix": "%s",
-
-
-  "effect.tetra_loopback.thunder": "§bThunderous",
-  "effect.tetra_loopback.thunder.tooltip": "§bThunderous",
 
   "tetra.material.bloody_star.prefix": "§4Blood Disater Star",
-  "tetra.material.lightning.prefix": "§bLightning",
   "tetra.material.mislead_star.prefix": "§5Mislead Star",
-  "tetra.material.lightning_ingot.prefix": "§bLightning Ingot",
   "tetra.material.fuse_steel_ingot.prefix": "§7Fuse Steel Ingot",
-  "tetra.material.lightning_logo.prefix": "§bLightning Ingot",
-  "tetra.material.blazing_wood.prefix": "§4blazing_wood",
-  "tetra.material.phaonia_bone_ingot.prefix": "§7Phaonia Bone Ingot",
-  "tetra.material.empty_ringing_crystal_ingot.prefix": "§1Empty Ringing Crystal Ingot",
 
 
 
 
 
 
-  "tetra_loopback.effect.thundering.name": "§6ß§bThundering",
-  "tetra_loopback.effect.thundering.tooltip": "§bBring down the thunder",
+
   "tetra_loopback.effect.guardian.name": "§6ß§7Guardian",
   "tetra_loopback.effect.guardian.tooltip": "§7Great Guardian",
 
-  "tetra.variant.strange/lightning": "§bLightning",
   "tetra.variant.stars/fuse_steel_ingot": "§7Fuse Steel Ingot",
-  "tetra.variant.stars/lightning_ingot": "§bLightning Ingot",
   "tetra.variant.stars/bloody_star": "Bloody Star",
   "tetra.variant.stars/mislead_star": "Mislead Star",
-  "tetra.variant_category.logo/strange.label": "Singular Element",
   "tetra.variant_category.logo/stars.label": "Stars",
-  "tetra.variant_category.logo/moon.label": "Moon",
-  "tetra.variant.peltate/lightning_ingot": "§bLightning Ingot",
   "tetra.variant.peltate/fuse_steel_ingot": "§7Fuse Steel Ingot",
-  "tetra.variant.sword_socket/socket_round_ruby": "§4Round Ruby",
-  "tetra.variant.single_socket/socket_round_ruby": "§4Round Ruby",
-  "tetra.variant.double_socket/socket_round_ruby": "§4Round Ruby",
+
 
 
 
@@ -298,7 +142,6 @@
   "tetra.stats.tetra_loopback:strife": "§6ß§dDisputes",
   "tetra.stats.tetra_loopback:strife.tooltip_short": "§dInflict Weakness 2 on hostile mobs when attacking hostile mobs, and Weakness 2 on self when attacking neutral or friendly creeps. When the caster is injured, gain Strength 3 and Resistance 2, and have a cooldown for 20 seconds",
 
-  "tetra.stats.thunder_effect.tooltip": "§bWhen attacking an enemy, there is a chance to trigger a lightning strike every 10s, and each lightning strike will provide the player with 2 temporary attack damage until they leave the battle",
 
   "tetra_loopback.attribute.attack_knockback.name": "Attack Knockback",
   "tetra_loopback.attribute.attack_knockback.tooltip": "Increases attack knockback by %s",
@@ -309,7 +152,18 @@
   "tetra_loopback.attribute.max_health.name": "Max Health",
   "tetra_loopback.attribute.max_health.tooltip": "Increases max health by %s",
   "tetra_loopback.attribute.movement_speed.name": "Movement Speed",
-  "tetra_loopback.attribute.movement_speed.tooltip": "Increases movement speed by %s"
+  "tetra_loopback.attribute.movement_speed.tooltip": "Increases movement speed by %s",
 
-
+  "tetra_loopback.effect.resonance.name": "§6Ʀ",
+  "tetra.stats.tetra_loopback:resonance.name": "§6Ʀ",
+  "tetra.stats.tetra_loopback:resonance.stage0": "Dor",
+  "tetra.stats.tetra_loopback:resonance.stage1": "Awa",
+  "tetra.stats.tetra_loopback:resonance.stage2": "Res",
+  "tetra.stats.tetra_loopback:resonance.stage3": "Har",
+  "tetra.stats.tetra_loopback:resonance.stage4": "Ult",
+  "tetra.stats.tetra_loopback:resonance.stage0.tooltip": "§7DormantThe §f item shows no signs of resonance.",
+  "tetra.stats.tetra_loopback:resonance.stage1.tooltip": "§aAwakening §f Faint vibrations can be felt from the item.",
+  "tetra.stats.tetra_loopback:resonance.stage2.tooltip": "§9Resonating §f The item resonates with energy, enhancing its properties.",
+  "tetra.stats.tetra_loopback:resonance.stage3.tooltip": "§5Harmonic §f The item is in perfect harmony, unleashing its full potential.",
+  "tetra.stats.tetra_loopback:resonance.stage4.tooltip": "§cUltimate §f The item has reached the ultimate realm of resonance, exhibiting an unprecedented power."
 }

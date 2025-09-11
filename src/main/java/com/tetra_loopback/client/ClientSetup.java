@@ -19,6 +19,7 @@ public class ClientSetup {
         event.enqueueWork(() -> {
             //register renderer
             CuriosRendererRegistry.register(TLbRegistry.MODULAR_EMBLEM.get(), ModularEmblemRenderer::new);
+            CuriosRendererRegistry.register(TLbRegistry.MODULAR_GOGGLES.get(), ModularEmblemRenderer::new);
         });
     }
 }

@@ -1,0 +1,23 @@
+{
+  "replace": true,
+  "slots": [ "goggles/rightlense" ],
+  "improvements":
+  [
+    "tetra:goggles/rightlense/"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 16,
+    "textureY": 0
+  },
+  "outcomes": [
+    {
+      "materials": [ "tetra:resonance/"],
+      "countFactor": 2,
+      "moduleKey": "goggles/rightlense/gem_rightlense",
+      "moduleVariant": "gem_rightlense/"
+    }
+  ]
+}
