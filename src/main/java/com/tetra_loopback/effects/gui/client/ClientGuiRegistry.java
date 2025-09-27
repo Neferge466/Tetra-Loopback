@@ -50,7 +50,7 @@ public class ClientGuiRegistry {
                 0, 0, StatsHelper.barLength,
                 Tetra_loopback.MODID + ".effect.resonance.name",
                 0, 20,
-                false, false, false,
+                false, false, true,
                 resonanceGetter,
                 new ResonanceLabelGetter(),
                 new ResonanceTooltipGetter()

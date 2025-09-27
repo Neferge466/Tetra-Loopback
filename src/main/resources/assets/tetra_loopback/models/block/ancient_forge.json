@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "tetra_loopback:block/ancient_forge"
+  }
+}

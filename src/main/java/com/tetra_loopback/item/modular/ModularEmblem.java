@@ -8,6 +8,7 @@ import com.google.common.collect.Multimaps;
 import com.tetra_loopback.Tetra_loopback;
 import com.tetra_loopback.util.CuriosAttributesUtil;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -19,7 +20,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.ObjectHolder;
 import se.mickelus.mutil.network.PacketHandler;
 import se.mickelus.tetra.data.DataManager;
+import se.mickelus.tetra.effect.ItemEffect;
 import se.mickelus.tetra.gui.GuiModuleOffsets;
+import se.mickelus.tetra.items.modular.IModularItem;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
@@ -44,6 +47,14 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
 
     private static final GuiModuleOffsets majorOffsets = new GuiModuleOffsets(4, 20, -12, 20);
     private static final GuiModuleOffsets minorOffsets = new GuiModuleOffsets(-13, -1);
+
+    //添加Resonance_NBT_KEY
+    public static final String RESONANCE_NBT_KEY = "Resonance";
+    public static final String RESONANCE_VALUE_KEY = "value";
+
+    //设共鸣值
+    public static final double FIXED_RESONANCE_VALUE =4;
+
 
     @ObjectHolder(
             registryName = "item",
@@ -114,22 +125,7 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
         return minorOffsets;
     }
 
-    public static Multimap<Attribute, AttributeModifier> Curios$fixIdentifiers(SlotContext slotContext, Multimap<Attribute, AttributeModifier> modifiers) {
-        return Optional.ofNullable(modifiers)
-                .map(Multimap::entries)
-                .map(Collection::stream)
-                .map((entries) -> entries.collect(
-                        Multimaps.toMultimap(
-                                Map.Entry::getKey,
-                                (entry) ->
-                                        new AttributeModifier(
-                                                entry.getValue().getName() + slotContext.identifier() + slotContext.index(),
-                                                entry.getValue().getAmount(),
-                                                entry.getValue().getOperation()
-                                        ),
-                                ArrayListMultimap::create))
-                ).orElse(null);
-    }
+
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
@@ -142,8 +138,41 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
         return CuriosAttributesUtil.Curios$fixIdentifiers(slotContext, result);
     }
 
+
+
+    //设置物品的共鸣值
+    public static void setResonanceValue(ItemStack stack, double value) {
+        // 确保值在0-20范围内
+        double clampedValue = Mth.clamp(value, 0, 20);
+
+        CompoundTag ResonanceValueTag = new CompoundTag();
+        ResonanceValueTag.putDouble(RESONANCE_VALUE_KEY, clampedValue);
+
+        CompoundTag stackTag = stack.getOrCreateTag();
+        stackTag.put(RESONANCE_NBT_KEY, ResonanceValueTag);
+    }
+
+    //获取物品的共鸣值
+    public static double getResonanceValue(ItemStack stack) {
+        if (stack.hasTag() && stack.getTag().contains(RESONANCE_NBT_KEY)) {
+            CompoundTag ResonanceTag = stack.getTag().getCompound(RESONANCE_NBT_KEY);
+            if (ResonanceTag.contains(RESONANCE_VALUE_KEY)) {
+                return ResonanceTag.getDouble(RESONANCE_VALUE_KEY);
+            }
+        }
+        return 0;
+    }
+
+
+
     @Override
     public void assemble(ItemStack itemStack, @Nullable Level world, float severity) {
+
+
+        super.assemble(itemStack, world, severity);
+        setResonanceValue(itemStack, FIXED_RESONANCE_VALUE);
+
+
         itemStack.getOrCreateTag().putBoolean("gempeltate",
                 getModuleFromSlot(itemStack,"emblem/base")
                         .getVariantData(itemStack).key
@@ -164,6 +193,19 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
 
         //ICurioItem
     public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //    ways
 //    @Override

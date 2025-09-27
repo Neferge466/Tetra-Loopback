@@ -12,10 +12,10 @@ public class GuiBarQuadSegmented extends GuiBar {
     private int currentValue;
     private int barLength;
 
-    public GuiBarQuadSegmented(int x, int y, int barLength, double min, double max) {
-        super(x, y, barLength, min, max);
-        this.barLength = barLength;
-    }
+//    public GuiBarQuadSegmented(int x, int y, int barLength, double min, double max) {
+//        super(x, y, barLength, min, max);
+//        this.barLength = barLength;
+//    }
 
     public GuiBarQuadSegmented(int x, int y, int barLength, double min, double max, boolean invertedDiff) {
         super(x, y, barLength, min, max, invertedDiff);
@@ -33,10 +33,11 @@ public class GuiBarQuadSegmented extends GuiBar {
 
     @Override
     public void draw(GuiGraphics graphics, int refX, int refY, int screenWidth, int screenHeight, int mouseX, int mouseY, float opacity) {
-        //计算进度条长度 (0-20 映射到 0-barLength)
+
+        //计算进度条长度
         int progressLength = (int) ((currentValue / 20.0) * barLength);
 
-        //绘制背景（未填充部分）
+        //绘制背景（未填充）
         drawRect(graphics,
                 refX + x,
                 refY + y + 6,
@@ -44,8 +45,9 @@ public class GuiBarQuadSegmented extends GuiBar {
                 refY + y + 6 + height,
                 0x333333, opacity * 0.5f);
 
-        //绘制进度条（填充部分）
+        //绘制进度条（填充）
         if (progressLength > 0) {
+            int colorWithAlpha = (diffColor & 0x00FFFFFF) | ((int)(opacity * 255) << 24);
             drawRect(graphics,
                     refX + x,
                     refY + y + 6,
@@ -56,7 +58,6 @@ public class GuiBarQuadSegmented extends GuiBar {
     }
 
     private int getColorForValue(int value) {
-        //根据值确定颜色
         if (value >= 16) {
             return 0xFF0000; // 红色 - 极致 (16-20)
         } else if (value >= 11) {
@@ -70,18 +71,18 @@ public class GuiBarQuadSegmented extends GuiBar {
         }
     }
 
-    //获取当前阶段的颜色（用于文本着色）
+    //获取当前阶段的颜色（文本）
     public static int getStageColor(int value) {
         if (value >= 16) {
-            return 0xFF0000; // 红色
+            return 0xFF0000; //红
         } else if (value >= 11) {
-            return 0xFF55FF; // 紫色
+            return 0xFF55FF; //紫
         } else if (value >= 6) {
-            return 0x5555FF; // 蓝色
+            return 0x5555FF; //蓝
         } else if (value >= 1) {
-            return 0x55FF55; // 绿色
+            return 0x55FF55; //绿
         } else {
-            return 0x555555; // 灰色
+            return 0x555555; //灰
         }
     }
 

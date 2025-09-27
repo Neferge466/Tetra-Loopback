@@ -11,7 +11,7 @@ public class ResonanceLabelGetter implements ILabelGetter {
         int intValue = (int) Math.round(value);
         int intDiffValue = (int) Math.round(diffValue);
 
-        //获取阶段颜色代码
+        //获取阶段颜色
         String colorCode = getColorCode(GuiBarQuadSegmented.getStageColor(intValue));
 
         if (value == diffValue) {
@@ -28,13 +28,13 @@ public class ResonanceLabelGetter implements ILabelGetter {
                 " §7→ " + newColorCode + I18n.get(GuiBarQuadSegmented.getStageName(intDiffValue)) + "§7)";
     }
 
-    //将颜色值转换为Minecraft颜色代码
+    //颜色值转换
     private String getColorCode(int color) {
-        if (color == 0xFF0000) return "§c"; // 红色
-        if (color == 0xFF55FF) return "§5"; // 紫色
-        if (color == 0x5555FF) return "§9"; // 蓝色
-        if (color == 0x55FF55) return "§a"; // 绿色
-        return "§7"; // 灰色
+        if (color == 0xFF0000) return "§c";//红色
+        if (color == 0xFF55FF) return "§5";//紫色
+        if (color == 0x5555FF) return "§9";//蓝色
+        if (color == 0x55FF55) return "§a";//绿色
+        return "§7";//灰色
     }
 
     @Override

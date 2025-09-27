@@ -21,12 +21,21 @@
           "textureX": 16.5,
           "textureY": 0
         },
-        "availableTextures": [ "metal","wood","bone"],
+        "availableTextures": [ "metal","wood","bone","shiny"],
         "models": [
           {
             "location": "tetra:item/module/goggles/buckle/"
           }
-        ]
+        ],
+        "extract": {
+          "primaryAttributes": {
+            "generic.attack_damage": 1
+          },
+          "integrity": -1,
+          "availableTextures": [
+            "metal","wood","bone","shiny"
+          ]
+        }
       }
     }
   ]

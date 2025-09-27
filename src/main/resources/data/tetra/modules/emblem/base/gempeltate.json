@@ -25,7 +25,10 @@
           {
             "location": "tetra:item/module/emblem/base/gempeltate/"
           }
-        ]
+        ],
+        "extract": {
+          "integrity": -1
+        }
       }
     }
   ]

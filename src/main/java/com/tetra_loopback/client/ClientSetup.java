@@ -2,6 +2,9 @@ package com.tetra_loopback.client;
 
 import com.tetra_loopback.TLbRegistry;
 import com.tetra_loopback.client.renderer.ModularEmblemRenderer;
+import com.tetra_loopback.inventory.TLbMenus;
+import com.tetra_loopback.screen.AncientForgeScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -20,6 +23,10 @@ public class ClientSetup {
             //register renderer
             CuriosRendererRegistry.register(TLbRegistry.MODULAR_EMBLEM.get(), ModularEmblemRenderer::new);
             CuriosRendererRegistry.register(TLbRegistry.MODULAR_GOGGLES.get(), ModularEmblemRenderer::new);
+
+
+            //注册屏幕
+            MenuScreens.register(TLbMenus.ANCIENT_FORGE_MENU.get(), AncientForgeScreen::new);
         });
     }
 }

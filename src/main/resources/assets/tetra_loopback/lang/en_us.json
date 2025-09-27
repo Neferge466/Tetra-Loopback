@@ -158,12 +158,27 @@
   "tetra.stats.tetra_loopback:resonance.name": "§6Ʀ",
   "tetra.stats.tetra_loopback:resonance.stage0": "Dor",
   "tetra.stats.tetra_loopback:resonance.stage1": "Awa",
-  "tetra.stats.tetra_loopback:resonance.stage2": "Res",
-  "tetra.stats.tetra_loopback:resonance.stage3": "Har",
+  "tetra.stats.tetra_loopback:resonance.stage2": "Har",
+  "tetra.stats.tetra_loopback:resonance.stage3": "Fla",
   "tetra.stats.tetra_loopback:resonance.stage4": "Ult",
   "tetra.stats.tetra_loopback:resonance.stage0.tooltip": "§7DormantThe §f item shows no signs of resonance.",
   "tetra.stats.tetra_loopback:resonance.stage1.tooltip": "§aAwakening §f Faint vibrations can be felt from the item.",
-  "tetra.stats.tetra_loopback:resonance.stage2.tooltip": "§9Resonating §f The item resonates with energy, enhancing its properties.",
-  "tetra.stats.tetra_loopback:resonance.stage3.tooltip": "§5Harmonic §f The item is in perfect harmony, unleashing its full potential.",
-  "tetra.stats.tetra_loopback:resonance.stage4.tooltip": "§cUltimate §f The item has reached the ultimate realm of resonance, exhibiting an unprecedented power."
+  "tetra.stats.tetra_loopback:resonance.stage2.tooltip": "§9Harmonized §f The item resonates in harmony with energy, enhancing its properties.",
+  "tetra.stats.tetra_loopback:resonance.stage3.tooltip": "§5Flawless §f The item exists in a state of perfect harmony, unleashing its full potential.",
+  "tetra.stats.tetra_loopback:resonance.stage4.tooltip": "§cUltimate §f The item has reached the ultimate realm of resonance, exhibiting an unprecedented power.",
+
+  "block.tetra_loopback.ancient_forge": "Ancient Forge",
+  "container.tetra_loopback.ancient_forge": "Ancient Forge",
+  "gui.tetra_loopback.ancient_forge.burn_time": "Burn time: %ds / %ds",
+  "gui.tetra_loopback.ancient_forge.craft_progress": "Progress: %d%%",
+
+  "tooltip.tetra_loopback.material_slot": "Place crafting materials here",
+  "tooltip.tetra_loopback.catalyst_slot": "Place catalyst here (optional, speeds up process)",
+  "tooltip.tetra_loopback.energy_slot": "Place fuel here to power the forge",
+  "tooltip.tetra_loopback.main_output_slot": "Primary output",
+  "tooltip.tetra_loopback.side_output_slot": "Secondary output",
+  "tooltip.tetra_loopback.return_slot": "Possible returned materials"
+
+
+
 }

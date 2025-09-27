@@ -47,12 +47,12 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
     private static final GuiModuleOffsets minorOffsets = new GuiModuleOffsets();
 
 
-    // 添加一个常量定义Resonance_NBT_KEY
+    //添加Resonance_NBT_KEY
     public static final String RESONANCE_NBT_KEY = "Resonance";
     public static final String RESONANCE_VALUE_KEY = "value";
 
-    // 设置固定的共鸣值
-    public static final double FIXED_RESONANCE_VALUE =16;
+    //设置共鸣值
+    public static final double FIXED_RESONANCE_VALUE =0;
 
 
     @ObjectHolder(
@@ -75,7 +75,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
         Tetra_loopback.items.add(this);
     }
 
-    // Synergies
+    //Synergies
     public void commonInit(PacketHandler packetHandler) {
         DataManager.instance.synergyData.onReload(() -> {
             this.synergies = DataManager.instance.synergyData.getOrdered("goggles/");
@@ -125,22 +125,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
     }
 
 
-    public static Multimap<Attribute, AttributeModifier> Curios$fixIdentifiers(SlotContext slotContext, Multimap<Attribute, AttributeModifier> modifiers) {
-        return Optional.ofNullable(modifiers)
-                .map(Multimap::entries)
-                .map(Collection::stream)
-                .map((entries) -> entries.collect(
-                        Multimaps.toMultimap(
-                                Map.Entry::getKey,
-                                (entry) ->
-                                        new AttributeModifier(
-                                                entry.getValue().getName() + slotContext.identifier() + slotContext.index(),
-                                                entry.getValue().getAmount(),
-                                                entry.getValue().getOperation()
-                                        ),
-                                ArrayListMultimap::create))
-                ).orElse(null);
-    }
+
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
@@ -160,13 +145,9 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
 
 
-    /**
-     * 设置物品的共鸣值
-     * @param stack 物品堆栈
-     * @param value 共鸣值（-100到100之间）
-     */
+    //设置物品的共鸣值
     public static void setResonanceValue(ItemStack stack, double value) {
-        // 确保值在0-20范围内
+        // 确保值在0-20
         double clampedValue = Mth.clamp(value, 0, 20);
 
         CompoundTag ResonanceValueTag = new CompoundTag();
@@ -174,13 +155,11 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
         CompoundTag stackTag = stack.getOrCreateTag();
         stackTag.put(RESONANCE_NBT_KEY, ResonanceValueTag);
+
     }
 
-    /**
-     * 获取物品的共鸣值
-     * @param stack 物品堆栈
-     * @return 共鸣值，如果没有设置则返回0
-     */
+
+     //获取物品的共鸣值
     public static double getResonanceValue(ItemStack stack) {
         if (stack.hasTag() && stack.getTag().contains(RESONANCE_NBT_KEY)) {
             CompoundTag ResonanceTag = stack.getTag().getCompound(RESONANCE_NBT_KEY);
@@ -197,7 +176,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 //                        .getVariantData(itemStack).key
 //                        .startsWith("gempeltate/"));
 //        super.assemble(itemStack, world, severity);
-// 在物品组装时写入固定的共鸣值到NBT
+
 
 
     @Override
@@ -272,4 +251,5 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 //        }
 //        */
 //    }
+
 }

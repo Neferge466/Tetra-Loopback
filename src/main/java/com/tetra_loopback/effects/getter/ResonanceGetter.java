@@ -16,31 +16,46 @@ public class ResonanceGetter implements IStatGetter {
 
     @Override
     public boolean shouldShow(Player player, ItemStack currentStack, ItemStack previewStack) {
-        return this.getValue(player, currentStack) != 0 || this.getValue(player, previewStack) != 0;
+        return hasResonance(player, currentStack) || hasResonance(player, previewStack);
     }
 
+    private boolean hasResonance(Player player, ItemStack itemStack) {
+        if (itemStack == null || itemStack.isEmpty()) {
+            return false;
+        }
+        if (itemStack.hasTag() && itemStack.getTag().contains("Resonance")) {
+            return true;
+        }
+        double effectLevel = effectLevelGetter.getValue(player, itemStack);
+        if (effectLevel > 0) {
+            return true;
+        }
+        return false;
+    }
+
+
+
     public double getResonanceValue(Player player, ItemStack itemStack) {
-        //检查NBT中是否有固定的共鸣值
+        //检查NBT中是否有共鸣值
         double nbtValue = getNbtResonanceValue(itemStack);
 
-        //然后获取正常的effectlevel值
+        //获取effectlevel值
         double effectLevel = effectLevelGetter.getValue(player, itemStack);
 
-        //将两个值结合（根据需要调整逻辑）
+        //将两个值结合）
         double combinedValue = nbtValue + effectLevel;
 
-        //将结果限制在0-20范围内（用于Resonance效果显示）
+        //限制在0-20（用于显示）
         return Mth.clamp(combinedValue, 0, 20);
     }
 
     private double getNbtResonanceValue(ItemStack itemStack) {
-        //检查NBT中是否有Resonance数据
+        //检查NBT中是否有Resonance
         if (itemStack.hasTag() && itemStack.getTag().contains("Resonance")) {
             var data = itemStack.getTag().getCompound("Resonance");
             if (!data.contains("value") || itemStack.isDamaged()) {
                 return 0;
             }
-            //
             double ResonanceValue = data.getDouble("value");
             return ResonanceValue;
         }

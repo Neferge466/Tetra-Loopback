@@ -23,7 +23,7 @@ public class ResonanceTooltipGetter implements ITooltipGetter {
         double value = getter.getValue(player, itemStack);
         int intValue = (int) Math.round(value);
 
-        //获取阶段颜色代码
+        //获取阶段颜色
         String colorCode = getColorCode(GuiBarQuadSegmented.getStageColor(intValue));
 
         return colorCode + intValue + " - " + I18n.get(GuiBarQuadSegmented.getStageName(intValue));
@@ -40,7 +40,7 @@ public class ResonanceTooltipGetter implements ITooltipGetter {
         double value = getter.getValue(player, itemStack);
         int intValue = (int) Math.round(value);
 
-        //根据阶段显示不同的提示信息
+        //阶段显示提示
         if (intValue >= 16) {
             return I18n.get("tetra.stats.tetra_loopback:resonance.stage4.tooltip");
         } else if (intValue >= 11) {
@@ -54,7 +54,7 @@ public class ResonanceTooltipGetter implements ITooltipGetter {
         }
     }
 
-    //将颜色值转换为Minecraft颜色代码
+    //颜色值转换
     private String getColorCode(int color) {
         if (color == 0xFF0000) return "§c"; // 红色
         if (color == 0xFF55FF) return "§5"; // 紫色

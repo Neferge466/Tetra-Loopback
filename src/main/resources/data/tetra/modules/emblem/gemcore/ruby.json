@@ -12,7 +12,8 @@
       "key": "ruby/",
       "integrity": 2,
       "attributes": {
-        "generic.attack_damage": 4
+        "generic.attack_damage": 4,
+        "generic.max_health": 2
       },
       "effects":
       {

@@ -1,7 +1,9 @@
 package com.tetra_loopback;
 
+import com.tetra_loopback.block.AncientForgeBlock;
 import com.tetra_loopback.item.modular.ModularEmblem;
 import com.tetra_loopback.item.modular.ModularGoggles;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -14,6 +16,26 @@ import top.theillusivec4.curios.api.SlotContext;
 public class TLbRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Tetra_loopback.MODID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Tetra_loopback.MODID);
+
+
+
+
+    //远古锻炉方块注册
+    public static final RegistryObject<Block> ANCIENT_FORGE = BLOCKS.register("ancient_forge",
+            () -> new AncientForgeBlock(Block.Properties.of()
+                    .strength(3.5f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Item> ANCIENT_FORGE_ITEM = ITEMS.register("ancient_forge",
+            () -> new BlockItem(ANCIENT_FORGE.get(), new Item.Properties()));
+
+
+
+
+
+
+
+
 
     //ICurioItem
     public static final RegistryObject<Item> MODULAR_EMBLEM = ITEMS.register(ModularEmblem.identifier, () ->

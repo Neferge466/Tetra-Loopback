@@ -18,6 +18,7 @@ public class TLbCreativeModeTab {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(TLbRegistry.LOOPBACK_ITEM.get()))
                     .title(Component.translatable("creativetab.tetra_loopback"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(TLbRegistry.ANCIENT_FORGE.get());
                         pOutput.accept(TLbRegistry.CURIOS_EMBLEM.get());
                         pOutput.accept(TLbRegistry.CURIOS_GOGGLES.get());
                         pOutput.accept(TLbRegistry.BLOODY_STAR.get());

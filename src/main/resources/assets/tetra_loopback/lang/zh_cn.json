@@ -78,9 +78,7 @@
   "tetra.module.emblem/pattern/stars.prefix": "%s",
 
   "tetra.stats.tetra_loopback:guardian": "§6ß§7守护",
-  "tetra.stats.tetra_loopback:thundering": "§6ß§b雷鸣",
   "tetra.stats.tetra_loopback:guardian.tooltip_short": "增加玩家的护甲值，每级提供 4 点护甲",
-  "tetra.stats.tetra_loopback:thundering.tooltip_short": "为玩家的每一次攻击施加雷电，冷却10s",
 
 
 
@@ -154,9 +152,6 @@
 
 
 
-  "tetra.stats.thunder_effect.tooltip": "§b攻击敌人时，每10秒有几率触发一次闪电打击，并且每次闪电打击都会为玩家提供2点临时攻击力直到脱战。",
-
-
 
 
   "tetra_loopback.attribute.attack_knockback.name": "攻击击退",
@@ -172,19 +167,30 @@
 
 
 
-  "tetra_loopback.effect.resonance.name": "§6Ʀ共鸣",
-  "tetra.stats.tetra_loopback:resonance.name": "§6Ʀ共鸣",
+  "tetra_loopback.effect.resonance.name": "§6共鸣",
+  "tetra.stats.tetra_loopback:resonance.name": "§6共鸣",
   "tetra.stats.tetra_loopback:resonance.stage0": "沉寂",
   "tetra.stats.tetra_loopback:resonance.stage1": "觉醒",
-  "tetra.stats.tetra_loopback:resonance.stage2": "共鸣",
-  "tetra.stats.tetra_loopback:resonance.stage3": "谐和",
+  "tetra.stats.tetra_loopback:resonance.stage2": "谐振",
+  "tetra.stats.tetra_loopback:resonance.stage3": "无瑕",
   "tetra.stats.tetra_loopback:resonance.stage4": "极致",
   "tetra.stats.tetra_loopback:resonance.stage0.tooltip": "物品没有任何共鸣迹象。",
   "tetra.stats.tetra_loopback:resonance.stage1.tooltip": "可以感受到物品传来的微弱振动。",
-  "tetra.stats.tetra_loopback:resonance.stage2.tooltip": "物品与能量共鸣，增强了它的属性。",
-  "tetra.stats.tetra_loopback:resonance.stage3.tooltip": "物品处于完美的和谐状态，释放出全部潜能。",
-  "tetra.stats.tetra_loopback:resonance.stage4.tooltip": "物品达到了共鸣的极致境界，展现出前所未有的力量。"
+  "tetra.stats.tetra_loopback:resonance.stage2.tooltip": "物品与能量谐调共振，增强了它的属性。",
+  "tetra.stats.tetra_loopback:resonance.stage3.tooltip": "物品处于完美无瑕的和谐状态，释放出全部潜能。",
+  "tetra.stats.tetra_loopback:resonance.stage4.tooltip": "物品达到了共鸣的极致境界，展现出前所未有的力量。",
 
+  "block.tetra_loopback.ancient_forge": "远古锻炉",
+  "container.tetra_loopback.ancient_forge": "远古锻炉",
+  "gui.tetra_loopback.ancient_forge.burn_time": "燃烧时间: %d秒 / %d秒",
+  "gui.tetra_loopback.ancient_forge.craft_progress": "进度: %d%%",
+
+  "tooltip.tetra_loopback.material_slot": "放入合成材料",
+  "tooltip.tetra_loopback.catalyst_slot": "放入催化剂（可选，可加速反应）",
+  "tooltip.tetra_loopback.energy_slot": "放入燃料，为锻炉提供能量",
+  "tooltip.tetra_loopback.main_output_slot": "主要产出物",
+  "tooltip.tetra_loopback.side_output_slot": "次要产出物",
+  "tooltip.tetra_loopback.return_slot": "可能返还的材料"
 
 
 }
