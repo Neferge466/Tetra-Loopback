@@ -1,10 +1,14 @@
 package com.tetra_loopback.effects.gui.client;
 
 import com.tetra_loopback.Tetra_loopback;
-import com.tetra_loopback.effects.getter.ResonanceGetter;
-import com.tetra_loopback.effects.getter.ResonanceLabelGetter;
-import com.tetra_loopback.effects.getter.ResonanceTooltipGetter;
-import com.tetra_loopback.effects.gui.GuiStatBarQuadSegmented;
+import com.tetra_loopback.effects.getter.resonance.ResonanceGetter;
+import com.tetra_loopback.effects.getter.resonance.ResonanceLabelGetter;
+import com.tetra_loopback.effects.getter.resonance.ResonanceTooltipGetter;
+import com.tetra_loopback.effects.getter.vision.VisionFieldGetter;
+import com.tetra_loopback.effects.getter.vision.VisionFieldLabelGetter;
+import com.tetra_loopback.effects.getter.vision.VisionFieldTooltipGetter;
+import com.tetra_loopback.effects.gui.resonance.GuiStatBarQuadSegmented;
+import com.tetra_loopback.effects.gui.vision.GuiStatBarVisionField;
 import com.tetra_loopback.effects.gui.ModEffectStats;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -41,8 +45,29 @@ public class ClientGuiRegistry {
         registerMaxHealthBar();
         registerMovementSpeedBar();
 
+        registerVisionFieldBar();
+
 
     }
+
+
+    private static void registerVisionFieldBar() {
+        IStatGetter visionFieldGetter = new VisionFieldGetter();
+        GuiStatBarVisionField visionFieldBar = new GuiStatBarVisionField(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.vision_field.name",
+                0, 5,
+                false, false, true,
+                visionFieldGetter,
+                new VisionFieldLabelGetter(),
+                new VisionFieldTooltipGetter()
+        );
+
+        WorkbenchStatsGui.addBar(visionFieldBar);
+        HoloStatsGui.addBar(visionFieldBar);
+    }
+
+
 
     private static void registerResonanceBar() {
         IStatGetter resonanceGetter = new ResonanceGetter();

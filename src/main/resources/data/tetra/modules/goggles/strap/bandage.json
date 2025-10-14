@@ -1,0 +1,34 @@
+{
+  "replace": true,
+  "type": "tetra:basic_major_module",
+  "slots": [ "goggles/strap" ],
+  "improvements": [],
+
+
+  "renderLayer": "BASE",
+  "variants": [
+    {
+      "materials": [ "tetra:curios_fabric/" , "tetra:curios_skin/" ],
+      "key": "bandage/",
+      "integrity": 2,
+      "extract": {
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+          "textureX": 16.5,
+          "textureY": 0
+        },
+        "availableTextures": [ "bandage" ],
+        "integrity": 1,
+        "models": [
+          {
+            "location": "tetra:item/module/goggles/strap/",
+            "transform": {
+              "scale": [1,1,1],
+              "translation": [0,0,0]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

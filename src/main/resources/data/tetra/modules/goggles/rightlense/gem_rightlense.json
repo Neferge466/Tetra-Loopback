@@ -6,12 +6,10 @@
 
 
   "renderLayer": "BASE",
-  "aspects": {
-    "wearable": 2
-  },
+  "aspects": {},
   "variants": [
     {
-      "materials": [ "tetra:resonance/" ],
+      "materials": [ "tetra:curios_gem/" ],
       "key": "gem_rightlense/",
       "integrity": 2,
       "extract": {
@@ -20,10 +18,11 @@
           "textureX": 16.5,
           "textureY": 0
         },
+        "integrity": -1,
         "availableTextures": [ "default"],
         "models": [
           {
-            "location": "tetra:item/module/goggles/rightlense/gem_rightlense/"
+            "location": "tetra:item/module/goggles/rightlense/"
           }
         ]
       }

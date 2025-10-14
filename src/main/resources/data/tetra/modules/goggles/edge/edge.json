@@ -1,0 +1,34 @@
+{
+  "replace": true,
+  "type": "tetra:basic_major_module",
+  "slots": [ "goggles/edge" ],
+  "improvements": [],
+
+
+  "renderLayer": "BASE",
+  "variants": [
+    {
+      "materials": [ "tetra:curios_metal/" ],
+      "key": "edge/",
+      "integrity": 2,
+      "extract": {
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+          "textureX": 16.5,
+          "textureY": 0
+        },
+        "availableTextures": [ "default" ],
+        "integrity": -1,
+        "models": [
+          {
+            "location": "tetra:item/module/goggles/edge/",
+            "transform": {
+              "scale": [1,1,1],
+              "translation": [0,0,0]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -5,10 +5,9 @@
     },
     "item": "tetra_loopback:modular_goggles",
     "modules": {
-      "loop/buckle": [ "goggles/buckle/buckle","buckle/gold" ],
-      "loop/leftlense": [ "goggles/leftlense/gem_leftlense","gem_leftlense/mislead_star" ],
-      "loop/rightlense": [ "goggles/rightlense/gem_rightlense","gem_rightlense/mislead_star" ],
-      "loop/strap": [ "goggles/strap/strap","strap/dragon_sinew" ]
+      "loop/frame": [ "goggles/frame/single_frame","single_frame/fuse_steel_ingot" ],
+      "loop/edge": [ "goggles/edge/edge","edge/iron" ],
+      "loop/strap": [ "goggles/strap/binding_rope","binding_rope/string" ]
     },
     "improvements": {}
   }

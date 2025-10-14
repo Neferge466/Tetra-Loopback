@@ -6,6 +6,13 @@
   "item.tetra_loopback.fuse_steel_ingot": "Fused Steel Ingot",
   "item.tetra_loopback.curios_emblem": "Wood Emblem Base",
 
+  "tetra.variant_category.logo/stars.label": "Stars",
+  "tetra.variant_category.curios_fabric.label": "Curios fabric",
+  "tetra.variant_category.curios_fibre.label": "Curios fibre",
+  "tetra.variant_category.curios_gem.label": "Curios gem",
+  "tetra.variant_category.curios_metal.label": "Curios metal",
+  "tetra.variant_category.curios_skin.label": "Curios skin",
+  "tetra.variant_category.curios_wood.label": "Curios wood",
 
 
 
@@ -16,66 +23,180 @@
 
 
 
+
+  "tetra.holo.craft.modular_emblem": "Modular Emblem",
+  "tetra.holo.craft.modular_goggles": "Modular Goggles",
+
+
+
   "tetra.slot.emblem/base": "Base",
   "tetra.slot.emblem/pattern": "Pattern",
 
+  "tetra.slot.goggles/buckle": "Buckle",
+  "tetra.slot.goggles/edge": "Edge",
+  "tetra.slot.goggles/frame": "Frame",
+  "tetra.slot.goggles/leftlense": "Left lens",
+  "tetra.slot.goggles/rightlense": "Right lens",
+  "tetra.slot.goggles/singlelense": "Single lens",
+  "tetra.slot.goggles/strap": "Strap",
 
 
 
+  "tetra/schematic/emblem/base/peltate.name": "Peltate base",
+  "tetra/schematic/emblem/base/peltate.description": "Replace the current emblem base with a peltate base",
+  "tetra/schematic/emblem/base/peltate.slot1": "Emblem material",
 
-  "tetra.stats.tetra_loopback:attack_knockback.tooltip_short": "Increases Attack Knockback",
-  "tetra.stats.tetra_loopback:follow_range.tooltip_short": "Increases Follow Range",
-  "tetra.stats.tetra_loopback:max_health.tooltip_short": "Increases Max Health",
-  "tetra.stats.tetra_loopback:attack_speed.tooltip_short": "Increases Attack Speed",
-  "tetra.stats.tetra_loopback:attack_damage.tooltip_short": "Increases Attack Damage",
-  "tetra.stats.tetra_loopback:flying_speed.tooltip_short": "Increases Fly Speed",
-  "tetra.stats.tetra_loopback:armor.tooltip_short": "Increases Armor",
-  "tetra.stats.tetra_loopback:luck.tooltip_short": "Increases Luck",
-  "tetra.stats.tetra_loopback:armor_toughness.tooltip_short": "Increases Armor Toughness",
-  "tetra.stats.tetra_loopback:knockback_resistance.tooltip_short": "Increases Knockblack Resistance",
-  "tetra.stats.tetra_loopback:movement_speed.tooltip_short": "Increases Speed",
-
-
-  "tetra.stats.tetra_loopback:attack_knockback": "Attack Knockback",
-  "tetra.stats.tetra_loopback:follow_range": "Follow Range",
-  "tetra.stats.tetra_loopback:max_health": "Max Health",
-  "tetra.stats.tetra_loopback:attack_speed": "Attack Speed",
-  "tetra.stats.tetra_loopback:attack_damage": "Attack Damage",
-  "tetra.stats.tetra_loopback:flying_speed": "Fly Speed",
-  "tetra.stats.tetra_loopback:armor": "Armor",
-  "tetra.stats.tetra_loopback:luck": "Luck",
-  "tetra.stats.tetra_loopback:armor_toughness": "Armor Toughness",
-  "tetra.stats.tetra_loopback:knockback_resistance": "Knockblack Resistance",
-  "tetra.stats.tetra_loopback:movement_speed": "Speed",
-
-
-
-
-
-
-  "tetra/schematic/base/peltate.name": "Peltate base",
-  "tetra/schematic/base/peltate.description": "Replace the current emblem base with a peltate base",
-  "tetra/schematic/base/peltate.slot1": "Emblem material",
-
-  "tetra.module.emblem/base/peltate.item_name": "Peltate Emblem",
-  "tetra.module.emblem/base/peltate.name": "Peltate Emblem",
-  "tetra.module.emblem/base/peltate.description": "A peltate emblem.",
-  "tetra.module.emblem/base/peltate.material_name": "%s peltate emblem",
+  "tetra.module.emblem/base/peltate.item_name": "Peltate base",
+  "tetra.module.emblem/base/peltate.name": "Peltate base",
+  "tetra.module.emblem/base/peltate.description": "A peltate base can be adorned with patterns.",
+  "tetra.module.emblem/base/peltate.material_name": "%s peltate base",
   "tetra.module.emblem/base/peltate.prefix": "%s",
 
+  "tetra/schematic/emblem/base/gempeltate.name": "Gem peltate base",
+  "tetra/schematic/emblem/base/gempeltate.description": "Replace the current emblem base with a gem peltate base",
+  "tetra/schematic/emblem/base/gempeltate.slot1": "Emblem material",
+
+  "tetra.module.emblem/base/gempeltate.item_name": "Gem Peltate Emblem",
+  "tetra.module.emblem/base/gempeltate.name": "Gem Peltate Emblem",
+  "tetra.module.emblem/base/gempeltate.description": "A gem peltate emblem that can be inlaid with gems.",
+  "tetra.module.emblem/base/gempeltate.material_name": "%s gem peltate emblem",
+  "tetra.module.emblem/base/gempeltate.prefix": "%s",
 
 
 
 
-  "tetra/schematic/pattern/stars.name": "Stars pattern",
-  "tetra/schematic/pattern/stars.description": "Replace the current emblem pattern with a stars pettern",
-  "tetra/schematic/pattern/stars.slot1": "Pattern material",
+  "tetra/schematic/emblem/pattern/stars.name": "Stars pattern",
+  "tetra/schematic/emblem/pattern/stars.description": "Replace the current emblem pattern with a stars pattern",
+  "tetra/schematic/emblem/pattern/stars.slot1": "Pattern material",
 
   "tetra.module.emblem/pattern/stars.item_name": "Stars Pattern",
   "tetra.module.emblem/pattern/stars.name": "Stars Pattern",
   "tetra.module.emblem/pattern/stars.description": "A stars pattern.",
   "tetra.module.emblem/pattern/stars.material_name": "%s stars pattern",
   "tetra.module.emblem/pattern/stars.prefix": "%s",
+
+
+
+
+  "tetra/schematic/emblem/gemcore/agem.name": "Gem core",
+  "tetra/schematic/emblem/gemcore/agem.description": "Set a gem as the core.",
+  "tetra/schematic/emblem/gemcore/agem.slot1": "Gem material",
+
+  "tetra.module.emblem/gemcore/agem.item_name": "Gem",
+  "tetra.module.emblem/gemcore/agem.name": "Gem core",
+  "tetra.module.emblem/gemcore/agem.description": "Set a gem as the core.",
+  "tetra.module.emblem/gemcore/agem.material_name": "%s Gem core",
+  "tetra.module.emblem/gemcore/agem.prefix": "%s",
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "tetra/schematic/goggles/buckle/buckle.name": "Buckle",
+  "tetra/schematic/goggles/buckle/buckle.description": "A buckle for adjusting the tightness.",
+  "tetra/schematic/goggles/buckle/buckle.slot1": "Buckle material",
+
+  "tetra.module.goggles/buckle/buckle.name": "Buckle",
+  "tetra.module.goggles/buckle/buckle.description": "A buckle for adjusting the tightness of wearing goggles.",
+  "tetra.module.goggles/buckle/buckle.material_name": "%s buckle",
+
+
+
+  "tetra/schematic/goggles/edge/edge.name": "Edge",
+  "tetra/schematic/goggles/edge/edge.description": "The edge of the goggles frame.",
+  "tetra/schematic/goggles/edge/edge.slot1": "Edge material",
+
+  "tetra.module.goggles/edge/edge.name": "Edge",
+  "tetra.module.goggles/edge/edge.description": "The edge of the goggles frame.",
+  "tetra.module.goggles/edge/edge.material_name": "%s edge",
+
+
+
+  "tetra/schematic/goggles/frame/binocular_frame.name": "Binocular frame",
+  "tetra/schematic/goggles/frame/binocular_frame.description": "The binocular frame of the goggles.",
+  "tetra/schematic/goggles/frame/binocular_frame.slot1": "Frame material",
+
+  "tetra.module.goggles/frame/binocular_frame.item_name": "Binocular frame goggles",
+  "tetra.module.goggles/frame/binocular_frame.name": "Binocular frame",
+  "tetra.module.goggles/frame/binocular_frame.description": "The binocular frame of the goggles.",
+  "tetra.module.goggles/frame/binocular_frame.material_name": "%s binocular frame",
+  "tetra.module.goggles/frame/binocular_frame.prefix": "%s",
+
+
+  "tetra/schematic/goggles/frame/single_frame.name": "Single frame goggles",
+  "tetra/schematic/goggles/frame/single_frame.description": "The Single frame of the goggles.",
+  "tetra/schematic/goggles/frame/single_frame.slot1": "Frame material",
+
+  "tetra.module.goggles/frame/single_frame.item_name": "Single frame",
+  "tetra.module.goggles/frame/single_frame.name": "Single frame",
+  "tetra.module.goggles/frame/single_frame.description": "The single frame of the goggles.",
+  "tetra.module.goggles/frame/single_frame.material_name": "%s single frame",
+  "tetra.module.goggles/frame/single_frame.prefix": "%s",
+
+
+
+  "tetra/schematic/goggles/leftlense/gem_leftlense.name": "Gem left lens",
+  "tetra/schematic/goggles/leftlense/gem_leftlense.description": "Left gem lens.",
+  "tetra/schematic/goggles/leftlense/gem_leftlense.slot1": "Gem lens material",
+
+  "tetra.module.goggles/leftlense/gem_leftlense.name": "Gem left lens",
+  "tetra.module.goggles/leftlense/gem_leftlense.description": "Left gem lens.",
+  "tetra.module.goggles/leftlense/gem_leftlense.material_name": "%s gem lens",
+
+
+  "tetra/schematic/goggles/singlelense/singlelense.name": "Gem single lens",
+  "tetra/schematic/goggles/singlelense/singlelense.description": "Single gem lens.",
+  "tetra/schematic/goggles/singlelense/singlelense.slot1": "Gem lens material",
+
+  "tetra.module.goggles/singlelense/singlelense.name": "Gem single lens",
+  "tetra.module.goggles/singlelense/singlelense.description": "Single gem lens.",
+  "tetra.module.goggles/singlelense/singlelense.material_name": "%s gem lens",
+
+
+
+  "tetra/schematic/goggles/rightlense/gem_rightlense.name": "Gem right lens",
+  "tetra/schematic/goggles/rightlense/gem_rightlense.description": "Right gem lens.",
+  "tetra/schematic/goggles/rightlense/gem_rightlense.slot1": "Gem lens material",
+
+  "tetra.module.goggles/rightlense/gem_rightlense.name": "Gem right lens",
+  "tetra.module.goggles/rightlense/gem_rightlense.description": "Right gem lens.",
+  "tetra.module.goggles/rightlense/gem_rightlense.material_name": "%s gem lens",
+
+
+  "tetra/schematic/goggles/strap/bandage.name": "Bandage",
+  "tetra/schematic/goggles/strap/bandage.description": "A flat,soft and adjustable strap.",
+  "tetra/schematic/goggles/strap/bandage.slot1": "Bandage material",
+
+  "tetra.module.goggles/strap/bandage.item_name": "Bandage",
+  "tetra.module.goggles/strap/bandage.name": "Bandage",
+  "tetra.module.goggles/strap/bandage.description": "A flat,soft and adjustable strap.",
+  "tetra.module.goggles/strap/bandage.material_name": "%s bandage",
+  "tetra.module.goggles/strap/bandage.prefix": "%s",
+
+
+  "tetra/schematic/goggles/strap/binding_rope.name": "Binding rope",
+  "tetra/schematic/goggles/strap/binding_rope.description": "A soft and elastic rope.",
+  "tetra/schematic/goggles/strap/binding_rope.slot1": "Binding rope material",
+
+  "tetra.module.goggles/strap/binding_rope.item_name": "Binding rope",
+  "tetra.module.goggles/strap/binding_rope.name": "Binding rope",
+  "tetra.module.goggles/strap/binding_rope.description": "A soft and elastic rope.",
+  "tetra.module.goggles/strap/binding_rope.material_name": "%s binding rope",
+  "tetra.module.goggles/strap/binding_rope.prefix": "%s",
+
+
+
+
+
+
 
   "tetra.stats.tetra_loopback:guardian": "§6ß§7Guardian",
   "tetra.stats.tetra_loopback:guardian.tooltip_short": "Increases the player's armor by granting 4 armor points per level",
@@ -103,14 +224,13 @@
 
 
 
-
+  "tetra_loopback.effect.vision_field.name": "§6Vision Field",
   "tetra_loopback.effect.guardian.name": "§6ß§7Guardian",
-  "tetra_loopback.effect.guardian.tooltip": "§7Great Guardian",
+  "tetra_loopback.effect.guardian.tooltip": "§7Increase armor",
 
   "tetra.variant.stars/fuse_steel_ingot": "§7Fuse Steel Ingot",
   "tetra.variant.stars/bloody_star": "Bloody Star",
   "tetra.variant.stars/mislead_star": "Mislead Star",
-  "tetra.variant_category.logo/stars.label": "Stars",
   "tetra.variant.peltate/fuse_steel_ingot": "§7Fuse Steel Ingot",
 
 
@@ -177,7 +297,83 @@
   "tooltip.tetra_loopback.energy_slot": "Place fuel here to power the forge",
   "tooltip.tetra_loopback.main_output_slot": "Primary output",
   "tooltip.tetra_loopback.side_output_slot": "Secondary output",
-  "tooltip.tetra_loopback.return_slot": "Possible returned materials"
+  "tooltip.tetra_loopback.return_slot": "Possible returned materials",
+
+
+
+
+
+
+  "effect.tetra_loopback.vision_field.title": "§6Vision System - Level %s",
+  "effect.tetra_loopback.vision_field.coordinates": "Coordinates: %s",
+  "effect.tetra_loopback.vision_field.speed": "Speed: %s m/s",
+  "effect.tetra_loopback.vision_field.facing": "Facing: %s",
+  "effect.tetra_loopback.vision_field.attributes.title": "§6--- Attributes ---",
+  "effect.tetra_loopback.vision_field.armor": "Armor: %s",
+  "effect.tetra_loopback.vision_field.armor_toughness": "Armor Toughness: %s",
+  "effect.tetra_loopback.vision_field.attack_damage": "Attack Damage: %s",
+  "effect.tetra_loopback.vision_field.attack_speed": "Attack Speed: %s",
+  "effect.tetra_loopback.vision_field.knockback_resistance": "Knockback Resistance: %s",
+  "effect.tetra_loopback.vision_field.luck": "Luck: %s",
+  "effect.tetra_loopback.vision_field.max_health": "Max Health: %s",
+  "effect.tetra_loopback.vision_field.movement_speed": "Movement Speed: %s",
+  "effect.tetra_loopback.vision_field.enemies": "Nearby Enemies: %s",
+  "effect.tetra_loopback.vision_field.time_weather": "%s",
+  "effect.tetra_loopback.vision_field.time_weather_format": "Time: %s | Weather: %s",
+  "effect.tetra_loopback.vision_field.moon_phase": "Moon Phase: %s",
+  "effect.tetra_loopback.vision_field.moon_phase.full": "Full Moon",
+  "effect.tetra_loopback.vision_field.moon_phase.waning_gibbous": "Waning Gibbous",
+  "effect.tetra_loopback.vision_field.moon_phase.last_quarter": "Last Quarter",
+  "effect.tetra_loopback.vision_field.moon_phase.waning_crescent": "Waning Crescent",
+  "effect.tetra_loopback.vision_field.moon_phase.new": "New Moon",
+  "effect.tetra_loopback.vision_field.moon_phase.waxing_crescent": "Waxing Crescent",
+  "effect.tetra_loopback.vision_field.moon_phase.first_quarter": "First Quarter",
+  "effect.tetra_loopback.vision_field.moon_phase.waxing_gibbous": "Waxing Gibbous",
+  "effect.tetra_loopback.vision_field.holding": "Holding: %s",
+  "effect.tetra_loopback.vision_field.direction.south": "South",
+  "effect.tetra_loopback.vision_field.direction.west": "West",
+  "effect.tetra_loopback.vision_field.direction.north": "North",
+  "effect.tetra_loopback.vision_field.direction.east": "East",
+  "effect.tetra_loopback.vision_field.weather.thunder": "Thunderstorm",
+  "effect.tetra_loopback.vision_field.weather.rain": "Rainy",
+  "effect.tetra_loopback.vision_field.weather.clear": "Clear",
+  "effect.tetra_loopback.vision_field.time.dawn": "Dawn",
+  "effect.tetra_loopback.vision_field.time.morning": "Morning",
+  "effect.tetra_loopback.vision_field.time.noon": "Noon",
+  "effect.tetra_loopback.vision_field.time.dusk": "Dusk",
+  "effect.tetra_loopback.vision_field.time.night": "Night",
+  "effect.tetra_loopback.vision_field.unknown": "Unknown",
+
+
+
+  "tetra.stats.tetra_loopback:vision_field.name": "Vision Field",
+  "tetra.stats.tetra_loopback:vision_field.level": "Level",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level0": "Vision Field not activated.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level1": "Level 1: Display basic information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level2": "Level 2: Display attribute information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level3": "Level 3: Display enemy information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level4": "Level 4: Display time and weather information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level5": "Level 5: Display held item information.",
+
+
+
+
+
+
+
+  "key.tetra_loopback.toggle_vision_overlay": "Toggle Vision Field Overlay",
+  "key.categories.tetra_loopback": "Tetra Loopback",
+  "effect.tetra_loopback.vision_field.title_hidden": "Vision Field %s [HIDDEN]",
+  "message.tetra_loopback.vision_overlay.shown": "§aVision Field overlay shown",
+  "message.tetra_loopback.vision_overlay.hidden": "§7Vision Field overlay hidden"
+
+
+
+
+
+
+
+
 
 
 

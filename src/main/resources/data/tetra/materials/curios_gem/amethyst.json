@@ -1,0 +1,31 @@
+{
+    "key": "amethyst",
+    "hidden": true,
+    "category": "curios_gem",
+    "primary": 5,
+    "secondary": 2.7,
+    "tertiary": 0,
+    "durability": 850,
+    "integrityCost": 2,
+    "integrityGain": 2,
+    "magicCapacity": 72,
+    "toolLevel": "minecraft:iron",
+    "toolEfficiency": 7,
+    "effects": {
+        "tetra_loopback:vision_field": 5
+    },
+    "tints": {
+        "glyph": "af49f0",
+        "texture": "af49f0"
+    },
+    "textures": [
+        "shiny",
+        "crude"
+    ],
+    "material": {
+        "items": [ "minecraft:amethyst_shard" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:stone"
+    }
+}

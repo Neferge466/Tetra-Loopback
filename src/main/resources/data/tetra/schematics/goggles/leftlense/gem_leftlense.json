@@ -2,9 +2,7 @@
   "replace": true,
   "slots": [ "goggles/leftlense" ],
   "improvements":
-  [
-    "tetra:goggles/leftlense/"
-  ],
+  [],
   "materialSlotCount": 1,
   "displayType": "major",
   "glyph": {
@@ -14,7 +12,7 @@
   },
   "outcomes": [
     {
-      "materials": [ "tetra:resonance/"],
+      "materials": [ "tetra:curios_gem/"],
       "countFactor": 2,
       "moduleKey": "goggles/leftlense/gem_leftlense",
       "moduleVariant": "gem_leftlense/"

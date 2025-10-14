@@ -19,6 +19,7 @@
           "textureY": 0
         },
         "availableTextures": [ "shiny","metal","default","bloody","mislead" ],
+        "integrity": 1,
         "models": [
           {
             "location": "tetra:item/module/emblem/pattern/stars/",

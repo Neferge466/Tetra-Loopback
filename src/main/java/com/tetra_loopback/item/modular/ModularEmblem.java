@@ -8,15 +8,19 @@ import com.google.common.collect.Multimaps;
 import com.tetra_loopback.Tetra_loopback;
 import com.tetra_loopback.util.CuriosAttributesUtil;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.registries.ObjectHolder;
 import se.mickelus.mutil.network.PacketHandler;
 import se.mickelus.tetra.data.DataManager;
@@ -193,19 +197,7 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
 
         //ICurioItem
     public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 //    ways
 //    @Override

@@ -1,0 +1,12 @@
+[
+  {
+    "variant": "singlelense/amethyst",
+    "key": "singlelense_vision",
+    "steps": 8,
+    "properties": {
+      "effects": {
+        "tetra_loopback:vision_field": 1
+      }
+    }
+  }
+]

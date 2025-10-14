@@ -1,0 +1,44 @@
+{
+  "replace": true,
+  "type": "tetra:basic_major_module",
+  "slots": [ "emblem/gemcore" ],
+  "improvements": [],
+  "renderLayer": "HIGHER",
+  "variants": [
+    {
+      "materials": [
+        "tetra:gem/"
+      ],
+      "key": "agem/",
+      "integrity": 2,
+      "attributes": {
+        "generic.attack_damage": 4,
+        "generic.max_health": 2
+      },
+      "effects":
+      {
+        "reaching": 5
+      },
+      "extract": {
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+          "textureX": 32,
+          "textureY": 0
+        },
+        "availableTextures": ["default"],
+        "integrity": 1,
+        "models": [
+          {
+            "location": "tetra:item/module/emblem/gemcore/",
+            "emission": 15,
+            "transform": {
+              "translation": [-0.15,-0.15,0.005],
+              "scale": [1.3,1.3,1]
+            }
+          }
+
+        ]
+      }
+    }
+  ]
+}

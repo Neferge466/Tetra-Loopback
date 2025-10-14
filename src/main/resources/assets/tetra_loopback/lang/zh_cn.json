@@ -8,51 +8,50 @@
   "item.tetra_loopback.fuse_steel_ingot": "融合钢锭",
   "item.tetra_loopback.curios_emblem": "木质徽章底托",
 
+
+
+
+
+  "tetra.variant_category.logo/stars.label": "星星纹样",
+  "tetra.variant_category.curios_fabric.label": "饰品布料",
+  "tetra.variant_category.curios_fibre.label": "饰品纤维",
+  "tetra.variant_category.curios_gem.label": "饰品宝石",
+  "tetra.variant_category.curios_metal.label": "饰品金属",
+  "tetra.variant_category.curios_skin.label": "饰品皮革",
+  "tetra.variant_category.curios_wood.label": "饰品木料",
+
+
+
+
+
+
+  "tetra.holo.craft.modular_emblem": "模块化徽章",
+  "tetra.holo.craft.modular_goggles": "模块化护目镜",
+
+
+
+
+
+
+
+
+
+
   "tetra.slot.emblem/base": "底托",
   "tetra.slot.emblem/pattern": "纹样",
 
+  "tetra.slot.goggles/buckle": "带扣",
+  "tetra.slot.goggles/edge": "镶边",
+  "tetra.slot.goggles/frame": "框架",
+  "tetra.slot.goggles/leftlense": "左镜片",
+  "tetra.slot.goggles/rightlense": "右镜片",
+  "tetra.slot.goggles/singlelense": "单镜片",
+  "tetra.slot.goggles/strap": "条带",
 
 
-  "tetra.stats.tetra_loopback:attack_knockback.tooltip_short": "增加攻击击退",
-  "tetra.stats.tetra_loopback:follow_range.tooltip_short": "增加追踪范围",
-  "tetra.stats.tetra_loopback:max_health.tooltip_short": "增加最大生命值",
-  "tetra.stats.tetra_loopback:attack_speed.tooltip_short": "增加攻击速度",
-  "tetra.stats.tetra_loopback:attack_damage.tooltip_short": "增加攻击伤害",
-  "tetra.stats.tetra_loopback:flying_speed.tooltip_short": "增加飞行速度",
-  "tetra.stats.tetra_loopback:armor.tooltip_short": "增加护甲值",
-  "tetra.stats.tetra_loopback:luck.tooltip_short": "增加幸运值",
-  "tetra.stats.tetra_loopback:armor_toughness.tooltip_short": "增加护甲韧性",
-  "tetra.stats.tetra_loopback:knockback_resistance.tooltip_short": "增加击退抗性",
-  "tetra.stats.tetra_loopback:movement_speed.tooltip_short": "增加移动速度",
-
-
-
-
-
-
-  "tetra.stats.tetra_loopback:attack_knockback": "§6ß§f攻击击退",
-  "tetra.stats.tetra_loopback:follow_range": "§6ß§f追踪范围",
-  "tetra.stats.tetra_loopback:max_health": "§6ß§f最大生命值",
-  "tetra.stats.tetra_loopback:attack_speed": "§6ß§f攻击速度",
-  "tetra.stats.tetra_loopback:attack_damage": "§6ß§f攻击伤害",
-  "tetra.stats.tetra_loopback:flying_speed": "§6ß§f飞行速度",
-  "tetra.stats.tetra_loopback:armor": "§6ß§f护甲",
-  "tetra.stats.tetra_loopback:luck": "§6ß§f幸运",
-  "tetra.stats.tetra_loopback:armor_toughness": "§6ß§f护甲韧性",
-  "tetra.stats.tetra_loopback:knockback_resistance": "§6ß§f击退抗性",
-  "tetra.stats.tetra_loopback:movement_speed": "§6ß§f移动速度",
-
-
-
-
-
-
-
-
-
-  "tetra/schematic/base/peltate.name": "盾形底托",
-  "tetra/schematic/base/peltate.description": "将当前徽章基础替换为盾形底托",
-  "tetra/schematic/base/peltate.slot1": "徽章材料",
+  "tetra/schematic/emblem/base/peltate.name": "盾形底托",
+  "tetra/schematic/emblem/base/peltate.description": "将当前徽章底座替换为盾形底托",
+  "tetra/schematic/emblem/base/peltate.slot1": "徽章材料",
 
   "tetra.module.emblem/base/peltate.item_name": "盾形徽章",
   "tetra.module.emblem/base/peltate.name": "盾形徽章",
@@ -61,15 +60,22 @@
   "tetra.module.emblem/base/peltate.prefix": "%s",
 
 
+  "tetra/schematic/emblem/base/gempeltate.name": "宝石盾章",
+  "tetra/schematic/emblem/base/gempeltate.description": "将当前的徽章底座替换为宝石盾章",
+  "tetra/schematic/emblem/base/gempeltate.slot1": "盾章材料",
+
+  "tetra.module.emblem/base/gempeltate.item_name": "宝石盾章",
+  "tetra.module.emblem/base/gempeltate.name": "宝石盾章",
+  "tetra.module.emblem/base/gempeltate.description": "一种可镶嵌宝石的盾章。",
+  "tetra.module.emblem/base/gempeltate.material_name": "%s 宝石盾章",
+  "tetra.module.emblem/base/gempeltate.prefix": "%s",
 
 
 
 
-
-
-  "tetra/schematic/pattern/stars.name": "星星图案",
-  "tetra/schematic/pattern/stars.description": "将当前徽章图案替换为星星图案",
-  "tetra/schematic/pattern/stars.slot1": "图案材料",
+  "tetra/schematic/emblem/pattern/stars.name": "星星图案",
+  "tetra/schematic/emblem/pattern/stars.description": "将当前徽章图案替换为星星图案",
+  "tetra/schematic/emblem/pattern/stars.slot1": "图案材料",
 
   "tetra.module.emblem/pattern/stars.item_name": "星星图案",
   "tetra.module.emblem/pattern/stars.name": "星星图案",
@@ -77,13 +83,136 @@
   "tetra.module.emblem/pattern/stars.material_name": "%s 星星图案",
   "tetra.module.emblem/pattern/stars.prefix": "%s",
 
+
+  "tetra/schematic/emblem/gemcore/agem.name": "宝石核心",
+  "tetra/schematic/emblem/gemcore/agem.description": "镶嵌一颗宝石作为核心",
+  "tetra/schematic/emblem/gemcore/agem.slot1": "宝石材料",
+
+  "tetra.module.emblem/gemcore/agem.item_name": "宝石",
+  "tetra.module.emblem/gemcore/agem.name": "宝石核心",
+  "tetra.module.emblem/gemcore/agem.description": "镶嵌一颗宝石作为核心",
+  "tetra.module.emblem/gemcore/agem.material_name": "%s 宝石核心",
+  "tetra.module.emblem/gemcore/agem.prefix": "%s",
+
+
+
+
+
+
+
+
+
+
+
+
+  "tetra/schematic/goggles/buckle/buckle.name": "带扣",
+  "tetra/schematic/goggles/buckle/buckle.description": "用于调节松紧的带扣。",
+  "tetra/schematic/goggles/buckle/buckle.slot1": "带扣材料",
+
+  "tetra.module.goggles/buckle/buckle.name": "带扣",
+  "tetra.module.goggles/buckle/buckle.description": "用于调节护目镜佩戴松紧的带扣。",
+  "tetra.module.goggles/buckle/buckle.material_name": "%s 带扣",
+
+
+
+  "tetra/schematic/goggles/edge/edge.name": "镶边",
+  "tetra/schematic/goggles/edge/edge.description": "护目镜框架的边缘部分。",
+  "tetra/schematic/goggles/edge/edge.slot1": "镶边材料",
+
+  "tetra.module.goggles/edge/edge.name": "镶边",
+  "tetra.module.goggles/edge/edge.description": "护目镜框架的边缘部分。",
+  "tetra.module.goggles/edge/edge.material_name": "%s 镶边",
+
+
+
+  "tetra/schematic/goggles/frame/binocular_frame.name": "双镜框",
+  "tetra/schematic/goggles/frame/binocular_frame.description": "护目镜的双镜框架。",
+  "tetra/schematic/goggles/frame/binocular_frame.slot1": "框架材料",
+
+  "tetra.module.goggles/frame/binocular_frame.item_name": "双镜框护目镜",
+  "tetra.module.goggles/frame/binocular_frame.name": "双镜框",
+  "tetra.module.goggles/frame/binocular_frame.description": "护目镜的双镜框架。",
+  "tetra.module.goggles/frame/binocular_frame.material_name": "%s 双镜框",
+  "tetra.module.goggles/frame/binocular_frame.prefix": "%s",
+
+
+
+  "tetra/schematic/goggles/frame/single_frame.name": "单镜框",
+  "tetra/schematic/goggles/frame/single_frame.description": "护目镜的单镜框架。",
+  "tetra/schematic/goggles/frame/single_frame.slot1": "框架材料",
+
+  "tetra.module.goggles/frame/single_frame.item_name": "单镜框护目镜",
+  "tetra.module.goggles/frame/single_frame.name": "单镜框",
+  "tetra.module.goggles/frame/single_frame.description": "护目镜的单镜框架。",
+  "tetra.module.goggles/frame/single_frame.material_name": "%s 单镜框",
+  "tetra.module.goggles/frame/single_frame.prefix": "%s",
+
+
+
+  "tetra/schematic/goggles/leftlense/gem_leftlense.name": "宝石左镜片",
+  "tetra/schematic/goggles/leftlense/gem_leftlense.description": "左侧的宝石镜片。",
+  "tetra/schematic/goggles/leftlense/gem_leftlense.slot1": "宝石镜片材料",
+
+  "tetra.module.goggles/leftlense/gem_leftlense.name": "宝石左镜片",
+  "tetra.module.goggles/leftlense/gem_leftlense.description": "左侧的宝石镜片。",
+  "tetra.module.goggles/leftlense/gem_leftlense.material_name": "%s 宝石镜片",
+
+
+
+  "tetra/schematic/goggles/singlelense/singlelense.name": "宝石单镜片",
+  "tetra/schematic/goggles/singlelense/singlelense.description": "左右一体的宝石镜片。",
+  "tetra/schematic/goggles/singlelense/singlelense.slot1": "宝石镜片材料",
+
+  "tetra.module.goggles/singlelense/singlelense.name": "宝石单镜片",
+  "tetra.module.goggles/singlelense/singlelense.description": "左右一体的宝石镜片。",
+  "tetra.module.goggles/singlelense/singlelense.material_name": "%s 宝石镜片",
+
+
+
+  "tetra/schematic/goggles/rightlense/gem_rightlense.name": "宝石右镜片",
+  "tetra/schematic/goggles/rightlense/gem_rightlense.description": "右侧的宝石镜片。",
+  "tetra/schematic/goggles/rightlense/gem_rightlense.slot1": "宝石镜片材料",
+
+  "tetra.module.goggles/rightlense/gem_rightlense.name": "宝石右镜片",
+  "tetra.module.goggles/rightlense/gem_rightlense.description": "右侧的宝石镜片。",
+  "tetra.module.goggles/rightlense/gem_rightlense.material_name": "%s 宝石镜片",
+
+
+
+  "tetra/schematic/goggles/strap/bandage.name": "绑带",
+  "tetra/schematic/goggles/strap/bandage.description": "一条扁平、柔软且可调节的绑带。",
+  "tetra/schematic/goggles/strap/bandage.slot1": "绑带材料",
+
+  "tetra.module.goggles/strap/bandage.item_name": "绑带",
+  "tetra.module.goggles/strap/bandage.name": "绑带",
+  "tetra.module.goggles/strap/bandage.description": "一条扁平、柔软且可调节的绑带。",
+  "tetra.module.goggles/strap/bandage.material_name": "%s 绑带",
+  "tetra.module.goggles/strap/bandage.prefix": "%s",
+
+
+
+  "tetra/schematic/goggles/strap/binding_rope.name": "系绳",
+  "tetra/schematic/goggles/strap/binding_rope.description": "一条柔软且有弹性的绳子。",
+  "tetra/schematic/goggles/strap/binding_rope.slot1": "系绳材料",
+
+  "tetra.module.goggles/strap/binding_rope.item_name": "系绳",
+  "tetra.module.goggles/strap/binding_rope.name": "系绳",
+  "tetra.module.goggles/strap/binding_rope.description": "一条柔软且有弹性的绳子。",
+  "tetra.module.goggles/strap/binding_rope.material_name": "%s 系绳",
+  "tetra.module.goggles/strap/binding_rope.prefix": "%s",
+
+
+
+
+
+
+
+
+
+
+
   "tetra.stats.tetra_loopback:guardian": "§6ß§7守护",
   "tetra.stats.tetra_loopback:guardian.tooltip_short": "增加玩家的护甲值，每级提供 4 点护甲",
-
-
-
-
-
   "tetra.stats.tetra_loopback:ethereal_glow": "§6ß§5朦胧闪耀",
   "tetra.stats.tetra_loopback:frost_crown": "§6ß§9凛冬王冠",
   "tetra.stats.tetra_loopback:flame_admonition": "§6ß§c火焰谏言",
@@ -108,16 +237,15 @@
 
 
 
-
+  "tetra_loopback.effect.vision_field.name": "§6视域",
   "tetra_loopback.effect.guardian.name": "§6ß§7守护",
-  "tetra_loopback.effect.guardian.tooltip": "§7尊位守护",
+  "tetra_loopback.effect.guardian.tooltip": "§7提升护甲值",
 
 
 
   "tetra.variant.stars/fuse_steel_ingot": "§7融合钢",
   "tetra.variant.stars/bloody_star": "§4血灾星",
   "tetra.variant.stars/mislead_star": "§5荧惑星",
-  "tetra.variant_category.logo/stars.label": "星星纹样",
   "tetra.variant.peltate/fuse_steel_ingot": "§7融合钢",
 
 
@@ -190,7 +318,92 @@
   "tooltip.tetra_loopback.energy_slot": "放入燃料，为锻炉提供能量",
   "tooltip.tetra_loopback.main_output_slot": "主要产出物",
   "tooltip.tetra_loopback.side_output_slot": "次要产出物",
-  "tooltip.tetra_loopback.return_slot": "可能返还的材料"
+  "tooltip.tetra_loopback.return_slot": "可能返还的材料",
+
+
+
+
+
+
+
+
+
+
+  "effect.tetra_loopback.vision_field.title": "§6视域系统 - 等级 %s",
+  "effect.tetra_loopback.vision_field.coordinates": "坐标: %s",
+  "effect.tetra_loopback.vision_field.speed": "速度: %s m/s",
+  "effect.tetra_loopback.vision_field.facing": "朝向: %s",
+  "effect.tetra_loopback.vision_field.attributes.title": "§6--- 属性 ---",
+  "effect.tetra_loopback.vision_field.armor": "护甲: %s",
+  "effect.tetra_loopback.vision_field.armor_toughness": "护甲韧性: %s",
+  "effect.tetra_loopback.vision_field.attack_damage": "攻击伤害: %s",
+  "effect.tetra_loopback.vision_field.attack_speed": "攻击速度: %s",
+  "effect.tetra_loopback.vision_field.knockback_resistance": "击退抗性: %s",
+  "effect.tetra_loopback.vision_field.luck": "幸运: %s",
+  "effect.tetra_loopback.vision_field.max_health": "最大生命: %s",
+  "effect.tetra_loopback.vision_field.movement_speed": "移动速度: %s",
+  "effect.tetra_loopback.vision_field.enemies": "附近敌人: %s",
+  "effect.tetra_loopback.vision_field.time_weather": "%s",
+  "effect.tetra_loopback.vision_field.time_weather_format": "时间: %s | 天气: %s",
+  "effect.tetra_loopback.vision_field.moon_phase": "月相: %s",
+  "effect.tetra_loopback.vision_field.moon_phase.full": "满月",
+  "effect.tetra_loopback.vision_field.moon_phase.waning_gibbous": "亏凸月",
+  "effect.tetra_loopback.vision_field.moon_phase.last_quarter": "下弦月",
+  "effect.tetra_loopback.vision_field.moon_phase.waning_crescent": "残月",
+  "effect.tetra_loopback.vision_field.moon_phase.new": "新月",
+  "effect.tetra_loopback.vision_field.moon_phase.waxing_crescent": "娥眉月",
+  "effect.tetra_loopback.vision_field.moon_phase.first_quarter": "上弦月",
+  "effect.tetra_loopback.vision_field.moon_phase.waxing_gibbous": "盈凸月",
+  "effect.tetra_loopback.vision_field.holding": "手持: %s",
+  "effect.tetra_loopback.vision_field.direction.south": "南",
+  "effect.tetra_loopback.vision_field.direction.west": "西",
+  "effect.tetra_loopback.vision_field.direction.north": "北",
+  "effect.tetra_loopback.vision_field.direction.east": "东",
+  "effect.tetra_loopback.vision_field.weather.thunder": "雷雨",
+  "effect.tetra_loopback.vision_field.weather.rain": "雨天",
+  "effect.tetra_loopback.vision_field.weather.clear": "晴朗",
+  "effect.tetra_loopback.vision_field.time.dawn": "黎明",
+  "effect.tetra_loopback.vision_field.time.morning": "早晨",
+  "effect.tetra_loopback.vision_field.time.noon": "正午",
+  "effect.tetra_loopback.vision_field.time.dusk": "黄昏",
+  "effect.tetra_loopback.vision_field.time.night": "夜晚",
+  "effect.tetra_loopback.vision_field.unknown": "未知",
+
+
+
+
+  "tetra.stats.tetra_loopback:vision_field.name": "视域",
+  "tetra.stats.tetra_loopback:vision_field.level": "等级",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level0": "未激活视域效果",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level1": "等级1: 显示基础信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level2": "等级2: 显示属性信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level3": "等级3: 显示敌人信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level4": "等级4: 显示时间天气信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level5": "等级5: 显示手持物品信息",
+
+
+
+
+  "key.tetra_loopback.toggle_vision_overlay": "切换视域覆盖层显示",
+  "key.categories.tetra_loopback": "Tetra Loopback",
+  "effect.tetra_loopback.vision_field.title_hidden": "视域 %s [已隐藏]",
+  "message.tetra_loopback.vision_overlay.shown": "§a视域覆盖层已显示",
+  "message.tetra_loopback.vision_overlay.hidden": "§7视域覆盖层已隐藏"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

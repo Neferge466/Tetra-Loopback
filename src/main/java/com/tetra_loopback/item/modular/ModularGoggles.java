@@ -36,6 +36,12 @@ import java.util.stream.Stream;
 
 
 public abstract class ModularGoggles extends ModularItem implements ICurioItem {
+
+
+    public final static String gogglesFrame = "goggles/frame";
+    public final static String gogglesEdge = "goggles/edge";
+    public final static String gogglesSinglelense = "goggles/singlelense";
+
     public final static String gogglesRightlense = "goggles/rightlense";
     public final static String gogglesLeftlense = "goggles/leftlense";
     public final static String gogglesStrap = "goggles/strap";
@@ -43,8 +49,12 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
     public static final String identifier = "modular_goggles";
 
-    private static final GuiModuleOffsets majorOffsets = new GuiModuleOffsets(4, 20, -12, 20, -13, -1, 4,-1);
-    private static final GuiModuleOffsets minorOffsets = new GuiModuleOffsets();
+    //GUI偏移量
+    private static final GuiModuleOffsets majorOffsetsWithBuckle = new GuiModuleOffsets(1,22, -10,22, -10,-4, 1,-4);
+    private static final GuiModuleOffsets majorOffsetsWithoutBuckle = new GuiModuleOffsets(1,22, -10,22, -10,-4);
+
+    private static final GuiModuleOffsets minorOffsetsBinocular = new GuiModuleOffsets(-22, 12, 14, 12);
+    private static final GuiModuleOffsets minorOffsetsMonocular = new GuiModuleOffsets(-22, 12);
 
 
     //添加Resonance_NBT_KEY
@@ -68,10 +78,10 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
         canHone = false;
 
-        majorModuleKeys = new String[]{gogglesRightlense, gogglesLeftlense,gogglesStrap,gogglesBuckle};
-        minorModuleKeys = new String[]{};
+        majorModuleKeys = new String[]{gogglesFrame,gogglesStrap,gogglesEdge,gogglesBuckle};
+        minorModuleKeys = new String[]{gogglesSinglelense,gogglesRightlense, gogglesLeftlense};
 
-        requiredModules = new String[]{gogglesStrap};
+        requiredModules = new String[]{gogglesFrame,gogglesStrap,gogglesEdge};
         Tetra_loopback.items.add(this);
     }
 
@@ -116,15 +126,25 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
     @OnlyIn(Dist.CLIENT)
     public GuiModuleOffsets getMajorGuiOffsets(ItemStack itemStack) {
-        return majorOffsets;
+        CompoundTag tag = itemStack.getTag();
+        //bandage
+        if (tag != null && tag.contains("bandage") && tag.getBoolean("bandage")) {
+            return majorOffsetsWithBuckle; //4
+        } else {
+            return majorOffsetsWithoutBuckle; //3
+        }
     }
 
     @OnlyIn(Dist.CLIENT)
     public GuiModuleOffsets getMinorGuiOffsets(ItemStack itemStack) {
-        return minorOffsets;
+        CompoundTag tag = itemStack.getTag();
+        //binocular_frame
+        if (tag != null && tag.contains("binocular_frame") && tag.getBoolean("binocular_frame")) {
+            return minorOffsetsBinocular; //双
+        } else {
+            return minorOffsetsMonocular; //单
+        }
     }
-
-
 
 
     @Override
@@ -147,7 +167,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
     //设置物品的共鸣值
     public static void setResonanceValue(ItemStack stack, double value) {
-        // 确保值在0-20
+        //0-20
         double clampedValue = Mth.clamp(value, 0, 20);
 
         CompoundTag ResonanceValueTag = new CompoundTag();
@@ -183,6 +203,23 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
     public void assemble(ItemStack itemStack, @Nullable Level world, float severity) {
         super.assemble(itemStack, world, severity);
         setResonanceValue(itemStack, FIXED_RESONANCE_VALUE);
+
+
+
+
+                itemStack.getOrCreateTag().putBoolean("binocular_frame",
+                getModuleFromSlot(itemStack,"goggles/frame")
+                        .getVariantData(itemStack).key
+                        .startsWith("binocular_frame/"));
+        super.assemble(itemStack, world, severity);
+
+
+                itemStack.getOrCreateTag().putBoolean("bandage",
+                getModuleFromSlot(itemStack,"goggles/strap")
+                        .getVariantData(itemStack).key
+                        .startsWith("bandage/"));
+        super.assemble(itemStack, world, severity);
+
     }
 
 
@@ -191,16 +228,32 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
 
 
-//    @Override
-//    public String[] getMajorModuleKeys(ItemStack itemStack) {
-//        CompoundTag tag = itemStack.getTag();
-//        //check gempeltate  true
-//        if (tag != null && tag.contains("gempeltate") && tag.getBoolean("gempeltate")) {
-//            return new String[]{"emblem/base", "emblem/gemcore"};
-//        } else {
-//            return new String[]{"emblem/base", "emblem/pattern"};
-//        }
-//    }
+    @Override
+    public String[] getMinorModuleKeys(ItemStack itemStack) {
+        CompoundTag tag = itemStack.getTag();
+
+        if (tag != null && tag.contains("binocular_frame") && tag.getBoolean("binocular_frame")) {
+            return new String[]{"goggles/rightlense", "goggles/leftlense"};
+        } else {
+            return new String[]{"goggles/singlelense"};
+        }
+    }
+
+
+    @Override
+    public String[] getMajorModuleKeys(ItemStack itemStack) {
+        CompoundTag tag = itemStack.getTag();
+        if (tag != null && tag.contains("bandage") && tag.getBoolean("bandage")) {
+            return new String[]{"goggles/frame","goggles/strap","goggles/edge","goggles/buckle"};
+        } else {
+            return new String[]{"goggles/frame","goggles/strap","goggles/edge"};
+        }
+    }
+
+
+
+
+
 
 
         //ICurioItem
