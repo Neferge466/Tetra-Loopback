@@ -4,10 +4,10 @@
   "improvements":
   [],
   "materialSlotCount": 1,
-  "displayType": "major",
+  "displayType": "minor",
   "glyph": {
     "textureLocation": "tetra:textures/gui/tlb_glyph.png",
-    "textureX": 16,
+    "textureX": 80,
     "textureY": 0
   },
   "outcomes": [

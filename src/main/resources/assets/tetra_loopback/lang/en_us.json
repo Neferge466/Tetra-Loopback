@@ -1,10 +1,15 @@
 {
   "curios.identifier.emblem": "Emblem Slot",
   "itemGroup.tetra_loopback.loopback": "Loopback",
+  "item.tetra_loopback.loopback_crystal": "§5Loopback Crystal",
   "item.tetra_loopback.bloody_star": "§4Red Blood Disaster Star",
   "item.tetra_loopback.mislead_star": "§5Mislead Star",
   "item.tetra_loopback.fuse_steel_ingot": "Fused Steel Ingot",
   "item.tetra_loopback.curios_emblem": "Wood Emblem Base",
+  "item.tetra_loopback.rainstorm_pearl": "Rainstorm Pearl",
+  "curios.modifier.emblem": "Emblem",
+
+
 
   "tetra.variant_category.logo/stars.label": "Stars",
   "tetra.variant_category.curios_fabric.label": "Curios fabric",
@@ -31,6 +36,7 @@
 
   "tetra.slot.emblem/base": "Base",
   "tetra.slot.emblem/pattern": "Pattern",
+  "tetra.slot.emblem/gemcore": "Gem core",
 
   "tetra.slot.goggles/buckle": "Buckle",
   "tetra.slot.goggles/edge": "Edge",
@@ -210,7 +216,7 @@
   "tetra.material.fuse_steel_ingot": "Fused Steel Ingot",
   "tetra.material.bloody_star": "Blood Disaster Star",
   "tetra.material.mislead_star": "Mislead Star",
-
+  "tetra.material.loopback_crystal": "Loopback Crystal",
 
 
 
@@ -218,9 +224,9 @@
   "tetra.material.bloody_star.prefix": "§4Blood Disater Star",
   "tetra.material.mislead_star.prefix": "§5Mislead Star",
   "tetra.material.fuse_steel_ingot.prefix": "§7Fuse Steel Ingot",
+  "tetra.material.loopback_crystal.prefix": "§5Loopback Crystal",
 
-
-
+  "tetra.material.feature.goggles_vision_field": "Goggles §6ßVision Field",
 
 
 
@@ -228,6 +234,10 @@
   "tetra_loopback.effect.guardian.name": "§6ß§7Guardian",
   "tetra_loopback.effect.guardian.tooltip": "§7Increase armor",
 
+
+
+  "tetra.material.rainstorm_pearl": "§9Rainstorm Pearl",
+  "tetra.material.rainstorm_pearl.prefix": "§9Rainstorm Pearl",
   "tetra.variant.stars/fuse_steel_ingot": "§7Fuse Steel Ingot",
   "tetra.variant.stars/bloody_star": "Bloody Star",
   "tetra.variant.stars/mislead_star": "Mislead Star",
@@ -236,7 +246,7 @@
 
 
 
-
+  "tetra_loopback.effect.rainstorm.name": "§9Rainstorm",
 
   "tetra_loopback.effect.frost_crown.name": "§6ß§9Winter Crown",
   "tetra_loopback.effect.frost_crown.tooltip": "§9Immunity to frostbite\nGrants Retardation II to the attacker when attacked (5 seconds)",
@@ -343,7 +353,10 @@
   "effect.tetra_loopback.vision_field.time.dusk": "Dusk",
   "effect.tetra_loopback.vision_field.time.night": "Night",
   "effect.tetra_loopback.vision_field.unknown": "Unknown",
-
+  "effect.tetra_loopback.rainstorm.stage": "Rainstorm Stage",
+  "effect.tetra_loopback.rainstorm.stage.tooltip": "Current rainstorm effect stage",
+  "effect.tetra_loopback.windstorm.stage": "Windstorm Stage",
+  "effect.tetra_loopback.windstorm.stage.tooltip": "Current windstorm effect stage",
 
 
   "tetra.stats.tetra_loopback:vision_field.name": "Vision Field",
@@ -365,13 +378,43 @@
   "key.categories.tetra_loopback": "Tetra Loopback",
   "effect.tetra_loopback.vision_field.title_hidden": "Vision Field %s [HIDDEN]",
   "message.tetra_loopback.vision_overlay.shown": "§aVision Field overlay shown",
-  "message.tetra_loopback.vision_overlay.hidden": "§7Vision Field overlay hidden"
+  "message.tetra_loopback.vision_overlay.hidden": "§7Vision Field overlay hidden",
 
 
 
+  "tetra.stats.tetra_loopback:rainstorm.name": "Rainstorm",
 
+  "tetra.stats.tetra_loopback:rainstorm.inactive": "Inactive",
+  "tetra.stats.tetra_loopback:rainstorm.level1": "I",
+  "tetra.stats.tetra_loopback:rainstorm.level2": "II",
+  "tetra.stats.tetra_loopback:rainstorm.level3": "III",
 
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.empty": "No Rainstorm effect",
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.base_effects": "Base Effects",
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.conditions": "Activation Conditions",
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.resonance_system": "Resonance System",
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.resonance_desc": "Effects are enhanced by Resonance value from the highest Resonant item",
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.resonance_stages": "Resonance Stages",
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.stage4_note": "Stage 4 Enhancement",
+  "tetra.stats.tetra_loopback:rainstorm.tooltip.current_status": "Current Status",
 
+  "tetra.stats.tetra_loopback:rainstorm.effect.speed": "Speed I while raining",
+  "tetra.stats.tetra_loopback:rainstorm.effect.jump": "Jump Boost I",
+  "tetra.stats.tetra_loopback:rainstorm.effect.resistance": "Damage Resistance I",
+  "tetra.stats.tetra_loopback:rainstorm.effect.duration": "Effects last while raining",
+
+  "tetra.stats.tetra_loopback:rainstorm.condition.rain": "Active only during rain or thunderstorm",
+
+  "tetra.stats.tetra_loopback:rainstorm.resonance.stage1_desc": "• Stage 1 (1-5 Resonance): Attacks apply Slowness I to targets",
+  "tetra.stats.tetra_loopback:rainstorm.resonance.stage2_desc": "• Stage 2 (6-10 Resonance): Gain Strength I effect",
+  "tetra.stats.tetra_loopback:rainstorm.resonance.stage3_desc": "• Stage 3 (11-15 Resonance): Highlight nearby entities in blue",
+  "tetra.stats.tetra_loopback:rainstorm.resonance.stage4_desc": "• Stage 4 (16-20 Resonance): All effects gain +1 level and enhanced durations",
+
+  "tetra.stats.tetra_loopback:rainstorm.stage4.detail": "At Stage 4, all base effects (Speed, Jump, Resistance) are upgraded to level II.",
+
+  "tetra.stats.tetra_loopback:rainstorm.status.weather": "Weather: %s",
+  "tetra.stats.tetra_loopback:rainstorm.status.raining": "Raining ✓",
+  "tetra.stats.tetra_loopback:rainstorm.status.not_raining": "Not Raining"
 
 
 

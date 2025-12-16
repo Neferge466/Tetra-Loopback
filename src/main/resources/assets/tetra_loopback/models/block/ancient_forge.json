@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "tetra_loopback:block/ancient_forge"
-  }
+	"parent": "block/cube",
+	"textures": {
+		"particle": "tetra_loopback:block/ancient1",
+		"down": "tetra_loopback:block/ancient1",
+		"up": "tetra_loopback:block/ancient1",
+		"north": "tetra_loopback:block/ancient4",
+		"east": "tetra_loopback:block/ancient3",
+		"south": "tetra_loopback:block/ancient3",
+		"west": "tetra_loopback:block/ancient3"
+	}
 }

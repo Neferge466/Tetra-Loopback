@@ -17,7 +17,7 @@
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",
-          "textureX": 16.5,
+          "textureX": 16,
           "textureY": 0
         },
         "availableTextures": [ "metal", "shiny","wood","bone", "bright" ],

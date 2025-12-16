@@ -1,12 +1,16 @@
 package com.tetra_loopback.effects.gui.client;
 
 import com.tetra_loopback.Tetra_loopback;
+import com.tetra_loopback.effects.getter.rainstorm.RainstormGetter;
+import com.tetra_loopback.effects.getter.rainstorm.RainstormLabelGetter;
+import com.tetra_loopback.effects.getter.rainstorm.RainstormTooltipGetter;
 import com.tetra_loopback.effects.getter.resonance.ResonanceGetter;
 import com.tetra_loopback.effects.getter.resonance.ResonanceLabelGetter;
 import com.tetra_loopback.effects.getter.resonance.ResonanceTooltipGetter;
 import com.tetra_loopback.effects.getter.vision.VisionFieldGetter;
 import com.tetra_loopback.effects.getter.vision.VisionFieldLabelGetter;
 import com.tetra_loopback.effects.getter.vision.VisionFieldTooltipGetter;
+import com.tetra_loopback.effects.gui.effect.rainstorm.GuiStatBarRainstorm;
 import com.tetra_loopback.effects.gui.resonance.GuiStatBarQuadSegmented;
 import com.tetra_loopback.effects.gui.vision.GuiStatBarVisionField;
 import com.tetra_loopback.effects.gui.ModEffectStats;
@@ -37,6 +41,9 @@ public class ClientGuiRegistry {
 
         registerResonanceBar();
 
+        registerRainstormBar();
+
+
         registerAttackKnockbackBar();
         registerAttackFlyingSpeedBar();
         registerFollowRangeBar();
@@ -50,6 +57,22 @@ public class ClientGuiRegistry {
 
     }
 
+
+    private static void registerRainstormBar() {
+        IStatGetter rainstormGetter = new RainstormGetter();
+        GuiStatBarRainstorm rainstormBar = new GuiStatBarRainstorm(
+                0, 0, StatsHelper.barLength,
+                Tetra_loopback.MODID + ".effect.rainstorm.name",
+                0, 3,
+                false, false, true,
+                rainstormGetter,
+                new RainstormLabelGetter(),
+                new RainstormTooltipGetter()
+        );
+
+        WorkbenchStatsGui.addBar(rainstormBar);
+        HoloStatsGui.addBar(rainstormBar);
+    }
 
     private static void registerVisionFieldBar() {
         IStatGetter visionFieldGetter = new VisionFieldGetter();

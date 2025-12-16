@@ -1,6 +1,6 @@
 package com.tetra_loopback;
 
-import com.tetra_loopback.block.AncientForgeBlock;
+import com.tetra_loopback.block.ancientforge.AncientForgeBlock;
 import com.tetra_loopback.item.modular.ModularEmblem;
 import com.tetra_loopback.item.modular.ModularGoggles;
 import net.minecraft.world.item.BlockItem;
@@ -20,7 +20,6 @@ public class TLbRegistry {
 
 
 
-    //远古锻炉方块注册
     public static final RegistryObject<Block> ANCIENT_FORGE = BLOCKS.register("ancient_forge",
             () -> new AncientForgeBlock(Block.Properties.of()
                     .strength(3.5f)
@@ -28,9 +27,6 @@ public class TLbRegistry {
 
     public static final RegistryObject<Item> ANCIENT_FORGE_ITEM = ITEMS.register("ancient_forge",
             () -> new BlockItem(ANCIENT_FORGE.get(), new Item.Properties()));
-
-
-
 
 
 
@@ -65,10 +61,7 @@ public class TLbRegistry {
 
 
 
-
-
-
-    public static final RegistryObject<Item> LOOPBACK_ITEM = ITEMS.register("loopback_item",
+    public static final RegistryObject<Item> LOOPBACK_CRYSTAL = ITEMS.register("loopback_crystal",
             () -> new Item(new Item.Properties().rarity(Rarity.EPIC).fireResistant()));
 
 
@@ -81,6 +74,12 @@ public class TLbRegistry {
 
     public static final RegistryObject<Item> FUSE_STEEL_INGOT = ITEMS.register("fuse_steel_ingot",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+
+
+    public static final RegistryObject<Item> RAINSTORM_PEARL = ITEMS.register("rainstorm_pearl",
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+
+
 
 
 

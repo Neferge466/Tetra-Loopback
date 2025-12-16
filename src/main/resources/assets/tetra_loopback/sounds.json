@@ -1,0 +1,42 @@
+{
+  "equip_goggles": {
+    "subtitle": "subtitles.tetra_loopback.equip_goggles",
+    "sounds": [
+      {
+        "name": "tetra_loopback:equip_goggles",
+        "stream": false,
+        "volume": 1.0
+      }
+    ]
+  },
+  "unequip_goggles": {
+    "subtitle": "subtitles.tetra_loopback.unequip_goggles",
+    "sounds": [
+      {
+        "name": "tetra_loopback:unequip_goggles",
+        "stream": false,
+        "volume": 1.0
+      }
+    ]
+  },
+  "equip_emblem": {
+    "subtitle": "subtitles.tetra_loopback.equip_emblem",
+    "sounds": [
+      {
+        "name": "tetra_loopback:equip_emblem",
+        "stream": false,
+        "volume": 1.0
+      }
+    ]
+  },
+  "unequip_emblem": {
+    "subtitle": "subtitles.tetra_loopback.unequip_emblem",
+    "sounds": [
+      {
+        "name": "tetra_loopback:unequip_emblem",
+        "stream": false,
+        "volume": 1.0
+      }
+    ]
+  }
+}

@@ -19,7 +19,7 @@ public class ModEffectStats {
     public static final ItemEffect resonanceEffect = ItemEffect.get(Tetra_loopback.MODID + ":resonance");
     public static final ItemEffect visionFieldEffect = ItemEffect.get(Tetra_loopback.MODID + ":vision_field");
 
-
+    public static final ItemEffect rainstormEffect = ItemEffect.get(Tetra_loopback.MODID + ":rainstorm");
 
     public static void safeInit() {
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> ClientGuiRegistry::registerAllBars);

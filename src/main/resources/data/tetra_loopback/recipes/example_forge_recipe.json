@@ -19,7 +19,7 @@
   },
   "main_outputs": [
     {
-      "item": "tetra_loopback:loopback_item",
+      "item": "tetra_loopback:loopback_crystal",
       "count": 1
     }
   ],

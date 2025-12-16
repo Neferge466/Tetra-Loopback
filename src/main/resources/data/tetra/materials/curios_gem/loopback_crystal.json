@@ -1,0 +1,31 @@
+{
+    "key": "loopback_crystal",
+    "hidden": true,
+    "category": "curios_gem",
+    "primary": 6,
+    "secondary": 3,
+    "tertiary": 0,
+    "durability": 888,
+    "integrityCost": 2,
+    "integrityGain": 3,
+    "magicCapacity": 99,
+    "toolLevel": "minecraft:diamond",
+    "toolEfficiency": 7,
+    "effects": {
+        "tetra_loopback:vision_field": 5
+    },
+    "tints": {
+        "glyph": "c77ff4",
+        "texture": "c77ff4"
+    },
+    "textures": [
+        "shiny",
+        "crude"
+    ],
+    "material": {
+        "items": [ "tetra_loopback:loopback_crystal" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    }
+}

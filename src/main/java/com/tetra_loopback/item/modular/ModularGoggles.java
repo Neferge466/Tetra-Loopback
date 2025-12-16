@@ -6,8 +6,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import com.tetra_loopback.Tetra_loopback;
+import com.tetra_loopback.sound.TLbSoundEvents;
 import com.tetra_loopback.util.CuriosAttributesUtil;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -203,10 +205,6 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
     public void assemble(ItemStack itemStack, @Nullable Level world, float severity) {
         super.assemble(itemStack, world, severity);
         setResonanceValue(itemStack, FIXED_RESONANCE_VALUE);
-
-
-
-
                 itemStack.getOrCreateTag().putBoolean("binocular_frame",
                 getModuleFromSlot(itemStack,"goggles/frame")
                         .getVariantData(itemStack).key
@@ -222,12 +220,6 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
     }
 
-
-
-
-
-
-
     @Override
     public String[] getMinorModuleKeys(ItemStack itemStack) {
         CompoundTag tag = itemStack.getTag();
@@ -238,7 +230,6 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
             return new String[]{"goggles/singlelense"};
         }
     }
-
 
     @Override
     public String[] getMajorModuleKeys(ItemStack itemStack) {
@@ -259,7 +250,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
         //ICurioItem
     public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);
 
-//    ways
+
 //    @Override
 //    public void curioTick(SlotContext slotContext, ItemStack stack) {
 //        //粒子效果,动态渲染
@@ -277,32 +268,35 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 //        */
 //    }
 //
-//    @Override
-//    public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
-//        //装备时逻辑
-//        //播放声音
-//        /*
-//        LivingEntity entity = slotContext.entity();
-//        if (!entity.level().isClientSide) {
-//            entity.level().playSound(null, entity.blockPosition(),
-//                SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.PLAYERS,
-//                1.0F, 1.0F);
-//        }
-//        */
-//    }
-//
-//    @Override
-//    public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
-//        //卸下时逻辑
-//        //播放声音
-//        /*
-//        LivingEntity entity = slotContext.entity();
-//        if (!entity.level().isClientSide) {
-//            entity.level().playSound(null, entity.blockPosition(),
-//                SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.PLAYERS,
-//                1.0F, 0.8F);
-//        }
-//        */
-//    }
+    @Override
+    public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
+
+        LivingEntity entity = slotContext.entity();
+        if (!entity.level().isClientSide()) {
+            entity.level().playSound(
+                    null,
+                    entity.getX(), entity.getY(), entity.getZ(),
+                    TLbSoundEvents.GOGGLES_EQUIP.get(),
+                    SoundSource.PLAYERS,
+                    1.0F, // 音量
+                    1.0F  // 音高
+            );
+        }
+    }
+
+    @Override
+    public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
+        LivingEntity entity = slotContext.entity();
+        if (!entity.level().isClientSide()) {
+            entity.level().playSound(
+                    null,
+                    entity.getX(), entity.getY(), entity.getZ(),
+                    TLbSoundEvents.GOGGLES_UNEQUIP.get(),
+                    SoundSource.PLAYERS,
+                    1.0F, // 音量
+                    0.8F  // 音高
+            );
+        }
+    }
 
 }

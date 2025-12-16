@@ -9,8 +9,8 @@
   "displayType": "major",
   "glyph": {
     "textureLocation": "tetra:textures/gui/tlb_glyph.png",
-    "textureX": 16,
-    "textureY": 0
+    "textureX": 0,
+    "textureY": 16
   },
   "outcomes": [
     {

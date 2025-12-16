@@ -1,13 +1,14 @@
 package com.tetra_loopback;
 
 import com.mojang.logging.LogUtils;
-import com.tetra_loopback.block.entity.TLbBlockEntities;
+import com.tetra_loopback.block.ancientforge.entity.TLbBlockEntities;
 import com.tetra_loopback.effects.TLbEffects;
 import com.tetra_loopback.effects.curio.vision.VisionFieldEffect;
 import com.tetra_loopback.effects.gui.ModEffectStats;
-import com.tetra_loopback.inventory.TLbMenus;
+import com.tetra_loopback.block.ancientforge.inventory.TLbMenus;
 import com.tetra_loopback.item.creative.TLbCreativeModeTab;
-import com.tetra_loopback.recipe.TLbRecipes;
+import com.tetra_loopback.block.ancientforge.recipe.TLbRecipes;
+import com.tetra_loopback.sound.TLbSoundEvents;
 import com.tetra_loopback.util.ClientProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -44,6 +45,9 @@ public class Tetra_loopback {
         TLbRegistry.ITEMS.register(bus);
         TLbCreativeModeTab.register(bus);
         TLbEffects.register(bus);
+
+
+        TLbSoundEvents.register(bus);
 
         //注册方块实体
         TLbBlockEntities.BLOCK_ENTITIES.register(bus);

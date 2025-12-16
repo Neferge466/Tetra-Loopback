@@ -1,0 +1,30 @@
+{
+    "key": "rainstorm_pearl",
+    "category": "gem",
+    "primary": 6,
+    "secondary": 3,
+    "tertiary": 0,
+    "durability": 888,
+    "integrityCost": 2,
+    "integrityGain": 3,
+    "magicCapacity": 99,
+    "toolLevel": "minecraft:diamond",
+    "toolEfficiency": 7,
+    "effects": {
+
+    },
+    "tints": {
+        "glyph": "7facf4",
+        "texture": "7facf4"
+    },
+    "textures": [
+        "shiny",
+        "crude"
+    ],
+    "material": {
+        "items": [ "tetra_loopback:rainstorm_pearl" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    }
+}

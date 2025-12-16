@@ -1,0 +1,7 @@
+{
+  "parent": "tetra_loopback:block/ancient_forge",
+  "textures": {
+    "particle": "tetra_loopback:block/ancient4_lit",
+    "north": "tetra_loopback:block/ancient4_lit"
+  }
+}

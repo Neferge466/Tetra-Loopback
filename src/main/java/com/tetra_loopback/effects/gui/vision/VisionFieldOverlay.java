@@ -41,10 +41,10 @@ public class VisionFieldOverlay implements IGuiOverlay {
     private float scaleFactor = 0.85f;
 
     //颜色常量
-    private static final int HIGHLIGHT_COLOR = 0xFFFFD700; // 金色
-    private static final int TEXT_COLOR = 0xFFDCDCDC;       // 浅灰色
-    private static final int WARNING_COLOR = 0xFFFF6464;    // 红色
-    private static final int GREEN_COLOR = 0xFF64FF64;      // 绿色
+    private static final int HIGHLIGHT_COLOR = 0xFFFFD700; //金色
+    private static final int TEXT_COLOR = 0xFFDCDCDC;       //浅灰色
+    private static final int WARNING_COLOR = 0xFFFF6464;    //红色
+    private static final int GREEN_COLOR = 0xFF64FF64;      //绿色
 
     public VisionFieldOverlay() {
         this.minecraft = Minecraft.getInstance();
@@ -63,7 +63,7 @@ public class VisionFieldOverlay implements IGuiOverlay {
 
         //3级：敌人数量
         if (effectLevel >= 3) {
-            this.enemyCount = countNearbyEnemies(player, 16);
+            this.enemyCount = countNearbyEnemies(player);
         }
 
         //5级：手持物品
@@ -313,9 +313,9 @@ public class VisionFieldOverlay implements IGuiOverlay {
         else return Component.translatable("effect.tetra_loopback.vision_field.direction.south").getString();
     }
 
-    private int countNearbyEnemies(Player player, double radius) {
+    private int countNearbyEnemies(Player player) {
         return player.level().getEntitiesOfClass(Monster.class,
-                player.getBoundingBox().inflate(radius)).size();
+                player.getBoundingBox().inflate(16)).size();
     }
 
     private String getTimeWeatherInfo(Level level) {

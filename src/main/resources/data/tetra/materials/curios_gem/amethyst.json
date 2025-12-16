@@ -11,9 +11,7 @@
     "magicCapacity": 72,
     "toolLevel": "minecraft:iron",
     "toolEfficiency": 7,
-    "effects": {
-        "tetra_loopback:vision_field": 5
-    },
+    "effects": {},
     "tints": {
         "glyph": "af49f0",
         "texture": "af49f0"

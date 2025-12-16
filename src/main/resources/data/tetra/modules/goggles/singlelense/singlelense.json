@@ -1,6 +1,6 @@
 {
   "replace": true,
-  "type": "tetra:basic_major_module",
+  "type": "tetra:basic_module",
   "slots": [ "goggles/singlelense" ],
   "improvements": [],
 
@@ -14,8 +14,8 @@
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",
-          "textureX": 16.5,
-          "textureY": 0
+          "textureX": 180,
+          "textureY": 5
         },
         "availableTextures": [ "default" ],
         "integrity": -1,

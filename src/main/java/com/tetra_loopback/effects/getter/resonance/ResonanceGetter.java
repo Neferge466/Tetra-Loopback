@@ -33,8 +33,6 @@ public class ResonanceGetter implements IStatGetter {
         return false;
     }
 
-
-
     public double getResonanceValue(Player player, ItemStack itemStack) {
 
         double nbtValue = getNbtResonanceValue(itemStack);
