@@ -61,7 +61,18 @@ public class AncientForgeBlock extends BaseEntityBlock {
         return player.hasCorrectToolForDrops(state);
     }
 
-
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos,
+                         BlockState newState, boolean isMoving) {
+        if (!state.is(newState.getBlock())) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof AncientForgeBlockEntity forgeEntity) {
+                //掉落方块实体中的所有物品
+                forgeEntity.dropContents();
+            }
+            super.onRemove(state, level, pos, newState, isMoving);
+        }
+    }
 
 
     @Override

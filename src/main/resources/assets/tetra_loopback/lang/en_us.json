@@ -1,12 +1,32 @@
 {
   "curios.identifier.emblem": "Emblem Slot",
+
   "itemGroup.tetra_loopback.loopback": "Loopback",
   "item.tetra_loopback.loopback_crystal": "§5Loopback Crystal",
   "item.tetra_loopback.bloody_star": "§4Red Blood Disaster Star",
   "item.tetra_loopback.mislead_star": "§5Mislead Star",
   "item.tetra_loopback.fuse_steel_ingot": "Fused Steel Ingot",
+
+  "item.tetra_loopback.cold_steel_ingot": "Cold Steel Ingot",
+  "item.tetra_loopback.cold_wind_ingot": "Cold Wind Ingot",
+  "item.tetra_loopback.earth_vein_ingot": "Earth Vein Ingot",
+  "item.tetra_loopback.vitality_ingot": "Vitality Ingot",
+  "item.tetra_loopback.earth_vein_crystal": "Earth Vein Crystal",
+  "item.tetra_loopback.vitality_crystal": "Vitality Crystal",
+  "item.tetra_loopback.empty_crystal": "Empty Crystal",
+  "item.tetra_loopback.lava_pearl": "Lava Pearl",
+  "item.tetra_loopback.snow_pearl": "Snow Pearl",
+  "item.tetra_loopback.lightning_pearl": "Lightning Pearl",
+  "item.tetra_loopback.fuse_pearl": "Fuse Pearl",
+
   "item.tetra_loopback.curios_emblem": "Wood Emblem Base",
+  "item.tetra_loopback.curios_goggles": "Goggles Frame",
   "item.tetra_loopback.rainstorm_pearl": "Rainstorm Pearl",
+
+
+
+
+
   "curios.modifier.emblem": "Emblem",
 
 

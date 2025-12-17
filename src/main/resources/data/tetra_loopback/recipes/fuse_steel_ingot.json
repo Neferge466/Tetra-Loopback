@@ -1,20 +1,54 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "III",
-    "III",
-    "MMM"
+  "type": "tetra_loopback:ancient_forge",
+  "materials": [
+    {"item": "tetra:metal_scrap"},
+    {"item": "tetra:metal_scrap"},
+    {"item": "tetra:metal_scrap"},
+    {"item": "minecraft:iron_ingot"},
+    {"item": "minecraft:iron_ingot"},
+    {"item": "minecraft:iron_ingot"},
+    {"item": "tetra:metal_scrap"},
+    {"item": "tetra:metal_scrap"},
+    {"item": "tetra:metal_scrap"}
   ],
-  "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
+
+  "catalyst": {
+    "optional": true,
+    "required": false,
+    "ingredient": {
+      "item": "tetra:planar_stabilizer"
     },
-    "M": {
-      "item": "tetra:metal_scrap"
-    }
+    "time_reduction": 0.25
   },
-  "result": {
-    "item": "tetra_loopback:fuse_steel_ingot",
-    "count": 1
-  }
+
+  "energy_source": {
+    "ingredient": {
+      "tag": "tetra_loopback:ancient_forge_fuels"
+    },
+    "energy_value": 1600,
+    "accept_any_fuel": true,
+    "fuel_multiplier": 0.8
+  },
+
+  "main_outputs": [
+    {
+      "item": "tetra_loopback:fuse_steel_ingot",
+      "count": 1
+    }
+  ],
+
+  "side_outputs": [],
+
+  "return_materials": [
+    {
+      "item": "tetra:metal_scrap",
+      "count": 1
+    }
+  ],
+
+  "process_time": 200,
+  "main_output_multiplier": 1.0,
+  "side_output_multiplier": 1.0,
+  "main_to_side_ratio": 2.0,
+  "return_chance": 0.25
 }

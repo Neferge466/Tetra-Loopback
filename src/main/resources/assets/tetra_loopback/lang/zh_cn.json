@@ -5,7 +5,23 @@
   "item.tetra_loopback.bloody_star": "§4血灾星",
   "item.tetra_loopback.mislead_star": "§5荧惑星",
   "item.tetra_loopback.fuse_steel_ingot": "融合钢锭",
+
+  "item.tetra_loopback.cold_steel_ingot": "冷钢锭",
+  "item.tetra_loopback.cold_wind_ingot": "沧风锭",
+  "item.tetra_loopback.earth_vein_ingot": "地脉锭",
+  "item.tetra_loopback.vitality_ingot": "活力锭",
+  "item.tetra_loopback.earth_vein_crystal": "地脉水晶",
+  "item.tetra_loopback.vitality_crystal": "活力水晶",
+  "item.tetra_loopback.empty_crystal": "空水晶",
+  "item.tetra_loopback.lava_pearl": "熔岩宝珠",
+  "item.tetra_loopback.snow_pearl": "雪宝珠",
+  "item.tetra_loopback.lightning_pearl": "闪电宝珠",
+  "item.tetra_loopback.fuse_pearl": "融合珠",
+
+
+
   "item.tetra_loopback.curios_emblem": "木质徽章底托",
+  "item.tetra_loopback.curios_goggles": "护目镜框架",
   "item.tetra_loopback.rainstorm_pearl": "暴雨宝珠",
   "curios.modifier.emblem": "徽章",
   "tetra.variant_category.logo/stars.label": "星星纹样",

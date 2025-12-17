@@ -66,6 +66,7 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
         super(menu, inventory, title);
         this.imageWidth = 176;
         this.imageHeight = 166;
+        this.titleLabelY = 2;
         this.inventoryLabelY = this.imageHeight - 100;
     }
 
@@ -187,7 +188,7 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
         if (craftTime > 0 && craftTimeTotal > 0) {
             float progress = Math.min(1.0f, (float) craftTime / craftTimeTotal);
 
-            // 根据进度计算帧索引 (0-5)
+            //根据进度计算帧索引 (0-5)
             int frameIndex = calculateProgressFrameIndex(progress);
             int[] frameCoords = CRAFT_FRAMES[frameIndex];
             int u = frameCoords[0];
@@ -335,16 +336,15 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
                 gui.renderTooltip(this.font,
                         Component.translatable("tooltip.tetra_loopback.return_slot"),
                         mouseX, mouseY);
-                return;
             }
         }
     }
 
     @Override
     protected void renderLabels(GuiGraphics gui, int mouseX, int mouseY) {
-        gui.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY, 4210752, false);
+        gui.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY, 0xFFFFFF, false);
         int textX = this.inventoryLabelX;
         int textY = 117 - 10;
-        gui.drawString(this.font, this.playerInventoryTitle, textX, textY, 4210752, false);
+        gui.drawString(this.font, this.playerInventoryTitle, textX, textY, 0xFFFFFF, false);
     }
 }

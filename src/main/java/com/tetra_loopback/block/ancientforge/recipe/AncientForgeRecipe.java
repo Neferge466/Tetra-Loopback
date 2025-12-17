@@ -18,43 +18,89 @@ public class AncientForgeRecipe implements Recipe<Container> {
 
     private final ResourceLocation id;
     private final NonNullList<Ingredient> materials;
-    private final Ingredient catalyst;
-    private final Ingredient energySource;
+    private final CatalystData catalystData;
+    private final EnergySourceData energySourceData;
     private final NonNullList<ItemStack> mainOutputs;
     private final NonNullList<ItemStack> sideOutputs;
     private final NonNullList<ItemStack> returnMaterials;
     private final int processTime;
 
-    private final int energyValue; //能量物品的燃烧时间（tick）
-    private final float timeReduction; //催化剂时间缩减比例（0-1）
-    private final float mainOutputMultiplier; //主产物增产倍数
-    private final float sideOutputMultiplier; //副产物增产倍数
-    private final float mainToSideRatio; //主副产物比例
-    private final float returnChance; //返还材料几率（0-1）
+    //产出倍率参数
+    private final float mainOutputMultiplier;
+    private final float sideOutputMultiplier;
+    private final float mainToSideRatio;
+    private final float returnChance;
 
-    public AncientForgeRecipe(ResourceLocation id, NonNullList<Ingredient> materials, Ingredient catalyst,
-                              Ingredient energySource, NonNullList<ItemStack> mainOutputs,
-                              NonNullList<ItemStack> sideOutputs, NonNullList<ItemStack> returnMaterials,
-                              int processTime, int energyValue, float timeReduction,
+    //催化剂数据类
+    public static class CatalystData {
+        private final Ingredient ingredient;
+        private final boolean optional;      //催化剂是否可选
+        private final boolean required;      //是否必需才能启动
+        private final float timeReduction;   //时间减少比例
+
+        public CatalystData(Ingredient ingredient, boolean optional, boolean required, float timeReduction) {
+            this.ingredient = ingredient;
+            this.optional = optional;
+            this.required = required;
+            this.timeReduction = Math.max(0, Math.min(1, timeReduction));  //限制在0-1之间
+        }
+
+        public boolean isValidCatalyst(ItemStack stack) {
+            return !stack.isEmpty() && ingredient.test(stack);
+        }
+
+        public Ingredient getIngredient() { return ingredient; }
+        public boolean isOptional() { return optional; }
+        public boolean isRequired() { return required; }
+        public float getTimeReduction() { return timeReduction; }
+    }
+
+    //能量源数据类
+    public static class EnergySourceData {
+        private final Ingredient ingredient;
+        private final int energyValue;
+        private final boolean acceptAnyFuel;      //是否接受任何燃料
+        private final float fuelMultiplier;       //通用燃料倍率
+
+        public EnergySourceData(Ingredient ingredient, int energyValue,
+                                boolean acceptAnyFuel, float fuelMultiplier) {
+            this.ingredient = ingredient;
+            this.energyValue = Math.max(0, energyValue);
+            this.acceptAnyFuel = acceptAnyFuel;
+            this.fuelMultiplier = Math.max(0, fuelMultiplier);
+        }
+
+        public boolean isValidFuel(ItemStack stack) {
+            return !stack.isEmpty() && ingredient.test(stack);
+        }
+
+        public Ingredient getIngredient() { return ingredient; }
+        public int getEnergyValue() { return energyValue; }
+        public boolean acceptAnyFuel() { return acceptAnyFuel; }
+        public float getFuelMultiplier() { return fuelMultiplier; }
+    }
+
+    public AncientForgeRecipe(ResourceLocation id, NonNullList<Ingredient> materials,
+                              CatalystData catalystData, EnergySourceData energySourceData,
+                              NonNullList<ItemStack> mainOutputs, NonNullList<ItemStack> sideOutputs,
+                              NonNullList<ItemStack> returnMaterials, int processTime,
                               float mainOutputMultiplier, float sideOutputMultiplier,
                               float mainToSideRatio, float returnChance) {
         this.id = id;
         this.materials = materials;
-        this.catalyst = catalyst;
-        this.energySource = energySource;
+        this.catalystData = catalystData;
+        this.energySourceData = energySourceData;
         this.mainOutputs = mainOutputs;
         this.sideOutputs = sideOutputs;
         this.returnMaterials = returnMaterials;
         this.processTime = processTime;
-        this.energyValue = energyValue;
-        this.timeReduction = timeReduction;
         this.mainOutputMultiplier = mainOutputMultiplier;
         this.sideOutputMultiplier = sideOutputMultiplier;
         this.mainToSideRatio = mainToSideRatio;
         this.returnChance = returnChance;
     }
 
-    //matches方法
+    //matches
     @Override
     public boolean matches(Container container, Level level) {
         //检查原料是否匹配
@@ -68,13 +114,26 @@ public class AncientForgeRecipe implements Recipe<Container> {
 
         //检查催化剂
         ItemStack catalystStack = container.getItem(MATERIAL_SLOTS);
-        if (!catalyst.test(catalystStack)) {
+
+        //如果催化剂是必需的，必须存在且匹配
+        if (catalystData.isRequired() && !catalystData.isValidCatalyst(catalystStack)) {
+            return false;
+        }
+
+        //如果催化剂不是可选的且放入了物品，必须匹配
+        if (!catalystData.isOptional() && !catalystStack.isEmpty() &&
+                !catalystData.isValidCatalyst(catalystStack)) {
             return false;
         }
 
         //检查能量源
         ItemStack energyStack = container.getItem(MATERIAL_SLOTS + 1);
-        if (!energySource.test(energyStack)) {
+        if (energyStack.isEmpty()) {
+            return false;
+        }
+
+        //如果能量源是指定的，必须匹配
+        if (!energySourceData.acceptAnyFuel() && !energySourceData.isValidFuel(energyStack)) {
             return false;
         }
 
@@ -96,7 +155,6 @@ public class AncientForgeRecipe implements Recipe<Container> {
         return applyOutputMultipliers(mainOutputs.get(0).copy());
     }
 
-    //应用产出倍率
     private ItemStack applyOutputMultipliers(ItemStack stack) {
         if (mainOutputMultiplier > 1.0f) {
             int newCount = (int) Math.ceil(stack.getCount() * mainOutputMultiplier);
@@ -120,73 +178,23 @@ public class AncientForgeRecipe implements Recipe<Container> {
         return AncientForgeRecipeType.INSTANCE;
     }
 
-    public int getProcessTime() {
-        return processTime;
-    }
-
-    public NonNullList<Ingredient> getMaterials() {
-        return materials;
-    }
-
-    public Ingredient getCatalyst() {
-        return catalyst;
-    }
-
-    public Ingredient getEnergySource() {
-        return energySource;
-    }
-
-    public NonNullList<ItemStack> getMainOutputs() {
-        return mainOutputs;
-    }
-
-    public NonNullList<ItemStack> getSideOutputs() {
-        return sideOutputs;
-    }
-
-    public NonNullList<ItemStack> getReturnMaterials() {
-        return returnMaterials;
-    }
-
-
-
-
-
-    public int getEnergyValue() {
-        return energyValue;
-    }
-
-    public float getTimeReduction() {
-        return timeReduction;
-    }
-
-    public float getMainOutputMultiplier() {
-        return mainOutputMultiplier;
-    }
-
-    public float getSideOutputMultiplier() {
-        return sideOutputMultiplier;
-    }
-
-    public float getMainToSideRatio() {
-        return mainToSideRatio;
-    }
-
-    public float getReturnChance() {
-        return returnChance;
-    }
-
-
-
-
-
-
+    //Getters
+    public int getProcessTime() { return processTime; }
+    public NonNullList<Ingredient> getMaterials() { return materials; }
+    public CatalystData getCatalystData() { return catalystData; }
+    public EnergySourceData getEnergySourceData() { return energySourceData; }
+    public NonNullList<ItemStack> getMainOutputs() { return mainOutputs; }
+    public NonNullList<ItemStack> getSideOutputs() { return sideOutputs; }
+    public NonNullList<ItemStack> getReturnMaterials() { return returnMaterials; }
+    public float getMainOutputMultiplier() { return mainOutputMultiplier; }
+    public float getSideOutputMultiplier() { return sideOutputMultiplier; }
+    public float getMainToSideRatio() { return mainToSideRatio; }
+    public float getReturnChance() { return returnChance; }
 
     public static class Serializer implements RecipeSerializer<AncientForgeRecipe> {
 
         @Override
         public AncientForgeRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
-
             JsonArray materialsArray = GsonHelper.getAsJsonArray(json, "materials");
             NonNullList<Ingredient> materials = NonNullList.withSize(9, Ingredient.EMPTY);
 
@@ -194,12 +202,29 @@ public class AncientForgeRecipe implements Recipe<Container> {
                 materials.set(i, Ingredient.fromJson(materialsArray.get(i)));
             }
 
-            Ingredient catalyst = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "catalyst"));
-            Ingredient energySource = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "energy_source"));
+            //解析催化剂数据
+            JsonObject catalystObj = GsonHelper.getAsJsonObject(json, "catalyst");
+            Ingredient catalystIngredient = Ingredient.fromJson(GsonHelper.getAsJsonObject(catalystObj, "ingredient"));
+            boolean catalystOptional = GsonHelper.getAsBoolean(catalystObj, "optional", true);
+            boolean catalystRequired = GsonHelper.getAsBoolean(catalystObj, "required", false);
+            float timeReduction = GsonHelper.getAsFloat(catalystObj, "time_reduction", 0.0f);
 
+            CatalystData catalystData = new CatalystData(catalystIngredient, catalystOptional,
+                    catalystRequired, timeReduction);
+
+            //解析能量源数据
+            JsonObject energyObj = GsonHelper.getAsJsonObject(json, "energy_source");
+            Ingredient energyIngredient = Ingredient.fromJson(GsonHelper.getAsJsonObject(energyObj, "ingredient"));
+            int energyValue = GsonHelper.getAsInt(energyObj, "energy_value", 200);
+            boolean acceptAnyFuel = GsonHelper.getAsBoolean(energyObj, "accept_any_fuel", false);
+            float fuelMultiplier = GsonHelper.getAsFloat(energyObj, "fuel_multiplier", 1.0f);
+
+            EnergySourceData energySourceData = new EnergySourceData(energyIngredient, energyValue,
+                    acceptAnyFuel, fuelMultiplier);
+
+            //解析输出
             JsonArray mainOutputsArray = GsonHelper.getAsJsonArray(json, "main_outputs");
             NonNullList<ItemStack> mainOutputs = NonNullList.create();
-
             for (int i = 0; i < mainOutputsArray.size(); i++) {
                 JsonObject outputObject = mainOutputsArray.get(i).getAsJsonObject();
                 mainOutputs.add(ShapedRecipe.itemStackFromJson(outputObject));
@@ -207,7 +232,6 @@ public class AncientForgeRecipe implements Recipe<Container> {
 
             JsonArray sideOutputsArray = GsonHelper.getAsJsonArray(json, "side_outputs");
             NonNullList<ItemStack> sideOutputs = NonNullList.create();
-
             for (int i = 0; i < sideOutputsArray.size(); i++) {
                 JsonObject outputObject = sideOutputsArray.get(i).getAsJsonObject();
                 sideOutputs.add(ShapedRecipe.itemStackFromJson(outputObject));
@@ -215,74 +239,75 @@ public class AncientForgeRecipe implements Recipe<Container> {
 
             JsonArray returnMaterialsArray = GsonHelper.getAsJsonArray(json, "return_materials");
             NonNullList<ItemStack> returnMaterials = NonNullList.create();
-
             for (int i = 0; i < returnMaterialsArray.size(); i++) {
                 JsonObject outputObject = returnMaterialsArray.get(i).getAsJsonObject();
                 returnMaterials.add(ShapedRecipe.itemStackFromJson(outputObject));
             }
 
+            //解析其他参数
             int processTime = GsonHelper.getAsInt(json, "process_time", 200);
+            float mainOutputMultiplier = GsonHelper.getAsFloat(json, "main_output_multiplier", 1.0f);
+            float sideOutputMultiplier = GsonHelper.getAsFloat(json, "side_output_multiplier", 1.0f);
+            float mainToSideRatio = GsonHelper.getAsFloat(json, "main_to_side_ratio", 2.0f);
+            float returnChance = GsonHelper.getAsFloat(json, "return_chance", 0.0f);
 
-            //解析
-            int energyValue = GsonHelper.getAsInt(json, "energy_value", 200); // 默认200ticks（10秒）
-            float timeReduction = GsonHelper.getAsFloat(json, "time_reduction", 0.0f); // 默认无缩减
-            float mainOutputMultiplier = GsonHelper.getAsFloat(json, "main_output_multiplier", 1.0f); // 默认无增产
-            float sideOutputMultiplier = GsonHelper.getAsFloat(json, "side_output_multiplier", 1.0f); // 默认无增产
-            float mainToSideRatio = GsonHelper.getAsFloat(json, "main_to_side_ratio", 2.0f); // 默认2:1
-            float returnChance = GsonHelper.getAsFloat(json, "return_chance", 0.0f); // 默认不返还
-
-            return new AncientForgeRecipe(recipeId, materials, catalyst, energySource,
-                    mainOutputs, sideOutputs, returnMaterials, processTime, energyValue,
-                    timeReduction, mainOutputMultiplier, sideOutputMultiplier,
-                    mainToSideRatio, returnChance);
+            return new AncientForgeRecipe(recipeId, materials, catalystData, energySourceData,
+                    mainOutputs, sideOutputs, returnMaterials, processTime,
+                    mainOutputMultiplier, sideOutputMultiplier, mainToSideRatio, returnChance);
         }
 
         @Override
         public AncientForgeRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
             NonNullList<Ingredient> materials = NonNullList.withSize(9, Ingredient.EMPTY);
-
             for (int i = 0; i < 9; i++) {
                 materials.set(i, Ingredient.fromNetwork(buffer));
             }
 
-            Ingredient catalyst = Ingredient.fromNetwork(buffer);
-            Ingredient energySource = Ingredient.fromNetwork(buffer);
+            //读取催化剂数据
+            Ingredient catalystIngredient = Ingredient.fromNetwork(buffer);
+            boolean catalystOptional = buffer.readBoolean();
+            boolean catalystRequired = buffer.readBoolean();
+            float timeReduction = buffer.readFloat();
+            CatalystData catalystData = new CatalystData(catalystIngredient, catalystOptional,
+                    catalystRequired, timeReduction);
 
+            //读取能量源数据
+            Ingredient energyIngredient = Ingredient.fromNetwork(buffer);
+            int energyValue = buffer.readVarInt();
+            boolean acceptAnyFuel = buffer.readBoolean();
+            float fuelMultiplier = buffer.readFloat();
+            EnergySourceData energySourceData = new EnergySourceData(energyIngredient, energyValue,
+                    acceptAnyFuel, fuelMultiplier);
+
+            //读取输出
             int mainOutputCount = buffer.readVarInt();
             NonNullList<ItemStack> mainOutputs = NonNullList.withSize(mainOutputCount, ItemStack.EMPTY);
-
             for (int i = 0; i < mainOutputCount; i++) {
                 mainOutputs.set(i, buffer.readItem());
             }
 
             int sideOutputCount = buffer.readVarInt();
             NonNullList<ItemStack> sideOutputs = NonNullList.withSize(sideOutputCount, ItemStack.EMPTY);
-
             for (int i = 0; i < sideOutputCount; i++) {
                 sideOutputs.set(i, buffer.readItem());
             }
 
             int returnMaterialCount = buffer.readVarInt();
             NonNullList<ItemStack> returnMaterials = NonNullList.withSize(returnMaterialCount, ItemStack.EMPTY);
-
             for (int i = 0; i < returnMaterialCount; i++) {
                 returnMaterials.set(i, buffer.readItem());
             }
 
+            //读取其他参数
             int processTime = buffer.readVarInt();
-
-            //
-            int energyValue = buffer.readVarInt();
-            float timeReduction = buffer.readFloat();
             float mainOutputMultiplier = buffer.readFloat();
             float sideOutputMultiplier = buffer.readFloat();
             float mainToSideRatio = buffer.readFloat();
             float returnChance = buffer.readFloat();
 
-            return new AncientForgeRecipe(recipeId, materials, catalyst, energySource,
-                    mainOutputs, sideOutputs, returnMaterials, processTime, energyValue,
-                    timeReduction, mainOutputMultiplier, sideOutputMultiplier,
-                    mainToSideRatio, returnChance);
+            return new AncientForgeRecipe(recipeId, materials, catalystData, energySourceData,
+                    mainOutputs, sideOutputs, returnMaterials, processTime,
+                    mainOutputMultiplier, sideOutputMultiplier, mainToSideRatio, returnChance);
         }
 
         @Override
@@ -291,9 +316,19 @@ public class AncientForgeRecipe implements Recipe<Container> {
                 ingredient.toNetwork(buffer);
             }
 
-            recipe.catalyst.toNetwork(buffer);
-            recipe.energySource.toNetwork(buffer);
+            //写入催化剂数据
+            recipe.catalystData.getIngredient().toNetwork(buffer);
+            buffer.writeBoolean(recipe.catalystData.isOptional());
+            buffer.writeBoolean(recipe.catalystData.isRequired());
+            buffer.writeFloat(recipe.catalystData.getTimeReduction());
 
+            //写入能量源数据
+            recipe.energySourceData.getIngredient().toNetwork(buffer);
+            buffer.writeVarInt(recipe.energySourceData.getEnergyValue());
+            buffer.writeBoolean(recipe.energySourceData.acceptAnyFuel());
+            buffer.writeFloat(recipe.energySourceData.getFuelMultiplier());
+
+            //写入输出
             buffer.writeVarInt(recipe.mainOutputs.size());
             for (ItemStack stack : recipe.mainOutputs) {
                 buffer.writeItem(stack);
@@ -309,9 +344,8 @@ public class AncientForgeRecipe implements Recipe<Container> {
                 buffer.writeItem(stack);
             }
 
+            //写入其他参数
             buffer.writeVarInt(recipe.processTime);
-            buffer.writeVarInt(recipe.energyValue);
-            buffer.writeFloat(recipe.timeReduction);
             buffer.writeFloat(recipe.mainOutputMultiplier);
             buffer.writeFloat(recipe.sideOutputMultiplier);
             buffer.writeFloat(recipe.mainToSideRatio);
