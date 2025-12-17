@@ -7,8 +7,8 @@
   "displayType": "minor",
   "glyph": {
     "textureLocation": "tetra:textures/gui/tlb_glyph.png",
-    "textureX": 80,
-    "textureY": 0
+    "textureX": 85,
+    "textureY": 4
   },
   "outcomes": [
     {

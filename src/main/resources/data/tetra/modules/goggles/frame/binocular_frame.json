@@ -23,8 +23,8 @@
           {
             "location": "tetra:item/module/goggles/frame/",
             "transform": {
-              "scale": [1,1,1],
-              "translation": [0,0,0]
+              "scale": [1,1,2],
+              "translation": [0,0,-0.5]
             }
           }
         ]

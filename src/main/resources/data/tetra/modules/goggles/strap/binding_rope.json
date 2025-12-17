@@ -22,6 +22,7 @@
         "models": [
           {
             "location": "tetra:item/module/goggles/strap/",
+            "perspectives": ["gui"],
             "transform": {
               "scale": [1,1,1],
               "translation": [0,0,0]

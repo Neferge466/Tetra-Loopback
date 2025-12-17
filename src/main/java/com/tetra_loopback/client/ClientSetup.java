@@ -2,6 +2,7 @@ package com.tetra_loopback.client;
 
 import com.tetra_loopback.TLbRegistry;
 import com.tetra_loopback.client.renderer.ModularEmblemRenderer;
+import com.tetra_loopback.client.renderer.ModularGogglesRenderer;
 import com.tetra_loopback.block.ancientforge.inventory.TLbMenus;
 import com.tetra_loopback.block.ancientforge.screen.AncientForgeScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -22,7 +23,7 @@ public class ClientSetup {
         event.enqueueWork(() -> {
             //register renderer
             CuriosRendererRegistry.register(TLbRegistry.MODULAR_EMBLEM.get(), ModularEmblemRenderer::new);
-            //CuriosRendererRegistry.register(TLbRegistry.MODULAR_GOGGLES.get(), ModularGogglesRenderer::new);
+            CuriosRendererRegistry.register(TLbRegistry.MODULAR_GOGGLES.get(), ModularGogglesRenderer::new);
 
 
             //注册屏幕
