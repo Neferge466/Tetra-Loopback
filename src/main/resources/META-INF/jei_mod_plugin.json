@@ -1,0 +1,14 @@
+{
+  "plugin": "com.tetra_loopback.compat.jei.AncientForgeJEIPlugin",
+  "dependencies": [
+    {
+      "mod-id": "jei",
+      "minimum-version": "15.0.0.0"
+    }
+  ],
+  "description": {
+    "en": "JEI integration for Tetra Loopback's Ancient Forge",
+    "zh_cn": "Tetra Loopback 远古锻炉的JEI兼容"
+  },
+  "authors": ["YourName"]
+}
