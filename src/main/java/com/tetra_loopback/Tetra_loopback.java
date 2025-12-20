@@ -8,6 +8,7 @@ import com.tetra_loopback.effects.gui.ModEffectStats;
 import com.tetra_loopback.block.ancientforge.inventory.TLbMenus;
 import com.tetra_loopback.item.creative.TLbCreativeModeTab;
 import com.tetra_loopback.block.ancientforge.recipe.TLbRecipes;
+import com.tetra_loopback.network.TLbNetwork;
 import com.tetra_loopback.sound.TLbSoundEvents;
 import com.tetra_loopback.util.ClientProxy;
 import net.minecraftforge.common.MinecraftForge;
@@ -46,6 +47,9 @@ public class Tetra_loopback {
         TLbCreativeModeTab.register(bus);
         TLbEffects.register(bus);
 
+
+        // 初始化网络
+        TLbNetwork.register();
 
         TLbSoundEvents.register(bus);
 

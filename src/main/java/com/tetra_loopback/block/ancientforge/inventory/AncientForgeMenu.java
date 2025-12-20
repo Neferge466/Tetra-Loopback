@@ -164,4 +164,9 @@ public class AncientForgeMenu extends AbstractContainerMenu {
             return data.length;
         }
     }
+
+    public void broadcastChanges() {
+        this.broadcastFullState();
+    }
+
 }

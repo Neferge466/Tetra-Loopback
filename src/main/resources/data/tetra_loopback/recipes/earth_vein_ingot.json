@@ -1,0 +1,49 @@
+{
+  "type": "tetra_loopback:ancient_forge",
+  "materials": [
+    {"item": "minecraft:copper_ingot"},
+    {"item": "minecraft:copper_ingot"},
+    {"item": "minecraft:copper_ingot"},
+    {"item": "minecraft:gold_ingot"},
+    {"item": "tetra_loopback:fuse_steel_ingot"},
+    {"item": "minecraft:gold_ingot"},
+    {"item": "minecraft:magma_block"},
+    {"item": "minecraft:magma_block"},
+    {"item": "minecraft:magma_block"}
+  ],
+
+  "catalyst": {
+    "optional": false,
+    "required": true,
+    "ingredient": {
+      "item": "minecraft:magma_cream"
+    },
+    "time_reduction": 0.20
+  },
+
+  "energy_source": {
+    "ingredient": {
+      "tag": "tetra_loopback:ancient_forge_fuels"
+    },
+    "energy_value": 1600,
+    "accept_any_fuel": true,
+    "fuel_multiplier": 0.8
+  },
+
+  "main_outputs": [
+    {
+      "item": "tetra_loopback:earth_vein_ingot",
+      "count": 1
+    }
+  ],
+
+  "side_outputs": [],
+
+  "return_materials": [],
+
+  "process_time": 400,
+  "main_output_multiplier": 1.0,
+  "side_output_multiplier": 1.0,
+  "main_to_side_ratio": 1.0,
+  "return_chance": 0.0
+}

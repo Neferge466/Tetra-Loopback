@@ -434,10 +434,35 @@
 
   "tetra.stats.tetra_loopback:rainstorm.status.weather": "Weather: %s",
   "tetra.stats.tetra_loopback:rainstorm.status.raining": "Raining ✓",
-  "tetra.stats.tetra_loopback:rainstorm.status.not_raining": "Not Raining"
+  "tetra.stats.tetra_loopback:rainstorm.status.not_raining": "Not Raining",
 
 
-
+  "jei.tetra_loopback.ancient_forge": "Ancient Forge",
+  "jei.tetra_loopback.ancient_forge.description": "Use the Ancient Forge to craft advanced items, requiring specific recipes, catalysts, and energy sources.",
+  "jei.tetra_loopback.catalyst.required": "Required Catalyst",
+  "jei.tetra_loopback.catalyst.required.short": "Required",
+  "jei.tetra_loopback.catalyst.time_reduction": "Process time reduced by %s%%",
+  "jei.tetra_loopback.energy.value": "Energy value: %s ticks",
+  "jei.tetra_loopback.energy.accept_any_fuel": "Accepts any fuel",
+  "jei.tetra_loopback.output.multiplier": "Output multiplier: %sx",
+  "jei.tetra_loopback.side_output.chance": "Side output chance: %s%%",
+  "jei.tetra_loopback.return.chance": "Return chance: %s%%",
+  "jei.tetra_loopback.process_time": "Process time: %s seconds",
+  "jei.tetra_loopback.process_time_seconds": "Process time: %s seconds",
+  "jei.tetra_loopback.burning": "Burning",
+  "jei.tetra_loopback.burning_info": "Burning Info",
+  "jei.tetra_loopback.process_info": "Process Info",
+  "jei.tetra_loopback.fuel_type.any": "Fuel type: Any fuel",
+  "jei.tetra_loopback.fuel_type.specific": "Fuel type: Specific fuel",
+  "jei.tetra_loopback.burn_time": "Burn time: %s seconds",
+  "jei.tetra_loopback.with_catalyst": "With catalyst: %s seconds",
+  "jei.tetra_loopback.time_reduction": "Time reduction: %s%%",
+  "jei.tetra_loopback.transfer.error.cannot_transfer": "Cannot transfer recipe",
+  "jei.tetra_loopback.transfer.error.failed": "Recipe transfer failed",
+  "jei.tetra_loopback.transfer.error.missing_ingredient": "Missing ingredient",
+  "jei.tetra_loopback.transfer.error.missing_catalyst": "Missing required catalyst",
+  "jei.tetra_loopback.transfer.error.missing_energy": "Missing energy source",
+  "jei.tetra_loopback.transfer.error.no_space": "No space in output slots"
 
 
 }
