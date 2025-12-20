@@ -99,6 +99,7 @@ dependencies {
     implementation fg.deobf("curse.maven:simple-jade-tetra-1369375:7131798")
     implementation fg.deobf("curse.maven:mmmmmmmmmmmm-225738:6608233")
     implementation fg.deobf("curse.maven:selene-499980:6611244")
+    compileOnly fg.deobf("curse.maven:jei-238222:5101366")
     runtimeOnly fg.deobf("curse.maven:jei-238222:5101366")
     // Compile against only the API artifact
     compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${"5.11.0+1.20.1"}:api"))

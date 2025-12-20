@@ -156,7 +156,7 @@
   "tetra.material.feature.goggles_vision_field": "护目镜 §6ß视域",
   "tetra_loopback.effect.vision_field.name": "§6视域",
   "tetra_loopback.effect.guardian.name": "§6ß§7守护",
-  "tetra_loopback.effect.guardian.tooltip": "§7提升护甲值",
+  "tetra_loopback.effect.guardian.tooltip": "§7增加玩家的护甲值，每级提供 4 点护甲",
   "tetra.variant.stars/fuse_steel_ingot": "§7融合钢",
   "tetra.variant.stars/bloody_star": "§4血灾星",
   "tetra.variant.stars/mislead_star": "§5荧惑星",
@@ -302,5 +302,36 @@
 
   "tetra.stats.tetra_loopback:rainstorm.status.weather": "天气：%s",
   "tetra.stats.tetra_loopback:rainstorm.status.raining": "下雨中 ✓",
-  "tetra.stats.tetra_loopback:rainstorm.status.not_raining": "未下雨"
+  "tetra.stats.tetra_loopback:rainstorm.status.not_raining": "未下雨",
+
+  "jei.tetra_loopback.ancient_forge": "远古锻炉",
+  "jei.tetra_loopback.ancient_forge.description": "使用远古锻炉合成材料和物品，需要特定配方、催化剂和能量源。",
+  "jei.tetra_loopback.catalyst.required": "必需催化剂",
+  "jei.tetra_loopback.catalyst.required.short": "必需",
+  "jei.tetra_loopback.catalyst.time_reduction": "合成时间减少 %s%%",
+  "jei.tetra_loopback.energy.value": "能量值: %s 刻",
+  "jei.tetra_loopback.energy.accept_any_fuel": "接受任何燃料",
+  "jei.tetra_loopback.output.multiplier": "产出倍率: %sx",
+  "jei.tetra_loopback.side_output.chance": "副产物几率: %s%%",
+  "jei.tetra_loopback.return.chance": "返还几率: %s%%",
+  "jei.tetra_loopback.process_time": "合成时间: %s 秒",
+  "jei.tetra_loopback.process_time_seconds": "合成时间: %s 秒",
+  "jei.tetra_loopback.burning": "燃烧中",
+  "jei.tetra_loopback.burning_info": "燃烧信息",
+  "jei.tetra_loopback.process_info": "合成信息",
+  "jei.tetra_loopback.fuel_type.any": "燃料类型: 任何燃料",
+  "jei.tetra_loopback.fuel_type.specific": "燃料类型: 指定燃料",
+  "jei.tetra_loopback.burn_time": "燃烧时间: %s 秒",
+  "jei.tetra_loopback.with_catalyst": "使用催化剂: %s 秒",
+  "jei.tetra_loopback.time_reduction": "时间减少: %s%%",
+  "jei.tetra_loopback.transfer.error.cannot_transfer": "无法传输配方",
+  "jei.tetra_loopback.transfer.error.failed": "传输配方失败",
+  "jei.tetra_loopback.transfer.error.missing_ingredient": "缺少材料",
+  "jei.tetra_loopback.transfer.error.missing_catalyst": "缺少必需催化剂",
+  "jei.tetra_loopback.transfer.error.missing_energy": "缺少能量源",
+  "jei.tetra_loopback.transfer.error.no_space": "输出槽位空间不足"
+
+
+
+
 }

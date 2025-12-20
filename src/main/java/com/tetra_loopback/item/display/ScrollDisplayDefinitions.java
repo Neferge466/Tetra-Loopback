@@ -5,9 +5,6 @@ import net.minecraft.world.item.ItemStack;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 定义所有要在创造标签页中显示的卷轴
- */
 public class ScrollDisplayDefinitions {
 
     public static List<ItemStack> getAllDisplayScrolls() {

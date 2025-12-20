@@ -43,16 +43,16 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
     private static final int CRAFT_X = 84;     // 进度条X偏移
     private static final int CRAFT_Y = 40;     // 进度条Y偏移
     private static final int CRAFT_WIDTH = 23;    // 进度条宽度
-    private static final int CRAFT_HEIGHT = 7;    // 进度条高度
+    private static final int CRAFT_HEIGHT = 8;    // 进度条高度
 
     //进度条帧的纹理坐标
     private static final int[][] CRAFT_FRAMES = {
-            {230, 80},  // 第1帧：最少
-            {203, 80},  // 第2帧：多一点
-            {176, 80},  // 第3帧：更多
-            {230, 69},  // 第4帧：较多
-            {203, 69},  // 第5帧：很多
-            {176, 69}   // 第6帧：满进度
+            {230, 80},  //1
+            {203, 80},  //2
+            {176, 80},  //3
+            {230, 69},  //4
+            {203, 69},  //5
+            {176, 69}   //6
     };
 
     //动画相关

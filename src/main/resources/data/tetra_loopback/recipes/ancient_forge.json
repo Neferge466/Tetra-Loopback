@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "QPQ",
+    "QRQ",
+    "QDQ"
+  ],
+  "key": {
+    "Q": {
+      "item": "tetra:forged_wall"
+    },
+    "P": {
+      "item": "tetra:planar_stabilizer"
+    },
+    "R": {
+      "item": "tetra:combustion_chamber"
+    },
+    "D": {
+      "item": "tetra:core_extractor"
+    }
+  },
+  "result": {
+    "item": "tetra_loopback:ancient_forge",
+    "count": 1
+  }
+}
