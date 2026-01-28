@@ -10,9 +10,15 @@ public class ScrollDisplayDefinitions {
     public static List<ItemStack> getAllDisplayScrolls() {
         List<ItemStack> scrolls = new ArrayList<>();
 
-//        scrolls.add(createScroll("addbdg_blade", "tetra_loopback",
-//                new String[]{"sword/addbdg_blade"}, false, 2, 16750098, 6, 15, 4, 7));
-//
+        scrolls.add(createScroll("astral_remold", "tetra_loopback",
+                new String[]{"astral_remold"}, false, 1, 13396874, 4, 7, 6, 5));
+
+        scrolls.add(createScroll("buckle_adjust", "tetra_loopback",
+                new String[]{"buckle_adjust"}, false, 1, 8685461, 4, 7, 6, 5));
+
+
+
+
 
         return scrolls;
     }

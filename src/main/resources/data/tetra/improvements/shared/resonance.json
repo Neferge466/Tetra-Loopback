@@ -1,0 +1,26 @@
+[
+  {
+    "key": "resonance",
+    "level": 1,
+    "effects": {
+      "tetra_loopback:resonance": 2
+    },
+    "magicCapacity": 30
+  },
+  {
+    "key": "resonance",
+    "level": 2,
+    "effects": {
+      "tetra_loopback:resonance": 5
+    },
+    "magicCapacity": 60
+  },
+  {
+    "key": "resonance",
+    "level": 3,
+    "effects": {
+      "tetra_loopback:resonance": 10
+    },
+    "magicCapacity": 90
+  }
+]

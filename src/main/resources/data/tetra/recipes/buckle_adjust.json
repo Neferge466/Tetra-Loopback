@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " a ",
+    " b ",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "tetra_loopback:fuse_steel_ingot"
+    },
+    "b": {
+      "item": "minecraft:book"
+    },
+    "c": {
+      "item": "tetra:forged_mesh"
+    }
+  },
+  "result": {
+    "item": "tetra:scroll_rolled",
+    "count": 1,
+    "nbt": {
+      "BlockEntityTag": {
+        "data": [{
+          "key": "buckle_adjust",
+          "intricate": false,
+          "details": "buckle_adjust",
+          "material": 1,
+          "ribbon": "848795",
+          "glyphs": [ 4, 7, 6, 5 ],
+          "schematics": [ "tetra:buckle_adjust" ]
+        }]
+      }
+    }
+  }
+}

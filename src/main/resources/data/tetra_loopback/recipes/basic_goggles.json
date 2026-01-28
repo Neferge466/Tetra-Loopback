@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "B B",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:string"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "tetra_loopback:fuse_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "tetra_loopback:modular_goggles",
+    "nbt": {
+      "goggles/edge": "goggles/edge/edge",
+      "goggles/edge/edge_material": "edge/iron",
+      "goggles/frame": "goggles/frame/single_frame",
+      "goggles/frame/single_frame_material": "single_frame/fuse_steel_ingot",
+      "goggles/strap": "goggles/strap/binding_rope",
+      "goggles/strap/binding_rope_material": "binding_rope/string"
+    }
+  }
+}
+

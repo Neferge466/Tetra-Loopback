@@ -1,0 +1,49 @@
+{
+  "type": "tetra_loopback:ancient_forge",
+  "materials": [
+    {"item": "minecraft:basalt"},
+    {"item": "minecraft:basalt"},
+    {"item": "minecraft:basalt"},
+    {"item": "minecraft:basalt"},
+    {"item": "minecraft:quartz"},
+    {"item": "minecraft:basalt"},
+    {"item": "minecraft:blackstone"},
+    {"item": "minecraft:blackstone"},
+    {"item": "minecraft:blackstone"}
+  ],
+
+  "catalyst": {
+    "optional": false,
+    "required": true,
+    "ingredient": {
+      "item": "minecraft:nether_star"
+    },
+    "time_reduction": 0.20
+  },
+
+  "energy_source": {
+    "ingredient": {
+      "tag": "tetra_loopback:high_energy_fuels"
+    },
+    "energy_value": 2000,
+    "accept_any_fuel": false,
+    "fuel_multiplier": 0.8
+  },
+
+  "main_outputs": [
+    {
+      "item": "tetra:geode",
+      "count": 1
+    }
+  ],
+
+  "side_outputs": [],
+
+  "return_materials": [],
+
+  "process_time": 400,
+  "main_output_multiplier": 1.0,
+  "side_output_multiplier": 1.0,
+  "main_to_side_ratio": 1.0,
+  "return_chance": 0.0
+}

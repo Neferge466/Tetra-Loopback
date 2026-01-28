@@ -1,0 +1,33 @@
+{
+  "key": "cold_wind_ingot",
+  "hidden": true,
+  "category": "curios_metal",
+  "primary": 6,
+  "secondary": 3,
+  "tertiary": 4,
+  "durability": 1800,
+  "integrityCost": 5,
+  "integrityGain": 5,
+  "magicCapacity": 90,
+  "toolLevel": 5,
+  "toolEfficiency": 7,
+  "effects": {
+    "tetra_loopback:wind_light": 1,
+    "tetra_loopback:resonance": 2,
+    "quickStrike": 2,
+    "intuit": 2
+  },
+  "tints": {
+    "glyph": "99d4d4",
+    "texture":"99d4d4"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:cold_wind_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:iron"
+  }
+}

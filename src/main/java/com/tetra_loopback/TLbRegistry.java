@@ -100,23 +100,30 @@ public class TLbRegistry {
     public static final RegistryObject<Item> COLD_WIND_INGOT = ITEMS.register("cold_wind_ingot",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Item> STAR_INGOT = ITEMS.register("star_ingot",
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
 
 
     public static final RegistryObject<Item> RAINSTORM_PEARL = ITEMS.register("rainstorm_pearl",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> LAVA_PEARL = ITEMS.register("lava_pearl",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> LIGHTNING_PEARL = ITEMS.register("lightning_pearl",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> SNOW_PEARL = ITEMS.register("snow_pearl",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+            () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> FUSE_PEARL = ITEMS.register("fuse_pearl",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+
+
+
+    public static final RegistryObject<Item> BROKEN_MOON_SHARD = ITEMS.register("broken_moon_shard",
+            () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
 
 }

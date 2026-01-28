@@ -1,17 +1,18 @@
 {
   "key": "bloody_star",
-  "category": "logo/stars",
+  "category": "logo",
   "primary": 0,
   "secondary": 0,
   "tertiary": 0,
   "durability": 0,
-  "integrityCost": 1,
+  "integrityCost": 4,
   "integrityGain": 1,
   "magicCapacity": 0,
   "toolLevel": 3,
   "toolEfficiency": 2,
   "effects":{
-    "tetra_loopback:crimson_scourge": 1
+    "tetra_loopback:crimson_scourge": 1,
+    "tetra_loopback:resonance": 2
   },
   "tints": {
     "glyph": "AA0000"

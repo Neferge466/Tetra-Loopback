@@ -3,6 +3,8 @@ package com.tetra_loopback.item.creative;
 import com.tetra_loopback.Tetra_loopback;
 import com.tetra_loopback.TLbRegistry;
 import com.tetra_loopback.item.display.ScrollDisplayDefinitions;
+import com.tetra_loopback.item.modular.ModularEmblem;
+import com.tetra_loopback.item.modular.ModularGoggles;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,8 +22,6 @@ public class TLbCreativeModeTab {
                     .title(Component.translatable("creativetab.tetra_loopback"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(TLbRegistry.ANCIENT_FORGE.get());
-                        pOutput.accept(TLbRegistry.CURIOS_EMBLEM.get());
-                        pOutput.accept(TLbRegistry.CURIOS_GOGGLES.get());
                         pOutput.accept(TLbRegistry.EMPTY_CRYSTAL.get());
                         pOutput.accept(TLbRegistry.LOOPBACK_CRYSTAL.get());
                         pOutput.accept(TLbRegistry.VITALITY_CRYSTAL.get());
@@ -35,6 +35,7 @@ public class TLbCreativeModeTab {
                         pOutput.accept(TLbRegistry.COLD_STEEL_INGOT.get());
                         pOutput.accept(TLbRegistry.VITALITY_INGOT.get());
                         pOutput.accept(TLbRegistry.COLD_WIND_INGOT.get());
+                        pOutput.accept(TLbRegistry.STAR_INGOT.get());
 
                         pOutput.accept(TLbRegistry.RAINSTORM_PEARL.get());
                         pOutput.accept(TLbRegistry.LAVA_PEARL.get());
@@ -42,9 +43,12 @@ public class TLbCreativeModeTab {
                         pOutput.accept(TLbRegistry.SNOW_PEARL.get());
                         pOutput.accept(TLbRegistry.FUSE_PEARL.get());
 
-
-
+                        pOutput.accept(TLbRegistry.BROKEN_MOON_SHARD.get());
+                        
                         ScrollDisplayDefinitions.getAllDisplayScrolls().forEach(pOutput::accept);
+
+                        ModularEmblem.getCreativeTabItemStacks().forEach(pOutput::accept);
+                        ModularGoggles.getCreativeTabItemStacks().forEach(pOutput::accept);
                     })
                     .build());
 

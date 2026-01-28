@@ -2,7 +2,9 @@
   "replace": true,
   "type": "tetra:basic_major_module",
   "slots": [ "emblem/gemcore" ],
-  "improvements": [],
+  "improvements": [
+    "tetra:shared/"
+  ],
   "renderLayer": "HIGHER",
   "variants": [
     {
@@ -26,7 +28,7 @@
           "textureY": 0
         },
         "availableTextures": ["default"],
-        "integrity": 1,
+        "integrity": -2,
         "models": [
           {
             "location": "tetra:item/module/emblem/gemcore/",

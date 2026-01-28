@@ -4,8 +4,6 @@ import com.tetra_loopback.block.ancientforge.entity.AncientForgeBlockEntity;
 import com.tetra_loopback.block.ancientforge.entity.TLbBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.BlockParticleOption;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -31,13 +29,14 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 public class AncientForgeBlock extends BaseEntityBlock {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public AncientForgeBlock(Properties properties) {
-        //设置所有属性
         super(BlockBehaviour.Properties.of()
                 .mapColor(MapColor.METAL)
                 .requiresCorrectToolForDrops()
@@ -49,7 +48,6 @@ public class AncientForgeBlock extends BaseEntityBlock {
                 .isSuffocating((state, getter, pos) -> true)
                 .isViewBlocking((state, getter, pos) -> false)
         );
-        //注册默认状态，面朝北，未点燃
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
                 .setValue(LIT, false));
@@ -62,18 +60,27 @@ public class AncientForgeBlock extends BaseEntityBlock {
     }
 
     @Override
+    public List<ItemStack> getDrops(BlockState state, net.minecraft.world.level.storage.loot.LootParams.Builder builder) {
+        //掉落方块本身
+        return java.util.Arrays.asList(new ItemStack(this));
+    }
+
+    @Override
     public void onRemove(BlockState state, Level level, BlockPos pos,
                          BlockState newState, boolean isMoving) {
         if (!state.is(newState.getBlock())) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
             if (blockEntity instanceof AncientForgeBlockEntity forgeEntity) {
-                //掉落方块实体中的所有物品
+                //掉落内容物
                 forgeEntity.dropContents();
+                //方块实体移除
+                level.removeBlockEntity(pos);
             }
+            super.onRemove(state, level, pos, newState, isMoving);
+        } else {
             super.onRemove(state, level, pos, newState, isMoving);
         }
     }
-
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<net.minecraft.world.level.block.Block, BlockState> builder) {
@@ -82,7 +89,6 @@ public class AncientForgeBlock extends BaseEntityBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        //放置时正面朝向玩家
         return this.defaultBlockState()
                 .setValue(FACING, context.getHorizontalDirection().getOpposite());
     }

@@ -1,0 +1,33 @@
+{
+  "replace": true,
+  "slots": [
+    "goggles/frame","emblem/gemcore","emblem/pattern"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 128,
+    "textureY": 16
+  },
+  "requirement": {
+    "type": "tetra:improvement",
+    "improvement": "resonance",
+    "level": 2
+  },
+
+  "outcomes": [
+    {
+      "material": {
+        "items": ["tetra_loopback:loopback_crystal"]
+      },
+      "countFactor": 1,
+      "requiredTools": {
+        "hammer_dig": "minecraft:diamond"
+      },
+      "improvements": {
+        "resonance": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "replace": true,
+  "slots": [
+    "goggles/frame","emblem/gemcore","emblem/pattern"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 96,
+    "textureY": 16
+  },
+  "requirement": {
+    "type": "tetra:not",
+    "requirement": {
+      "type": "tetra:improvement",
+      "improvement": "resonance"
+    }
+  },
+  "outcomes": [
+    {
+      "material": {
+        "items": ["tetra:pristine_amethyst"]
+      },
+      "countFactor": 1,
+      "requiredTools": {
+        "hammer_dig": "minecraft:diamond"
+      },
+      "improvements": {
+        "resonance": 1
+      }
+    }
+  ]
+}

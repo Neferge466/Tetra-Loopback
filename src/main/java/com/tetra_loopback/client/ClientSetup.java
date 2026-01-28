@@ -21,13 +21,20 @@ public class ClientSetup {
 
     private static void onClientSetup(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            //register renderer
+            // 调用 ClientProxy 的初始化（如果你有的话）
+            // ClientProxy.init(); // 如果你有ClientProxy的话
+
+            //renderer
             CuriosRendererRegistry.register(TLbRegistry.MODULAR_EMBLEM.get(), ModularEmblemRenderer::new);
             CuriosRendererRegistry.register(TLbRegistry.MODULAR_GOGGLES.get(), ModularGogglesRenderer::new);
 
-
             //注册屏幕
             MenuScreens.register(TLbMenus.ANCIENT_FORGE_MENU.get(), AncientForgeScreen::new);
+
+            //初始化客户端数据类
+            com.tetra_loopback.effects.gui.ModEffectStats.safeInit();
+            com.tetra_loopback.ModTooltips.registerAll();
+
         });
     }
 }

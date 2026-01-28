@@ -5,6 +5,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
+import com.tetra_loopback.TLbRegistry;
 import com.tetra_loopback.Tetra_loopback;
 import com.tetra_loopback.util.CuriosAttributesUtil;
 import net.minecraft.nbt.CompoundTag;
@@ -49,7 +50,7 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
 
     public static final String identifier = "modular_emblem";
 
-    private static final GuiModuleOffsets majorOffsets = new GuiModuleOffsets(4, 20, -12, 20);
+    private static final GuiModuleOffsets majorOffsets = new GuiModuleOffsets(4, 20, -13, 20);
     private static final GuiModuleOffsets minorOffsets = new GuiModuleOffsets(-13, -1);
 
     //添加Resonance_NBT_KEY
@@ -57,7 +58,7 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
     public static final String RESONANCE_VALUE_KEY = "value";
 
     //设共鸣值
-    public static final double FIXED_RESONANCE_VALUE =4;
+    public static final double FIXED_RESONANCE_VALUE =3;
 
 
     @ObjectHolder(
@@ -244,4 +245,31 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
 //        }
 //        */
 //    }
+
+
+    public static Collection<ItemStack> getCreativeTabItemStacks() {
+        Item emblemItem = TLbRegistry.MODULAR_EMBLEM.get();
+
+        return Arrays.asList(
+                createBasicEmblem(emblemItem, "oak")
+        );
+    }
+
+    private static ItemStack createBasicEmblem(Item item, String baseMaterial) {
+        ItemStack itemStack = new ItemStack(item);
+
+        IModularItem.putModuleInSlot(itemStack, emblemBase,
+                "emblem/base/peltate",
+                "emblem/base/peltate_material",
+                "peltate/" + baseMaterial);
+
+        IModularItem.updateIdentifier(itemStack);
+
+        return itemStack;
+    }
+
+
+
+
+
 }

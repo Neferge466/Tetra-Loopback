@@ -1,0 +1,29 @@
+{
+  "key": "vitality_crystal",
+  "hidden": true,
+  "primary": 6,
+  "secondary": 3,
+  "tertiary": 0,
+  "durability": 999,
+  "integrityCost": 3,
+  "integrityGain": 3,
+  "magicCapacity": 99,
+  "toolLevel": "minecraft:diamond",
+  "toolEfficiency": 7,
+  "effects": {
+    "tetra_loopback:vital_shield": 1
+  },
+  "tints": {
+    "glyph": "4fa976",
+    "texture":"4fa976"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:vitality_crystal" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:diamond"
+  }
+}

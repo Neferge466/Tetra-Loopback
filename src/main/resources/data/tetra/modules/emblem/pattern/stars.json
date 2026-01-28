@@ -2,15 +2,21 @@
   "replace": true,
   "type": "tetra:basic_major_module",
   "slots": [ "emblem/pattern" ],
-  "improvements": [],
+  "improvements": [
+    "tetra:shared/"
+  ],
   "renderLayer": "HIGHER",
   "variants": [
     {
-      "materials": [ "tetra:logo/","tetra:metal/" ],
+      "materials": [ "tetra:logo/","tetra:curios_metal/" ],
       "key": "stars/",
       "integrity": 2,
       "attributes": {
         "generic.attack_damage": 6
+      },
+      "effects":
+      {
+        "tetra_loopback:resonance": 3
       },
       "extract": {
         "glyph": {
@@ -19,7 +25,7 @@
           "textureY": 0
         },
         "availableTextures": [ "shiny","metal","default","bloody","mislead" ],
-        "integrity": 1,
+        "integrity": -1,
         "models": [
           {
             "location": "tetra:item/module/emblem/pattern/stars/",

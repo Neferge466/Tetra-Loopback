@@ -12,13 +12,13 @@ public class TLbSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Tetra_loopback.MODID);
 
-    // 护目镜声音
+    //护目镜
     public static final RegistryObject<SoundEvent> GOGGLES_EQUIP =
             registerSoundEvent("equip_goggles");
     public static final RegistryObject<SoundEvent> GOGGLES_UNEQUIP =
             registerSoundEvent("unequip_goggles");
 
-//    // 徽章声音
+//    //徽章
 //    public static final RegistryObject<SoundEvent> EMBLEM_EQUIP =
 //            registerSoundEvent("equip_emblem");
 //    public static final RegistryObject<SoundEvent> EMBLEM_UNEQUIP =

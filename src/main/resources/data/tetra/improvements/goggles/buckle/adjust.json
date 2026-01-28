@@ -1,0 +1,14 @@
+[
+  {
+    "key": "buckle_adjust",
+    "level": 1,
+    "integrity": -1,
+    "effects":
+    {
+      "intuit": 2
+    },
+    "attributes": {
+      "generic.max_health": 3
+    }
+  }
+]

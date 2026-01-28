@@ -1,0 +1,33 @@
+{
+    "key": "snow_pearl",
+    "category": "gem",
+    "primary": 6,
+    "secondary": 3,
+    "tertiary": 0,
+    "durability": 888,
+    "integrityCost": 2,
+    "integrityGain": 3,
+    "magicCapacity": 99,
+    "toolLevel": "minecraft:diamond",
+    "toolEfficiency": 7,
+    "effects": {
+    },
+    "tints": {
+        "glyph": "eaeaea",
+        "texture": "eaeaea"
+    },
+    "textures": [
+        "shiny",
+        "crude"
+    ],
+    "material": {
+        "items": [ "tetra_loopback:snow_pearl" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    },
+    "features": [
+        "curios_frost_crown",
+        "curios_resonance"
+    ]
+}

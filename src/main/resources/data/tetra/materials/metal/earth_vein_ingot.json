@@ -1,0 +1,35 @@
+{
+  "key": "earth_vein_ingot",
+  "category": "metal",
+  "primary": 7,
+  "secondary": 3,
+  "tertiary": 2,
+  "durability": 5000,
+  "integrityCost": 3,
+  "integrityGain": 4,
+  "magicCapacity": 40,
+  "toolLevel": 5,
+  "toolEfficiency": 5,
+  "effects": {
+    "sweeping": [2,0.3],
+    "truesweep": 1,
+    "earthbind": 10
+  },
+  "tints": {
+    "glyph": "edac4a",
+    "texture":"edac4a"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:earth_vein_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:diamond"
+  },
+  "features": [
+    "curios_telluric_anchor",
+    "curios_resonance"
+  ]
+}

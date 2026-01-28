@@ -1,33 +1,16 @@
 [
   {
-    "variant": "buckle/",
+    "improvement": "buckle_adjust",
     "key": "buckle_res",
-    "steps": 8,
+    "steps": 3,
     "properties": {
       "attributes": {
-        "generic.max_health": 1
+        "generic.armor": 1
       },
       "effects": {
-        "tetra_loopback:resonance": 0.5
-      }
-    }
-  },
-  {
-    "variant": "buckle/iron",
-    "key": "buckle_speed",
-    "steps": 8,
-    "properties": {
-      "attributes": {
-        "generic.movement_speed": 0.01
-      }
-    }
-  },
-  {
-    "variant": "buckle/iron",
-    "key": "buckle_health",
-    "steps": 8,
-    "properties": {
-      "integrity": 2
+        "tetra_loopback:resonance": 1
+      },
+      "integrity": -1
     }
   }
 ]

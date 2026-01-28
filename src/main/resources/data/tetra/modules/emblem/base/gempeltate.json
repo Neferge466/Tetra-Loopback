@@ -11,7 +11,7 @@
   },
   "variants": [
     {
-      "materials": [ "tetra:metal/","tetra:wood/","tetra:bone/" ],
+      "materials": [ "tetra:curios_metal/","tetra:curios_wood/" ],
       "key": "gempeltate/",
       "integrity": 2,
       "extract": {
@@ -20,7 +20,7 @@
           "textureX": 0,
           "textureY": 16
         },
-        "availableTextures": [ "metal","wood","bone"],
+        "availableTextures": [ "metal","wood" ],
         "integrity": 1,
         "models": [
           {

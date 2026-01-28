@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PLP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "L": {
+      "item": "minecraft:oak_log"
+    }
+  },
+  "result": {
+    "item": "tetra_loopback:modular_emblem",
+    "nbt": {
+      "emblem/base": "emblem/base/peltate",
+      "emblem/base/peltate_material": "peltate/oak"
+    }
+  }
+}
+

@@ -1,15 +1,15 @@
 {
   "type": "tetra_loopback:ancient_forge",
   "materials": [
-    {"item": "minecraft:amethyst_shard"},
-    {"item": "minecraft:ender_eye"},
-    {"item": "minecraft:amethyst_shard"},
-    {"item": "minecraft:amethyst_shard"},
-    {"item": "tetra_loopback:empty_crystal"},
-    {"item": "minecraft:amethyst_shard"},
-    {"item": "minecraft:amethyst_shard"},
     {"item": "tetra:pristine_amethyst"},
-    {"item": "minecraft:amethyst_shard"}
+    {"item": "minecraft:ender_eye"},
+    {"item": "tetra:pristine_amethyst"},
+    {"item": "tetra:pristine_amethyst"},
+    {"item": "tetra_loopback:empty_crystal"},
+    {"item": "tetra:pristine_amethyst"},
+    {"item": "tetra:pristine_amethyst"},
+    {"item": "minecraft:dragon_breath"},
+    {"item": "tetra:pristine_amethyst"}
   ],
 
   "catalyst": {
@@ -26,7 +26,7 @@
       "tag": "tetra_loopback:high_energy_fuels"
     },
     "energy_value": 2000,
-    "accept_any_fuel": true,
+    "accept_any_fuel": false,
     "fuel_multiplier": 0.8
   },
 

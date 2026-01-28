@@ -1,0 +1,49 @@
+{
+  "type": "tetra_loopback:ancient_forge",
+  "materials": [
+    {"item": "minecraft:blaze_powder"},
+    {"item": "minecraft:water_bucket"},
+    {"item": "minecraft:blaze_powder"},
+    {"item": "minecraft:blaze_powder"},
+    {"item": "tetra_loopback:fuse_pearl"},
+    {"item": "minecraft:blaze_powder"},
+    {"item": "minecraft:blaze_powder"},
+    {"item": "minecraft:magma_cream"},
+    {"item": "minecraft:blaze_powder"}
+  ],
+
+  "catalyst": {
+    "optional": false,
+    "required": true,
+    "ingredient": {
+      "item": "tetra:combustion_chamber"
+    },
+    "time_reduction": 0.20
+  },
+
+  "energy_source": {
+    "ingredient": {
+      "tag": "tetra_loopback:ancient_forge_fuels"
+    },
+    "energy_value": 2000,
+    "accept_any_fuel": false,
+    "fuel_multiplier": 0.8
+  },
+
+  "main_outputs": [
+    {
+      "item": "tetra_loopback:lava_pearl",
+      "count": 1
+    }
+  ],
+
+  "side_outputs": [],
+
+  "return_materials": [],
+
+  "process_time": 600,
+  "main_output_multiplier": 1.0,
+  "side_output_multiplier": 1.0,
+  "main_to_side_ratio": 1.0,
+  "return_chance": 0.0
+}

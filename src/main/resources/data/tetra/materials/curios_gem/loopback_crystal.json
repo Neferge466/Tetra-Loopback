@@ -6,13 +6,14 @@
     "secondary": 3,
     "tertiary": 0,
     "durability": 888,
-    "integrityCost": 2,
+    "integrityCost": 3,
     "integrityGain": 3,
     "magicCapacity": 99,
     "toolLevel": "minecraft:diamond",
     "toolEfficiency": 7,
     "effects": {
-        "tetra_loopback:vision_field": 5
+        "tetra_loopback:vision_field": 2,
+        "tetra_loopback:resonance": 3
     },
     "tints": {
         "glyph": "c77ff4",

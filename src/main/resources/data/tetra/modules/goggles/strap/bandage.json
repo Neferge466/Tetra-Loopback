@@ -10,7 +10,7 @@
     {
       "materials": [ "tetra:curios_fabric/" , "tetra:curios_skin/" ],
       "key": "bandage/",
-      "integrity": 2,
+      "integrity": 1,
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",

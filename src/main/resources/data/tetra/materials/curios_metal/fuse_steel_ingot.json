@@ -13,11 +13,12 @@
   "toolEfficiency": 2,
   "effects": {
     "tetra_loopback:guardian":1,
+    "tetra_loopback:resonance": 2,
     "crushing": 1
   },
   "tints": {
-    "glyph": "AAAAAA",
-    "texture":"AAAAAA"
+    "glyph": "848795",
+    "texture":"848795"
   },
   "textures": [
     "metal"

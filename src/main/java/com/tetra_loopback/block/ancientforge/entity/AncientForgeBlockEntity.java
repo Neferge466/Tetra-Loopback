@@ -9,6 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -48,28 +49,35 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
     private int craftTime;
     private int craftTimeTotal;
     private AncientForgeRecipe currentRecipe;
+    private ResourceLocation lastRecipeId;
     private boolean needsRecipeUpdate = true;
     private boolean isBurning = false;
-    private boolean hasConsumedIngredients = false;
     private boolean hasValidRecipe = false;
     private boolean isCraftingInProgress = false;
-    private boolean wasRecipeValidBefore = false;
-    private boolean catalystApplied = false; //标记当前合成是否应用了催化剂
+    private boolean catalystApplied = false;
+
+    //燃料信息
+    private ItemStack lastFuelStack = ItemStack.EMPTY;
+    private int lastFuelBurnTime = 0;
+
+    private boolean needsMaterialCheck = true;
 
     private final ItemStackHandler itemHandler = new ItemStackHandler(TOTAL_SLOTS) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
 
-            if (slot < MATERIAL_SLOTS && isBurning && !isCraftingInProgress && !hasValidRecipe) {
-                if (hasValidRecipe()) {
-                    hasValidRecipe = true;
-                    craftTime = 0;
-                    hasConsumedIngredients = false;
-                }
-            }
-            if (slot < MATERIAL_SLOTS + 2 && !isBurning) {
+            //材料槽位变化时更新配方
+            if (slot < MATERIAL_SLOTS + 2) { //材料，催化剂，燃料
                 needsRecipeUpdate = true;
+                //材料变化时重新检查
+                needsMaterialCheck = true;
+            }
+
+            if (isCraftingInProgress && slot < MATERIAL_SLOTS) {
+                if (!checkRecipeValid(currentRecipe)) {
+                    stopCrafting();
+                }
             }
         }
     };
@@ -132,6 +140,18 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
     public void onLoad() {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
+
+        if (level != null && !level.isClientSide && lastRecipeId != null) {
+            Optional<AncientForgeRecipe> recipe = level.getRecipeManager().getAllRecipesFor(AncientForgeRecipeType.INSTANCE)
+                    .stream()
+                    .filter(r -> r.getId().equals(lastRecipeId))
+                    .findFirst();
+
+            if (recipe.isPresent()) {
+                currentRecipe = recipe.get();
+                hasValidRecipe = checkRecipeValid(currentRecipe);
+            }
+        }
     }
 
     @Override
@@ -142,34 +162,70 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     protected void saveAdditional(CompoundTag tag) {
+        super.saveAdditional(tag);
+
         tag.put("inventory", itemHandler.serializeNBT());
         tag.putInt("burnTime", burnTime);
         tag.putInt("burnTimeTotal", burnTimeTotal);
         tag.putInt("craftTime", craftTime);
         tag.putInt("craftTimeTotal", craftTimeTotal);
         tag.putBoolean("isBurning", isBurning);
-        tag.putBoolean("hasConsumedIngredients", hasConsumedIngredients);
         tag.putBoolean("hasValidRecipe", hasValidRecipe);
         tag.putBoolean("isCraftingInProgress", isCraftingInProgress);
-        tag.putBoolean("wasRecipeValidBefore", wasRecipeValidBefore);
-        tag.putBoolean("catalystApplied", catalystApplied); //保存催化剂标记
-        super.saveAdditional(tag);
+        tag.putBoolean("catalystApplied", catalystApplied);
+        tag.putBoolean("needsMaterialCheck", needsMaterialCheck);
+
+        //保存燃料信息
+        if (!lastFuelStack.isEmpty()) {
+            CompoundTag fuelTag = new CompoundTag();
+            lastFuelStack.save(fuelTag);
+            tag.put("lastFuel", fuelTag);
+        }
+        tag.putInt("lastFuelBurnTime", lastFuelBurnTime);
+
+        //保存当前配方
+        if (currentRecipe != null) {
+            tag.putString("recipeId", currentRecipe.getId().toString());
+        } else if (lastRecipeId != null) {
+            tag.putString("lastRecipeId", lastRecipeId.toString());
+        }
     }
 
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
+
         itemHandler.deserializeNBT(tag.getCompound("inventory"));
         burnTime = tag.getInt("burnTime");
         burnTimeTotal = tag.getInt("burnTimeTotal");
         craftTime = tag.getInt("craftTime");
         craftTimeTotal = tag.getInt("craftTimeTotal");
         isBurning = tag.getBoolean("isBurning");
-        hasConsumedIngredients = tag.getBoolean("hasConsumedIngredients");
         hasValidRecipe = tag.getBoolean("hasValidRecipe");
         isCraftingInProgress = tag.getBoolean("isCraftingInProgress");
-        wasRecipeValidBefore = tag.getBoolean("wasRecipeValidBefore");
-        catalystApplied = tag.getBoolean("catalystApplied"); // 加载催化剂标记
+        catalystApplied = tag.getBoolean("catalystApplied");
+        needsMaterialCheck = tag.getBoolean("needsMaterialCheck");
+
+        //恢复燃料信息
+        if (tag.contains("lastFuel")) {
+            lastFuelStack = ItemStack.of(tag.getCompound("lastFuel"));
+        }
+        lastFuelBurnTime = tag.getInt("lastFuelBurnTime");
+
+        //恢复配方
+        if (tag.contains("recipeId")) {
+            lastRecipeId = new ResourceLocation(tag.getString("recipeId"));
+        } else if (tag.contains("lastRecipeId")) {
+            lastRecipeId = new ResourceLocation(tag.getString("lastRecipeId"));
+        }
+
+        if (isBurning && burnTime <= 0) {
+            stopBurning();
+        }
+
+        if (isCraftingInProgress && !hasValidRecipe) {
+            stopCrafting();
+        }
     }
 
     public boolean stillValid(Player player) {
@@ -184,55 +240,93 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
     public static void tick(Level level, BlockPos pos, BlockState state, AncientForgeBlockEntity entity) {
         if (level.isClientSide) return;
 
-        if (entity.needsRecipeUpdate && !entity.isBurning) {
+        boolean changed = false;
+        boolean wasBurning = entity.isBurning;
+
+        if (entity.needsRecipeUpdate) {
             entity.updateCurrentRecipe();
             entity.needsRecipeUpdate = false;
+            entity.needsMaterialCheck = true;
         }
-
-        boolean hasRecipe = entity.currentRecipe != null;
-        boolean changed = false;
 
         if (entity.isBurning) {
             entity.burnTime--;
             changed = true;
 
             if (entity.burnTime <= 0) {
-                entity.resetCraftingState();
+                entity.stopBurning();
                 changed = true;
             }
         }
 
-        if (!entity.isBurning && hasRecipe && entity.canCraft()) {
-            ItemStack energyItem = entity.itemHandler.getStackInSlot(ENERGY_SLOT);
-            int burnTime = entity.getBurnTime(energyItem);
+        if (!entity.isBurning && entity.currentRecipe != null && entity.hasValidRecipe) {
+            ItemStack fuelStack = entity.itemHandler.getStackInSlot(ENERGY_SLOT);
+            int burnTime = entity.getBurnTime(fuelStack, entity.currentRecipe);
 
             if (burnTime > 0) {
-                entity.startCrafting(burnTime);
-                energyItem.shrink(1);
+                entity.startBurning(fuelStack, burnTime);
+                fuelStack.shrink(1);
                 changed = true;
             }
         }
 
-        if (entity.isBurning && entity.hasValidRecipe) {
-            if (!entity.hasValidRecipe()) {
-                entity.resetCraftingState();
-                changed = true;
-            } else {
-                entity.processCrafting(changed);
+        if (entity.isBurning && entity.hasValidRecipe && entity.currentRecipe != null) {
+            if (entity.needsMaterialCheck) {
+                boolean hasMaterials = entity.hasEnoughMaterials();
+                if (!hasMaterials) {
+                    entity.hasValidRecipe = false;
+                    entity.stopCrafting();
+                    entity.needsMaterialCheck = false;
+                    changed = true;
+                } else {
+                    entity.needsMaterialCheck = false;
+                }
             }
-        } else if (entity.craftTime > 0) {
-            entity.resetCraftingState();
+
+            if (!entity.isCraftingInProgress && entity.hasValidRecipe) {
+                if (entity.hasEnoughSpace()) {
+                    entity.craftTimeTotal = entity.getActualCraftTime();
+                    entity.craftTime = 0;
+                    entity.isCraftingInProgress = true;
+                    ItemStack catalyst = entity.itemHandler.getStackInSlot(CATALYST_SLOT);
+                    entity.catalystApplied = !catalyst.isEmpty() &&
+                            entity.currentRecipe.getCatalystData().isValidCatalyst(catalyst);
+
+                    changed = true;
+                }
+            } else if (entity.isCraftingInProgress) {
+                entity.craftTime++;
+                changed = true;
+
+                if (entity.craftTime >= entity.craftTimeTotal) {
+                    if (entity.hasEnoughMaterials() && entity.hasEnoughSpace()) {
+                        entity.finishCrafting();
+                        changed = true;
+
+                        entity.needsMaterialCheck = true;
+
+                        if (!entity.hasEnoughMaterials()) {
+                            entity.hasValidRecipe = false;
+                            entity.stopCrafting();
+                        }
+                    } else {
+                        entity.hasValidRecipe = false;
+                        entity.stopCrafting();
+                        changed = true;
+                    }
+                }
+            }
+        } else if (entity.isCraftingInProgress) {
+            entity.stopCrafting();
             changed = true;
         }
 
+        boolean isLit = entity.isBurning && entity.burnTime > 0;
         boolean wasLit = state.getValue(AncientForgeBlock.LIT);
-        boolean shouldBeLit = entity.isBurning;
 
-        if (wasLit != shouldBeLit) {
-            //更新方块状态
-            BlockState newState = state.setValue(AncientForgeBlock.LIT, shouldBeLit);
-            level.setBlock(pos, newState, Block.UPDATE_ALL);
-            entity.setChanged();
+        if (isLit != wasLit) {
+            level.setBlock(pos, state.setValue(AncientForgeBlock.LIT, isLit), Block.UPDATE_ALL);
+            changed = true;
         }
 
         if (changed) {
@@ -240,81 +334,46 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
         }
     }
 
-
-    private void resetCraftingState() {
+    private void stopBurning() {
         this.isBurning = false;
-        this.craftTime = 0;
-        this.hasConsumedIngredients = false;
-        this.hasValidRecipe = false;
-        this.isCraftingInProgress = false;
-        this.wasRecipeValidBefore = false;
-        this.catalystApplied = false; //重置催化剂标记
+        this.burnTime = 0;
+        this.burnTimeTotal = 0;
+        this.lastFuelStack = ItemStack.EMPTY;
+        this.lastFuelBurnTime = 0;
+
+        stopCrafting();
     }
 
-    private void startCrafting(int burnTime) {
+    private void stopCrafting() {
+        this.isCraftingInProgress = false;
+        this.craftTime = 0;
+        this.craftTimeTotal = 0;
+        this.catalystApplied = false;
+        this.needsMaterialCheck = true;
+    }
+
+    private void startBurning(ItemStack fuelStack, int burnTime) {
         this.isBurning = true;
         this.burnTime = burnTime;
         this.burnTimeTotal = burnTime;
-
-        //在合成开始时计算并保存合成时间
-        this.craftTimeTotal = this.getActualCraftTime();
-        this.craftTime = 0;
-        this.hasConsumedIngredients = false;
-        this.hasValidRecipe = true;
-        this.isCraftingInProgress = false;
-        this.wasRecipeValidBefore = true;
-
-        //标记是否应用了催化剂
-        ItemStack catalyst = itemHandler.getStackInSlot(CATALYST_SLOT);
-        if (!catalyst.isEmpty() && currentRecipe != null) {
-            this.catalystApplied = currentRecipe.getCatalystData().isValidCatalyst(catalyst);
-        }
+        this.lastFuelStack = fuelStack.copy();
+        this.lastFuelStack.setCount(1);
+        this.lastFuelBurnTime = burnTime;
     }
 
-    private void processCrafting(boolean changed) {
-        if (!this.hasConsumedIngredients && this.craftTime == 0) {
-            this.consumeIngredients();
-            this.hasConsumedIngredients = true;
-            this.isCraftingInProgress = true;
-            changed = true;
-        }
+    private void finishCrafting() {
+        if (currentRecipe == null) return;
 
-        if (this.isCraftingInProgress) {
-            this.craftTime++;
+        //合成完成时消耗材料
+        consumeIngredients();
 
-            //合成过程中不重新计算时间，保持开始时的craftTimeTotal
-            if (this.craftTime >= this.craftTimeTotal) {
-                this.craftItem();
-
-                this.craftTime = 0;
-                this.hasConsumedIngredients = false;
-                this.isCraftingInProgress = false;
-                this.catalystApplied = false; //重置催化剂标记
-
-                if (!this.hasEnoughIngredients()) {
-                    this.hasValidRecipe = false;
-                }
-
-                changed = true;
-            }
-        }
-    }
-
-    private boolean hasValidRecipe() {
-        if (currentRecipe == null) return false;
-        if (isCraftingInProgress) {
-            return true;
-        }
-        for (int i = 0; i < MATERIAL_SLOTS; i++) {
-            ItemStack stack = itemHandler.getStackInSlot(i);
-            Ingredient required = currentRecipe.getMaterials().get(i);
-
-            if (!required.test(stack)) {
-                return false;
-            }
-        }
-
-        return true;
+        //放置产出
+        placeOutputs();
+        placeReturnMaterials();
+        //重置合成状态，但保持燃烧
+        stopCrafting();
+        //记录最后一个成功的配方ID
+        lastRecipeId = currentRecipe.getId();
     }
 
     private void updateCurrentRecipe() {
@@ -327,80 +386,107 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
                 .getRecipeFor(AncientForgeRecipeType.INSTANCE, inventory, level);
 
         if (recipe.isPresent()) {
-            currentRecipe = recipe.get();
-            craftTimeTotal = currentRecipe.getProcessTime();
-            hasValidRecipe = true;
+            AncientForgeRecipe newRecipe = recipe.get();
+
+            //检查新配方是否可以使用当前燃料
+            if (isBurning) {
+                ItemStack currentFuel = itemHandler.getStackInSlot(ENERGY_SLOT);
+                int newBurnTime = getBurnTime(currentFuel, newRecipe);
+                if (newBurnTime <= 0 && !isSameFuelType(newRecipe)) {
+                    hasValidRecipe = false;
+                    return;
+                }
+            }
+
+            currentRecipe = newRecipe;
+            hasValidRecipe = checkRecipeValid(newRecipe);
+            craftTimeTotal = newRecipe.getProcessTime();
         } else {
             currentRecipe = null;
+            hasValidRecipe = false;
             craftTime = 0;
             craftTimeTotal = 0;
-            hasValidRecipe = false;
-        }
-    }
-
-    private int getActualCraftTime() {
-        if (currentRecipe == null) return 0;
-
-        //只在合成开始时检查催化剂
-        ItemStack catalyst = itemHandler.getStackInSlot(CATALYST_SLOT);
-        boolean hasValidCatalyst = !catalyst.isEmpty() &&
-                currentRecipe.getCatalystData().isValidCatalyst(catalyst);
-
-        //计算基础时间
-        float baseTime = currentRecipe.getProcessTime();
-
-        //存在催化剂且配方设置时间减少，则应用
-        if (hasValidCatalyst && currentRecipe.getCatalystData().getTimeReduction() > 0) {
-            float reduction = currentRecipe.getCatalystData().getTimeReduction();
-            return (int) (baseTime * (1.0f - reduction));
         }
 
-        return (int) baseTime;
+        needsMaterialCheck = true;
     }
 
-    private boolean canCraft() {
-        if (currentRecipe == null) return false;
+    private boolean isSameFuelType(AncientForgeRecipe recipe) {
+        if (currentRecipe == null || recipe == null) return false;
 
-        //检查催化剂是否必需
-        if (currentRecipe.getCatalystData().isRequired()) {
-            ItemStack catalyst = itemHandler.getStackInSlot(CATALYST_SLOT);
-            if (!currentRecipe.getCatalystData().isValidCatalyst(catalyst)) {
+        //比较能量源
+        AncientForgeRecipe.EnergySourceData currentEnergy = currentRecipe.getEnergySourceData();
+        AncientForgeRecipe.EnergySourceData newEnergy = recipe.getEnergySourceData();
+
+        //如果都接受任何燃料，则视为相同
+        if (currentEnergy.acceptAnyFuel() && newEnergy.acceptAnyFuel()) {
+            return true;
+        }
+
+        return currentEnergy.getIngredient().equals(newEnergy.getIngredient());
+    }
+
+    private boolean checkRecipeValid(AncientForgeRecipe recipe) {
+        if (recipe == null) return false;
+
+        for (int i = 0; i < MATERIAL_SLOTS; i++) {
+            ItemStack stack = itemHandler.getStackInSlot(i);
+            Ingredient required = recipe.getMaterials().get(i);
+
+            if (!required.test(stack) || stack.getCount() < 1) {
                 return false;
             }
         }
 
-        //检查燃料
-        ItemStack energyItem = itemHandler.getStackInSlot(ENERGY_SLOT);
-        if (getBurnTime(energyItem) <= 0) {
-            return false;
+        if (recipe.getCatalystData().isRequired()) {
+            ItemStack catalyst = itemHandler.getStackInSlot(CATALYST_SLOT);
+            if (!recipe.getCatalystData().isValidCatalyst(catalyst)) {
+                return false;
+            }
         }
 
-        //检查材料
-        if (!hasEnoughIngredients()) {
-            return false;
-        }
-
-        //检查输出空间
-        return hasEnoughSpace();
+        return true;
     }
 
-    private int getBurnTime(ItemStack fuel) {
-        //使用燃料兼容类
-        return AncientForgeFuelCompat.getFuelValue(fuel, currentRecipe);
-    }
-
-    private boolean hasEnoughIngredients() {
+    private boolean hasEnoughMaterials() {
         if (currentRecipe == null) return false;
 
         for (int i = 0; i < MATERIAL_SLOTS; i++) {
             ItemStack stack = itemHandler.getStackInSlot(i);
             Ingredient required = currentRecipe.getMaterials().get(i);
+
+            if (!required.isEmpty() && !required.test(stack)) {
+                return false;
+            }
+
             if (!required.test(stack) || stack.getCount() < 1) {
                 return false;
             }
         }
 
         return true;
+    }
+
+    private int getBurnTime(ItemStack fuel, AncientForgeRecipe recipe) {
+        //燃料兼容
+        return AncientForgeFuelCompat.getFuelValue(fuel, recipe);
+    }
+
+    private int getActualCraftTime() {
+        if (currentRecipe == null) return 0;
+
+        float baseTime = currentRecipe.getProcessTime();
+
+        ItemStack catalyst = itemHandler.getStackInSlot(CATALYST_SLOT);
+        boolean hasValidCatalyst = !catalyst.isEmpty() &&
+                currentRecipe.getCatalystData().isValidCatalyst(catalyst);
+
+        if (hasValidCatalyst && currentRecipe.getCatalystData().getTimeReduction() > 0) {
+            float reduction = currentRecipe.getCatalystData().getTimeReduction();
+            return (int) (baseTime * (1.0f - reduction));
+        }
+
+        return (int) baseTime;
     }
 
     private boolean hasEnoughSpace() {
@@ -422,7 +508,7 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
         }
 
         if (currentRecipe.getSideOutputs().size() > 0) {
-            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS; // 副产物槽索引
+            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS;
             ItemStack output = currentRecipe.getSideOutputs().get(0).copy();
 
             float finalMultiplier = currentRecipe.getSideOutputMultiplier() / currentRecipe.getMainToSideRatio();
@@ -436,7 +522,7 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
         }
 
         if (currentRecipe.getReturnChance() > 0 && currentRecipe.getReturnMaterials().size() > 0) {
-            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS + SIDE_OUTPUT_SLOTS; // 返还材料槽索引
+            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS + SIDE_OUTPUT_SLOTS;
             ItemStack returnMat = currentRecipe.getReturnMaterials().get(0).copy();
 
             ItemStack remaining = itemHandler.insertItem(slotIndex, returnMat, true);
@@ -448,17 +534,9 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
         return true;
     }
 
-    private void craftItem() {
-        if (currentRecipe == null || !hasEnoughSpace()) return;
-
-        placeOutputs();
-
-        placeReturnMaterials();
-
-        needsRecipeUpdate = true;
-    }
-
     private void consumeIngredients() {
+        if (currentRecipe == null) return;
+
         for (int i = 0; i < MATERIAL_SLOTS; i++) {
             ItemStack stack = itemHandler.getStackInSlot(i);
             Ingredient required = currentRecipe.getMaterials().get(i);
@@ -470,6 +548,9 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
     }
 
     private void placeOutputs() {
+        if (currentRecipe == null) return;
+
+        //主产物
         if (currentRecipe.getMainOutputs().size() > 0) {
             int slotIndex = MATERIAL_SLOTS + 2;
             ItemStack output = currentRecipe.getMainOutputs().get(0).copy();
@@ -481,12 +562,21 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
 
             ItemStack remaining = itemHandler.insertItem(slotIndex, output, false);
             if (!remaining.isEmpty()) {
-                System.out.println("无法插入物品到主产物槽" + slotIndex);
+                //无法插入，掉落在地上
+                if (level != null) {
+                    ItemEntity itemEntity = new ItemEntity(level,
+                            worldPosition.getX() + 0.5,
+                            worldPosition.getY() + 0.5,
+                            worldPosition.getZ() + 0.5,
+                            remaining);
+                    level.addFreshEntity(itemEntity);
+                }
             }
         }
 
+        //副产物
         if (currentRecipe.getSideOutputs().size() > 0) {
-            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS; // 副产物槽索引
+            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS;
             ItemStack output = currentRecipe.getSideOutputs().get(0).copy();
 
             float finalMultiplier = currentRecipe.getSideOutputMultiplier() / currentRecipe.getMainToSideRatio();
@@ -495,39 +585,60 @@ public class AncientForgeBlockEntity extends BlockEntity implements MenuProvider
 
             ItemStack remaining = itemHandler.insertItem(slotIndex, output, false);
             if (!remaining.isEmpty()) {
-                System.out.println("无法插入副产物到槽" + slotIndex);
+                if (level != null) {
+                    ItemEntity itemEntity = new ItemEntity(level,
+                            worldPosition.getX() + 0.5,
+                            worldPosition.getY() + 0.5,
+                            worldPosition.getZ() + 0.5,
+                            remaining);
+                    level.addFreshEntity(itemEntity);
+                }
             }
         }
     }
 
     private void placeReturnMaterials() {
+        if (currentRecipe == null || level == null) return;
+
         if (currentRecipe.getReturnChance() > 0 && currentRecipe.getReturnMaterials().size() > 0 &&
                 level.random.nextFloat() <= currentRecipe.getReturnChance()) {
-            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS + SIDE_OUTPUT_SLOTS; //返还材料槽索引
+            int slotIndex = MATERIAL_SLOTS + 2 + MAIN_OUTPUT_SLOTS + SIDE_OUTPUT_SLOTS;
             ItemStack returnMat = currentRecipe.getReturnMaterials().get(0).copy();
-            itemHandler.insertItem(slotIndex, returnMat, false);
+
+            ItemStack remaining = itemHandler.insertItem(slotIndex, returnMat, false);
+            if (!remaining.isEmpty()) {
+                ItemEntity itemEntity = new ItemEntity(level,
+                        worldPosition.getX() + 0.5,
+                        worldPosition.getY() + 0.5,
+                        worldPosition.getZ() + 0.5,
+                        remaining);
+                level.addFreshEntity(itemEntity);
+            }
         }
     }
 
     public void dropContents() {
         if (level == null || level.isClientSide) return;
 
-        //掉落所有物品槽中的物品
-        for (int i = 0; i < itemHandler.getSlots(); i++) {
-            ItemStack stack = itemHandler.getStackInSlot(i);
-            if (!stack.isEmpty()) {
-                //创建物品实体并掉落
-                ItemEntity itemEntity = new ItemEntity(level,
-                        worldPosition.getX() + 0.5,
-                        worldPosition.getY() + 0.5,
-                        worldPosition.getZ() + 0.5,
-                        stack.copy());
-                itemEntity.setDefaultPickUpDelay();
-                level.addFreshEntity(itemEntity);
+        try {
+            synchronized (this) {
+                for (int i = 0; i < itemHandler.getSlots(); i++) {
+                    ItemStack stack = itemHandler.getStackInSlot(i);
+                    if (!stack.isEmpty()) {
+                        ItemEntity itemEntity = new ItemEntity(level,
+                                worldPosition.getX() + 0.5,
+                                worldPosition.getY() + 0.5,
+                                worldPosition.getZ() + 0.5,
+                                stack.copy());
+                        itemEntity.setDefaultPickUpDelay();
+                        level.addFreshEntity(itemEntity);
 
-                //清空槽位
-                itemHandler.setStackInSlot(i, ItemStack.EMPTY);
+                        itemHandler.setStackInSlot(i, ItemStack.EMPTY);
+                    }
+                }
             }
+        } catch (Exception e) {
+            System.err.println("Error dropping forge contents: " + e.getMessage());
         }
     }
 

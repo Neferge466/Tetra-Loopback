@@ -5,7 +5,7 @@
         },
         "item": "tetra_loopback:modular_emblem",
         "modules": {
-            "loop/base": [ "emblem/base/peltate", "peltate/wood"]
+            "loop/base": [ "emblem/base/peltate", "peltate/wood/oak"]
         },
         "improvements": {}
     }

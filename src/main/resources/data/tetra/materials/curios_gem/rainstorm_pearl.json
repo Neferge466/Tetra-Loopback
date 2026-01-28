@@ -1,6 +1,6 @@
 {
     "key": "rainstorm_pearl",
-    "hidden": false,
+    "hidden": true,
     "category": "curios_gem",
     "primary": 6,
     "secondary": 3,
@@ -12,8 +12,8 @@
     "toolLevel": "minecraft:diamond",
     "toolEfficiency": 7,
     "effects": {
-        "tetra_loopback:resonance": 20,
-        "tetra_loopback:rainstorm": 3
+        "tetra_loopback:rainstorm": 1,
+        "tetra_loopback:resonance": 2
     },
     "tints": {
         "glyph": "7facf4",

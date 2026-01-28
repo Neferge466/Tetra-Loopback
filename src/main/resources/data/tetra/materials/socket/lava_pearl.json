@@ -1,0 +1,29 @@
+{
+    "key": "lava_pearl",
+    "hidden": true,
+    "primary": 6,
+    "secondary": 3,
+    "tertiary": 0,
+    "durability": 888,
+    "integrityCost": 2,
+    "integrityGain": 3,
+    "magicCapacity": 99,
+    "toolLevel": "minecraft:diamond",
+    "toolEfficiency": 7,
+    "effects": {
+    },
+    "tints": {
+        "glyph": "ff766a",
+        "texture": "ff766a"
+    },
+    "textures": [
+        "shiny",
+        "crude"
+    ],
+    "material": {
+        "items": [ "tetra_loopback:lava_pearl" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:iron"
+    }
+}

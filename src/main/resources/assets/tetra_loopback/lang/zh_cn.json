@@ -6,6 +6,7 @@
   "item.tetra_loopback.mislead_star": "§5荧惑星",
   "item.tetra_loopback.fuse_steel_ingot": "融合钢锭",
 
+  "item.tetra_loopback.star_ingot": "星辰锭",
   "item.tetra_loopback.cold_steel_ingot": "冷钢锭",
   "item.tetra_loopback.cold_wind_ingot": "沧风锭",
   "item.tetra_loopback.earth_vein_ingot": "地脉锭",
@@ -18,13 +19,13 @@
   "item.tetra_loopback.lightning_pearl": "闪电宝珠",
   "item.tetra_loopback.fuse_pearl": "融合珠",
 
-
+  "item.tetra_loopback.broken_moon_shard": "§e残月碎片",
 
   "item.tetra_loopback.curios_emblem": "木质徽章底托",
   "item.tetra_loopback.curios_goggles": "护目镜框架",
   "item.tetra_loopback.rainstorm_pearl": "暴雨宝珠",
   "curios.modifier.emblem": "徽章",
-  "tetra.variant_category.logo/stars.label": "星星纹样",
+  "tetra.variant_category.logo.label": "纹样",
   "tetra.variant_category.curios_fabric.label": "饰品布料",
   "tetra.variant_category.curios_fibre.label": "饰品纤维",
   "tetra.variant_category.curios_gem.label": "饰品宝石",
@@ -59,14 +60,52 @@
   "tetra.module.emblem/base/gempeltate.description": "一种可镶嵌宝石的盾章。",
   "tetra.module.emblem/base/gempeltate.material_name": "%s 宝石盾章",
   "tetra.module.emblem/base/gempeltate.prefix": "%s",
+
   "tetra/schematic/emblem/pattern/stars.name": "星星图案",
   "tetra/schematic/emblem/pattern/stars.description": "将当前徽章图案替换为星星图案",
   "tetra/schematic/emblem/pattern/stars.slot1": "图案材料",
   "tetra.module.emblem/pattern/stars.item_name": "星星图案",
   "tetra.module.emblem/pattern/stars.name": "星星图案",
-  "tetra.module.emblem/pattern/stars.description": "一个星星图案。",
+  "tetra.module.emblem/pattern/stars.description": "星星纹样，来自遥远的夜幕。",
   "tetra.module.emblem/pattern/stars.material_name": "%s 星星图案",
   "tetra.module.emblem/pattern/stars.prefix": "%s",
+
+
+
+  "tetra/schematic/emblem/pattern/moon.name": "月亮图案",
+  "tetra/schematic/emblem/pattern/moon.description": "将当前徽章图案替换为月亮图案",
+  "tetra/schematic/emblem/pattern/moon.slot1": "图案材料",
+
+  "tetra.module.emblem/pattern/moon.item_name": "月亮图案",
+  "tetra.module.emblem/pattern/moon.name": "月亮图案",
+  "tetra.module.emblem/pattern/moon.description": "月亮纹样，玛尼驾驭着月亮的轨迹，主司月亮的圆缺。",
+  "tetra.module.emblem/pattern/moon.material_name": "%s 月亮图案",
+  "tetra.module.emblem/pattern/moon.prefix": "%s",
+
+
+  "tetra/schematic/emblem/pattern/waning_moon.name": "§1亏月纹样",
+  "tetra/schematic/emblem/pattern/waning_moon.description": "将当前徽章图案替换为亏月图案",
+  "tetra/schematic/emblem/pattern/waning_moon.slot1": "图案材料",
+
+  "tetra.module.emblem/pattern/waning_moon.item_name": "§1亏月图案",
+  "tetra.module.emblem/pattern/waning_moon.name": "§1亏月图案",
+  "tetra.module.emblem/pattern/waning_moon.description": "亏月纹样，玛尼有两个孩子，其一叫做碧尔（渐弱者）。",
+  "tetra.module.emblem/pattern/waning_moon.material_name": "%s §1亏月图案",
+  "tetra.module.emblem/pattern/waning_moon.prefix": "%s",
+
+
+  "tetra/schematic/emblem/pattern/waxing_moon.name": "§4盈月纹样",
+  "tetra/schematic/emblem/pattern/waxing_moon.description": "将当前徽章图案替换为盈月图案",
+  "tetra/schematic/emblem/pattern/waxing_moon.slot1": "图案材料",
+
+  "tetra.module.emblem/pattern/waxing_moon.item_name": "§4盈月图案",
+  "tetra.module.emblem/pattern/waxing_moon.name": "§4盈月图案",
+  "tetra.module.emblem/pattern/waxing_moon.description": "盈月纹样，玛尼有两个孩子，其一叫做修奇（渐强者）。",
+  "tetra.module.emblem/pattern/waxing_moon.material_name": "%s §4盈月图案",
+  "tetra.module.emblem/pattern/waxing_moon.prefix": "%s",
+
+
+
   "tetra/schematic/emblem/gemcore/agem.name": "宝石核心",
   "tetra/schematic/emblem/gemcore/agem.description": "镶嵌一颗宝石作为核心",
   "tetra/schematic/emblem/gemcore/agem.slot1": "宝石材料",
@@ -151,8 +190,47 @@
   "tetra.material.rainstorm_pearl.prefix": "§9暴雨宝珠",
   "tetra.material.bloody_star.prefix": "§4血灾星",
   "tetra.material.mislead_star.prefix": "§5荧惑星",
+
+  "tetra.material.broken_moon_shard": "§e残月碎片",
+  "tetra.material.broken_moon_shard.prefix": "§e残月碎片",
+
   "tetra.material.fuse_steel_ingot.prefix": "§7融合钢锭",
   "tetra.material.loopback_crystal.prefix": "§5回环水晶",
+  "tetra.material.nether_star": "下界之星",
+  "tetra.material.nether_star.prefix": "下界之星",
+
+
+
+  "tetra.material.cold_steel_ingot": "§9冷钢锭",
+  "tetra.material.cold_steel_ingot.prefix": "§9冷钢锭",
+  "tetra.material.cold_wind_ingot": "§3沧风锭",
+  "tetra.material.cold_wind_ingot.prefix": "§3沧风锭",
+  "tetra.material.earth_vein_ingot": "§6地脉锭",
+  "tetra.material.earth_vein_ingot.prefix": "§6地脉锭",
+  "tetra.material.star_ingot": "§5星辰锭",
+  "tetra.material.star_ingot.prefix": "§5星辰锭",
+  "tetra.material.vitality_ingot": "§2活力锭",
+  "tetra.material.vitality_ingot.prefix": "§2活力锭",
+
+  "tetra.material.earth_vein_crystal": "§6地脉水晶",
+  "tetra.material.earth_vein_crystal.prefix": "§6地脉水晶",
+
+  "tetra.material.vitality_crystal": "§2活力水晶",
+  "tetra.material.vitality_crystal.prefix": "§2活力水晶",
+
+  "tetra.material.lava_pearl": "§4熔岩宝珠",
+  "tetra.material.lava_pearl.prefix": "§4熔岩宝珠",
+
+  "tetra.material.snow_pearl": "§f雪宝珠",
+  "tetra.material.snow_pearl.prefix": "§f雪宝珠",
+
+  "tetra.material.lightning_pearl": "§b闪电宝珠",
+  "tetra.material.lightning_pearl.prefix": "§b闪电宝珠",
+
+
+
+
+
   "tetra.material.feature.goggles_vision_field": "护目镜 §6ß视域",
   "tetra_loopback.effect.vision_field.name": "§6视域",
   "tetra_loopback.effect.guardian.name": "§6ß§7守护",
@@ -160,8 +238,44 @@
   "tetra.variant.stars/fuse_steel_ingot": "§7融合钢",
   "tetra.variant.stars/bloody_star": "§4血灾星",
   "tetra.variant.stars/mislead_star": "§5荧惑星",
+  "tetra.variant.moon/broken_moon_shard": "§e残月碎片",
   "tetra.variant.peltate/fuse_steel_ingot": "§7融合钢",
-  "tetra_loopback.effect.rainstorm.name": "§9暴雨",
+
+
+  "tetra.improvement.astral_remold.name": "§5星界重铸",
+  "tetra.improvement.astral_remold.description": "星界重铸是一种高阶改进工艺，它运用天体运行之理重塑物品的本质核心，从而显著提升其性能与属性。",
+  "tetra/schematic/emblem/pattern/astral_remold.name": "§5星界重铸",
+  "tetra/schematic/emblem/pattern/astral_remold.description": "星界重铸是一种高阶改进工艺，它运用天体运行之理重塑物品的本质核心，从而显著提升其性能与属性。",
+
+  "tetra.improvement.buckle_adjust.name": "§7带扣调节",
+  "tetra.improvement.buckle_adjust.description": "用于调节护目镜的带扣，以使护目镜佩戴起来更加贴合。",
+  "tetra/schematic/goggles/buckle/buckle_adjust.name": "§7带扣调节",
+  "tetra/schematic/goggles/buckle/buckle_adjust.description": "用于调节护目镜的带扣，以使护目镜佩戴起来更加贴合。",
+
+
+
+
+
+  "tetra.improvement.resonance.name": "§6共鸣工艺",
+  "tetra.improvement.resonance.description": "激活物品的隐藏潜能，与世界共鸣。",
+  "tetra/schematic/shared/resonance1.name": "§6共鸣工艺I",
+  "tetra/schematic/shared/resonance1.description": "与世界共鸣，提升2共鸣值",
+  "tetra/schematic/shared/resonance2.name": "§6共鸣工艺II",
+  "tetra/schematic/shared/resonance2.description": "与世界共鸣，提升3共鸣值",
+  "tetra/schematic/shared/resonance3.name": "§6共鸣工艺III",
+  "tetra/schematic/shared/resonance3.description": "与世界共鸣，提升5共鸣值",
+
+  "tetra/schematic/shared/resonance1.slot1": "§6共鸣材料 I",
+  "tetra/schematic/shared/resonance2.slot1": "§6共鸣材料 II",
+  "tetra/schematic/shared/resonance3.slot1": "§6共鸣材料 III",
+
+
+  "tetra_loopback.effect.wind_light.name": "§6β§3如风轻盈",
+  "tetra_loopback.effect.wind_light.tooltip": "§6β§3如风轻盈",
+
+
+
+  "tetra_loopback.effect.rainstorm.name": "§6ß§9暴雨",
   "tetra_loopback.effect.frost_crown.name": "§6ß§9凛冬王冠",
   "tetra_loopback.effect.frost_crown.tooltip": "§9冻伤免疫,受到攻击时，使攻击者获得缓慢 II 效果（5秒）",
   "tetra.stats.tetra_loopback:frost_crown.tooltip_short": "§9冻伤免疫,受到攻击时，使攻击者获得缓慢 II 效果（5秒）",
@@ -329,8 +443,424 @@
   "jei.tetra_loopback.transfer.error.missing_ingredient": "缺少材料",
   "jei.tetra_loopback.transfer.error.missing_catalyst": "缺少必需催化剂",
   "jei.tetra_loopback.transfer.error.missing_energy": "缺少能量源",
-  "jei.tetra_loopback.transfer.error.no_space": "输出槽位空间不足"
+  "jei.tetra_loopback.transfer.error.no_space": "输出槽位空间不足",
 
+
+
+  "item.tetra_loopback.loopback_crystal.desc": "§7能够回响共鸣的水晶。 \n§8能够带来清晰视域，用于远古锻炉的特殊工艺。",
+  "item.tetra_loopback.vitality_crystal.desc": "§7脉动着生命能量的水晶。 \n§8赋予再生特性。",
+  "item.tetra_loopback.empty_crystal.desc": "§7等待注入能量的惰性水晶。 \n§8可充入各种元素能量。",
+  "item.tetra_loopback.earth_vein_crystal.desc": "§7蕴含地脉精华的水晶。 \n§8赋予地脉的稳定性和强度。",
+
+  "item.tetra_loopback.fuse_steel_ingot.desc": "§7兼具耐热性与延展性的合金，能够很好地融合其他材料。 \n§8用于材料融合。",
+  "item.tetra_loopback.earth_vein_ingot.desc": "§7由地脉力量精炼而成的锭。 \n§8赋予锻造物品地脉特性。",
+  "item.tetra_loopback.cold_steel_ingot.desc": "§7永不钝化的冷钢。 \n§8制作精密刀刃的理想材料。",
+  "item.tetra_loopback.vitality_ingot.desc": "§7生命力的金属体现。 \n§8用于治疗和防护装备。",
+  "item.tetra_loopback.cold_wind_ingot.desc": "§7如风般波动的轻质合金。 \n§8增强敏捷能力。",
+  "item.tetra_loopback.star_ingot.desc": "§7蕴含星辰力量的锭 \n§d拥有难以辨明的能量",
+
+
+  "item.tetra_loopback.rainstorm_pearl.desc": "§7暴雨精华凝聚而成的珍珠。",
+  "item.tetra_loopback.lava_pearl.desc": "§7蕴含熔岩之怒的宝珠。 ",
+  "item.tetra_loopback.lightning_pearl.desc": "§7闪烁着捕获的闪电。",
+  "item.tetra_loopback.snow_pearl.desc": "§7来自冰霜的宝珠。",
+  "item.tetra_loopback.fuse_pearl.desc": "§7能稳定融合其他元素。",
+
+  "item.tetra_loopback.bloody_star.desc": "§7染上深红的星界碎片。 \n§8用于灾祸工艺。",
+  "item.tetra_loopback.mislead_star.desc": "§7闪烁着欺骗性光芒的星辰，带来灾祸与纷争。 \n§8用于纷争工艺。",
+
+  "item.tetra_loopback.curios_emblem.desc": "§7用于饰品槽的徽章。 \n§8带来更多能力和外观。",
+  "item.tetra_loopback.curios_goggles.desc": "§7用于饰品槽的护目镜。 \n§8带来更多能力和外观。",
+
+  "block.tetra_loopback.ancient_forge.desc": "§7用于锻造材料的远古锻炉。 \n§8以创造非凡物品。",
+
+  "item.tetra_loopback.broken_moon_shard.desc": "§7残月遗落的碎片。\n§8用于残月工艺。",
+
+  "trait.astral_power": "星界之力",
+  "trait.echo_resonance": "回响共鸣",
+  "trait.life_essence": "生命精华",
+  "trait.earth_vein_power": "地脉之力",
+  "trait.heat_resistant": "耐热",
+  "trait.tempered_cold": "冷淬",
+  "trait.pulsating_life": "脉动生命",
+  "trait.wind_light": "如风轻盈",
+  "trait.rainstorm": "暴雨",
+  "trait.lava": "熔岩",
+  "trait.lightning": "闪电",
+  "trait.winter_snow": "冬雪",
+  "trait.stable_fusion": "稳定融合",
+  "trait.fusion": "融合",
+  "trait.bloody_disaster": "血红灾祸",
+  "trait.strife": "纷争",
+  "trait.curios": "饰品",
+  "trait.ancient_forge": "远古锻炉",
+  "trait.crafts_special": "锻造特殊物品",
+  "trait.mani": "玛尼驾驭着月亮的轨迹，主司月亮的圆缺。",
+
+  "usage.ancient_forge": "用于远古锻炉",
+  "usage.forge_material": "锻造材料",
+  "usage.curio_slot": "装备在饰品槽中",
+  "usage.right_click": "右键点击使用",
+
+  "section.traits": "",
+  "section.usage": "用途",
+  "section.properties": "属性",
+
+  "tooltip.tetra_loopback.separator": "──────────────────",
+
+
+  "item.tetra.scroll.astral_remold.name": "§5星界重铸",
+  "item.tetra.scroll.astral_remold.description": "星界重铸是一种高阶改进工艺，它运用天体运行之理重塑物品的本质核心，从而显著提升其性能与属性。",
+  "item.tetra.scroll.astral_remold.details": "星界重铸是一种高阶改进工艺，它运用天体运行之理重塑物品的本质核心，从而显著提升其性能与属性。",
+
+  "item.tetra.scroll.buckle_adjust.name": "§7带扣调节",
+  "item.tetra.scroll.buckle_adjust.description": "用于调节护目镜的带扣，以使护目镜佩戴起来更加贴合。",
+  "item.tetra.scroll.buckle_adjust.details": "用于调节护目镜的带扣，以使护目镜佩戴起来更加贴合。",
+
+
+
+
+  "key.tetra_loopback.double_jump": "二段跳",
+  "key.tetra_loopback.dash": "冲刺",
+  "key.tetra_loopback.fast_fall": "快速坠落",
+
+  "tetra.stats.tetra_loopback:wind_light.name": "§6β§3如风轻盈",
+  "tetra.stats.tetra_loopback:wind_light.level1": "I",
+  "tetra.stats.tetra_loopback:wind_light.level2": "II",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.base_effects": "基础效果",
+  "tetra.stats.tetra_loopback:wind_light.effect.speed": "移动速度提升",
+  "tetra.stats.tetra_loopback:wind_light.effect.jump": "跳跃提升",
+  "tetra.stats.tetra_loopback:wind_light.condition.always": "常驻效果",
+  "tetra.stats.tetra_loopback:wind_light.effect.duration": "持续时间：10秒，自动刷新",
+  "tetra.stats.tetra_loopback:wind_light.tooltip.conditions": "效果属性",
+
+  "tetra.stats.tetra_loopback:wind_light.inactive": "未激活",
+  "tetra.stats.tetra_loopback:wind_light.tooltip.empty": "如风轻盈效果",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.resonance_system": "共鸣系统",
+  "tetra.stats.tetra_loopback:wind_light.tooltip.resonance_desc": "效果根据此物品的共鸣值（0-20）而变化。",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.resonance_stages": "共鸣阶段",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage1_desc": "阶段1 (1-5)：基础速度/跳跃效果",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage2_desc": "阶段2 (6-10)：免疫摔落伤害",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage3_desc": "阶段3 (11-15)：快速坠落能力",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage4_desc": "阶段4 (16-20)：二段跳+冲刺（增强速度/跳跃）",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.stage4_note": "阶段4特殊能力",
+  "tetra.stats.tetra_loopback:wind_light.stage4.detail": "参数可通过配置文件调整。",
+
+  "tetra.stats.tetra_loopback:tempered_cold": "§6&§9冷淬",
+  "tetra_loopback.effect.tempered_cold.name": "§6&§9冷淬",
+  "tetra_loopback.effect.tempered_cold.tooltip": "§6寒霜积聚§7：\n§7攻击附加霜冻标记，每层降低目标10%%移速和攻速（最高3层）。\n§6脆化爆发§7：\n§7满层时消耗所有标记，造成1.5倍物理伤害并无视30%%护甲。\n§6环境适应§7：\n§7地狱需9层，普通环境需6层，寒冷环境需2层。",
+  "tetra.stats.tetra_loopback:tempered_cold.tooltip_short": "寒霜积聚(0-3层) → 脆化爆发(150%%伤害，-30%%护甲)。",
+
+
+
+
+  "tetra_loopback.effect.supercooling.name": "§6β§3过冷化",
+  "tetra.stats.tetra_loopback:supercooling.name": "§6β§3过冷化",
+  "tetra.stats.tetra_loopback:supercooling.tooltip.empty": "无过冷化效果",
+
+  "tetra.stats.tetra_loopback:supercooling.tooltip.core": "核心效果",
+  "tetra.stats.tetra_loopback:supercooling.effect.cooldown_overfill": "冷却溢出：攻击冷却条满后可继续充能（最多1秒）",
+  "tetra.stats.tetra_loopback:supercooling.effect.conditional_damage": "条件伤害：效果随共鸣阶段提升",
+
+  "tetra.stats.tetra_loopback:supercooling.tooltip.activation": "激活条件",
+  "tetra.stats.tetra_loopback:supercooling.condition.cooldown_full": "攻击冷却条必须完全充满",
+  "tetra.stats.tetra_loopback:supercooling.condition.wait": "保持不攻击以进入过冷状态",
+  "tetra.stats.tetra_loopback:supercooling.condition.attack": "在过冷条充满时攻击",
+
+  "tetra.stats.tetra_loopback:supercooling.inactive": "此物品没有过冷化效果",
+
+  "tetra.stats.tetra_loopback:supercooling.tooltip.resonance_stages": "共鸣阶段效果",
+  "tetra.stats.tetra_loopback:supercooling.resonance.note": "效果根据佩戴饰品中的最高共鸣值提升",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage1_desc": "阶段 1 (共鸣值 1-5)",
+  "tetra.stats.tetra_loopback:supercooling.stage1.damage": "过冷条满时造成+50%%伤害",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage2_desc": "阶段 2 (共鸣值 6-10)",
+  "tetra.stats.tetra_loopback:supercooling.stage2.interrupt": "无视目标无敌帧并打断物品使用",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage3_desc": "阶段 3 (共鸣值 11-15)",
+  "tetra.stats.tetra_loopback:supercooling.stage3.armor_conversion": "将自身30%%盔甲韧性转化为额外伤害",
+  "tetra.stats.tetra_loopback:supercooling.stage3.weakness": "为目标施加2秒虚弱效果",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage4_desc": "阶段 4 (共鸣值 16-20)",
+  "tetra.stats.tetra_loopback:supercooling.stage4.knockback": "基于自身盔甲韧性的额外击退",
+
+
+
+
+
+
+
+
+  "tetra_loopback.effect.life_essence.name": "§6β§a生命精华",
+  "tetra.stats.tetra_loopback:life_essence.name": "§6β§a生命精华",
+  "tetra.stats.tetra_loopback:life_essence.tooltip.empty": "无生命精华效果",
+  "tetra.stats.tetra_loopback:life_essence.tooltip.core": "核心效果",
+  "tetra.stats.tetra_loopback:life_essence.effect.natural_healing": "在明亮或自然环境中获得再生效果",
+  "tetra.stats.tetra_loopback:life_essence.effect.debuff_reduction": "减少负面效果的持续时间",
+  "tetra.stats.tetra_loopback:life_essence.effect.overflow_compensation": "满血时将溢出的治疗转化为饥饿值",
+  "tetra.stats.tetra_loopback:life_essence.inactive": "未激活 ",
+  "tetra.stats.tetra_loopback:life_essence.tooltip.resonance_stages": "共鸣阶段",
+  "tetra.stats.tetra_loopback:life_essence.resonance.note": "效果随共鸣等级提高而增强",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage1_desc": "阶段1（共鸣1-5）",
+  "tetra.stats.tetra_loopback:life_essence.stage1.healing": "在明亮处获得缓慢再生I",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage2_desc": "阶段2（共鸣6-10）",
+  "tetra.stats.tetra_loopback:life_essence.stage2.natural_blocks": "在自然方块上也生效",
+  "tetra.stats.tetra_loopback:life_essence.stage2.overflow_start": "开始溢出补偿",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage3_desc": "阶段3（共鸣11-15）",
+  "tetra.stats.tetra_loopback:life_essence.stage3.enhanced_healing": "更快的再生速度",
+  "tetra.stats.tetra_loopback:life_essence.stage3.enhanced_overflow": "增强的溢出转化",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage4_desc": "阶段4（共鸣16-20）",
+  "tetra.stats.tetra_loopback:life_essence.stage4.duration": "更长的再生持续时间",
+  "tetra.stats.tetra_loopback:life_essence.stage4.food_restoration": "最佳的溢出转化效果",
+
+
+
+
+
+  "tetra_loopback.effect.primal_leech.name": "§6β§4荒芜掠夺",
+  "tetra.stats.tetra_loopback:primal_leech.name": "§6β§4荒芜掠夺",
+  "tetra.stats.tetra_loopback:primal_leech.desc": "掠夺敌人生命以治疗自身",
+  "tetra.stats.tetra_loopback:primal_leech.tooltip.empty": "无",
+
+  "tetra.stats.tetra_loopback:primal_leech.tooltip.core_effects": "核心效果",
+  "tetra.stats.tetra_loopback:primal_leech.tooltip.resonance_effects": "共鸣阶段",
+
+  "tetra.stats.tetra_loopback:primal_leech.effect.leech": "攻击伤害的15%%转化为生命值",
+  "tetra.stats.tetra_loopback:primal_leech.effect.low_hp": "生命值低于20%%时效果翻倍",
+  "tetra.stats.tetra_loopback:primal_leech.effect.kill": "击杀恢复4点生命值",
+  "tetra.stats.tetra_loopback:primal_leech.effect.reflect": "反弹20%%近战伤害并等量治疗",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage1": "阶段1（共鸣1-5）",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage1": "清除一个随机负面效果",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage2": "阶段2（共鸣6-10）",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage2.1": "偷取20%%，反伤25%%",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage3": "阶段3（共鸣11-15）",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage3.1": "偷取25%%，反伤30%%",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage4": "阶段4（共鸣16-20）",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage4.1": "偷取30%%，反伤35%%",
+
+
+
+
+  "tetra_loopback.effect.telluric_anchor.name": "§6β§6地脉沉降",
+  "tetra.stats.tetra_loopback:telluric_anchor.name": "§6β§6地脉沉降",
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.empty": "无地脉沉降效果",
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.core_desc": "将你与大地锚定，获得绝对的稳定性。",
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.effects": "基础效果",
+  "tetra.stats.tetra_loopback:telluric_anchor.effect.gravity_anchor": "重力锚定：地面站立时获得击退抗性（等级决定强度）",
+  "tetra.stats.tetra_loopback:telluric_anchor.inactive": "未激活",
+
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.resonance_stages": "共鸣阶段效果",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage1_desc": "阶段1（共鸣1-5）",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage2_desc": "阶段2（共鸣6-10）",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage3_desc": "阶段3（共鸣11-15）",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage4_desc": "阶段4（共鸣16-20）",
+
+  "tetra.stats.tetra_loopback:telluric_anchor.stage1.none": "无效果",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage2.gravity_anchor": "重力锚定激活（30%%/60%%/90%%击退抗性）",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage2.ground_only": "仅在地面站立时生效",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage3.kinetic_dissipation": "动能耗散：落地时释放冲击波",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage3.knockback_aoe": "击退周围3格内生物",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage4.earth_empowerment": "大地供能：潜行时扎根大地",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage4.hunger_regen": "每秒恢复1点饥饿值（移动速度-80%%）",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage4.fall_reduction": "减少50%%坠落伤害",
+
+
+
+
+
+
+
+  "tetra_loopback.effect.astral_phase.name": "§6β§5★§d星辰相位",
+
+  "tetra.stats.tetra_loopback:astral_phase.name": "§6β§d星辰相位",
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.empty": "无星辰相位效果",
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.core": "核心效果",
+  "tetra.stats.tetra_loopback:astral_phase.effect.phase_dodge": "相位躲避：受到伤害时概率进入相位偏移（随移动速度增加）",
+  "tetra.stats.tetra_loopback:astral_phase.effect.starlight_agility": "星光轻盈：相位结束时获得推进力并重置掉落伤害",
+  "tetra.stats.tetra_loopback:astral_phase.inactive": "未激活",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.details": "详细说明",
+  "tetra.stats.tetra_loopback:astral_phase.detail.base_chance": "基础触发几率：15%%",
+  "tetra.stats.tetra_loopback:astral_phase.detail.speed_bonus": "每米/秒移动速度增加1%%（最大+20%%",
+  "tetra.stats.tetra_loopback:astral_phase.detail.attack_cancel": "攻击会提前结束相位",
+  "tetra.stats.tetra_loopback:astral_phase.detail.phase_duration": "相位持续时间：1.5秒",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.mechanics": "运作机制",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.cooldown": "相位最小间隔：2秒",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.push_physics": "推进强度：1.8倍水平速度",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.fall_reset": "完全重置掉落伤害",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.speed_calculation": "速度加成仅计算水平移动",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.note": "注意事项",
+  "tetra.stats.tetra_loopback:astral_phase.note.bypass_damage": "不绕过无敌帧",
+  "tetra.stats.tetra_loopback:astral_phase.note.status_effects": "不免疫状态效果伤害",
+  "tetra.stats.tetra_loopback:astral_phase.note.invulnerability": "仅免疫直接物理和弹射物伤害",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.resonance_stages": "共鸣阶段效果（未来）",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage1_desc": "阶段1（共鸣1-5）",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage2_desc": "阶段2（共鸣6-10）",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage3_desc": "阶段3（共鸣11-15）",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage4_desc": "阶段4（共鸣16-20）",
+
+  "tetra.stats.tetra_loopback:astral_phase.resonance.note": "星辰相位的共鸣效果尚未实现",
+  "tetra.stats.tetra_loopback:astral_phase.stage1.none": "无额外效果",
+  "tetra.stats.tetra_loopback:astral_phase.stage2.none": "无额外效果",
+  "tetra.stats.tetra_loopback:astral_phase.stage3.none": "无额外效果",
+  "tetra.stats.tetra_loopback:astral_phase.stage4.none": "无额外效果",
+
+
+
+
+
+
+  "tetra_loopback.effect.earthen_shield.name": "§6&§6⛰§6大地盾甲",
+
+  "tetra.stats.tetra_loopback:earthen_shield.name": "§6&§6大地盾甲",
+  "tetra.stats.tetra_loopback:earthen_shield.tooltip.empty": "无大地盾甲效果",
+  "tetra.stats.tetra_loopback:earthen_shield.inactive": "未激活",
+
+  "tetra.stats.tetra_loopback:earthen_shield.level1": "等级1: 抗性 I (20%%伤害减免)",
+  "tetra.stats.tetra_loopback:earthen_shield.level2": "等级2: 抗性 II (40%%伤害减免)",
+  "tetra.stats.tetra_loopback:earthen_shield.level3": "等级3: 抗性 II + 2点护甲",
+  "tetra.stats.tetra_loopback:earthen_shield.level4": "等级4: 抗性 III + 4点护甲 + 1点护甲韧性 + 50%%摔落减免",
+  "tetra.stats.tetra_loopback:earthen_shield.level5": "等级5: 抗性 IV + 6点护甲 + 2点护甲韧性 + 75%%摔落减免 + 8格光环",
+
+  "tetra.stats.tetra_loopback:earthen_shield.condition": "激活条件: 站立于坚实地面",
+  "tetra.stats.tetra_loopback:earthen_shield.buffer": "离开地面后效果持续0.5秒",
+
+  "tetra.stats.tetra_loopback:earthen_shield.extended_title": "各等级详细效果",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanics_title": "运作机制",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.active": "效果仅在地面激活",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.buffer_desc": "10刻缓冲防止效果闪烁",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.aura": "等级5光环: 8格半径，为队友提供抗性 I",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.stack": "护甲/护甲韧性加成与装备叠加",
+
+
+  "tetra_loopback.effect.lightning_strike.name": "§6&§b⚡§b雷击",
+
+  "tetra.stats.tetra_loopback:lightning_strike.name": "§6&§b雷击",
+  "tetra.stats.tetra_loopback:lightning_strike.tooltip.empty": "无雷击效果",
+  "tetra.stats.tetra_loopback:lightning_strike.inactive": "未激活",
+
+  "tetra.stats.tetra_loopback:lightning_strike.level1": "等级1: 10%%概率, 3.0雷电伤害, 目标蓝色发光并获得缓慢 I 3秒",
+  "tetra.stats.tetra_loopback:lightning_strike.level2": "等级2: 25%%概率, 4.8雷电伤害, 目标蓝色发光并获得缓慢 I 4秒",
+  "tetra.stats.tetra_loopback:lightning_strike.level3": "等级3: 45%%概率, 6.6雷电伤害, 目标蓝色发光并获得缓慢 II 5秒",
+  "tetra.stats.tetra_loopback:lightning_strike.level4": "等级4: 70%%概率, 8.4雷电伤害, 目标蓝色发光并获得缓慢 II 6秒",
+  "tetra.stats.tetra_loopback:lightning_strike.level5": "等级5: 100%%概率, 10.2雷电伤害, 目标蓝色发光并获得缓慢 III 7秒",
+
+  "tetra.stats.tetra_loopback:lightning_strike.condition": "触发条件: 造成伤害时",
+  "tetra.stats.tetra_loopback:lightning_strike.probability": "触发概率随等级提高",
+
+  "tetra.stats.tetra_loopback:lightning_strike.extended_title": "各等级详细效果",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanics_title": "运作机制",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.proc": "任何伤害都有概率触发",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.damage": "蓝色雷电伤害会附加到攻击中",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.glow": "使目标发出蓝色光芒（可穿透方块）",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.slowness": "缓慢效果降低移动速度",
+
+
+
+  "tetra_loopback.effect.vital_shield.name": "§6&§a❤§a生机护盾",
+
+  "tetra.stats.tetra_loopback:vital_shield.name": "§6&§a生机护盾",
+  "tetra.stats.tetra_loopback:vital_shield.tooltip.empty": "无生机护盾效果",
+  "tetra.stats.tetra_loopback:vital_shield.inactive": "未激活",
+
+  "tetra.stats.tetra_loopback:vital_shield.level1": "等级1: 5颗黄心(16点吸收值)，持续8秒",
+  "tetra.stats.tetra_loopback:vital_shield.level2": "等级2: 7颗黄心(20点吸收值)，持续9秒",
+  "tetra.stats.tetra_loopback:vital_shield.level3": "等级3: 9颗黄心(24点吸收值)，持续10秒",
+  "tetra.stats.tetra_loopback:vital_shield.level4": "等级4: 11颗黄心(28点吸收值)，持续11秒",
+  "tetra.stats.tetra_loopback:vital_shield.level5": "等级5: 13颗黄心(32点吸收值)，持续12秒",
+
+  "tetra.stats.tetra_loopback:vital_shield.condition": "造成或受到伤害时触发",
+  "tetra.stats.tetra_loopback:vital_shield.refresh": "效果持续时仅刷新持续时间",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown": "冷却时间: 3分钟 (随等级降低)",
+
+  "tetra.stats.tetra_loopback:vital_shield.extended_title": "各等级详细效果",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_title": "各等级冷却时间",
+
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level1": "等级1: 180秒冷却时间",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level2": "等级2: 150秒冷却时间",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level3": "等级3: 120秒冷却时间",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level4": "等级4: 90秒冷却时间",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level5": "等级5: 60秒冷却时间",
+
+  "tetra.stats.tetra_loopback:vital_shield.mechanics_title": "运作机制",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.trigger": "造成伤害和受到伤害时都会触发",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.refresh": "效果持续时再次触发仅刷新持续时间",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.upgrade": "自动升级为更高等级的护盾",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.cooldown": "触发后进入冷却(随等级降低冷却时间)",
+
+
+  "tetra.tweak.buckle_res.label": "带扣松紧度调节",
+  "tetra.tweak.buckle_res.tooltip": "调节松紧度以改变属性和效果。",
+  "tetra.tweak.buckle_res.left": "松",
+  "tetra.tweak.buckle_res.right": "紧",
+
+
+  "tetra.stats.tetra_loopback:earthen_shield": "§6&§6大地盾甲",
+  "tetra.stats.tetra_loopback:earthen_shield.tooltip_short": "§6&§6立于大地之时获得强力保护。",
+
+
+
+  "tetra.stats.tetra_loopback:resonance": "§6β共鸣",
+  "tetra.stats.tetra_loopback:resonance.tooltip_short": "§6β与世界共鸣，激发物品难以想象的潜能。",
+
+  "tetra.material.feature.curios_resonance": "§6β共鸣",
+  "tetra.material.feature.curios_resonance.tooltip": "§6β与世界共鸣，激发物品难以想象的潜能。",
+
+  "tetra.material.feature.common_lightning_strike": "§6&§b雷击",
+  "tetra.material.feature.common_lightning_strike.tooltip": "§6&§b召唤落雷击中目标。",
+
+
+  "tetra.material.feature.curios_flame_admonition": "§6ß§c火焰谏言",
+  "tetra.material.feature.curios_flame_admonition.tooltip": "§6ß§c点燃目标，减少自身受到的火焰伤害。",
+
+
+  "tetra.material.feature.common_vital_shield": "§6&§a生机护盾",
+  "tetra.material.feature.common_vital_shield.tooltip": "§6&§a带来伤害吸收的效果。",
+
+
+  "tetra.material.feature.curios_rainstorm": "§6ß§9暴雨",
+  "tetra.material.feature.curios_rainstorm.tooltip": "§6ß§9在雨中拥有更强的力量。",
+
+  "tetra.material.feature.curios_wind_light": "§6β§3如风轻盈",
+  "tetra.material.feature.curios_wind_light.tooltip": "§6β§3如风一般轻盈，获得更高的机动能力。",
+
+
+  "tetra.material.feature.curios_supercooling": "§6β§3过冷化",
+  "tetra.material.feature.curios_supercooling.tooltip": "§6β§3能够造成击碎敌人的寒冷的充能攻击。",
+
+  "tetra.material.feature.curios_astral_phase": "§6β§d星辰相位",
+  "tetra.material.feature.curios_astral_phase.tooltip": "§6β§d遇到伤害时有几率完全规避并且高速逃脱。",
+
+  "tetra.material.feature.curios_telluric_anchor": "§6β§6地脉沉降",
+  "tetra.material.feature.curios_telluric_anchor.tooltip": "§6β§6与大地锚定，获得绝对的稳定性。",
+
+  "tetra.material.feature.curios_primal_leech": "§6β§4荒芜掠夺",
+  "tetra.material.feature.curios_primal_leech.tooltip": "§6β§4掠夺敌人生命以治疗自身。",
+
+  "tetra.material.feature.curios_life_essence": "§6β§a生命精华",
+  "tetra.material.feature.curios_life_essence.tooltip": "§6β§a在自然中获得新生。",
+
+
+  "tetra.material.feature.curios_frost_crown": "§6ß§9凛冬王冠",
+  "tetra.material.feature.curios_frost_crown.tooltip": "§6ß§9免疫冻伤并且能够减缓敌人速度。",
+
+
+
+
+  "tetra.material.feature.curios_guardian": "§6ß§7守护",
+  "tetra.material.feature.curios_guardian.tooltip": "§6ß§7增加玩家的护甲值，每级提供4点护甲。"
 
 
 

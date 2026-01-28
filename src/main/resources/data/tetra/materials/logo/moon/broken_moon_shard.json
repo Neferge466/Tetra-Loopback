@@ -1,0 +1,28 @@
+{
+  "key": "broken_moon_shard",
+  "category": "logo",
+  "primary": 0,
+  "secondary": 0,
+  "tertiary": 0,
+  "durability": 0,
+  "integrityCost": 4,
+  "integrityGain": 2,
+  "magicCapacity": 0,
+  "toolLevel": 3,
+  "toolEfficiency": 2,
+  "effects":{
+
+    "tetra_loopback:resonance": 2
+  },
+  "tints": {
+    "glyph": "FFFF55"
+  },
+  "textures": [
+    "broken"
+  ],
+  "material": {
+    "items": [
+      "tetra_loopback:broken_moon_shard"
+    ]
+  }
+}

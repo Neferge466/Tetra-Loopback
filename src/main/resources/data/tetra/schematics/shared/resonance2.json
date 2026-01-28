@@ -1,0 +1,33 @@
+{
+  "replace": true,
+  "slots": [
+    "goggles/frame","emblem/gemcore","emblem/pattern"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 112,
+    "textureY": 16
+  },
+  "requirement": {
+    "type": "tetra:improvement",
+    "improvement": "resonance",
+    "level": 1
+  },
+
+  "outcomes": [
+    {
+      "material":{
+        "items": ["minecraft:nether_star"]
+      },
+      "countFactor": 1,
+      "requiredTools": {
+        "hammer_dig": "minecraft:diamond"
+      },
+      "improvements": {
+        "resonance": 2
+      }
+    }
+  ]
+}

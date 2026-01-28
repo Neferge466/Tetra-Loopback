@@ -5,6 +5,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
+import com.tetra_loopback.TLbRegistry;
 import com.tetra_loopback.Tetra_loopback;
 import com.tetra_loopback.sound.TLbSoundEvents;
 import com.tetra_loopback.util.CuriosAttributesUtil;
@@ -14,6 +15,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -22,6 +24,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import se.mickelus.mutil.network.PacketHandler;
 import se.mickelus.tetra.data.DataManager;
 import se.mickelus.tetra.gui.GuiModuleOffsets;
+import se.mickelus.tetra.items.modular.IModularItem;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
@@ -278,8 +281,8 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
                     entity.getX(), entity.getY(), entity.getZ(),
                     TLbSoundEvents.GOGGLES_EQUIP.get(),
                     SoundSource.PLAYERS,
-                    1.0F, // 音量
-                    1.0F  // 音高
+                    1.0F, //音量
+                    1.0F  //音高
             );
         }
     }
@@ -293,10 +296,44 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
                     entity.getX(), entity.getY(), entity.getZ(),
                     TLbSoundEvents.GOGGLES_UNEQUIP.get(),
                     SoundSource.PLAYERS,
-                    1.0F, // 音量
-                    0.8F  // 音高
+                    1.0F, //音量
+                    0.8F  //音高
             );
         }
     }
+
+
+    public static Collection<ItemStack> getCreativeTabItemStacks() {
+        Item gogglesItem = TLbRegistry.MODULAR_GOGGLES.get();
+
+        return Arrays.asList(
+                createBasicGoggles(gogglesItem)
+        );
+    }
+
+    private static ItemStack createBasicGoggles(Item item) {
+        ItemStack itemStack = new ItemStack(item);
+
+        IModularItem.putModuleInSlot(itemStack, gogglesEdge,
+                "goggles/edge/edge",
+                "goggles/edge/edge_material",
+                "edge/iron");
+
+        IModularItem.putModuleInSlot(itemStack, gogglesFrame,
+                "goggles/frame/single_frame",
+                "goggles/frame/single_frame_material",
+                "single_frame/fuse_steel_ingot");
+
+        IModularItem.putModuleInSlot(itemStack, gogglesStrap,
+                "goggles/strap/binding_rope",
+                "goggles/strap/binding_rope_material",
+                "binding_rope/string");
+
+        IModularItem.updateIdentifier(itemStack);
+
+
+        return itemStack;
+    }
+
 
 }

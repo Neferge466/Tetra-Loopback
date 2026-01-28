@@ -1,0 +1,32 @@
+{
+  "replace": true,
+  "slots": [ "emblem/pattern" ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/tlb_glyph.png",
+    "textureX": 32,
+    "textureY": 16
+  },
+  "requirement": {
+    "type": "tetra:and",
+    "requirements": [
+      {
+        "type": "tetra:module",
+        "module": "emblem/pattern/moon"
+      },
+      {
+          "type": "tetra:improvement",
+          "improvement": "astral_remold"
+      }
+    ]
+  },
+
+  "outcomes": [
+    {
+      "materials": [ "tetra:logo/moon/"],
+      "moduleKey": "emblem/pattern/waxing_moon",
+      "moduleVariant": "waning_moon/"
+    }
+  ]
+}

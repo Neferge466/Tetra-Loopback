@@ -7,6 +7,7 @@
   "item.tetra_loopback.mislead_star": "§5Mislead Star",
   "item.tetra_loopback.fuse_steel_ingot": "Fused Steel Ingot",
 
+  "item.tetra_loopback.star_ingot": "Star Ingot",
   "item.tetra_loopback.cold_steel_ingot": "Cold Steel Ingot",
   "item.tetra_loopback.cold_wind_ingot": "Cold Wind Ingot",
   "item.tetra_loopback.earth_vein_ingot": "Earth Vein Ingot",
@@ -23,7 +24,7 @@
   "item.tetra_loopback.curios_goggles": "Goggles Frame",
   "item.tetra_loopback.rainstorm_pearl": "Rainstorm Pearl",
 
-
+  "item.tetra_loopback.broken_moon_shard": "§eBroken Moon Shard",
 
 
 
@@ -31,7 +32,7 @@
 
 
 
-  "tetra.variant_category.logo/stars.label": "Stars",
+  "tetra.variant_category.logo.label": "Logo",
   "tetra.variant_category.curios_fabric.label": "Curios fabric",
   "tetra.variant_category.curios_fibre.label": "Curios fibre",
   "tetra.variant_category.curios_gem.label": "Curios gem",
@@ -97,9 +98,40 @@
 
   "tetra.module.emblem/pattern/stars.item_name": "Stars Pattern",
   "tetra.module.emblem/pattern/stars.name": "Stars Pattern",
-  "tetra.module.emblem/pattern/stars.description": "A stars pattern.",
+  "tetra.module.emblem/pattern/stars.description": "Stars pattern,comes from the distant night sky.",
   "tetra.module.emblem/pattern/stars.material_name": "%s stars pattern",
   "tetra.module.emblem/pattern/stars.prefix": "%s",
+
+
+  "tetra/schematic/emblem/pattern/moon.name": "Moon pattern",
+  "tetra/schematic/emblem/pattern/moon.description": "Replace the current emblem pattern with a moon pattern",
+  "tetra/schematic/emblem/pattern/moon.slot1": "Pattern material",
+
+  "tetra.module.emblem/pattern/moon.item_name": "Moon Pattern",
+  "tetra.module.emblem/pattern/moon.name": "Moon Pattern",
+  "tetra.module.emblem/pattern/moon.description": "Moon pattern,Mani steers the course of the moon, presiding over its waxing and waning.",
+  "tetra.module.emblem/pattern/moon.material_name": "%s moon pattern",
+  "tetra.module.emblem/pattern/moon.prefix": "%s",
+
+  "tetra/schematic/emblem/pattern/waning_moon.name": "§1Waning Moon Pattern",
+  "tetra/schematic/emblem/pattern/waning_moon.description": "Replace the current emblem pattern with a waning moon pattern",
+  "tetra/schematic/emblem/pattern/waning_moon.slot1": "Pattern material",
+
+  "tetra.module.emblem/pattern/waning_moon.item_name": "§1Waning Moon Pattern",
+  "tetra.module.emblem/pattern/waning_moon.name": "§1Waning Moon Pattern",
+  "tetra.module.emblem/pattern/waning_moon.description": "A waning moon pattern. Mani has two children, one named Bil (the Waning one).",
+  "tetra.module.emblem/pattern/waning_moon.material_name": "%s §1Waning Moon Pattern",
+  "tetra.module.emblem/pattern/waning_moon.prefix": "%s",
+
+  "tetra/schematic/emblem/pattern/waxing_moon.name": "§4Waxing Moon Pattern",
+  "tetra/schematic/emblem/pattern/waxing_moon.description": "Replace the current emblem pattern with a waxing moon pattern",
+  "tetra/schematic/emblem/pattern/waxing_moon.slot1": "Pattern material",
+
+  "tetra.module.emblem/pattern/waxing_moon.item_name": "§4Waxing Moon Pattern",
+  "tetra.module.emblem/pattern/waxing_moon.name": "§4Waxing Moon Pattern",
+  "tetra.module.emblem/pattern/waxing_moon.description": "A waxing moon pattern. Mani has two children, one named Hjuki (the Waxing one).",
+  "tetra.module.emblem/pattern/waxing_moon.material_name": "%s §4Waxing Moon Pattern",
+  "tetra.module.emblem/pattern/waxing_moon.prefix": "%s",
 
 
 
@@ -237,12 +269,45 @@
   "tetra.material.bloody_star": "Blood Disaster Star",
   "tetra.material.mislead_star": "Mislead Star",
   "tetra.material.loopback_crystal": "Loopback Crystal",
+  "tetra.material.nether_star": "Nether Star",
+  "tetra.material.nether_star.prefix": "Nether Star",
+
+  "tetra.material.cold_steel_ingot": "§9Cold Steel Ingot",
+  "tetra.material.cold_steel_ingot.prefix": "§9Cold Steel Ingot",
+  "tetra.material.cold_wind_ingot": "§3Cold Wind Ingot",
+  "tetra.material.cold_wind_ingot.prefix": "§3Cold Wind Ingot",
+  "tetra.material.earth_vein_ingot": "§6Earth Vein Ingot",
+  "tetra.material.earth_vein_ingot.prefix": "§6Earth Vein Ingot",
+  "tetra.material.star_ingot": "§5Star Ingot",
+  "tetra.material.star_ingot.prefix": "§5Star Ingot",
+  "tetra.material.vitality_ingot": "§2Vitality Ingot",
+  "tetra.material.vitality_ingot.prefix": "§2Vitality Ingot",
+
+  "tetra.material.earth_vein_crystal": "§6Earth Vein Crystal",
+  "tetra.material.earth_vein_crystal.prefix": "§6Earth Vein Crystal",
+
+
+  "tetra.material.vitality_crystal": "§2Vitality Crystal",
+  "tetra.material.vitality_crystal.prefix": "§2Vitality Crystal",
+
+  "tetra.material.lava_pearl": "§4Lava Pearl",
+  "tetra.material.lava_pearl.prefix": "§4Lava Pearl",
+
+  "tetra.material.snow_pearl": "§fSnow Pearl",
+  "tetra.material.snow_pearl.prefix": "§fSnow Pearl",
+
+  "tetra.material.lightning_pearl": "§bLightning Pearl",
+  "tetra.material.lightning_pearl.prefix": "§bLightning Pearl",
 
 
 
 
   "tetra.material.bloody_star.prefix": "§4Blood Disater Star",
   "tetra.material.mislead_star.prefix": "§5Mislead Star",
+
+  "tetra.material.broken_moon_shard": "§eBroken Moon Shard",
+  "tetra.material.broken_moon_shard.prefix": "§eBroken Moon Shard",
+
   "tetra.material.fuse_steel_ingot.prefix": "§7Fuse Steel Ingot",
   "tetra.material.loopback_crystal.prefix": "§5Loopback Crystal",
 
@@ -254,14 +319,48 @@
   "tetra_loopback.effect.guardian.name": "§6ß§7Guardian",
   "tetra_loopback.effect.guardian.tooltip": "§7Increases the player's armor by granting 4 armor points per level",
 
-
-
+  "tetra_loopback.effect.wind_light.name": "§6β§3Wind Light",
+  "tetra_loopback.effect.wind_light.tooltip": "§6β§3Wind Light",
   "tetra.material.rainstorm_pearl": "§9Rainstorm Pearl",
   "tetra.material.rainstorm_pearl.prefix": "§9Rainstorm Pearl",
   "tetra.variant.stars/fuse_steel_ingot": "§7Fuse Steel Ingot",
   "tetra.variant.stars/bloody_star": "Bloody Star",
   "tetra.variant.stars/mislead_star": "Mislead Star",
+  "tetra.variant.moon/broken_moon_shard": "§eBroken Moon Shard",
   "tetra.variant.peltate/fuse_steel_ingot": "§7Fuse Steel Ingot",
+
+
+  "tetra.improvement.astral_remold.name": "§5Astral Remold",
+  "tetra.improvement.astral_remold.description": "Astral Remold is an advanced improvement process that refines an item's fundamental essence using celestial principles, significantly enhancing its capabilities and attributes.",
+  "tetra/schematic/emblem/pattern/astral_remold.name": "§5Astral Remold",
+  "tetra/schematic/emblem/pattern/astral_remold.description": "Astral Remold is an advanced improvement process that refines an item's fundamental essence using celestial principles, significantly enhancing its capabilities and attributes.",
+
+
+
+
+  "tetra.improvement.buckle_adjust.name": "§7Buckle Adjustment",
+  "tetra.improvement.buckle_adjust.description": "Adjusts the buckle of the goggles to allow for a more comfortable fit.",
+  "tetra/schematic/goggles/buckle/buckle_adjust.name": "§7Buckle Adjustment",
+  "tetra/schematic/goggles/buckle/buckle_adjust.description": "Adjusts the buckle of the goggles to allow for a more comfortable fit.",
+
+  "item.tetra.scroll.buckle_adjust.name": "§7Buckle Adjustment",
+  "item.tetra.scroll.buckle_adjust.description": "Adjusts the buckle of the goggles to allow for a more comfortable fit.",
+  "item.tetra.scroll.buckle_adjust.details": "Adjusts the buckle of the goggles to allow for a more comfortable fit.",
+
+
+
+  "tetra.improvement.resonance.name": "§6Resonance Crafting",
+  "tetra.improvement.resonance.description": "Activates the hidden potential of items, resonating with the world.",
+  "tetra/schematic/shared/resonance1.name": "§6Resonance Crafting I",
+  "tetra/schematic/shared/resonance1.description": "Resonates with the world, increasing resonance by 2",
+  "tetra/schematic/shared/resonance2.name": "§6Resonance Crafting II",
+  "tetra/schematic/shared/resonance2.description": "Resonates with the world, increasing resonance by 3",
+  "tetra/schematic/shared/resonance3.name": "§6Resonance Crafting III",
+  "tetra/schematic/shared/resonance3.description": "Resonates with the world, increasing resonance by 5",
+
+  "tetra/schematic/shared/resonance1.slot1": "§6Resonance Material I",
+  "tetra/schematic/shared/resonance2.slot1": "§6Resonance Material II",
+  "tetra/schematic/shared/resonance3.slot1": "§6Resonance Material III",
 
 
 
@@ -333,7 +432,6 @@
 
 
 
-
   "effect.tetra_loopback.vision_field.title": "§6Vision System - Level %s",
   "effect.tetra_loopback.vision_field.coordinates": "Coordinates: %s",
   "effect.tetra_loopback.vision_field.speed": "Speed: %s m/s",
@@ -387,7 +485,6 @@
   "tetra.stats.tetra_loopback:vision_field.tooltip.level3": "Level 3: Display enemy information.",
   "tetra.stats.tetra_loopback:vision_field.tooltip.level4": "Level 4: Display time and weather information.",
   "tetra.stats.tetra_loopback:vision_field.tooltip.level5": "Level 5: Display held item information.",
-
 
 
 
@@ -462,7 +559,407 @@
   "jei.tetra_loopback.transfer.error.missing_ingredient": "Missing ingredient",
   "jei.tetra_loopback.transfer.error.missing_catalyst": "Missing required catalyst",
   "jei.tetra_loopback.transfer.error.missing_energy": "Missing energy source",
-  "jei.tetra_loopback.transfer.error.no_space": "No space in output slots"
+  "jei.tetra_loopback.transfer.error.no_space": "No space in output slots",
+
+
+
+  "item.tetra_loopback.loopback_crystal.desc": "§7A crystal capable of echoing resonance. \n§8Brings clear vision and is used for special crafts in the Ancient Forge.",
+  "item.tetra_loopback.vitality_crystal.desc": "§7A crystal pulsating with life energy. \n§8Grants regeneration properties.",
+  "item.tetra_loopback.empty_crystal.desc": "§7An inert crystal waiting to be infused with energy. \n§8Can be charged with various elemental energies.",
+  "item.tetra_loopback.earth_vein_crystal.desc": "§7A crystal containing earth vein essence. \n§8Imparts the stability and strength of earth veins.",
+
+  "item.tetra_loopback.fuse_steel_ingot.desc": "§7An alloy with both heat resistance and ductility, capable of fusing well with other materials. \n§8Used for material fusion.",
+  "item.tetra_loopback.earth_vein_ingot.desc": "§7An ingot refined with earth vein power. \n§8Imparts earth vein properties to forged items.",
+  "item.tetra_loopback.cold_steel_ingot.desc": "§7Cold steel that never dulls. \n§8Ideal material for precision blades.",
+  "item.tetra_loopback.vitality_ingot.desc": "§7The metallic embodiment of life force. \n§8Used for healing and protective equipment.",
+  "item.tetra_loopback.cold_wind_ingot.desc": "§7A lightweight alloy fluctuating like wind. \n§8Enhances agility.",
+  "item.tetra_loopback.star_ingot.desc": "§7An ingot containing the power of the stars. \n§8Possesses indiscernible energy.",
+
+  "item.tetra_loopback.rainstorm_pearl.desc": "§7A pearl condensed from rainstorm essence.",
+  "item.tetra_loopback.lava_pearl.desc": "§7A treasure orb containing the fury of lava.",
+  "item.tetra_loopback.lightning_pearl.desc": "§7Flashes with captured lightning.",
+  "item.tetra_loopback.snow_pearl.desc": "§7A treasure orb from frost.",
+  "item.tetra_loopback.fuse_pearl.desc": "§7Capable of stably fusing other elements.",
+
+  "item.tetra_loopback.bloody_star.desc": "§7A starry fragment stained with deep crimson. \n§8Used for calamity crafts.",
+  "item.tetra_loopback.mislead_star.desc": "§7A star shimmering with deceptive light, bringing calamity and discord. \n§8Used for discordant crafts.",
+
+  "item.tetra_loopback.curios_emblem.desc": "§7An emblem for the curio slot. \n§8Provides additional abilities and appearance.",
+  "item.tetra_loopback.curios_goggles.desc": "§7Goggles for the curio slot. \n§8Provides additional abilities and appearance.",
+
+  "block.tetra_loopback.ancient_forge.desc": "§7An ancient forge for forging materials. \n§8To create extraordinary items.",
+
+  "item.tetra_loopback.broken_moon_shard.desc": "§7Shard of the broken moon. \n§8Used for broken moon crafts.",
+
+
+
+  "trait.astral_power": "Astral Power",
+  "trait.echo_resonance": "Echo Resonance",
+  "trait.life_essence": "Life Essence",
+  "trait.earth_vein_power": "Earth Vein Power",
+  "trait.heat_resistant": "Heat Resistant",
+  "trait.tempered_cold": "Tempered Cold",
+  "trait.pulsating_life": "Pulsating Life",
+  "trait.wind_light": "Wind Light",
+  "trait.rainstorm": "Rainstorm",
+  "trait.lava": "Lava",
+  "trait.lightning": "Lightning",
+  "trait.winter_snow": "Winter Snow",
+  "trait.stable_fusion": "Stable Fusion",
+  "trait.fusion": "Fusion",
+  "trait.bloody_disaster": "Bloody Disaster",
+  "trait.strife": "Strife",
+  "trait.curios": "Curios",
+  "trait.ancient_forge": "Ancient Forge",
+  "trait.crafts_special": "Crafts Special Items",
+  "trait.mani": "Mani steers the course of the moon, presiding over its waxing and waning.",
+
+
+  "usage.ancient_forge": "Used in Ancient Forge",
+  "usage.forge_material": "Forge Material",
+  "usage.curio_slot": "Equip in curio slot",
+  "usage.right_click": "Right-click to use",
+
+  "section.traits": "",
+  "section.usage": "Usage",
+  "section.properties": "Properties",
+
+  "tooltip.tetra_loopback.separator": "──────────────────",
+
+  "item.tetra.scroll.astral_remold.name": "§5Astral Remold",
+  "item.tetra.scroll.astral_remold.description": "Astral Remold is an advanced improvement process that refines an item's fundamental essence using celestial principles, significantly enhancing its capabilities and attributes.",
+  "item.tetra.scroll.astral_remold.details": "Astral Remold is an advanced improvement process that refines an item's fundamental essence using celestial principles, significantly enhancing its capabilities and attributes.",
+
+  "key.tetra_loopback.double_jump": "Double Jump",
+  "key.tetra_loopback.dash": "Dash",
+  "key.tetra_loopback.fast_fall": "Fast Fall",
+
+  "tetra.stats.tetra_loopback:wind_light.name": "§6β§3Wind Light",
+  "tetra.stats.tetra_loopback:wind_light.level1": "I",
+  "tetra.stats.tetra_loopback:wind_light.level2": "II",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.base_effects": "Base Effects",
+  "tetra.stats.tetra_loopback:wind_light.effect.speed": "Speed Boost",
+  "tetra.stats.tetra_loopback:wind_light.effect.jump": "Jump Boost",
+  "tetra.stats.tetra_loopback:wind_light.condition.always": "Always Active",
+  "tetra.stats.tetra_loopback:wind_light.effect.duration": "Duration: 10 seconds, automatically refreshed",
+  "tetra.stats.tetra_loopback:wind_light.tooltip.conditions": "Effect Properties",
+
+  "tetra.stats.tetra_loopback:wind_light.inactive": "Not active",
+  "tetra.stats.tetra_loopback:wind_light.tooltip.empty": "Wind Light Effect",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.resonance_system": "Resonance System",
+  "tetra.stats.tetra_loopback:wind_light.tooltip.resonance_desc": "Effects scale with this item's resonance value (0-20).",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.resonance_stages": "Resonance Stages",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage1_desc": "Stage 1 (1-5): Base speed/jump effects",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage2_desc": "Stage 2 (6-10): No fall damage",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage3_desc": "Stage 3 (11-15): Fast fall ability",
+  "tetra.stats.tetra_loopback:wind_light.resonance.stage4_desc": "Stage 4 (16-20): Double jump + Dash (enhanced speed/jump)",
+
+  "tetra.stats.tetra_loopback:wind_light.tooltip.stage4_note": "Stage 4 Special Abilities",
+  "tetra.stats.tetra_loopback:wind_light.stage4.detail": "Parameters can be adjusted in the configuration file.",
+
+
+
+  "tetra.stats.tetra_loopback:tempered_cold": "§6&§9Tempered Cold",
+  "tetra_loopback.effect.tempered_cold.name": "§6&§9Tempered Cold",
+  "tetra_loopback.effect.tempered_cold.tooltip": "§6Frost Accumulation§7:\n §7Attacks apply Frost Marks, each reduces movement/attack speed by 10%% (max 3 stacks).\n §6Brittle Fracture§7:\n §7At max stacks, consumes all marks to deal 1.5x physical damage and ignore 30%% armor.\n §6Environmental Adaptation§7:\n §7Requires 9 stacks in Nether, 6 in normal biomes, 2 in cold biomes.",
+  "tetra.stats.tetra_loopback:tempered_cold.tooltip_short": "Frost Accumulation (0-3 marks) -> Brittle Fracture (150%% damage, -30%% armor).",
+
+
+
+
+
+  "tetra_loopback.effect.supercooling.name": "§6β§3Supercooling",
+  "tetra.stats.tetra_loopback:supercooling.name": "§6β§3Supercooling",
+  "tetra.stats.tetra_loopback:supercooling.tooltip.empty": "No Supercooling effect",
+
+  "tetra.stats.tetra_loopback:supercooling.tooltip.core": "Core Effects",
+  "tetra.stats.tetra_loopback:supercooling.effect.cooldown_overfill": "Cooldown Overfill: Continue charging after attack cooldown is full (up to 1 second)",
+  "tetra.stats.tetra_loopback:supercooling.effect.conditional_damage": "Conditional Damage: Effects scale with resonance stage",
+
+  "tetra.stats.tetra_loopback:supercooling.tooltip.activation": "Activation Conditions",
+  "tetra.stats.tetra_loopback:supercooling.condition.cooldown_full": "Attack cooldown bar must be fully charged",
+  "tetra.stats.tetra_loopback:supercooling.condition.wait": "Wait without attacking to enter supercooling state",
+  "tetra.stats.tetra_loopback:supercooling.condition.attack": "Attack when supercooling bar is full",
+
+  "tetra.stats.tetra_loopback:supercooling.inactive": "This item does not have the Supercooling effect",
+
+  "tetra.stats.tetra_loopback:supercooling.tooltip.resonance_stages": "Resonance Stage Effects",
+  "tetra.stats.tetra_loopback:supercooling.resonance.note": "Effects improve based on your highest resonance value from equipped curios",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage1_desc": "Stage 1 (Resonance 1-5)",
+  "tetra.stats.tetra_loopback:supercooling.stage1.damage": "+50%% damage when supercooling bar is full",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage2_desc": "Stage 2 (Resonance 6-10)",
+  "tetra.stats.tetra_loopback:supercooling.stage2.interrupt": "Ignore target invulnerability frames and interrupt item usage",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage3_desc": "Stage 3 (Resonance 11-15)",
+  "tetra.stats.tetra_loopback:supercooling.stage3.armor_conversion": "Convert 30%% of your armor toughness into extra damage",
+  "tetra.stats.tetra_loopback:supercooling.stage3.weakness": "Apply 2 seconds of Weakness to target",
+
+  "tetra.stats.tetra_loopback:supercooling.resonance.stage4_desc": "Stage 4 (Resonance 16-20)",
+  "tetra.stats.tetra_loopback:supercooling.stage4.knockback": "Additional knockback based on your armor toughness",
+
+
+
+
+  "tetra_loopback.effect.life_essence.name": "§6β§aLife Essence",
+  "tetra.stats.tetra_loopback:life_essence.name": "§6β§aLife Essence",
+  "tetra.stats.tetra_loopback:life_essence.tooltip.empty": "No Life Essence effect",
+  "tetra.stats.tetra_loopback:life_essence.tooltip.core": "Core Effects",
+  "tetra.stats.tetra_loopback:life_essence.effect.natural_healing": "Grants regeneration in bright or natural environments",
+  "tetra.stats.tetra_loopback:life_essence.effect.debuff_reduction": "Reduces duration of negative effects",
+  "tetra.stats.tetra_loopback:life_essence.effect.overflow_compensation": "Converts excess healing to hunger when at full health",
+  "tetra.stats.tetra_loopback:life_essence.inactive": "Inactive - requires at least level 1",
+  "tetra.stats.tetra_loopback:life_essence.tooltip.resonance_stages": "Resonance Stages",
+  "tetra.stats.tetra_loopback:life_essence.resonance.note": "Effects improve with higher Resonance levels",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage1_desc": "Stage 1 (Resonance 1-5)",
+  "tetra.stats.tetra_loopback:life_essence.stage1.healing": "Slow Regeneration I in bright light",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage2_desc": "Stage 2 (Resonance 6-10)",
+  "tetra.stats.tetra_loopback:life_essence.stage2.natural_blocks": "Works on natural blocks too",
+  "tetra.stats.tetra_loopback:life_essence.stage2.overflow_start": "Overflow compensation begins",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage3_desc": "Stage 3 (Resonance 11-15)",
+  "tetra.stats.tetra_loopback:life_essence.stage3.enhanced_healing": "Faster regeneration",
+  "tetra.stats.tetra_loopback:life_essence.stage3.enhanced_overflow": "Improved overflow conversion",
+  "tetra.stats.tetra_loopback:life_essence.resonance.stage4_desc": "Stage 4 (Resonance 16-20)",
+  "tetra.stats.tetra_loopback:life_essence.stage4.duration": "Longer regeneration duration",
+  "tetra.stats.tetra_loopback:life_essence.stage4.food_restoration": "Best overflow conversion",
+
+
+
+
+
+
+
+
+  "tetra_loopback.effect.primal_leech.name": "§6β§4Primal Leech",
+  "tetra.stats.tetra_loopback:primal_leech.name": "§6β§4Primal Leech",
+  "tetra.stats.tetra_loopback:primal_leech.desc": "Steal life from enemies to heal yourself",
+  "tetra.stats.tetra_loopback:primal_leech.tooltip.empty": "None",
+
+  "tetra.stats.tetra_loopback:primal_leech.tooltip.core_effects": "Core Effects",
+  "tetra.stats.tetra_loopback:primal_leech.tooltip.resonance_effects": "Resonance Stages",
+
+  "tetra.stats.tetra_loopback:primal_leech.effect.leech": "15%% of attack damage converted to health",
+  "tetra.stats.tetra_loopback:primal_leech.effect.low_hp": "Double effect when below 20%% health",
+  "tetra.stats.tetra_loopback:primal_leech.effect.kill": "Restore 4 health on kill",
+  "tetra.stats.tetra_loopback:primal_leech.effect.reflect": "Reflect 20%% melee damage and heal equal amount",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage1": "Stage 1(Resonance 1-5)",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage1": "Clear one random negative effect",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage2": "Stage 2(Resonance 6-10)",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage2.1": "Leech 20%%, Reflect 25%%",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage3": "Stage 3(Resonance 11-15)",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage3.1": "Leech 25%%, Reflect 30%%",
+
+  "tetra.stats.tetra_loopback:primal_leech.resonance.stage4": "Stage 4(Resonance 16-20)",
+  "tetra.stats.tetra_loopback:primal_leech.effect.stage4.1": "Leech 30%%, Reflect 35%%",
+
+
+
+
+
+  "tetra_loopback.effect.telluric_anchor.name": "§6β§6Telluric Anchor",
+  "tetra.stats.tetra_loopback:telluric_anchor.name": "§6β§6Telluric Anchor",
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.empty": "No Telluric Anchor effect",
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.core_desc": "Anchors you to the earth, granting absolute stability.",
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.effects": "Base Effects",
+  "tetra.stats.tetra_loopback:telluric_anchor.effect.gravity_anchor": "Gravity Anchor: Gain knockback resistance while standing on ground (strength depends on level)",
+  "tetra.stats.tetra_loopback:telluric_anchor.inactive": "Inactive",
+
+  "tetra.stats.tetra_loopback:telluric_anchor.tooltip.resonance_stages": "Resonance Stage Effects",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage1_desc": "Stage 1(Resonance 1-5)",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage2_desc": "Stage 2(Resonance 6-10)",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage3_desc": "Stage 3(Resonance 11-15)",
+  "tetra.stats.tetra_loopback:telluric_anchor.resonance.stage4_desc": "Stage 4(Resonance 16-20)",
+
+  "tetra.stats.tetra_loopback:telluric_anchor.stage1.none": "No effects",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage2.gravity_anchor": "Gravity Anchor activated (30%%/60%%/90%% knockback resistance)",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage2.ground_only": "Only works while standing on ground",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage3.kinetic_dissipation": "Kinetic Dissipation: Release shockwave on landing",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage3.knockback_aoe": "Knocks back entities within 3 blocks",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage4.earth_empowerment": "Earth Empowerment: Root to earth while sneaking",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage4.hunger_regen": "Restores 1 hunger per second (Movement speed -80%%)",
+  "tetra.stats.tetra_loopback:telluric_anchor.stage4.fall_reduction": "Reduces fall damage by 50%%",
+
+
+
+
+
+
+
+
+  "tetra_loopback.effect.astral_phase.name": "§6β§5★§d Astral Phase",
+
+  "tetra.stats.tetra_loopback:astral_phase.name": "§6β§dAstral Phase",
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.empty": "No Astral Phase effect",
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.core": "Core Effects",
+  "tetra.stats.tetra_loopback:astral_phase.effect.phase_dodge": "Phase Dodge: Chance to phase through incoming damage (increases with movement speed)",
+  "tetra.stats.tetra_loopback:astral_phase.effect.starlight_agility": "Starlight Agility: Gain propulsion and reset fall damage when phase ends",
+  "tetra.stats.tetra_loopback:astral_phase.inactive": "Inactive",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.details": "Details",
+  "tetra.stats.tetra_loopback:astral_phase.detail.base_chance": "Base trigger chance: 15%",
+  "tetra.stats.tetra_loopback:astral_phase.detail.speed_bonus": "+1%% per m/s movement speed (max +20%%)",
+  "tetra.stats.tetra_loopback:astral_phase.detail.attack_cancel": "Attacking cancels phase early",
+  "tetra.stats.tetra_loopback:astral_phase.detail.phase_duration": "Phase duration: 1.5 seconds",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.mechanics": "Mechanics",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.cooldown": "Minimum interval between phases: 2 seconds",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.push_physics": "Push strength: 1.8x horizontal speed",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.fall_reset": "Fall damage completely reset",
+  "tetra.stats.tetra_loopback:astral_phase.mechanic.speed_calculation": "Speed bonus calculated from horizontal movement only",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.note": "Notes",
+  "tetra.stats.tetra_loopback:astral_phase.note.bypass_damage": "Does not bypass immunity frames",
+  "tetra.stats.tetra_loopback:astral_phase.note.status_effects": "Status effect damage is not negated",
+  "tetra.stats.tetra_loopback:astral_phase.note.invulnerability": "Only negates direct physical and projectile damage",
+
+  "tetra.stats.tetra_loopback:astral_phase.tooltip.resonance_stages": "Resonance Stage Effects (Future)",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage1_desc": "Stage 1 (Resonance 1-5)",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage2_desc": "Stage 2 (Resonance 6-10)",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage3_desc": "Stage 3 (Resonance 11-15)",
+  "tetra.stats.tetra_loopback:astral_phase.resonance.stage4_desc": "Stage 4 (Resonance 16-20)",
+
+  "tetra.stats.tetra_loopback:astral_phase.resonance.note": "Resonance effects not yet implemented for Astral Phase",
+  "tetra.stats.tetra_loopback:astral_phase.stage1.none": "No additional effects",
+  "tetra.stats.tetra_loopback:astral_phase.stage2.none": "No additional effects",
+  "tetra.stats.tetra_loopback:astral_phase.stage3.none": "No additional effects",
+  "tetra.stats.tetra_loopback:astral_phase.stage4.none": "No additional effects",
+
+
+
+
+  "tetra_loopback.effect.earthen_shield.name": "§6&§6⛰§6 Earthen Shield",
+
+  "tetra.stats.tetra_loopback:earthen_shield.name": "§6&§6Earthen Shield",
+  "tetra.stats.tetra_loopback:earthen_shield.tooltip.empty": "No Earthen Shield effect",
+  "tetra.stats.tetra_loopback:earthen_shield.inactive": "Inactive",
+
+  "tetra.stats.tetra_loopback:earthen_shield.level1": "Level 1: Resistance I (20%% damage reduction)",
+  "tetra.stats.tetra_loopback:earthen_shield.level2": "Level 2: Resistance II (40%% damage reduction)",
+  "tetra.stats.tetra_loopback:earthen_shield.level3": "Level 3: Resistance II + 2 Armor",
+  "tetra.stats.tetra_loopback:earthen_shield.level4": "Level 4: Resistance III + 4 Armor + 1 Toughness + 50%% fall reduction",
+  "tetra.stats.tetra_loopback:earthen_shield.level5": "Level 5: Resistance IV + 6 Armor + 2 Toughness + 75%% fall reduction + 8 block aura",
+
+  "tetra.stats.tetra_loopback:earthen_shield.condition": "Activation: Standing on solid ground",
+  "tetra.stats.tetra_loopback:earthen_shield.buffer": "Effects persist 0.5s after leaving ground",
+
+  "tetra.stats.tetra_loopback:earthen_shield.extended_title": "Detailed Effects by Level",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanics_title": "Mechanics",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.active": "Effects active only while on ground",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.buffer_desc": "10 tick buffer prevents effect flickering",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.aura": "Level 5 aura: 8 block radius, grants Resistance I to allies",
+  "tetra.stats.tetra_loopback:earthen_shield.mechanic.stack": "Armor/Toughness bonuses stack with equipment",
+
+
+
+
+  "tetra_loopback.effect.lightning_strike.name": "§6&§b⚡§b Lightning Strike",
+
+  "tetra.stats.tetra_loopback:lightning_strike.name": "§6&§bLightning Strike",
+  "tetra.stats.tetra_loopback:lightning_strike.tooltip.empty": "No Lightning Strike effect",
+  "tetra.stats.tetra_loopback:lightning_strike.inactive": "Inactive",
+
+  "tetra.stats.tetra_loopback:lightning_strike.level1": "Level 1: 10%% chance, 3.0 lightning damage, target glows blue and gets Slowness I for 3s",
+  "tetra.stats.tetra_loopback:lightning_strike.level2": "Level 2: 25%% chance, 4.8 lightning damage, target glows blue and gets Slowness I for 4s",
+  "tetra.stats.tetra_loopback:lightning_strike.level3": "Level 3: 45%% chance, 6.6 lightning damage, target glows blue and gets Slowness II for 5s",
+  "tetra.stats.tetra_loopback:lightning_strike.level4": "Level 4: 70%% chance, 8.4 lightning damage, target glows blue and gets Slowness II for 6s",
+  "tetra.stats.tetra_loopback:lightning_strike.level5": "Level 5: 100%% chance, 10.2 lightning damage, target glows blue and gets Slowness III for 7s",
+
+  "tetra.stats.tetra_loopback:lightning_strike.condition": "Trigger: When dealing damage",
+  "tetra.stats.tetra_loopback:lightning_strike.probability": "Chance increases with level",
+
+  "tetra.stats.tetra_loopback:lightning_strike.extended_title": "Detailed Effects by Level",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanics_title": "Mechanics",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.proc": "Chance to trigger on any damage dealt",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.damage": "Blue lightning damage is added to the attack",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.glow": "Causes target to glow blue (visible through blocks)",
+  "tetra.stats.tetra_loopback:lightning_strike.mechanic.slowness": "Slowness effect reduces movement speed",
+
+
+
+
+
+
+  "tetra_loopback.effect.vital_shield.name": "§6&§a❤§a Vital Shield",
+
+  "tetra.stats.tetra_loopback:vital_shield.name": "§6&§aVital Shield",
+  "tetra.stats.tetra_loopback:vital_shield.tooltip.empty": "No Vital Shield effect",
+  "tetra.stats.tetra_loopback:vital_shield.inactive": "Inactive",
+
+  "tetra.stats.tetra_loopback:vital_shield.level1": "Level 1: 5 yellow hearts (16 absorption), 8s duration",
+  "tetra.stats.tetra_loopback:vital_shield.level2": "Level 2: 7 yellow hearts (20 absorption), 9s duration",
+  "tetra.stats.tetra_loopback:vital_shield.level3": "Level 3: 9 yellow hearts (24 absorption), 10s duration",
+  "tetra.stats.tetra_loopback:vital_shield.level4": "Level 4: 11 yellow hearts (28 absorption), 11s duration",
+  "tetra.stats.tetra_loopback:vital_shield.level5": "Level 5: 13 yellow hearts (32 absorption), 12s duration",
+
+  "tetra.stats.tetra_loopback:vital_shield.condition": "Triggers when dealing or taking damage",
+  "tetra.stats.tetra_loopback:vital_shield.refresh": "Refreshes duration only when already active",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown": "Cooldown: 3 minutes (reduces with level)",
+
+  "tetra.stats.tetra_loopback:vital_shield.extended_title": "Detailed Effects by Level",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_title": "Cooldown by Level",
+
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level1": "Level 1: 180 seconds cooldown",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level2": "Level 2: 150 seconds cooldown",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level3": "Level 3: 120 seconds cooldown",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level4": "Level 4: 90 seconds cooldown",
+  "tetra.stats.tetra_loopback:vital_shield.cooldown_level5": "Level 5: 60 seconds cooldown",
+
+  "tetra.stats.tetra_loopback:vital_shield.mechanics_title": "Mechanics",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.trigger": "Triggers on both dealing and taking damage",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.refresh": "Only refreshes duration when effect is already active",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.upgrade": "Automatically upgrades to higher level shield",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.cooldown": "Enters cooldown after triggering (reduces with level)",
+  "tetra.stats.tetra_loopback:vital_shield.mechanic.detection": "Checks main hand, offhand, and curios slots",
+
+
+
+
+  "tetra.tweak.buckle_res.label": "Buckle Tension",
+  "tetra.tweak.buckle_res.tooltip": "Adjust tightness to modify stats and effects",
+  "tetra.tweak.buckle_res.left": "Loose",
+  "tetra.tweak.buckle_res.right": "Tight",
+
+
+
+  "tetra.stats.tetra_loopback:earthen_shield": "§6&§6Earthen Shield",
+  "tetra.stats.tetra_loopback:earthen_shield.tooltip_short": "§6&§6Provides powerful protection while standing on the ground.",
+  "tetra.stats.tetra_loopback:resonance": "§6βResonance",
+  "tetra.stats.tetra_loopback:resonance.tooltip_short": "§6βResonates with the world, unlocking the unimaginable potential of items.",
+  "tetra.material.feature.curios_resonance": "§6βResonance",
+  "tetra.material.feature.curios_resonance.tooltip": "§6βResonates with the world, unlocking the unimaginable potential of items.",
+  "tetra.material.feature.common_lightning_strike": "§6&§bLightning Strike",
+  "tetra.material.feature.common_lightning_strike.tooltip": "§6&§bSummons a lightning bolt to strike the target.",
+  "tetra.material.feature.curios_flame_admonition": "§6ß§cFlame Admonition",
+  "tetra.material.feature.curios_flame_admonition.tooltip": "§6ß§cIgnites the target and reduces fire damage taken.",
+  "tetra.material.feature.common_vital_shield": "§6&§aVital Shield",
+  "tetra.material.feature.common_vital_shield.tooltip": "§6&§aProvides an absorption effect.",
+  "tetra.material.feature.curios_rainstorm": "§6ß§9Rainstorm",
+  "tetra.material.feature.curios_rainstorm.tooltip": "§6ß§9Possesses greater power in the rain.",
+  "tetra.material.feature.curios_wind_light": "§6β§3Wind's Lightness",
+  "tetra.material.feature.curios_wind_light.tooltip": "§6β§3Light as the wind, grants higher mobility.",
+  "tetra.material.feature.curios_supercooling": "§6β§3Supercooling",
+  "tetra.material.feature.curios_supercooling.tooltip": "§6β§3Can perform a charged cold attack that shatters enemies.",
+  "tetra.material.feature.curios_astral_phase": "§6β§dAstral Phase",
+  "tetra.material.feature.curios_astral_phase.tooltip": "§6β§dHas a chance to completely avoid damage and escape at high speed when hit.",
+  "tetra.material.feature.curios_telluric_anchor": "§6β§6Telluric Anchor",
+  "tetra.material.feature.curios_telluric_anchor.tooltip": "§6β§6Anchored to the earth, gaining absolute stability.",
+  "tetra.material.feature.curios_primal_leech": "§6β§4Primal Leech",
+  "tetra.material.feature.curios_primal_leech.tooltip": "§6β§4Leeches enemies' life to heal oneself.",
+  "tetra.material.feature.curios_life_essence": "§6β§aLife Essence",
+  "tetra.material.feature.curios_life_essence.tooltip": "§6β§aGrants rejuvenation in nature.",
+
+  "tetra.material.feature.curios_frost_crown": "§6ß§9Frost Crown",
+  "tetra.material.feature.curios_frost_crown.tooltip": "§6ß§9Immune to frostbite and can slow down enemies.",
+
+  "tetra.material.feature.curios_guardian": "§6ß§7Guardian",
+  "tetra.material.feature.curios_guardian.tooltip": "§7Increases the player's armor by granting 4 armor points per level."
 
 
 }

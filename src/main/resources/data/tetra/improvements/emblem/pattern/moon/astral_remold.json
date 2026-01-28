@@ -1,0 +1,15 @@
+[
+  {
+    "key": "astral_remold",
+    "level": 1,
+    "integrity": -1,
+    "effects":
+    {
+      "tetra_loopback:resonance": 3
+    },
+    "attributes": {
+      "generic.max_health": 2,
+      "generic.armor":2
+    }
+  }
+]

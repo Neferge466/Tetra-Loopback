@@ -10,7 +10,8 @@
     "magicCapacity": 99,
     "toolLevel": "minecraft:diamond",
     "toolEfficiency": 7,
-    "effects": {},
+    "effects": {
+    },
     "tints": {
         "glyph": "c77ff4",
         "texture": "c77ff4"

@@ -14,7 +14,7 @@
   },
   "outcomes": [
     {
-      "materials": [ "tetra:wood/", "tetra:metal/", "tetra:bone/"],
+      "materials": [ "tetra:curios_wood/", "tetra:curios_metal/" ],
       "countFactor": 2,
       "moduleKey": "emblem/base/gempeltate",
       "moduleVariant": "gempeltate/"

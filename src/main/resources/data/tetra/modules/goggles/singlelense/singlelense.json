@@ -10,7 +10,10 @@
     {
       "materials": [ "tetra:curios_gem/" ],
       "key": "singlelense/",
-      "integrity": 2,
+      "integrity": -2,
+      "effects": {
+        "tetra_loopback:vision_field": 2
+      },
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",

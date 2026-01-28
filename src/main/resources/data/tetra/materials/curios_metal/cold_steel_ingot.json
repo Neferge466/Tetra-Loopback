@@ -1,0 +1,33 @@
+{
+  "key": "cold_steel_ingot",
+  "hidden": true,
+  "category": "curios_metal",
+  "primary": 7,
+  "secondary": 4,
+  "tertiary": 4,
+  "durability": 3300,
+  "integrityCost": 5,
+  "integrityGain": 5,
+  "magicCapacity": 30,
+  "toolLevel": 5,
+  "toolEfficiency": 8,
+  "effects": {
+    "tetra_loopback:tempered_cold": 1,
+    "tetra_loopback:supercooling": 1,
+    "tetra_loopback:resonance": 2,
+    "criticalStrike": [22,2.0]
+  },
+  "tints": {
+    "glyph": "5e788c",
+    "texture":"5e788c"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:cold_steel_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:diamond"
+  }
+}

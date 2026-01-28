@@ -1,0 +1,32 @@
+{
+  "key": "vitality_ingot",
+  "hidden": true,
+  "category": "curios_metal",
+  "primary": 6,
+  "secondary": 2.5,
+  "tertiary": 5,
+  "durability": 3333,
+  "integrityCost": 5,
+  "integrityGain": 5,
+  "magicCapacity": 140,
+  "toolLevel": 5,
+  "toolEfficiency": 5,
+  "effects": {
+    "tetra_loopback:life_essence": 1,
+    "tetra_loopback:resonance": 2,
+    "tetra_loopback:primal_leech": 1
+  },
+  "tints": {
+    "glyph": "6ea84a",
+    "texture":"6ea84a"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:vitality_ingot" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:diamond"
+  }
+}

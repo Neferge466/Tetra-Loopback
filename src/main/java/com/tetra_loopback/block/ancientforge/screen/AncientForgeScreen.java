@@ -24,41 +24,47 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
             new ResourceLocation("tetra", "textures/gui/player-inventory.png");
 
     //燃烧条常量
-    private static final int BURN_X = 91;      //火焰槽X偏移
-    private static final int BURN_Y = 55;      //火焰槽Y偏移
+    private static final int BURN_X = 91;
+    private static final int BURN_Y = 55;
     private static final int BURN_WIDTH = 10;
     private static final int BURN_HEIGHT = 18;
 
     //燃烧条帧的纹理坐标
     private static final int[][] BURN_FRAMES = {
-            {176, 16},  //1
-            {192, 16},  //2
-            {208, 16},  //3
-            {224, 16},  //4
-            {240, 16},  //5
-            {176, 38}   //6
+            {176, 16},
+            {192, 16},
+            {208, 16},
+            {224, 16},
+            {240, 16},
+            {176, 38}
     };
 
     //进度条常量
-    private static final int CRAFT_X = 84;     // 进度条X偏移
-    private static final int CRAFT_Y = 40;     // 进度条Y偏移
-    private static final int CRAFT_WIDTH = 23;    // 进度条宽度
-    private static final int CRAFT_HEIGHT = 8;    // 进度条高度
+    private static final int CRAFT_X = 84;
+    private static final int CRAFT_Y = 40;
+    private static final int CRAFT_WIDTH = 23;
+    private static final int CRAFT_HEIGHT = 8;
 
     //进度条帧的纹理坐标
     private static final int[][] CRAFT_FRAMES = {
-            {230, 80},  //1
-            {203, 80},  //2
-            {176, 80},  //3
-            {230, 69},  //4
-            {203, 69},  //5
-            {176, 69}   //6
+            {230, 80},
+            {203, 80},
+            {176, 80},
+            {230, 69},
+            {203, 69},
+            {176, 69}
     };
 
     //动画相关
     private final List<GuiElement> animatedElements = new ArrayList<>();
     private GuiElement backgroundElement;
     private GuiElement playerInventoryElement;
+
+    private int lastBurnTime = -1;
+    private int lastBurnTimeTotal = -1;
+    private int lastCraftTime = -1;
+    private int lastCraftTimeTotal = -1;
+    private boolean wasBurning = false;
 
     private boolean animationsInitialized = false;
 
@@ -79,20 +85,16 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
     private void initAnimationElements() {
         if (animationsInitialized) return;
 
-        //背景淡入
         backgroundElement = new GuiElement(0, 0, imageWidth, imageHeight - 60) {
             @Override
             public void draw(GuiGraphics gui, int refX, int refY, int screenWidth, int screenHeight, int mouseX, int mouseY, float opacity) {
-                //renderBg
             }
         };
         animatedElements.add(backgroundElement);
 
-        //物品栏背景
         playerInventoryElement = new GuiElement(0, 116, 172, 98) {
             @Override
             public void draw(GuiGraphics gui, int refX, int refY, int screenWidth, int screenHeight, int mouseX, int mouseY, float opacity) {
-                //
             }
         };
         animatedElements.add(playerInventoryElement);
@@ -144,82 +146,76 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
         gui.blit(PLAYER_INVENTORY_TEXTURE, guiLeft, guiTop + 116, 0, 0, 172, 98, 256, 256);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
-        //动态绘制燃烧条
+        //获取当前燃烧和合成数据
         int burnTime = menu.getBurnTime();
         int burnTimeTotal = menu.getBurnTimeTotal();
-
-        if (burnTime > 0 && burnTimeTotal > 0) {
-            float progress = Math.min(1.0f, (float) burnTime / burnTimeTotal);
-
-            //根据进度选择帧(0-5)
-            int frameIndex;
-            if (progress > 0.83f) {
-                frameIndex = 0; // 第一帧：满红
-            } else if (progress > 0.66f) {
-                frameIndex = 1; // 第二帧：少红
-            } else if (progress > 0.5f) {
-                frameIndex = 2; // 第三帧
-            } else if (progress > 0.33f) {
-                frameIndex = 3; // 第四帧
-            } else if (progress > 0.16f) {
-                frameIndex = 4; // 第五帧
-            } else {
-                frameIndex = 5; // 第六帧：非常少红
-            }
-
-            int[] frameCoords = BURN_FRAMES[frameIndex];
-            int u = frameCoords[0];
-            int v = frameCoords[1];
-
-            //绘制选定帧
-            gui.blit(
-                    TEXTURE,
-                    guiLeft + BURN_X, guiTop + BURN_Y,
-                    u, v,
-                    BURN_WIDTH, BURN_HEIGHT,
-                    256, 256
-            );
-        }
-
-        //动态绘制合成进度条，使用帧动画代替拉伸动画
         int craftTime = menu.getCraftTime();
         int craftTimeTotal = menu.getCraftTimeTotal();
 
+        if (burnTime > 0 && burnTimeTotal > 0) {
+            float progress = Math.min(1.0f, (float) burnTime / burnTimeTotal);
+            int frameIndex = calculateBurnFrameIndex(progress);
+
+            if (frameIndex >= 0 && frameIndex < BURN_FRAMES.length) {
+                int[] frameCoords = BURN_FRAMES[frameIndex];
+                int u = frameCoords[0];
+                int v = frameCoords[1];
+
+                gui.blit(
+                        TEXTURE,
+                        guiLeft + BURN_X, guiTop + BURN_Y,
+                        u, v,
+                        BURN_WIDTH, BURN_HEIGHT,
+                        256, 256
+                );
+            }
+        }
+
         if (craftTime > 0 && craftTimeTotal > 0) {
             float progress = Math.min(1.0f, (float) craftTime / craftTimeTotal);
+            int frameIndex = calculateCraftFrameIndex(progress);
 
-            //根据进度计算帧索引 (0-5)
-            int frameIndex = calculateProgressFrameIndex(progress);
-            int[] frameCoords = CRAFT_FRAMES[frameIndex];
-            int u = frameCoords[0];
-            int v = frameCoords[1];
+            if (frameIndex >= 0 && frameIndex < CRAFT_FRAMES.length) {
+                int[] frameCoords = CRAFT_FRAMES[frameIndex];
+                int u = frameCoords[0];
+                int v = frameCoords[1];
 
-            //绘制选定的进度条帧
-            gui.blit(
-                    TEXTURE,
-                    guiLeft + CRAFT_X, guiTop + CRAFT_Y,
-                    u, v,
-                    CRAFT_WIDTH, CRAFT_HEIGHT,
-                    256, 256
-            );
+                gui.blit(
+                        TEXTURE,
+                        guiLeft + CRAFT_X, guiTop + CRAFT_Y,
+                        u, v,
+                        CRAFT_WIDTH, CRAFT_HEIGHT,
+                        256, 256
+                );
+            }
         }
+
+        //保存当前状态
+        lastBurnTime = burnTime;
+        lastBurnTimeTotal = burnTimeTotal;
+        lastCraftTime = craftTime;
+        lastCraftTimeTotal = craftTimeTotal;
     }
 
-    private int calculateProgressFrameIndex(float progress) {
-        //确保进度在0-1范围内
+    private int calculateBurnFrameIndex(float progress) {
         progress = Math.max(0.0f, Math.min(1.0f, progress));
 
+        float inverseProgress = 1.0f - progress;
+        int frameIndex = (int) (inverseProgress * 6);
 
-        //简单的线性映射
+        if (frameIndex >= 6) frameIndex = 5;
+        if (frameIndex < 0) frameIndex = 0;
+
+        return frameIndex;
+    }
+
+    private int calculateCraftFrameIndex(float progress) {
+        progress = Math.max(0.0f, Math.min(1.0f, progress));
+
         int frameIndex = (int) (progress * 6);
 
-        //确保索引在0-5内
-        if (frameIndex >= 6) {
-            frameIndex = 5;
-        }
-        if (frameIndex < 0) {
-            frameIndex = 0;
-        }
+        if (frameIndex >= 6) frameIndex = 5;
+        if (frameIndex < 0) frameIndex = 0;
 
         return frameIndex;
     }
@@ -230,17 +226,17 @@ public class AncientForgeScreen extends AbstractContainerScreen<AncientForgeMenu
         super.render(gui, mouseX, mouseY, partialTick);
         this.renderTooltip(gui, mouseX, mouseY);
 
-        //添加悬停提示
         int guiLeft = (this.width - this.imageWidth) / 2;
         int guiTop = (this.height - this.imageHeight) / 2;
 
         //燃烧条提示
         if (isHovering(BURN_X, BURN_Y, BURN_WIDTH, BURN_HEIGHT, mouseX, mouseY)) {
             int burnTime = menu.getBurnTime();
-            if (burnTime > 0) {
+            int burnTimeTotal = menu.getBurnTimeTotal();
+            if (burnTime > 0 && burnTimeTotal > 0) {
                 gui.renderTooltip(font,
                         Component.translatable("gui.tetra_loopback.ancient_forge.burn_time",
-                                burnTime / 20, menu.getBurnTimeTotal() / 20),
+                                burnTime / 20, burnTimeTotal / 20),
                         mouseX, mouseY);
             }
         }

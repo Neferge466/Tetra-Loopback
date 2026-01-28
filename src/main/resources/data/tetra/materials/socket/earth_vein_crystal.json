@@ -1,0 +1,30 @@
+{
+  "key": "earth_vein_crystal",
+  "hidden": true,
+  "primary": 6,
+  "secondary": 3,
+  "tertiary": 0,
+  "durability": 888,
+  "integrityCost": 2,
+  "integrityGain": 3,
+  "magicCapacity": 99,
+  "toolLevel": "minecraft:diamond",
+  "toolEfficiency": 7,
+  "effects": {
+    "tetra_loopback:earthen_shield": 5,
+    "earthbind": 10
+  },
+  "tints": {
+    "glyph": "edac4a",
+    "texture":"edac4a"
+  },
+  "textures": [
+    "metal"
+  ],
+  "material": {
+    "items": [ "tetra_loopback:earth_vein_crystal" ]
+  },
+  "requiredTools": {
+    "hammer_dig": "minecraft:diamond"
+  }
+}

@@ -26,5 +26,9 @@
     },
     "requiredTools": {
         "hammer_dig": "minecraft:iron"
-    }
+    },
+    "features": [
+        "curios_rainstorm",
+        "curios_resonance"
+    ]
 }

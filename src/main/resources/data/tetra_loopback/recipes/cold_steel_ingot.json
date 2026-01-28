@@ -26,7 +26,7 @@
       "tag": "tetra_loopback:ancient_forge_fuels"
     },
     "energy_value": 1600,
-    "accept_any_fuel": true,
+    "accept_any_fuel": false,
     "fuel_multiplier": 0.8
   },
 
