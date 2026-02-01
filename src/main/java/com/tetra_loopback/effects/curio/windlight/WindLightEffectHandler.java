@@ -293,7 +293,7 @@ public class WindLightEffectHandler {
     }
 
     //处理Dash
-    public static void handleDash(Player player, int direction) {
+    public static void handleDash(Player player, Vec3 dashVector) {
         if (player.level().isClientSide()) return;
         if (!canPerformWindLightAbility(player, AbilityType.DASH)) {
             return;
@@ -311,28 +311,34 @@ public class WindLightEffectHandler {
             return;
         }
 
-
         if (player.onGround()) {
             return; //在地面不能dash
         }
 
-        Vec3 dashDir = calculateDashDirection(player, direction);
-        if (dashDir.equals(Vec3.ZERO)) return;
+        if (dashVector.equals(Vec3.ZERO)) {
+            //如果向量为零，使用方向代码计算
+            return;
+        }
 
-        sendMotionToClient(player, dashDir.x, dashDir.y, dashDir.z,
+        sendMotionToClient(player, dashVector.x, dashVector.y, dashVector.z,
                 WindLightMotionPacket.Operation.SET_ABSOLUTE);
 
         state.isDashing = true;
         state.dashTicks = com.tetra_loopback.Config.dashDuration;
         state.dashCooldown = com.tetra_loopback.Config.dashCooldown;
-        state.dashDirection = dashDir;
+        state.dashDirection = dashVector;
+    }
+
+    // 保持向后兼容的方法
+    public static void handleDash(Player player, int direction) {
+        Vec3 dashVector = calculateDashDirection(player, direction);
+        handleDash(player, dashVector);
     }
 
     private static Vec3 calculateDashDirection(Player player, int direction) {
         Vec3 look = player.getLookAngle();
         Vec3 result = Vec3.ZERO;
 
-        //获取玩家水平朝向（忽略垂直分量）
         Vec3 horizontalLook = new Vec3(look.x, 0, look.z).normalize();
         if (horizontalLook.lengthSqr() == 0) {
             //如果水平向量为零，使用默认方向
@@ -340,8 +346,8 @@ public class WindLightEffectHandler {
         }
 
         //计算左右向量
-        Vec3 left = new Vec3(horizontalLook.z, 0, horizontalLook.x).normalize();
-        Vec3 right = new Vec3(-horizontalLook.z, 0, -horizontalLook.x).normalize();
+        Vec3 left = new Vec3(horizontalLook.z, 0, -horizontalLook.x).normalize();
+        Vec3 right = new Vec3(-horizontalLook.z, 0, horizontalLook.x).normalize();
 
         switch (direction) {
             case 0: //前

@@ -12,7 +12,7 @@
     "toolLevel": "minecraft:diamond",
     "toolEfficiency": 7,
     "effects": {
-        "tetra_loopback:vision_field": 2,
+        "tetra_loopback:vision_field": 1,
         "tetra_loopback:resonance": 3
     },
     "tints": {

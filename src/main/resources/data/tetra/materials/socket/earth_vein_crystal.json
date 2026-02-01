@@ -11,7 +11,7 @@
   "toolLevel": "minecraft:diamond",
   "toolEfficiency": 7,
   "effects": {
-    "tetra_loopback:earthen_shield": 5,
+    "tetra_loopback:earthen_shield": 2,
     "earthbind": 10
   },
   "tints": {

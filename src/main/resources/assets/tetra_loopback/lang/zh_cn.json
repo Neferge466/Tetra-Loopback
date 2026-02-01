@@ -374,11 +374,22 @@
   "tetra.stats.tetra_loopback:vision_field.name": "视域",
   "tetra.stats.tetra_loopback:vision_field.level": "等级",
   "tetra.stats.tetra_loopback:vision_field.tooltip.level0": "未激活视域效果",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level1": "等级1: 显示基础信息",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level2": "等级2: 显示属性信息",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level3": "等级3: 显示敌人信息",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level4": "等级4: 显示时间天气信息",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level5": "等级5: 显示手持物品信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level1": "显示基础信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level2": "显示属性信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level3": "显示敌人信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level4": "显示时间天气信息",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level5": "显示手持物品信息",
+
+
+  "tetra.stats.tetra_loopback:vision_field.level1": "等级1",
+  "tetra.stats.tetra_loopback:vision_field.level2": "等级2",
+  "tetra.stats.tetra_loopback:vision_field.level3": "等级3",
+  "tetra.stats.tetra_loopback:vision_field.level4": "等级4",
+  "tetra.stats.tetra_loopback:vision_field.level5": "等级5",
+
+
+
+
   "key.tetra_loopback.toggle_vision_overlay": "切换视域覆盖层显示",
   "key.categories.tetra_loopback": "Tetra Loopback",
   "effect.tetra_loopback.vision_field.title_hidden": "视域 %s [已隐藏]",

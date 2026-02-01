@@ -11,6 +11,7 @@
     "toolLevel": "minecraft:diamond",
     "toolEfficiency": 7,
     "effects": {
+        "tetra_loopback:lightning_strike": 1
     },
     "tints": {
         "glyph": "4addf6",

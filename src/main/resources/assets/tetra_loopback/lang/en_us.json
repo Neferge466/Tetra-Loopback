@@ -480,12 +480,18 @@
   "tetra.stats.tetra_loopback:vision_field.name": "Vision Field",
   "tetra.stats.tetra_loopback:vision_field.level": "Level",
   "tetra.stats.tetra_loopback:vision_field.tooltip.level0": "Vision Field not activated.",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level1": "Level 1: Display basic information.",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level2": "Level 2: Display attribute information.",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level3": "Level 3: Display enemy information.",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level4": "Level 4: Display time and weather information.",
-  "tetra.stats.tetra_loopback:vision_field.tooltip.level5": "Level 5: Display held item information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level1": "Display basic information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level2": "Display attribute information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level3": "Display enemy information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level4": "Display time and weather information.",
+  "tetra.stats.tetra_loopback:vision_field.tooltip.level5": "Display held item information.",
 
+
+  "tetra.stats.tetra_loopback:vision_field.level1": "Level 1",
+  "tetra.stats.tetra_loopback:vision_field.level2": "Level 2",
+  "tetra.stats.tetra_loopback:vision_field.level3": "Level 3",
+  "tetra.stats.tetra_loopback:vision_field.level4": "Level 4",
+  "tetra.stats.tetra_loopback:vision_field.level5": "Level 5",
 
 
 

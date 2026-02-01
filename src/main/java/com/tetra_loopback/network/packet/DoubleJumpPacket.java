@@ -1,4 +1,3 @@
-// DoubleJumpPacket.java
 package com.tetra_loopback.network.packet;
 
 import com.tetra_loopback.effects.curio.windlight.WindLightEffectHandler;

@@ -11,7 +11,7 @@
   "toolLevel": "minecraft:diamond",
   "toolEfficiency": 7,
   "effects": {
-    "tetra_loopback:vital_shield": 1
+    "tetra_loopback:vital_shield": 2
   },
   "tints": {
     "glyph": "4fa976",

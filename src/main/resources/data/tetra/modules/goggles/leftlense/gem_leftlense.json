@@ -12,6 +12,9 @@
       "materials": [ "tetra:curios_gem/" ],
       "key": "gem_leftlense/",
       "integrity": -1,
+      "effects": {
+        "tetra_loopback:vision_field": 1
+      },
       "extract": {
         "glyph": {
           "textureLocation": "tetra:textures/gui/tlb_glyph.png",
