@@ -31,7 +31,7 @@ import se.mickelus.tetra.items.modular.IModularItem;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
-import se.mickelus.tetra.module.data.ModuleModel;
+import se.mickelus.tetra.module.model.IModuleModel;  // 修改导入
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
@@ -106,7 +106,7 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
 
 
     @OnlyIn(Dist.CLIENT)
-    public ImmutableList<ModuleModel> getModels(ItemStack itemStack, @Nullable LivingEntity entity) {
+    public ImmutableList<IModuleModel> getModels(ItemStack itemStack, @Nullable LivingEntity entity) {
         return Stream.concat(
                         Arrays.stream(getSynergyData(itemStack)).flatMap(synergyData -> Arrays.stream(synergyData.models)),
                         getAllModules(itemStack).stream()
@@ -114,7 +114,7 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
                                 .flatMap(itemModule -> Arrays.stream(itemModule.getModels(itemStack)))
                 )
                 .filter(Objects::nonNull)
-                .sorted(Comparator.comparing(ModuleModel::getRenderLayer))
+                .sorted(Comparator.comparing(IModuleModel::getRenderLayer))  //IModuleModel
                 .collect(Collectors.collectingAndThen(Collectors.toList(), ImmutableList::copyOf));
     }
 
@@ -196,9 +196,9 @@ public abstract class ModularEmblem extends ModularItem implements ICurioItem {
         }
     }
 
-        //ICurioItem
+    //ICurioItem
     public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);
-    
+
 
 //    ways
 //    @Override

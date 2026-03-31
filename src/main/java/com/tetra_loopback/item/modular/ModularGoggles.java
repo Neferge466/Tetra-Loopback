@@ -28,8 +28,7 @@ import se.mickelus.tetra.items.modular.IModularItem;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
-import se.mickelus.tetra.module.data.ModuleModel;
-import se.mickelus.tetra.properties.AttributeHelper;
+import se.mickelus.tetra.module.model.IModuleModel;  // 修改导入
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
@@ -115,7 +114,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
 
     @OnlyIn(Dist.CLIENT)
-    public ImmutableList<ModuleModel> getModels(ItemStack itemStack, @Nullable LivingEntity entity) {
+    public ImmutableList<IModuleModel> getModels(ItemStack itemStack, @Nullable LivingEntity entity) {
         return Stream.concat(
                         Arrays.stream(getSynergyData(itemStack)).flatMap(synergyData -> Arrays.stream(synergyData.models)),
                         getAllModules(itemStack).stream()
@@ -123,7 +122,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
                                 .flatMap(itemModule -> Arrays.stream(itemModule.getModels(itemStack)))
                 )
                 .filter(Objects::nonNull)
-                .sorted(Comparator.comparing(ModuleModel::getRenderLayer))
+                .sorted(Comparator.comparing(IModuleModel::getRenderLayer))  // 修改
                 .collect(Collectors.collectingAndThen(Collectors.toList(), ImmutableList::copyOf));
     }
 
@@ -184,7 +183,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
     }
 
 
-     //获取物品的共鸣值
+    //获取物品的共鸣值
     public static double getResonanceValue(ItemStack stack) {
         if (stack.hasTag() && stack.getTag().contains(RESONANCE_NBT_KEY)) {
             CompoundTag ResonanceTag = stack.getTag().getCompound(RESONANCE_NBT_KEY);
@@ -208,14 +207,14 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
     public void assemble(ItemStack itemStack, @Nullable Level world, float severity) {
         super.assemble(itemStack, world, severity);
         setResonanceValue(itemStack, FIXED_RESONANCE_VALUE);
-                itemStack.getOrCreateTag().putBoolean("binocular_frame",
+        itemStack.getOrCreateTag().putBoolean("binocular_frame",
                 getModuleFromSlot(itemStack,"goggles/frame")
                         .getVariantData(itemStack).key
                         .startsWith("binocular_frame/"));
         super.assemble(itemStack, world, severity);
 
 
-                itemStack.getOrCreateTag().putBoolean("bandage",
+        itemStack.getOrCreateTag().putBoolean("bandage",
                 getModuleFromSlot(itemStack,"goggles/strap")
                         .getVariantData(itemStack).key
                         .startsWith("bandage/"));
@@ -250,11 +249,11 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
 
 
-        //ICurioItem
+    //ICurioItem
     public abstract boolean canEquipFromUse(SlotContext slotContext, ItemStack stack);
 
 
-//    @Override
+    //    @Override
 //    public void curioTick(SlotContext slotContext, ItemStack stack) {
 //        //粒子效果,动态渲染
 //        /*
