@@ -12,7 +12,7 @@
   },
   "outcomes": [
     {
-      "materials": [ "tetra:fibre/" ],
+      "materials": [ "tetra:curios_fibre/" ],
       "countFactor": 2,
       "moduleKey": "goggles/strap/binding_rope",
       "moduleVariant": "binding_rope/"

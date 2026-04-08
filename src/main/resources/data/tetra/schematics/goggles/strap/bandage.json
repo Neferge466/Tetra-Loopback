@@ -12,7 +12,7 @@
   },
   "outcomes": [
     {
-      "materials": [ "tetra:fabric/" , "tetra:curios_skin/" ],
+      "materials": [ "tetra:curios_fabric/" , "tetra:curios_skin/" ],
       "countFactor": 2,
       "moduleKey": "goggles/strap/bandage",
       "moduleVariant": "bandage/"

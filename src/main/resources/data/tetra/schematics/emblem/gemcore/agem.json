@@ -10,7 +10,7 @@
   },
   "outcomes": [
     {
-      "materials": ["tetra:gem/"],
+      "materials": ["tetra:curios_gem/"],
       "moduleKey": "emblem/gemcore/agem",
       "moduleVariant": "agem/"
     }

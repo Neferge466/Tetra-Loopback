@@ -3,7 +3,7 @@ loaderVersion = "[47,)"
 license = "LGPL-3.0"
 [[mods]]
 modId = "tetra_loopback"
-version = "1.0.1"
+version = "1.0.1-6.13"
 displayName = "Tetra Loopback"
 authors = "NEFOR"
 description = '''Tetra Loopback is an addon mod for Tetra, designed to add more content and improve the overall experience. '''

@@ -10,7 +10,7 @@
   },
   "outcomes": [
     {
-      "materials": [ "tetra:logo/stars/","tetra:metal/"],
+      "materials": [ "tetra:logo/stars/","tetra:curios_metal/"],
       "moduleKey": "emblem/pattern/stars",
       "moduleVariant": "stars/"
     }
