@@ -1,0 +1,9 @@
+{
+    "item": "tetra_loopback:modular_emblem",
+    "icon": {
+        "textureLocation": "tetra_loopback:textures/gui/holo.png",
+        "textureX": 0,
+        "textureY": 0
+    },
+    "position": 8
+}

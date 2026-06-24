@@ -1,0 +1,9 @@
+{
+    "item": "tetra_loopback:modular_goggles",
+    "icon": {
+        "textureLocation": "tetra_loopback:textures/gui/holo.png",
+        "textureX": 38,
+        "textureY": 0
+    },
+    "position": 9
+}
