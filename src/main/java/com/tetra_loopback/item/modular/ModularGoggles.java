@@ -28,7 +28,7 @@ import se.mickelus.tetra.items.modular.IModularItem;
 import se.mickelus.tetra.items.modular.ModularItem;
 import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
-import se.mickelus.tetra.module.model.IModuleModel;  // 修改导入
+import se.mickelus.tetra.module.data.ModuleModel;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
@@ -114,7 +114,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
 
 
     @OnlyIn(Dist.CLIENT)
-    public ImmutableList<IModuleModel> getModels(ItemStack itemStack, @Nullable LivingEntity entity) {
+    public ImmutableList<ModuleModel> getModels(ItemStack itemStack, @Nullable LivingEntity entity) {
         return Stream.concat(
                         Arrays.stream(getSynergyData(itemStack)).flatMap(synergyData -> Arrays.stream(synergyData.models)),
                         getAllModules(itemStack).stream()
@@ -122,7 +122,7 @@ public abstract class ModularGoggles extends ModularItem implements ICurioItem {
                                 .flatMap(itemModule -> Arrays.stream(itemModule.getModels(itemStack)))
                 )
                 .filter(Objects::nonNull)
-                .sorted(Comparator.comparing(IModuleModel::getRenderLayer))  // 修改
+                .sorted(Comparator.comparing(ModuleModel::getRenderLayer))  // 修改
                 .collect(Collectors.collectingAndThen(Collectors.toList(), ImmutableList::copyOf));
     }
 
